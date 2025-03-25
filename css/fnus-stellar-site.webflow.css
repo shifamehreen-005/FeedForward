@@ -1496,7 +1496,10 @@ ul {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  display: flex;
+  width: 940px;
+  /* height: 100%; */
+  padding-top: 80px;
+  /* display: flex; */
 }
 
 .cta-except {
