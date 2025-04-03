@@ -11,10 +11,10 @@ app.use(cors());
 
 // MySQL Connection
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "auth_user",
-    password: "your_password",
-    database: "auth_db"
+    host: "authdb.c2rk4k2g8hpl.us-east-1.rds.amazonaws.com",
+    user: "authuser",
+    password: "your-password",
+    database: "authdb"
 });
 
 db.connect(err => {
