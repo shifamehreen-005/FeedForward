@@ -7,7 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const submitButton = form.querySelector(".btn"); // Select the submit button
   let currentTab = "customers";
   let isSignUpMode = false;
-  
+
+  // Check login status in localStorage (or sessionStorage, depending on your setup)
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
   // if (token && userEmail) {
   //   console.log(userInfo)
   //   userInfo.innerHTML = `<span>Welcome, ${userEmail}!</span> <button id="logout-btn">Logout</button>`;
@@ -104,6 +107,7 @@ async function authenticateUser(endpoint, data) {
       localStorage.setItem("token", result.token);
       localStorage.setItem("user_email", data.email);
       localStorage.setItem("user_type", result.user_type); // Store user type
+      localStorage.setItem("isLoggedIn", "true");
       window.location.href = "index.html";
     }
   } catch (error) {

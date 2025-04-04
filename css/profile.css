@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+  }
+
+/* Profile Window */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    background-color: #fffff5;
+}
+
+.profile-window {
+    background: #fffff5;
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e2e2e2;
+    background: linear-gradient(145deg, #e7d8c5, #d5c9b0);
+    transition: all 0.3s ease-in-out;
+    animation: emerge 1s ease-out forwards;
+}
+
+@keyframes emerge {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Avatar & Header */
+.profile-header {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.profile-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #2D6A4F;  /* Green */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-avatar:hover {
+    transform: scale(1.1);
+}
+
+/* Profile Details */
+.profile-details {
+    text-align: center;
+    width: 100%;
+}
+
+.profile-name {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.profile-info-item {
+    width: 200px;
+    text-align: left;
+}
+
+.profile-info-item h3 {
+    font-size: 1.2em;
+    color: #2D6A4F;
+    margin-bottom: 8px;
+}
+
+.profile-info-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Bio Section */
+.profile-bio-container {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.profile-bio-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2D6A4F;
+}
+
+.profile-bio {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Edit Button */
+.edit-button {
+    padding: 15px 30px;
+    border: none;
+    background: #2D6A4F;  /* Green */
+    color: white;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.edit-button:hover {
+    background: #2D6A4F;
+}
+
+/* Edit Form */
+.edit-form-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.edit-form {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.edit-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.edit-form label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-button, .cancel-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.save-button {
+    background: #28a745;  /* Green */
+}
+
+.save-button:hover {
+    background: #2D6A4F;
+}
+
+.cancel-button {
+    background: #dc3545;  /* Red */
+}
+
+.cancel-button:hover {
+    background: #c82333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
