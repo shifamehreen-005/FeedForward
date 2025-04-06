@@ -1,0 +1,244 @@
+// <special-header></special-header>
+// <special-footer></special-footer>
+
+// <script src = "js/navfootermanager.js"></script>
+
+class SpecialHeader extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="page-wrapper">
+            <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
+              <div class="container-default w-container">
+                <div class="header-block">
+                  <a href="index.html" aria-current="page" class="header-brand w-nav-brand w--current"><img loading="lazy" src="images/Logo.webp" alt="" class="header-brand-logo"></a>
+                  <nav role="navigation" class="header-nav-menu w-nav-menu">
+                    <ul role="list" class="header-list">
+                      <li class="header-list-item">
+                        <div data-w-id="38b61dad-ec44-5bf7-f9d3-c95b9a806f53" class="header-nav-link">
+                          <a href="index.html" aria-current="page" class="header-nav-text w-nav-link w--current">Home</a>
+                          <div class="header-hover-block">
+                            <div class="nav-hover-circle"></div>
+                            <div class="nav-line-block">
+                              <div class="nav-hover-line"></div>
+                              <div class="nav-hover-bg"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="header-list-item">
+                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                          <a href="about.html" class="header-nav-text w-nav-link">About</a>
+                          <div class="header-hover-block">
+                            <div class="nav-hover-circle"></div>
+                            <div class="nav-line-block">
+                              <div class="nav-hover-line"></div>
+                              <div class="nav-hover-bg"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="header-list-item">
+                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                          <a href="explore.html" class="header-nav-text w-nav-link">Explore</a>
+                          <div class="header-hover-block">
+                            <div class="nav-hover-circle"></div>
+                            <div class="nav-line-block">
+                              <div class="nav-hover-line"></div>
+                              <div class="nav-hover-bg"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="header-list-item">
+                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                          <a href="contact-us.html" class="header-nav-text w-nav-link">Contact</a>
+                          <div class="header-hover-block">
+                            <div class="nav-hover-circle"></div>
+                            <div class="nav-line-block">
+                              <div class="nav-hover-line"></div>
+                              <div class="nav-hover-bg"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="header-list-item">
+                        <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
+                          <a href="donate.html" class="header-nav-text w-nav-link">Donate</a>
+                          <div class="header-hover-block">
+                            <div class="nav-hover-circle"></div>
+                            <div class="nav-line-block">
+                              <div class="nav-hover-line"></div>
+                              <div class="nav-hover-bg"></div>
+                            </div>
+                          </div><img loading="lazy" src="images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
+                        </div>
+                      </li>
+                      <li class="header-list-item">
+                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                          <a href="profile.html" class="header-nav-text w-nav-link" id="profile-link" style="display:none;">Profile</a>
+                          <div class="header-hover-block">
+                            <div class="nav-hover-circle"></div>
+                            <div class="nav-line-block">
+                              <div class="nav-hover-line"></div>
+                              <div class="nav-hover-bg"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="header-list-item header-button-item" id="login-button" display="inline-block">
+                        <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="login.html" class="primary-button w-inline-block">
+                          <div class="button-bg"></div>
+                          <div class="button-text">Login/Signup</div>
+                          <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
+                              <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
+                            </svg></div>
+                        </a>
+                      </li>
+                      <li class="header-list-item header-logout-button-item" id="logout-button" display="None">
+                        <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="index.html" class="primary-button w-inline-block">
+                          <div class="button-bg"></div>
+                          <div class="button-text">Logout</div>
+                          <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
+                              <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
+                            </svg></div>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div class="header-menu-button w-nav-button">
+                    <div class="header-menu-button-block">
+                      <div class="top"></div>
+                      <div class="middle"></div>
+                      <div class="bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </div>
+    `
+    }
+}
+
+class SpecialFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <section class="footer-section">
+    <div class="w-layout-blockcontainer container-default w-container">
+      <div class="footer-block">
+        <div class="footer-nav-block">
+          <a href="index.html" aria-current="page" class="footer-brand w-inline-block w--current"><img src="images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
+          <div class="footer-social-block">
+            <a href="https://www.facebook.com" target="_blank" class="footer-social-link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 42 42" fill="none" class="footer-social-icon">
+                <circle cx="21" cy="21" r="20.5" stroke="currentColor"></circle>
+                <path d="M19.272 21.9361C19.218 21.9361 18.03 21.9361 17.49 21.9361C17.202 21.9361 17.112 21.8281 17.112 21.5581C17.112 20.8381 17.112 20.1001 17.112 19.3801C17.112 19.0921 17.22 19.0021 17.49 19.0021H19.272C19.272 18.9481 19.272 17.9041 19.272 17.4181C19.272 16.6981 19.398 16.0141 19.758 15.3841C20.136 14.7361 20.676 14.3041 21.36 14.0521C21.81 13.8901 22.26 13.8181 22.746 13.8181H24.51C24.762 13.8181 24.87 13.9261 24.87 14.1781V16.2301C24.87 16.4821 24.762 16.5901 24.51 16.5901C24.024 16.5901 23.538 16.5901 23.052 16.6081C22.566 16.6081 22.314 16.8421 22.314 17.3461C22.296 17.8861 22.314 18.4081 22.314 18.9661H24.402C24.69 18.9661 24.798 19.0741 24.798 19.3621V21.5401C24.798 21.8281 24.708 21.9181 24.402 21.9181C23.754 21.9181 22.368 21.9181 22.314 21.9181V27.7861C22.314 28.0921 22.224 28.2001 21.9 28.2001C21.144 28.2001 20.406 28.2001 19.65 28.2001C19.38 28.2001 19.272 28.0921 19.272 27.8221C19.272 25.9321 19.272 21.9901 19.272 21.9361Z" fill="currentColor"></path>
+              </svg>
+              <div class="footer-social-text">Facebook</div>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="footer-social-link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 42 42" fill="none" class="footer-social-icon">
+                <circle cx="21" cy="21" r="20.5" stroke="currentColor"></circle>
+                <g clip-path="url(#clip0_6361_1011)">
+                  <path d="M16.8725 12H25.1276C27.8143 12 30 14.1857 30 16.8724V25.1277C30 27.8142 27.8143 30 25.1276 30H16.8723C14.1858 30 12 27.8142 12 25.1277V16.8724C12 14.1857 14.1858 12 16.8725 12ZM13.0553 25.1277C13.0553 27.2324 14.7676 28.9447 16.8725 28.9447H25.1276C27.2324 28.9447 28.9448 27.2324 28.9448 25.1277V16.8724C28.9448 14.7676 27.2324 13.0552 25.1276 13.0552H16.8723C14.7676 13.0552 13.0553 14.7676 13.0553 16.8724V25.1277Z" fill="currentColor"></path>
+                  <path d="M21 16.0784C23.7139 16.0784 25.9218 18.2862 25.9218 21.0001C25.9218 23.714 23.7139 25.9218 21 25.9218C18.2861 25.9218 16.0783 23.714 16.0783 21.0001C16.0783 18.2862 18.2861 16.0784 21 16.0784ZM21 24.8666C23.1319 24.8666 24.8665 23.1321 24.8665 21.0001C24.8665 18.8682 23.1319 17.1336 21 17.1336C18.868 17.1336 17.1335 18.8682 17.1335 21.0001C17.1335 23.1321 18.868 24.8666 21 24.8666Z" fill="currentColor"></path>
+                  <path d="M15.9606 14.3303C16.7626 14.3303 17.4149 14.9828 17.4149 15.7846C17.4149 16.5866 16.7626 17.2391 15.9606 17.2391C15.1586 17.2391 14.5062 16.5866 14.5062 15.7846C14.5062 14.9826 15.1586 14.3303 15.9606 14.3303ZM15.9606 16.1837C16.1806 16.1837 16.3597 16.0046 16.3597 15.7846C16.3597 15.5645 16.1806 15.3856 15.9606 15.3856C15.7405 15.3856 15.5614 15.5645 15.5614 15.7846C15.5614 16.0046 15.7405 16.1837 15.9606 16.1837Z" fill="currentColor"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_6361_1011">
+                    <rect width="18" height="18" fill="currentColor" transform="matrix(-1 0 0 1 30 12)"></rect>
+                  </clippath>
+                </defs>
+              </svg>
+              <div class="footer-social-text">Instagram</div>
+            </a>
+            <a href="https://x.com" target="_blank" class="footer-social-link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 42 42" fill="none" class="footer-social-icon">
+                <circle cx="21" cy="21" r="20.5" stroke="currentColor"></circle>
+                <g clip-path="url(#clip0_6361_1019)">
+                  <path d="M22.6756 19.6218L29.2325 12H27.6787L21.9854 18.6179L17.4382 12H12.1935L19.0698 22.0074L12.1935 30H13.7474L19.7596 23.0113L24.5618 30H29.8065L22.6753 19.6218H22.6756ZM20.5474 22.0956L19.8507 21.0991L14.3073 13.1697H16.6939L21.1675 19.5689L21.8642 20.5655L27.6794 28.8835H25.2928L20.5474 22.096V22.0956Z" fill="currentColor"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_6361_1019">
+                    <rect width="18" height="18" fill="currentColor" transform="translate(12 12)"></rect>
+                  </clippath>
+                </defs>
+              </svg>
+              <div class="footer-social-text">Twitter</div>
+            </a>
+          </div>
+        </div>
+        <div class="footer-description-block">
+          <div class="footer-cta-block">
+            <h3 class="footer-cta-title">Stay Updated with Our Community News</h3>
+            <div class="footer-form-block w-form">
+              <form id="email-form" name="email-form" data-name="Email Form" method="get" class="footer-form" data-wf-page-id="67df4d3822d52b417bdb3bd9" data-wf-element-id="4c87bd92-dee7-4880-4381-e0828ad71c57"><input class="footer-text-field w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="example@gmail.com" type="email" id="email-2" required=""><input type="submit" data-wait="" class="footer-button w-button" value=""></form>
+              <div class="footer-success-message w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="footer-error-message w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-contact-block">
+            <h5 class="footer-contact-title">Address</h5>
+            <div class="footer-contact-card">
+              <div class="footer-contact-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 24 24" fill="none" class="footer-contact-icon">
+                  <g clip-path="url(#clip0_6361_1038)">
+                    <path d="M4.89046 15.9536C7.25764 18.7833 10.1072 21.0112 13.3596 22.5877C14.5979 23.1745 16.2539 23.8707 18.0989 23.9901C18.2133 23.995 18.3227 24 18.4371 24C19.6754 24 20.67 23.5723 21.4806 22.6921C21.4856 22.6871 21.4955 22.6772 21.5005 22.6672C21.7889 22.3191 22.1171 22.0058 22.4603 21.6726C22.694 21.4488 22.9327 21.2151 23.1615 20.9764C24.2208 19.8724 24.2208 18.47 23.1515 17.4007L20.1627 14.4119C19.6555 13.8848 19.0488 13.6063 18.4122 13.6063C17.7757 13.6063 17.164 13.8848 16.6418 14.407L14.8614 16.1873C14.6973 16.0928 14.5283 16.0083 14.3691 15.9287C14.1702 15.8293 13.9862 15.7348 13.8221 15.6303C12.2009 14.6009 10.7288 13.2582 9.32146 11.5325C8.61031 10.6324 8.1329 9.8765 7.7997 9.10568C8.26717 8.68297 8.7048 8.24037 9.12751 7.80771C9.2767 7.65354 9.43087 7.49938 9.58503 7.34521C10.1221 6.80812 10.4106 6.18649 10.4106 5.55491C10.4106 4.92333 10.1271 4.3017 9.58503 3.76461L8.10306 2.28264C7.929 2.10858 7.76489 1.93949 7.59581 1.76544C7.26758 1.42727 6.92444 1.07915 6.58627 0.765852C6.07405 0.263572 5.47231 0 4.83576 0C4.20418 0 3.59746 0.263572 3.06535 0.770825L1.20542 2.63075C0.529083 3.30709 0.146157 4.12764 0.0665883 5.0775C-0.0278999 6.26606 0.190915 7.52922 0.757844 9.05595C1.62813 11.4182 2.94102 13.6113 4.89046 15.9536ZM1.28002 5.18193C1.33969 4.52051 1.59332 3.9685 2.07073 3.49109L3.92071 1.64111C4.20915 1.36262 4.52743 1.2184 4.83576 1.2184C5.13911 1.2184 5.44744 1.36262 5.73091 1.65106C6.0641 1.95939 6.3774 2.28264 6.71557 2.62578C6.88466 2.79983 7.05871 2.97389 7.23277 3.15292L8.71474 4.63489C9.02307 4.94322 9.18221 5.25653 9.18221 5.56486C9.18221 5.87319 9.02307 6.18649 8.71474 6.49482C8.56058 6.64898 8.40641 6.80812 8.25225 6.96229C7.78975 7.42976 7.3571 7.87236 6.87968 8.29507C6.86974 8.30501 6.86477 8.30999 6.85482 8.31993C6.44205 8.7327 6.5067 9.12557 6.60617 9.42395C6.61114 9.43887 6.61611 9.44882 6.62109 9.46374C7.00401 10.3838 7.53613 11.259 8.36663 12.3034C9.85855 14.1434 11.43 15.5707 13.1607 16.6697C13.3745 16.809 13.6033 16.9184 13.8171 17.0278C14.016 17.1272 14.2 17.2217 14.3641 17.3261C14.384 17.3361 14.399 17.346 14.4188 17.356C14.583 17.4405 14.7421 17.4803 14.9012 17.4803C15.2991 17.4803 15.5577 17.2267 15.6422 17.1421L17.5021 15.2822C17.7906 14.9938 18.1039 14.8396 18.4122 14.8396C18.7902 14.8396 19.0985 15.0734 19.2924 15.2822L22.2912 18.276C22.888 18.8728 22.883 19.5193 22.2763 20.1509C22.0674 20.3746 21.8486 20.5885 21.6149 20.8123C21.2668 21.1504 20.9037 21.4986 20.5755 21.8914C20.0036 22.5081 19.3223 22.7965 18.4421 22.7965C18.3575 22.7965 18.268 22.7915 18.1835 22.7866C16.5523 22.6821 15.0355 22.0456 13.8967 21.5035C10.8034 20.0066 8.08814 17.8831 5.83534 15.1877C3.98039 12.9548 2.73215 10.8761 1.90662 8.64816C1.3944 7.28056 1.20045 6.18152 1.28002 5.18193Z" fill="currentColor"></path>
+                  </g>
+                  <defs>
+                    <clippath id="clip0_6361_1038">
+                      <rect width="24" height="24" fill="currentColor"></rect>
+                    </clippath>
+                  </defs>
+                </svg></div>
+              <div class="footer-contact-text-block">
+                <div class="footer-contact-subtitle">Contact Number</div>
+                <div class="footer-contact-text">(123) 555-0119</div>
+              </div>
+            </div>
+            <div class="footer-contact-card">
+              <div class="footer-contact-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 24 24" fill="none" class="footer-contact-icon">
+                  <path d="M19.35 9.41256L19.3875 9.37506L19.4625 9.30006C19.5375 9.22506 19.6125 9.15006 19.725 9.07506C19.8 9.00006 19.875 8.92506 19.95 8.85006L20.55 8.28756C20.7 8.13756 20.775 7.91256 20.7 7.68756C20.6625 7.61256 20.625 7.53756 20.5875 7.46256C20.4 7.27506 20.1 7.23756 19.875 7.35006C19.8375 7.38756 19.8 7.38756 19.7625 7.42506L19.275 7.87506C17.775 9.22506 16.3125 10.5376 14.8125 11.8876C14.475 12.1876 14.1375 12.4876 13.8 12.7876C13.275 13.2376 12.6375 13.4626 12 13.4626C11.3625 13.4626 10.7625 13.2751 10.2 12.7876C9.86251 12.4876 9.52501 12.1876 9.18751 11.8876C7.68751 10.5376 6.22501 9.22506 4.72501 7.87506L4.23751 7.42506C4.20001 7.38756 4.16251 7.38756 4.12501 7.35006C3.90001 7.20006 3.60001 7.27506 3.41251 7.46256C3.33751 7.53756 3.30001 7.61256 3.30001 7.68756C3.22501 7.87506 3.30001 8.13756 3.45001 8.28756L4.05001 8.85006L4.27501 9.07506C4.35001 9.15006 4.42501 9.22506 4.53751 9.30006L4.61251 9.37506L4.65001 9.41256C5.36251 10.0876 6.11251 10.7251 6.82501 11.3626C7.08751 11.5876 7.35001 11.8501 7.65001 12.1126C7.61251 12.1501 7.57501 12.1876 7.53751 12.2251C6.37501 13.3876 5.21251 14.5126 4.05001 15.6751C4.01251 15.7126 3.93751 15.7876 3.90001 15.8251C3.75001 16.0126 3.75001 16.2751 3.86251 16.4626C4.01251 16.6501 4.23751 16.7626 4.46251 16.6501C4.57501 16.6126 4.68751 16.5376 4.76251 16.4251C5.92501 15.3001 7.08751 14.1376 8.25001 13.0126C8.32501 12.9376 8.36251 12.9001 8.43751 12.8251C8.77501 13.1251 9.07501 13.3876 9.37501 13.6501C9.97501 14.2126 10.725 14.5501 11.55 14.6251C11.7 14.6251 11.85 14.6626 12 14.6626C12.15 14.6626 12.3 14.6626 12.45 14.6251C13.275 14.5501 13.9875 14.1751 14.625 13.6501C14.925 13.3876 15.225 13.0876 15.5625 12.8251C15.6375 12.9001 15.7125 12.9376 15.75 13.0126C16.9125 14.1376 18.075 15.3001 19.2375 16.4251C19.3125 16.5001 19.425 16.6126 19.5375 16.6501C19.7625 16.7251 19.9875 16.6501 20.1375 16.4626C20.2875 16.2751 20.25 16.0126 20.1 15.8251C20.0625 15.7876 19.9875 15.7126 19.95 15.6751C18.7875 14.5126 17.625 13.3876 16.4625 12.2251C16.425 12.1876 16.3875 12.1501 16.35 12.1126C16.6125 11.8501 16.875 11.6251 17.175 11.3626C17.8875 10.7251 18.6375 10.0876 19.35 9.41256Z" fill="currentColor"></path>
+                  <path d="M20.175 20.55H3.82501C1.95001 20.55 0.412506 19.0125 0.412506 17.1375V6.86245C0.412506 4.98745 1.95001 3.44995 3.82501 3.44995H20.2125C22.0875 3.44995 23.625 4.98745 23.625 6.86245V17.1375C23.5875 19.0125 22.0875 20.55 20.175 20.55ZM3.82501 4.72495C2.62501 4.72495 1.68751 5.69995 1.68751 6.86245V17.1375C1.68751 18.3375 2.66251 19.275 3.82501 19.275H20.2125C21.4125 19.275 22.35 18.3 22.35 17.1375V6.86245C22.35 5.66245 21.375 4.72495 20.2125 4.72495H3.82501Z" fill="currentColor"></path>
+                </svg></div>
+              <div class="footer-contact-text-block">
+                <div class="footer-contact-subtitle">Contact support</div>
+                <div class="footer-contact-text">example@gmail.com</div>
+              </div>
+            </div>
+            <div class="footer-contact-card">
+              <div class="footer-contact-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 24 24" fill="none" class="footer-contact-icon">
+                  <g clip-path="url(#clip0_6361_1058)">
+                    <path d="M23.7448 9.75297L12.3684 1.42342C12.149 1.26283 11.851 1.26283 11.6317 1.42342L0.255231 9.75297C-0.022644 9.95646 -0.083019 10.3466 0.120465 10.6245C0.32395 10.9024 0.714184 10.9627 0.992012 10.7593L12 2.69941L23.008 10.7592C23.119 10.8406 23.248 10.8797 23.3759 10.8797C23.5679 10.8797 23.7573 10.7913 23.8795 10.6245C24.083 10.3466 24.0226 9.95646 23.7448 9.75297Z" fill="currentColor"></path>
+                    <path d="M20.7303 10.9004C20.3859 10.9004 20.1067 11.1796 20.1067 11.524V21.4497H15.1182V16.0316C15.1182 14.3122 13.7193 12.9135 12.0001 12.9135C10.2808 12.9135 8.88193 14.3123 8.88193 16.0316V21.4497H3.89335V11.524C3.89335 11.1796 3.61412 10.9004 3.26977 10.9004C2.92543 10.9004 2.64619 11.1796 2.64619 11.524V22.0734C2.64619 22.4178 2.92543 22.697 3.26977 22.697H9.50551C9.83344 22.697 10.1018 22.4436 10.1266 22.1219C10.1281 22.1074 10.1291 22.0914 10.1291 22.0734V16.0317C10.1291 15 10.9684 14.1607 12.0001 14.1607C13.0317 14.1607 13.871 15 13.871 16.0317V22.0734C13.871 22.0913 13.872 22.107 13.8735 22.1214C13.898 22.4433 14.1665 22.697 14.4946 22.697H20.7303C21.0747 22.697 21.3539 22.4178 21.3539 22.0734V11.524C21.3539 11.1796 21.0747 10.9004 20.7303 10.9004Z" fill="currentColor"></path>
+                  </g>
+                  <defs>
+                    <clippath id="clip0_6361_1058">
+                      <rect width="24" height="24" fill="currentColor"></rect>
+                    </clippath>
+                  </defs>
+                </svg></div>
+              <div class="footer-contact-text-block">
+                <div class="footer-contact-subtitle">4517 Washington Ave. Manchester, Kentucky 39495</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright-block">
+          <div class="footer-copyright-text">Copyright © 2025 FeedForward |  Designed by <a href="https://templates.themencode.com" target="_blank" class="footer-copyright-link">ThemeNcode LLC</a> | Powered by <a href="https://webflow.com" target="_blank" class="footer-copyright-link">Webflow</a>
+          </div>
+          <div class="footer-copyright-wrapper">
+            <a href="utility/style-guide.html" class="footer-copyright-link">Style guides</a>
+            <a href="utility/license.html" class="footer-copyright-link">License</a>
+            <a href="utility/changelog.html" class="footer-copyright-link">Change-log</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        `
+    }
+}
+
+customElements.define('special-header', SpecialHeader)
+customElements.define('special-footer', SpecialFooter)
