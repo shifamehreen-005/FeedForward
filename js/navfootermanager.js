@@ -6,7 +6,7 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div class="page-wrapper">
+        
             <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
               <div class="container-default w-container">
                 <div class="header-block">
@@ -115,7 +115,7 @@ class SpecialHeader extends HTMLElement {
                 </div>
               </div>
             </div>
-    </div>
+    
     `
     }
 }
