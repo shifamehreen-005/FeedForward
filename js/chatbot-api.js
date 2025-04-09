@@ -20,7 +20,7 @@ if (input === "") return;
 addMessage(input, "user");
 
 try {
-    const response = await fetch('http://localhost:8000', {
+    const response = await fetch('http://localhost:8000/chat', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ try {
     });
 
     const data = await response.json();
-    const botResponse = data.response || "Sorry, I didn't understand that.";
+    const botResponse = data.assistant_response || "Sorry, I didn't understand that.";
 
     setTimeout(() => {
     addMessage(botResponse, "bot");
