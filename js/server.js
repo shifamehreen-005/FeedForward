@@ -42,7 +42,16 @@ app.post("/signup", async (req, res) => {
             if (err) {
                 return res.status(500).json({ message: "Error inserting user" });
             }
-            res.status(201).json({ message: "User registered successfully" });
+            // After user is inserted into `users` table, also create a default profile
+            const profileSql = "INSERT INTO user_profiles (email) VALUES (?)";
+            db.query(profileSql, [email], (profileErr, profileResult) => {
+                if (profileErr) {
+                    console.error("Failed to initialize profile:", profileErr);
+                    return res.status(500).json({ message: "User created, but profile initialization failed" });
+                }
+                res.status(201).json({ message: "User and profile created successfully" });
+            });
+
         });
     } catch (err) {
         return res.status(500).json({ message: "Error hashing password" });
@@ -77,6 +86,64 @@ app.post("/login", (req, res) => {
         });
     });
 });
+
+app.post("/save-profile", (req, res) => {
+    const {
+        name, email, phone, location, transport, dietary_restrictions,
+        culture, kitchen_access, distribution, services, bio
+    } = req.body;
+
+    const sql = `
+        INSERT INTO user_profiles 
+        (name, email, phone, location, transport, dietary_restrictions, 
+         culture, kitchen_access, distribution, services, bio)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+            name = VALUES(name),
+            phone = VALUES(phone),
+            location = VALUES(location),
+            transport = VALUES(transport),
+            dietary_restrictions = VALUES(dietary_restrictions),
+            culture = VALUES(culture),
+            kitchen_access = VALUES(kitchen_access),
+            distribution = VALUES(distribution),
+            services = VALUES(services),
+            bio = VALUES(bio)
+    `;
+
+    db.query(sql, [
+        name, email, phone, location, transport, dietary_restrictions,
+        culture, kitchen_access, distribution, services, bio
+    ], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ message: "Failed to save profile" });
+        }
+        res.status(200).json({ message: "Profile saved or updated successfully" });
+    });
+});
+
+app.get("/get-profile", (req, res) => {
+    const { email } = req.query;
+
+    if (!email) {
+        return res.status(400).json({ message: "Email is required" });
+    }
+
+    const sql = "SELECT * FROM user_profiles WHERE email = ?";
+    db.query(sql, [email], (err, results) => {
+        if (err) return res.status(500).json({ message: "Server error" });
+
+        if (results.length === 0) {
+            return res.status(404).json({ message: "Profile not found" });
+        }
+
+        res.status(200).json(results[0]);
+    });
+});
+
+
+
 
 app.get('/', (req, res) => {
     res.send('Hello World');
