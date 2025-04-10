@@ -60,6 +60,22 @@ body {
   #helpBtn:hover {
     background-color: #bef746;
   }
+
+  #sendBtn {
+    background-color: white;
+    border: 1.5px solid black; /* solid black border */
+    color: black; /* black text */
+    padding: 10px 20px;
+    margin: 8px 4px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #sendBtn:hover {
+    background-color: #bef746;
+  }
   
   #micBtn {
     height: 40px;
