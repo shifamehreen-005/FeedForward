@@ -60,3 +60,20 @@ chatBox.scrollTop = chatBox.scrollHeight;
 userInput.addEventListener("keypress", function (e) {
 if (e.key === "Enter") sendMessage();
 });
+
+// 🎤 Speech Recognition Setup
+const micBtn = document.getElementById('micBtn');
+
+const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+recognition.continuous = false;
+recognition.lang = 'en-US';
+
+micBtn.addEventListener("click", () => {
+  recognition.start();
+});
+
+recognition.onresult = (event) => {
+  const transcript = event.results[0][0].transcript;
+  userInput.value = transcript;
+  sendMessage(); // auto-send
+};
