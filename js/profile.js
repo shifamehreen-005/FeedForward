@@ -201,12 +201,4 @@ document.addEventListener("DOMContentLoaded", function () {
     function closeEditForm() {
         document.querySelector(".edit-form-container").remove();
     }
-
-    profileImageUpload.addEventListener("change", function (event) {
-        const reader = new FileReader();
-        reader.onload = function () {
-            profileImage.src = reader.result;
-        };
-        reader.readAsDataURL(event.target.files[0]);
-    });
 });
