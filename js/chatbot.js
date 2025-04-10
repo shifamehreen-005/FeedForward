@@ -35,7 +35,7 @@ class ChatBot extends HTMLElement {
                 <path d="M12 14a3 3 0 003-3V5a3 3 0 10-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 0014 0h-2z"/>
               </svg>
             </button>
-            <button id = "helpBtn" onclick="expandChat()">Send</button>
+            <button id = "sendBtn" onclick="expandChat()">Send</button>
           </div>
         </div>
       </div>

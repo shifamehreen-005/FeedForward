@@ -77,3 +77,10 @@ recognition.onresult = (event) => {
   userInput.value = transcript;
   sendMessage(); // auto-send
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const sendBtn = document.getElementById("sendBtn");
+  if (sendBtn) {
+      sendBtn.addEventListener("click", sendMessage);
+  }
+});

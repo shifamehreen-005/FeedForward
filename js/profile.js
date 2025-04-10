@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </select>
 
                     <label for="dietary-restrictions">Dietary Restrictions:</label>
-                    <select id="dietary-restrictions" name="dietary-restrictions" mutliple size = "3">
+                    <select id="dietary-restrictions" name="dietary-restrictions" multiple size="3">
                         <option value="diabetic">Diabetic</option>
                         <option value="hypertension">Have Hypertension</option>
                         <option value="low-sodium">Need Low Sodium</option>
