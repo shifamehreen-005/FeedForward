@@ -108,21 +108,21 @@ function renderOptions(options) {
           if (profile) {
             currentProfile = {
               name: profile.name ? profile.name : "Full Name",
+              email: profile.email ? profile.email : "a@gmail.com",
               phone: profile.phone ? profile.phone : "+1 (234) 567-8901",
               location: profile.location ? profile.location : "New York, USA",
-              kitchenAccess: profile.kitchen_access ? profile.kitchen_access : "Yes",
-              culture: profile.culture ? profile.culture : "Middle Eastern",
               transport: profile.transport ? profile.transport: "N/A",
-              "dietary-restrictions": profile.dietary_restrictions ? profile.dietary_restrictions : "N/A",
-              "services-needed": profile.services ? profile.services : "N/A",
+              dietary_restrictions: profile.dietary_restrictions ? profile.dietary_restrictions : "N/A",
+              culture: profile.culture ? profile.culture : "Middle Eastern",
+              kitchen_access: profile.kitchen_access ? profile.kitchen_access : "Yes",
               distribution: profile.distribution ? profile.distribution : "N/A",
+              services: profile.services ? profile.services : "N/A",
               bio: profile.bio ? profile.bio : "N/A"
             };
           }
         } catch (err) {
           console.error("Failed to load profile:", err);
         }
-        console.log(currentProfile);
         showProfileOptions(currentProfile);
       } else {
         // For other options, send the message as usual
@@ -164,11 +164,11 @@ function showProfileOptions(currentProfile) {
     { label: "Name", key: "name", default: currentProfile.name },
     { label: "Phone", key: "phone", default: currentProfile.phone },
     { label: "Location", key: "location", default: currentProfile.location },
-    { label: "Kitchen Access", key: "kitchenAccess", default: currentProfile.kitchenAccess },
+    { label: "Kitchen Access", key: "kitchenAccess", default: currentProfile["kitchen_access"] },
     { label: "Culture", key: "culture", default: currentProfile.culture },
     { label: "Transport", key: "transport", default: currentProfile.transport },
-    { label: "Dietary Restrictions", key: "dietary-restrictions", default: currentProfile["dietary-restrictions"] },
-    { label: "Services Needed", key: "services-needed", default: currentProfile["services-needed"] },
+    { label: "Dietary Restrictions", key: "dietary-restrictions", default: currentProfile["dietary_restrictions"] },
+    { label: "Services Needed", key: "services-needed", default: currentProfile.services },
     { label: "Distribution", key: "distribution", default: currentProfile.distribution },
     { label: "Bio", key: "bio", default: currentProfile.bio }
   ];
@@ -180,7 +180,7 @@ function showProfileOptions(currentProfile) {
     btn.onclick = () => {
       message.remove();
       // Open a field-specific editor with the default/current value.
-      showFieldEditor(field.key, field.default, field.label);
+      showFieldEditor(currentProfile, field.key, field.default, field.label);
     };
     optionsWrapper.appendChild(btn);
   });
@@ -206,7 +206,7 @@ function showProfileOptions(currentProfile) {
  * @param {string} currentValue - The current (or default) value for that field
  * @param {string} label - Human-readable label for the field.
  */
-function showFieldEditor(field, currentValue, label) {
+function showFieldEditor(currentProfile, field, currentValue, label) {
   const message = document.createElement('div');
   message.classList.add('message', 'bot', 'profile-editor');
 
@@ -222,29 +222,32 @@ function showFieldEditor(field, currentValue, label) {
   chatBox.appendChild(message);
   chatBox.scrollTop = chatBox.scrollHeight;
 
-  document.getElementById('saveField').addEventListener('click', () => {
+  document.getElementById('saveField').addEventListener('click', async () => {
     const newValue = document.getElementById('fieldInput').value;
     
     // Construct an update object; in a full system you might merge this with the existing profile data.
     const updateData = {};
     updateData[field] = newValue;
 
+    const finalProfile = { ...currentProfile, ...updateData };
+    console.log(finalProfile);
     // Send updated field value to the server.
-    fetch('http://localhost:8000/updateProfileField', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(updateData)
-    })
-      .then(response => response.json())
-      .then(data => {
-        addMessage(`${label} updated successfully to "${newValue}".`, "bot");
-      })
-      .catch(error => {
-        console.error("Update error:", error);
-        addMessage("There was an error updating your profile.", "bot");
+    try {
+      const response = await fetch("http://localhost:3000/save-profile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(finalProfile)
       });
+  
+      const data = await response.json();
+      console.log("Server response:", data);
+      alert("Profile saved successfully!");
+    } catch (error) {
+      console.error("Error saving profile:", error);
+      alert("Failed to save profile.");
+    }
 
     message.remove();
   });
