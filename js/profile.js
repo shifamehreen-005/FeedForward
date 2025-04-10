@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const editButton = document.querySelector(".edit-button");
     const profileCard = document.querySelector(".profile-window");
-    const profileImageUpload = document.getElementById("profile-image-upload");
-    const profileImage = document.getElementById("profile-image");
 
     const email = localStorage.getItem("user_email");
     const isLoggedIn = localStorage.getItem("isLoggedIn");

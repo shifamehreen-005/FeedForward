@@ -37,13 +37,15 @@ app.post("/signup", async (req, res) => {
         
         // Insert the user into the database
         const sql = "INSERT INTO users (email, password, user_type) VALUES (?, ?, ?)";
-        console.log(email, hash, user_type);
         db.query(sql, [email, hash, user_type], (err, result) => {
             if (err) {
                 return res.status(500).json({ message: "Error inserting user" });
             }
             // After user is inserted into `users` table, also create a default profile
-            const profileSql = "INSERT INTO user_profiles (email) VALUES (?)";
+            const profileSql = user_type === "volunteers"
+            ? "INSERT INTO volunteer_profiles (email) VALUES (?);"
+            : "INSERT INTO user_profiles (email) VALUES (?);";
+
             db.query(profileSql, [email], (profileErr, profileResult) => {
                 if (profileErr) {
                     console.error("Failed to initialize profile:", profileErr);
@@ -123,6 +125,42 @@ app.post("/save-profile", (req, res) => {
     });
 });
 
+app.post("/save-profile-volunteer", (req, res) => {
+    const {
+        name, email, phone, location, availability, transport,
+        volunteer_interests, skills, experience, background_check, bio
+    } = req.body;
+    
+    const sql = `
+        INSERT INTO volunteer_profiles 
+        (name, email, phone, location, availability, transport,
+         volunteer_interests, skills, experience, background_check, bio)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON DUPLICATE KEY UPDATE
+            name = VALUES(name),
+            phone = VALUES(phone),
+            location = VALUES(location),
+            availability = VALUES(availability),
+            transport = VALUES(transport),
+            volunteer_interests = VALUES(volunteer_interests),
+            skills = VALUES(skills),
+            experience = VALUES(experience),
+            background_check = VALUES(background_check),
+            bio = VALUES(bio)
+    `;
+    
+    db.query(sql, [
+        name, email, phone, location, availability, transport,
+        volunteer_interests, skills, experience, background_check, bio
+    ], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ message: "Failed to save volunteer profile" });
+        }
+        res.status(200).json({ message: "Volunteer profile saved or updated successfully" });
+    });    
+});
+
 app.get("/get-profile", (req, res) => {
     const { email } = req.query;
 
@@ -131,6 +169,25 @@ app.get("/get-profile", (req, res) => {
     }
 
     const sql = "SELECT * FROM user_profiles WHERE email = ?";
+    db.query(sql, [email], (err, results) => {
+        if (err) return res.status(500).json({ message: "Server error" });
+
+        if (results.length === 0) {
+            return res.status(404).json({ message: "Profile not found" });
+        }
+
+        res.status(200).json(results[0]);
+    });
+});
+
+app.get("/get-profile-volunteer", (req, res) => {
+    const { email } = req.query;
+
+    if (!email) {
+        return res.status(400).json({ message: "Email is required" });
+    }
+
+    const sql = "SELECT * FROM volunteer_profiles WHERE email = ?";
     db.query(sql, [email], (err, results) => {
         if (err) return res.status(500).json({ message: "Server error" });
 

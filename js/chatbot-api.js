@@ -57,10 +57,6 @@ chatBox.appendChild(message);
 chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// userInput.addEventListener("keypress", function (e) {
-// if (e.key === "Enter") sendMessage();
-// });
-
 // 🎤 Speech Recognition Setup
 const micBtn = document.getElementById('micBtn');
 
@@ -80,9 +76,6 @@ recognition.onresult = (event) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   renderOptions(["Find Your Nearest Food Bank", "Update My Profile"]);
-  
-  // Fetch and Populate Profile
-
 });
 
 
@@ -90,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderOptions(options) {
   const message = document.createElement('div');
   message.classList.add('message', 'user');
-
+  const user_type = localStorage.getItem("user_type");
   const optionsWrapper = document.createElement('div');
   optionsWrapper.classList.add('option-wrapper');
 
@@ -101,7 +94,7 @@ function renderOptions(options) {
     button.classList.add("chat-option");
     button.onclick = async () => {
       message.remove();
-      if (option === "Update My Profile") {
+      if (option === "Update My Profile" && user_type == "customers") {
         try {
           const res = await fetch(`http://localhost:3000/get-profile?email=${encodeURIComponent(email)}`);
           const profile = await res.json();
@@ -119,6 +112,29 @@ function renderOptions(options) {
               services: profile.services ? profile.services : "N/A",
               bio: profile.bio ? profile.bio : "N/A"
             };
+          }
+        } catch (err) {
+          console.error("Failed to load profile:", err);
+        }
+        showProfileOptions(currentProfile);
+      } else if (option === "Update My Profile" && user_type == "volunteers") {
+        try {
+          const res = await fetch(`http://localhost:3000/get-profile-volunteer?email=${encodeURIComponent(email)}`);
+          const profile = await res.json();
+          if (profile) {
+            currentProfile = {
+              name: profile.name ? profile.name : "Full Name",
+              email: profile.email ? profile.email : "a@gmail.com",
+              phone: profile.phone ? profile.phone : "+1 (234) 567-8901",
+              location: profile.location ? profile.location : "New York, USA",
+              transport: profile.transport ? profile.transport : "N/A",
+              availability: profile.availability ? profile.availability : "N/A",  // Added based on table schema
+              volunteer_interests: profile.volunteer_interests ? profile.volunteer_interests : "N/A", // Added based on table schema
+              skills: profile.skills ? profile.skills : "N/A", // Added based on table schema
+              experience: profile.experience ? profile.experience : "N/A", // Added based on table schema
+              background_check: profile.background_check ? profile.background_check : "No", // Added based on table schema
+              bio: profile.bio ? profile.bio : "N/A"
+            };            
           }
         } catch (err) {
           console.error("Failed to load profile:", err);
@@ -164,14 +180,14 @@ function showProfileOptions(currentProfile) {
     { label: "Name", key: "name", default: currentProfile.name },
     { label: "Phone", key: "phone", default: currentProfile.phone },
     { label: "Location", key: "location", default: currentProfile.location },
-    { label: "Kitchen Access", key: "kitchenAccess", default: currentProfile["kitchen_access"] },
-    { label: "Culture", key: "culture", default: currentProfile.culture },
     { label: "Transport", key: "transport", default: currentProfile.transport },
-    { label: "Dietary Restrictions", key: "dietary-restrictions", default: currentProfile["dietary_restrictions"] },
-    { label: "Services Needed", key: "services-needed", default: currentProfile.services },
-    { label: "Distribution", key: "distribution", default: currentProfile.distribution },
+    { label: "Availability", key: "availability", default: currentProfile.availability },  // Added based on table schema
+    { label: "Volunteer Interests", key: "volunteer_interests", default: currentProfile.volunteer_interests }, // Added based on table schema
+    { label: "Skills", key: "skills", default: currentProfile.skills }, // Added based on table schema
+    { label: "Experience", key: "experience", default: currentProfile.experience }, // Added based on table schema
+    { label: "Background Check", key: "background_check", default: currentProfile.background_check }, // Added based on table schema
     { label: "Bio", key: "bio", default: currentProfile.bio }
-  ];
+  ];  
 
   fields.forEach(field => {
     const btn = document.createElement('button');
@@ -233,7 +249,7 @@ function showFieldEditor(currentProfile, field, currentValue, label) {
     console.log(finalProfile);
     // Send updated field value to the server.
     try {
-      const response = await fetch("http://localhost:3000/save-profile", {
+      const response = await fetch("http://localhost:3000/save-profile-volunteer", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
