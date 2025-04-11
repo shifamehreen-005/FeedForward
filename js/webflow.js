@@ -1,18 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     const profileLink = document.getElementById("profile-link");
+    const profileVolunteerLink = document.getElementById("profile-volunteer-link");
     const logoutButton = document.getElementById("logout-button");
     const loginButton = document.getElementById("login-button");
 
     // Check login status in localStorage
     const isLoggedIn = localStorage.getItem("isLoggedIn");
-
+    const user_type = localStorage.getItem("user_type");
     // If the user is logged in, show the Profile link and Logout button, hide the Login link
-    if (isLoggedIn === "true") {
+    if (isLoggedIn === "true" && user_type == 'customers') {
         profileLink.style.display = "inline-block";  // Show the profile link
+        profileVolunteerLink.style.display = "none";  
         logoutButton.style.display = "inline-block";  // Show the logout button
+        loginButton.style.display = "None";
+    } else if (isLoggedIn === "true" && user_type == 'volunteers') {
+        profileLink.style.display = "None";
+        profileVolunteerLink.style.display = "inline-block";         // Hide the profile link
+        logoutButton.style.display = "inline-block";        // Hide the logout button
         loginButton.style.display = "None";
     } else {
         profileLink.style.display = "none";         // Hide the profile link
+        profileVolunteerLink.style.display = "none";  
         logoutButton.style.display = "none";        // Hide the logout button
         loginButton.style.display = "inline-block";
     }

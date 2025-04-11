@@ -106,7 +106,7 @@ async function authenticateUser(endpoint, data) {
     if (response.ok && endpoint === "login") {
       localStorage.setItem("token", result.token);
       localStorage.setItem("user_email", data.email);
-      localStorage.setItem("user_type", result.user_type); // Store user type
+      localStorage.setItem("user_type", data.user_type); // Store user type
       localStorage.setItem("isLoggedIn", "true");
       window.location.href = "index.html";
     }
@@ -135,8 +135,6 @@ document
       .querySelector(".tab-btn.active")
       .getAttribute("data-tab");
     const endpoint = isSignUp ? "signup" : "login";
-    const data = isSignUp
-      ? { email, password, user_type }
-      : { email, password };
+    const data = { email, password, user_type };
     authenticateUser(endpoint, data);
   });
