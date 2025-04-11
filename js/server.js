@@ -1,4 +1,6 @@
 require("dotenv").config();
+const fs = require("fs");
+const path = require("path");
 const express = require("express");
 const mysql = require("mysql2");
 const bcrypt = require("bcryptjs");
@@ -148,6 +150,133 @@ app.get("/get-profile", (req, res) => {
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
+
+
+app.post("/upload-json-data", (req, res) => {
+    try {
+        // ======= LOCATION (Array) =======
+        const locationPath = path.join(__dirname, "..", "data", "location.json");
+        const locationData = JSON.parse(fs.readFileSync(locationPath, "utf8").replace(/\bNaN\b/g, 'null'));
+
+        const locationInsert = `
+            INSERT INTO location (
+                agency_id, agency_name, agency_region, county_ward, latitude, longitude
+            ) VALUES (?, ?, ?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE
+                agency_name = VALUES(agency_name),
+                agency_region = VALUES(agency_region),
+                county_ward = VALUES(county_ward),
+                latitude = VALUES(latitude),
+                longitude = VALUES(longitude)
+        `;
+
+        locationData.forEach(loc => {
+            db.query(locationInsert, [
+                loc["Agency ID"],
+                loc["Agency Name"],
+                loc["Agency Region"],
+                loc["County/Ward"],
+                loc["Latitude"],
+                loc["Longitude"]
+            ], err => {
+                if (err) console.error("Location insert error:", err);
+            });
+        });
+
+        // ======= INFORMATION (Array) =======
+        const infoPath = path.join(__dirname, "..", "data", "information.json");
+        const infoData = JSON.parse(fs.readFileSync(infoPath, "utf8").replace(/\bNaN\b/g, 'null'));
+
+        const clean = (val) => (val && val.toLowerCase() !== "nan" ? val : null);
+
+        const infoInsert = `
+            INSERT INTO information (
+                agency_id, agency_name, food_pantry_requirements, food_format,
+                distribution_models, cultural_populations_served
+            ) VALUES (?, ?, ?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE
+                agency_name = VALUES(agency_name),
+                food_pantry_requirements = VALUES(food_pantry_requirements),
+                food_format = VALUES(food_format),
+                distribution_models = VALUES(distribution_models),
+                cultural_populations_served = VALUES(cultural_populations_served)
+        `;
+
+        infoData.forEach(info => {
+            db.query(infoInsert, [
+                info["Agency ID"],
+                info["Agency Name"],
+                clean(info["Food Pantry Requirements"]),
+                info["Food Format"],
+                info["Distribution Models"],
+                clean(info["Cultural Populations Served"])
+            ], err => {
+                if (err) console.error("Information insert error:", err);
+            });
+        });
+
+        // ======= AVAILABILITY (Array) =======
+        const availabilityPath = path.join(__dirname, "..", "data", "availability.json");
+        const availabilityData = JSON.parse(fs.readFileSync(availabilityPath, "utf8").replace(/\bNaN\b/g, 'null'));
+
+        const availabilityInsert = `
+            INSERT INTO availability (
+                agency_id, agency_name, day_of_week, frequency,
+                starting_time, ending_time, by_appointment_only
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE
+                agency_name = VALUES(agency_name),
+                frequency = VALUES(frequency),
+                starting_time = VALUES(starting_time),
+                ending_time = VALUES(ending_time),
+                by_appointment_only = VALUES(by_appointment_only)
+        `;
+
+        availabilityData.forEach(avail => {
+            db.query(availabilityInsert, [
+                avail["Agency ID"],
+                avail["Agency Name"],
+                avail["Day of Week"],
+                avail["Frequency"],
+                avail["Starting Time"],
+                avail["Ending Time"],
+                avail["By Appointment Only"]
+            ], err => {
+                if (err) console.error("Availability insert error:", err);
+            });
+        });
+
+        // Final response (sent immediately after firing all inserts)
+        res.status(200).json({ message: "All data inserted (location, information, availability)" });
+
+    } catch (err) {
+        console.error("Unexpected error:", err);
+        res.status(500).json({ message: "Unexpected error occurred" });
+    }
+});
+
+
+app.get("/api/agencies", (req, res) => {
+    const sql = "SELECT agency_id, agency_name, latitude, longitude FROM location WHERE latitude IS NOT NULL AND longitude IS NOT NULL";
+
+    db.query(sql, (err, results) => {
+        if (err) {
+            console.error("Failed to fetch agency locations:", err);
+            return res.status(500).json({ message: "Database error" });
+        }
+
+        // dummy weight for food insecurity
+        const enriched = results.map(r => ({
+            ...r,
+            weight: Math.random().toFixed(2) //value between 0.00 and 1.00
+        }));
+
+        
+        res.status(200).json(results);
+    });
+});
+
+
 
 // Start Server
 app.listen(3000, () => {
