@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Agency Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS + JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+
+  <style>
+    body { margin: 0; }
+    #map { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+    const map = L.map('map');
+  
+    // 1. Try to get user's location
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          map.setView([latitude, longitude], 13);
+  
+          // Optionally: add a marker for the user
+          L.marker([latitude, longitude])
+            .addTo(map)
+            .bindPopup("You are here!")
+            .openPopup();
+        },
+        (error) => {
+          console.warn("Geolocation failed or was denied, using fallback location.");
+          map.setView([38.9072, -77.0369], 11); // Default: DC
+        }
+      );
+    } else {
+      console.warn("Geolocation not supported, using fallback location.");
+      map.setView([38.9072, -77.0369], 11); // Default: DC
+    }
+  
+    // 2. Load map tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+  
+    // 3. Fetch and add agency markers
+    fetch('http://localhost:3000/api/agencies')
+      .then(res => res.json())
+      .then(agencies => {
+        const heatPoints = [];
+
+        agencies.forEach(agency => {
+            console.log("Agency data:", agency); //debug
+            
+            
+            const lat = parseFloat(agency.latitude);
+            const lng = parseFloat(agency.longitude);
+
+            const possibleWeights = [0.1, 0.4, 0.7, 1.0];
+            const weight = possibleWeights[Math.floor(Math.random() * possibleWeights.length)];
+            console.log("Weight for", agency.agency_name, "=", weight);
+
+          
+          if (!isNaN(lat) && !isNaN(lng)) {
+            L.marker([lat, lng])
+              .addTo(map)
+              .bindPopup(`<strong>${agency.agency_name}</strong><br>ID: ${agency.agency_id}<br>Insecurity Index: ${weight}`);
+            
+              // Add to heatmap layer
+              heatPoints.push([lat, lng, weight]);
+          }
+        });
+
+        // Add heatmap layer
+        L.heatLayer(heatPoints, {
+            radius: 100,
+            blur: 50,
+            maxZoom: 16,
+            gradient: {
+                0.1: 'blue',
+                0.4: 'lime',
+                0.7: 'orange',
+                1.0: 'red'
+            }
+        }).addTo(map);
+      })
+      .catch(err => {
+        console.error("Failed to load agency data", err);
+      });
+  </script>
+  
+
+</body>
+</html>
