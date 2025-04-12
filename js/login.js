@@ -145,7 +145,7 @@ document
     const isSignUp =
       document.getElementById("form-title").textContent === "Sign Up";
 
-    if (isSignUp && confirmPassword.value !== password) {
+    if (isSignUp && confirmPassword && confirmPassword.value !== password) {
       alert("Passwords do not match!");
       return;
     }
@@ -155,5 +155,6 @@ document
       .getAttribute("data-tab");
     const endpoint = isSignUp ? "signup" : "login";
     const data = { email, password, user_type };
+    console.log(data);
     authenticateUser(endpoint, data);
   });
