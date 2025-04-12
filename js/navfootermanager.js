@@ -7,126 +7,138 @@ class SpecialHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         
-            <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
-              <div class="container-default w-container">
-                <div class="header-block">
-                  <a href="index.html" aria-current="page" class="header-brand w-nav-brand w--current"><img loading="lazy" src="images/Logo.webp" alt="" class="header-brand-logo"></a>
-                  <nav role="navigation" class="header-nav-menu w-nav-menu">
-                    <ul role="list" class="header-list">
-                      <li class="header-list-item">
-                        <div data-w-id="38b61dad-ec44-5bf7-f9d3-c95b9a806f53" class="header-nav-link">
-                          <a href="index.html" aria-current="page" class="header-nav-text w-nav-link w--current">Home</a>
-                          <div class="header-hover-block">
-                            <div class="nav-hover-circle"></div>
-                            <div class="nav-line-block">
-                              <div class="nav-hover-line"></div>
-                              <div class="nav-hover-bg"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-list-item">
-                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                          <a href="about.html" class="header-nav-text w-nav-link">About</a>
-                          <div class="header-hover-block">
-                            <div class="nav-hover-circle"></div>
-                            <div class="nav-line-block">
-                              <div class="nav-hover-line"></div>
-                              <div class="nav-hover-bg"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-list-item">
-                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                          <a href="explore.html" class="header-nav-text w-nav-link">Explore</a>
-                          <div class="header-hover-block">
-                            <div class="nav-hover-circle"></div>
-                            <div class="nav-line-block">
-                              <div class="nav-hover-line"></div>
-                              <div class="nav-hover-bg"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-list-item">
-                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                          <a href="Vdashboard.html" class="header-nav-text w-nav-link">Dashboard</a>
-                          <div class="header-hover-block">
-                            <div class="nav-hover-circle"></div>
-                            <div class="nav-line-block">
-                              <div class="nav-hover-line"></div>
-                              <div class="nav-hover-bg"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-list-item">
-                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                          <a href="contact-us.html" class="header-nav-text w-nav-link">Contact</a>
-                          <div class="header-hover-block">
-                            <div class="nav-hover-circle"></div>
-                            <div class="nav-line-block">
-                              <div class="nav-hover-line"></div>
-                              <div class="nav-hover-bg"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-list-item">
-                        <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
-                          <a href="donate.html" class="header-nav-text w-nav-link">Donate</a>
-                          <div class="header-hover-block">
-                            <div class="nav-hover-circle"></div>
-                            <div class="nav-line-block">
-                              <div class="nav-hover-line"></div>
-                              <div class="nav-hover-bg"></div>
-                            </div>
-                          </div><img loading="lazy" src="images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
-                        </div>
-                      </li>
-                      <li class="header-list-item">
-                        <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                          <a href="profile.html" class="header-nav-text w-nav-link" id="profile-link" style="display:none;">Profile</a>
-                          <div class="header-hover-block">
-                            <div class="nav-hover-circle"></div>
-                            <div class="nav-line-block">
-                              <div class="nav-hover-line"></div>
-                              <div class="nav-hover-bg"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="header-list-item header-button-item" id="login-button" display="inline-block">
-                        <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="login.html" class="primary-button w-inline-block">
-                          <div class="button-bg"></div>
-                          <div class="button-text">Login/Signup</div>
-                          <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
-                              <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
-                            </svg></div>
-                        </a>
-                      </li>
-                      <li class="header-list-item header-logout-button-item" id="logout-button" display="None">
-                        <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="index.html" class="primary-button w-inline-block">
-                          <div class="button-bg"></div>
-                          <div class="button-text">Logout</div>
-                          <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
-                              <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
-                            </svg></div>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                  <div class="header-menu-button w-nav-button">
-                    <div class="header-menu-button-block">
-                      <div class="top"></div>
-                      <div class="middle"></div>
-                      <div class="bottom"></div>
+    <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
+      <div class="container-default w-container">
+        <div class="header-block">
+          <a href="index.html" aria-current="page" class="header-brand w-nav-brand w--current"><img loading="lazy" src="images/Logo.webp" alt="" class="header-brand-logo"></a>
+          <nav role="navigation" class="header-nav-menu w-nav-menu">
+            <ul role="list" class="header-list">
+              <li class="header-list-item">
+                <div data-w-id="38b61dad-ec44-5bf7-f9d3-c95b9a806f53" class="header-nav-link">
+                  <a href="index.html" aria-current="page" class="header-nav-text w-nav-link w--current">Home</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="about.html" class="header-nav-text w-nav-link">About</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="explore.html" class="header-nav-text w-nav-link">Explore</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="contact-us.html" class="header-nav-text w-nav-link">Contact</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
+                  <a href="donate.html" class="header-nav-text w-nav-link">Donate</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div><img loading="lazy" src="images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="Vdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link" style="display:none;">Dashboard</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="profile.html" class="header-nav-text w-nav-link" id="profile-link" style="display:none;">Profile</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="profile-volunteer.html" class="header-nav-text w-nav-link" id="profile-volunteer-link" style="display:none;">Profile</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item header-button-item" id="login-button" display="inline-block">
+                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="login.html" class="primary-button w-inline-block">
+                  <div class="button-bg"></div>
+                  <div class="button-text">Login/Signup</div>
+                  <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
+                      <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
+                    </svg></div>
+                </a>
+              </li>
+              <li class="header-list-item header-logout-button-item" id="logout-button" display="None">
+                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="index.html" class="primary-button w-inline-block">
+                  <div class="button-bg"></div>
+                  <div class="button-text">Logout</div>
+                  <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
+                      <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
+                    </svg></div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-menu-button w-nav-button">
+            <div class="header-menu-button-block">
+              <div class="top"></div>
+              <div class="middle"></div>
+              <div class="bottom"></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
             
     
     `
