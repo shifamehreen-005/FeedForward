@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
         profileLink.style.display = "inline-block";  // Show the profile link
         profileVolunteerLink.style.display = "none";  
         logoutButton.style.display = "inline-block";  // Show the logout button
-        loginButton.style.display = "None";
+        loginButton.style.display = "none";
     } else if (isLoggedIn === "true" && user_type == 'volunteers') {
-        profileLink.style.display = "None";
+        profileLink.style.display = "none";
         dashboardLink.style.display = "inline-block";
         profileVolunteerLink.style.display = "inline-block";         // Hide the profile link
         logoutButton.style.display = "inline-block";        // Hide the logout button
-        loginButton.style.display = "None";
+        loginButton.style.display = "none";
     } else {
         profileLink.style.display = "none";         // Hide the profile link
         dashboardLink.style.display = "none";
