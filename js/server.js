@@ -64,14 +64,14 @@ app.post("/signup", async (req, res) => {
 
 // **User Login**
 app.post("/login", (req, res) => {
-    const { email, password } = req.body;
+    const { email, password, user_type } = req.body;
 
     if (!email || !password) {
         return res.status(400).json({ message: "All fields are required" });
     }
 
-    const sql = "SELECT * FROM users WHERE email = ?";
-    db.query(sql, [email], (err, results) => {
+    const sql = "SELECT * FROM users WHERE email = ? AND user_type = ?";
+    db.query(sql, [email, user_type], (err, results) => {
         if (err) return res.status(500).json({ message: "Server error" });
 
         if (results.length === 0) {
