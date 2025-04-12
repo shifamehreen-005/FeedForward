@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabs = document.querySelectorAll(".tab-btn");
   const formTitle = document.getElementById("form-title");
   const toggleText = document.querySelector(".toggle-text");
+  const logoutButton = document.getElementById("logout-button");
   const toggleLink = document.getElementById("toggle-link");
   const form = document.getElementById("auth-form");
   const submitButton = form.querySelector(".btn"); // Select the submit button
@@ -11,20 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Check login status in localStorage (or sessionStorage, depending on your setup)
   const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-  // if (token && userEmail) {
-  //   console.log(userInfo)
-  //   userInfo.innerHTML = `<span>Welcome, ${userEmail}!</span> <button id="logout-btn">Logout</button>`;
-
-  //   document
-  //     .getElementById("logout-btn")
-  //     .addEventListener("click", function () {
-  //       localStorage.removeItem("token");
-  //       localStorage.removeItem("user_email");
-  //       localStorage.removeItem("user_type");
-  //       window.location.reload();
-  //     });
-  // }
-
   function addConfirmPassword() {
       if (!document.getElementById("confirm-password")) {
           const confirmPasswordGroup = document.createElement("div");
@@ -32,6 +19,36 @@ document.addEventListener("DOMContentLoaded", function () {
           confirmPasswordGroup.innerHTML = '<input type="password" id="confirm-password" placeholder="Confirm Password" required>';
           form.insertBefore(confirmPasswordGroup, form.querySelector(".btn"));
       }
+  }
+
+  logoutButton?.addEventListener("click", (e) => {
+    e.preventDefault();
+    logoutUser();
+  });
+  
+  (function checkAutoLogout() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const loginTime = parseInt(localStorage.getItem("login_time"), 10);
+  
+    if (isLoggedIn && loginTime) {
+      const ONE_HOUR = 60 * 60 * 1000; // milliseconds
+      const currentTime = Date.now();
+  
+      if (currentTime - loginTime > ONE_HOUR) {
+        alert("Session expired. You have been logged out.");
+        logoutUser();
+      }
+    }
+  })();
+  
+  function logoutUser() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user_email");
+    localStorage.removeItem("user_type");
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("login_time");
+  
+    window.location.href = "login.html";
   }
   
   function removeConfirmPassword() {
@@ -104,10 +121,12 @@ async function authenticateUser(endpoint, data) {
     const result = await response.json();
     alert(result.message);
     if (response.ok && endpoint === "login") {
+      const currentTime = Date.now();
       localStorage.setItem("token", result.token);
       localStorage.setItem("user_email", data.email);
       localStorage.setItem("user_type", data.user_type); // Store user type
       localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("login_time", currentTime);
       window.location.href = "index.html";
     }
   } catch (error) {

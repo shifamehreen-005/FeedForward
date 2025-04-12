@@ -119,7 +119,7 @@ class SpecialHeader extends HTMLElement {
                 </a>
               </li>
               <li class="header-list-item header-logout-button-item" id="logout-button" display="None">
-                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="index.html" class="primary-button w-inline-block">
+                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="login.html" class="primary-button w-inline-block">
                   <div class="button-bg"></div>
                   <div class="button-text">Logout</div>
                   <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
