@@ -1,15 +1,17 @@
 import os
 import httpx
 from flask import Flask, render_template, jsonify
+from flask_cors import CORS
 
 app = Flask("voice_app")
+CORS(app)
 
 @app.route("/")
 def index():
     try:
-        return render_template("index.html")
+        return render_template("voice.html")
     except Exception as e:
-        return "index.html not found", 404
+        return "voice.html not found", 404
 
 @app.route("/session", methods=["GET"])
 def session_endpoint():
