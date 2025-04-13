@@ -4,6 +4,22 @@ const chatInit = document.getElementById('chatInit');
 const chatContainer = document.getElementById('chatContainer');
 const email = localStorage.getItem("user_email");
 
+document.getElementById("micBtn").addEventListener("click", () => {
+    // Trigger a fetch to your local Python backend
+    fetch("http://127.0.0.1:8116/")
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "http://127.0.0.1:8116/";  // Redirect on success
+        } else {
+          alert("Could not connect to Python app.");
+        }
+      })
+      .catch(err => {
+        alert("Error: " + err);
+      });
+  });
+
+
 function expandChat() {
   chatInit.style.display = "none";
   chatContainer.style.display = "flex";
