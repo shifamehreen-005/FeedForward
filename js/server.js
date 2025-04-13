@@ -6,10 +6,14 @@ const mysql = require("mysql2");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
+const fetch = require("node-fetch");
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+const TRANSIT_API_KEY = process.env.TRANSIT_API_KEY || "d2075a8b39fe7d775cf2a672682dfa41ed554d531095786cfe030853c50e8675";
+const EXTERNAL_TRANSIT_URL = "https://external.transitapp.com/v3/otp/plan";
 
 // MySQL Connection
 const db = mysql.createConnection({
@@ -208,6 +212,43 @@ app.get('/', (req, res) => {
     res.send('Hello World');
 });
 
+app.use((req, res, next) => {
+    console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+    next();
+  });
+
+app.get("/transitPlan", async (req, res) => {
+  console.log("Received request to /transitPlan with query:", req.query);
+  
+  // Check if we have the minimum required parameters
+  if (!req.query.fromPlace || !req.query.toPlace) {
+    return res.status(400).json({
+      error: "Missing required parameters. You must provide at least 'fromPlace' and 'toPlace'."
+    });
+  }
+  
+  try {
+    const queryString = new URLSearchParams(req.query).toString();
+    const finalUrl = `${EXTERNAL_TRANSIT_URL}?${queryString}`;
+    console.log("Making request to:", finalUrl);
+
+    const response = await fetch(finalUrl, {
+      headers: {
+        apiKey: TRANSIT_API_KEY,
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`Upstream request failed with status ${response.status}`);
+    }
+
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error("Error proxying request:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
 
 app.post("/upload-json-data", (req, res) => {
     try {
