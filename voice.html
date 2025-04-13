@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Reactive Gradient Sphere</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    input {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <input type="file" id="audioFile" accept="audio/*">
+  <script src="https://cdn.jsdelivr.net/npm/three@0.155/build/three.min.js"></script>
+
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0xf9f9f9);
+    document.body.appendChild(renderer.domElement);
+
+    const geometry = new THREE.SphereGeometry(4, 70, 60);
+
+    // Gradient Shader
+    const material = new THREE.ShaderMaterial({
+      vertexShader: `
+        varying vec3 vPosition;
+        void main() {
+          vPosition = position;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        varying vec3 vPosition;
+
+        void main() {
+          float gradient = (vPosition.y + 4.0) / 8.0; // Map y from [-4, 4] to [0, 1]
+
+            vec3 colorTop = vec3(0.85, 0.98, 0.6);   // #bef746
+            vec3 colorBottom = vec3(0.0, 0.4, 0.6);      // bluish
+            vec3 beige = vec3(0.96, 0.96, 0.86);         // beige center
+            vec3 midColor = vec3(1.0, 0.6, 0.4);         // warm orange/pink (new)
+
+            vec3 baseGradient = mix(colorBottom, colorTop, gradient);
+
+            float distFromCenter = length(vPosition) / 4.0; // normalized [0, 1]
+            float beigeFade = smoothstep(0.0, 0.3, distFromCenter);    // beige fades early
+            float midFade = smoothstep(0.2, 0.6, distFromCenter);      // mid blends mid-way
+
+            vec3 color = mix(beige, midColor, beigeFade);
+            vec3 finalColor = mix(color, baseGradient, midFade);
+            gl_FragColor = vec4(finalColor, 1.0);
+        }
+      `,
+      transparent: true
+    });
+
+
+    // version 1
+    // vec3 colorTop = vec3(0.745, 0.969, 0.275);   // #bef746
+    // vec3 colorBottom = vec3(0.0, 0.4, 0.6);     // bluish bottom
+    // vec3 finalColor = mix(colorBottom, colorTop, pow(gradient, 1.5));
+
+    // version 2
+    // vec3 colorTop = vec3(0.745, 0.969, 0.275);   // #bef746
+    // vec3 colorBottom = vec3(0.0, 0.4, 0.6);      // bluish
+    // vec3 beige = vec3(0.96, 0.96, 0.86);         // beige center
+
+    // vec3 baseGradient = mix(colorBottom, colorTop, gradient);
+
+    // float distFromCenter = length(vPosition) / 4.0; // normalized [0, 1]
+    // float centerFade = smoothstep(0.0, 0.6, distFromCenter); // fade beige out
+
+    // vec3 finalColor = mix(beige, baseGradient, centerFade);
+    // gl_FragColor = vec4(finalColor, 1.0);
+
+    const sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+    camera.position.z = 10;
+
+    const light = new THREE.AmbientLight(0xffffff, 1);
+    scene.add(light);
+
+    const initialVertices = geometry.attributes.position.array.slice();
+
+    // Audio setup
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioCtx.createAnalyser();
+    analyser.fftSize = 256;
+    const dataArray = new Uint8Array(analyser.frequencyBinCount);
+
+    document.getElementById('audioFile').addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        audioCtx.decodeAudioData(ev.target.result, function (buffer) {
+          const source = audioCtx.createBufferSource();
+          source.buffer = buffer;
+          source.connect(analyser);
+          analyser.connect(audioCtx.destination);
+          source.start();
+          animate();
+        });
+      };
+      reader.readAsArrayBuffer(file);
+    });
+
+    const clock = new THREE.Clock();
+
+    function animate() {
+      requestAnimationFrame(animate);
+      analyser.getByteFrequencyData(dataArray);
+      const avg = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
+
+      const time = clock.getElapsedTime();
+      const positions = geometry.attributes.position.array;
+
+      for (let i = 0; i < positions.length; i += 3) {
+        const x = initialVertices[i];
+        const y = initialVertices[i + 1];
+        const z = initialVertices[i + 2];
+
+        const noise = Math.sin(time * 3.5 + x + y + z) * 0.05 * (avg / 150);
+        positions[i] = x + (x * noise);
+        positions[i + 1] = y + (y * noise);
+        positions[i + 2] = z + (z * noise);
+      }
+
+      geometry.attributes.position.needsUpdate = true;
+      geometry.computeVertexNormals();
+
+      sphere.rotation.y += 0.002 + avg / 2048;
+      sphere.rotation.x += 0.001;
+
+      renderer.render(scene, camera);
+    }
+  </script>
+</body>
+</html>
