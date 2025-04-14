@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const profileLink = document.getElementById("profile-link");
     const dashboardLink = document.getElementById("dashboard-link");
+    const feedbackLink = document.getElementById("feedback-link");
     const dashboardstaffLink = document.getElementById("dashboard-link-staff");
     const profileVolunteerLink = document.getElementById("profile-volunteer-link");
     const logoutButton = document.getElementById("logout-button");
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // If the user is logged in, show the Profile link and Logout button, hide the Login link
     if (isLoggedIn === "true" && user_type == 'customers') {
         dashboardLink.style.display = "none";
+        feedbackLink.style.display = "none";
         dashboardstaffLink.style.display = "none";
         profileLink.style.display = "inline-block";  // Show the profile link
         profileVolunteerLink.style.display = "none";  
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loginButton.style.display = "none";
     } else if (isLoggedIn === "true" && user_type == 'volunteers') {
         profileLink.style.display = "none";
+        feedbackLink.style.display = "none";
         dashboardLink.style.display = "inline-block";
         dashboardstaffLink.style.display = "none";
         profileVolunteerLink.style.display = "inline-block";         // Hide the profile link
@@ -27,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (isLoggedIn === "true" && user_type == 'staff') {
         profileLink.style.display = "none";
         dashboardLink.style.display = "none";
+        feedbackLink.style.display = "inline-block";
         dashboardstaffLink.style.display = "inline-block";
         profileVolunteerLink.style.display = "none";         // Hide the profile link
         logoutButton.style.display = "inline-block";        // Hide the logout button
@@ -34,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         profileLink.style.display = "none";         // Hide the profile link
         dashboardLink.style.display = "none";
+        feedbackLink.style.display = "none";
         dashboardstaffLink.style.display = "none";
         profileVolunteerLink.style.display = "none";  
         logoutButton.style.display = "none";        // Hide the logout button
