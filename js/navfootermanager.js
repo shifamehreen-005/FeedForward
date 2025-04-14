@@ -228,7 +228,7 @@ class SpecialFooter extends HTMLElement {
                 </svg></div>
               <div class="footer-contact-text-block">
                 <div class="footer-contact-subtitle">Contact support</div>
-                <div class="footer-contact-text">example@gmail.com</div>
+                <div class="footer-contact-text">ssnssm12@gmail.com</div>
               </div>
             </div>
             <div class="footer-contact-card">
@@ -244,7 +244,7 @@ class SpecialFooter extends HTMLElement {
                   </defs>
                 </svg></div>
               <div class="footer-contact-text-block">
-                <div class="footer-contact-subtitle">4517 Washington Ave. Manchester, Kentucky 39495</div>
+                <div class="footer-contact-subtitle">University of Maryland, College Park, MD 20740</div>
               </div>
             </div>
           </div>
