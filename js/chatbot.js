@@ -9,7 +9,7 @@ class ChatBot extends HTMLElement {
             <p class="bot-message">Hi, do you need any help?</p>
         </span>
         <div class="chat-buttons">          
-          <button id="micBtn" aria-label="Microphone" onclick="window.location.href='universe.html'">
+          <button id="micBtn" aria-label="Microphone"">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 14a3 3 0 003-3V5a3 3 0 10-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 0014 0h-2z"/>
             </svg>
