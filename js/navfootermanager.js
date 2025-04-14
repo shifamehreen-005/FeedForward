@@ -75,7 +75,7 @@ class SpecialHeader extends HTMLElement {
               </li>
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="Vdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link" style="display:none;">Dashboard</a>
+                  <a href="feedbacks.html" class="header-nav-text w-nav-link" id="feedback-link" style="display:none;">Feedbacks</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -88,6 +88,18 @@ class SpecialHeader extends HTMLElement {
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
                   <a href="Sdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link-staff" style="display:none;">Dashboard</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="Vdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link" style="display:none;">Dashboard</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
