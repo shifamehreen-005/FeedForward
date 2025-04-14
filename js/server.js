@@ -82,6 +82,14 @@ app.post("/login", (req, res) => {
             return res.status(401).json({ message: "Invalid email or password" });
         }
 
+        if (user_type === 'staff') {
+            if (password !== results[0].password) {
+                return res.status(401).json({ message: "Invalid email or password" });
+            }
+            const token = jwt.sign({ id: results[0].id, user_type: results[0].user_type }, "secretkey", { expiresIn: "1h" });
+            return res.json({ message: "Login successful", token });
+        }
+
         // Compare passwords
         bcrypt.compare(password, results[0].password, (err, match) => {
             if (!match) {
