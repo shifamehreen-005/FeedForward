@@ -159,7 +159,7 @@ body {
     flex-grow: 1;
     padding: 16px;
     overflow-y: auto;
-    height: 150px;
+    height: 420px;
   }
 
   .message {
