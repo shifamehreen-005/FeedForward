@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FeedForward - Page Title</title>
+
+  <!-- Stylesheets -->
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/webflow.css" rel="stylesheet" />
+  <link href="css/chatbot.css" rel="stylesheet" />
+  <link href="css/explore.css" rel="stylesheet" />
+  <link href="css/fnus-stellar-site.webflow.css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Mona Sans:200,300,regular,500,600,700,800,900", "Old Standard TT:regular"]
+      }
+    });
+  </script>
+
+  <!-- Favicons -->
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="images/webclip.png" rel="apple-touch-icon" />
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .visualizer {
+      width: 100%;
+      height: 150px;
+      background-color: #fffff5;
+      border: 0.5px solid #ddd;
+      margin-bottom: 20px;
+      border-radius: 20px;
+    }
+    
+    .form-container {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .form-question {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-left: 3px solid #007bff;
+      display: none;
+    }
+    
+    .form-question.active {
+      display: block;
+      background-color: #e7f5ff;
+    }
+    
+    .form-question.completed {
+      display: block;
+      border-left: 3px solid #28a745;
+    }
+    
+    .form-controls {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .progress {
+      height: 8px;
+      margin-bottom: 15px;
+    }
+    
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .page-title{
+        font-size: 32px;
+        font-weight: lighter;
+        /* margin: 0; */
+        /* font-size: 1.5rem; */
+        flex: 1;
+    }
+
+    #close-chatbot {
+        z-index: 9999;
+        background-color: #c73434;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 50px;
+        font-size: 14px;
+        cursor: pointer;
+        }
+
+        .header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding: 1rem; */
+        flex-wrap: wrap;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        }
+
+  </style>
+</head>
+
+<body >
+  <!-- Navigation Bar Component -->
+  <special-header></special-header>
+  <script src="js/navfootermanager.js"></script>
+
+  <!-- Page content starts here -->
+    <div class="container">
+        <div class="header-row">
+            <h1 class="page-title">One voice. One step closer to the help you need.</h1>
+            <button id="close-chatbot">✕</button>
+          </div>
+      
+      <div class="row">
+        <div class="col-md-6">
+          <div class="mb-3">
+            <p><strong>User Voice:</strong></p>
+            <canvas id="localVisualizer" class="visualizer"></canvas>
+          </div>
+          <div class="mb-3">
+            <p><strong>Agent Voice:</strong></p>
+            <canvas id="backendVisualizer" class="visualizer"></canvas>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-container">
+            <h3>Food Bank Assistance Form</h3>
+            <p class="text-muted">Our voice assistant will guide you through these questions to help find the right food bank services for your needs.</p>
+            
+            <div class="progress">
+              <div id="formProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+            
+            <div id="formQuestions">
+              <div class="form-question" data-question-id="1">
+                <label class="form-label">What is your name?</label>
+                <input type="text" class="form-control" id="name" placeholder="Your name">
+              </div>
+              
+              <div class="form-question" data-question-id="2">
+                <label class="form-label">Do you have access to a kitchen?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="kitchen-access" id="kitchen-yes" value="Yes">
+                  <label class="form-check-label" for="kitchen-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="kitchen-access" id="kitchen-no" value="No">
+                  <label class="form-check-label" for="kitchen-no">No</label>
+                </div>
+              </div>
+              
+              <div class="form-question" data-question-id="3">
+                <label class="form-label">How would you like your food?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="food-loose" value="Loose groceries">
+                  <label class="form-check-label" for="food-loose">Loose groceries</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="food-packaged" value="Pre-bagged or boxed groceries">
+                  <label class="form-check-label" for="food-packaged">Pre-bagged or boxed groceries</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="food-prepared" value="Prepared meals">
+                  <label class="form-check-label" for="food-prepared">Prepared meals</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="food-any" value="Any">
+                  <label class="form-check-label" for="food-any">Any</label>
+                </div>
+              </div>
+              
+              <div class="form-question" data-question-id="4">
+                <label class="form-label">Do you have any dietary preferences?</label>
+                <div class="checkbox-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-latin" value="Latin American">
+                    <label class="form-check-label" for="pref-latin">Latin American</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-westafrican" value="West African">
+                    <label class="form-check-label" for="pref-westafrican">West African</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-eastafrican" value="East African">
+                    <label class="form-check-label" for="pref-eastafrican">East African</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-southasian" value="Central/South Asian">
+                    <label class="form-check-label" for="pref-southasian">Central/South Asian</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-eastasian" value="East Asian">
+                    <label class="form-check-label" for="pref-eastasian">East Asian</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-easteuropean" value="Eastern European">
+                    <label class="form-check-label" for="pref-easteuropean">Eastern European</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-middleeastern" value="Middle Eastern/North African">
+                    <label class="form-check-label" for="pref-middleeastern">Middle Eastern/North African</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-halal" value="Halal">
+                    <label class="form-check-label" for="pref-halal">Halal</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-kosher" value="Kosher">
+                    <label class="form-check-label" for="pref-kosher">Kosher</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-vegetarian" value="Vegetarian">
+                    <label class="form-check-label" for="pref-vegetarian">Vegetarian</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-vegan" value="Vegan">
+                    <label class="form-check-label" for="pref-vegan">Vegan</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="pref-none" value="None">
+                    <label class="form-check-label" for="pref-none">None</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-question" data-question-id="5">
+                <label class="form-label">Are you able to travel to pick up food?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="travel-ability" id="travel-yes" value="Yes">
+                  <label class="form-check-label" for="travel-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="travel-ability" id="travel-no" value="No">
+                  <label class="form-check-label" for="travel-no">No</label>
+                </div>
+              </div>
+              
+              <div class="form-question" data-question-id="6">
+                <label class="form-label">Can someone else pick up food for you?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="someone-else" id="someone-yes" value="Yes">
+                  <label class="form-check-label" for="someone-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="someone-else" id="someone-no" value="No">
+                  <label class="form-check-label" for="someone-no">No</label>
+                </div>
+              </div>
+              
+              <div class="form-question" data-question-id="7">
+                <label class="form-label">When would you like to go?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="day-preference" id="day-today" value="Today">
+                  <label class="form-check-label" for="day-today">Today</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="day-preference" id="day-another" value="Another day">
+                  <label class="form-check-label" for="day-another">Another day</label>
+                </div>
+              </div>
+              
+              <div class="form-question" data-question-id="8">
+                <label class="form-label">Which day would you prefer?</label>
+                <div class="checkbox-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-tomorrow" value="Tomorrow">
+                    <label class="form-check-label" for="day-tomorrow">Tomorrow</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-monday" value="Monday">
+                    <label class="form-check-label" for="day-monday">Monday</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-tuesday" value="Tuesday">
+                    <label class="form-check-label" for="day-tuesday">Tuesday</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-wednesday" value="Wednesday">
+                    <label class="form-check-label" for="day-wednesday">Wednesday</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-thursday" value="Thursday">
+                    <label class="form-check-label" for="day-thursday">Thursday</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-friday" value="Friday">
+                    <label class="form-check-label" for="day-friday">Friday</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-saturday" value="Saturday">
+                    <label class="form-check-label" for="day-saturday">Saturday</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="day-sunday" value="Sunday">
+                    <label class="form-check-label" for="day-sunday">Sunday</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-question" data-question-id="9">
+                <label class="form-label">What time would you prefer?</label>
+                <select class="form-select" id="preferred-time">
+                  <option value="">Select a time range</option>
+                  <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+                  <option value="Afternoon (12pm-4pm)">Afternoon (12pm-4pm)</option>
+                  <option value="Evening (4pm-7pm)">Evening (4pm-7pm)</option>
+                </select>
+              </div>
+              
+              <div class="form-question" data-question-id="10">
+                <label class="form-label">What is your location?</label>
+                <input type="text" class="form-control" id="location" placeholder="Your address or neighborhood">
+              </div>
+              
+              <div class="form-question" data-question-id="11">
+                <label class="form-label">For home delivery, what time would you prefer?</label>
+                <select class="form-select" id="delivery-time">
+                  <option value="">Select a time range</option>
+                  <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+                  <option value="Afternoon (12pm-4pm)">Afternoon (12pm-4pm)</option>
+                  <option value="Evening (4pm-7pm)">Evening (4pm-7pm)</option>
+                </select>
+              </div>
+              
+              <div class="form-question" data-question-id="12">
+                <label class="form-label">Any additional comments or needs?</label>
+                <textarea class="form-control" id="comments" rows="3" placeholder="Please share any other information that might help us serve you better"></textarea>
+              </div>
+            </div>
+            
+            <div class="form-controls">
+              <button type="button" id="startVoiceForm" class="btn btn-primary">Start Voice Form</button>
+              <button type="button" id="resetForm" class="btn btn-secondary">Reset Form</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="js/webflow.js"></script>
+  <script src="js/explore.js"></script>
+<script>
+      document.getElementById('close-chatbot').addEventListener('click', function () {
+    // Go back to the previous page
+    window.history.back();
+  });
+</script>
+
+</body>
+</html>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+  function getSelectedCheckboxValues(idArray) {
+    return idArray
+      .filter(id => document.getElementById(id)?.checked)
+      .map(id => document.getElementById(id).value);
+  }
+  
+  function shouldShowQuestion(questionId) {
+    switch(questionId) {
+      case "3": // Food format question
+        return document.getElementById("kitchen-yes")?.checked || false;
+        
+      case "6": // Someone else can pick up
+        return document.getElementById("travel-no")?.checked || false;
+        
+      case "7": // Day preference
+        return document.getElementById("travel-yes")?.checked || 
+               document.getElementById("someone-yes")?.checked || false;
+        
+      case "8": // Specific day
+        return document.getElementById("day-another")?.checked || false;
+        
+      case "9": // Preferred time
+      case "10": // Location for pickup
+        return document.getElementById("travel-yes")?.checked || 
+               document.getElementById("someone-yes")?.checked || false;
+        
+      case "11": // Delivery time
+        return document.getElementById("travel-no")?.checked && 
+               document.getElementById("someone-no")?.checked || false;
+        
+      default:
+        return true;
+    }
+  }
+  
+  function generateFormSummary(formData) {
+    let summary = [];
+    
+    if (formData.name) {
+      summary.push(`Name: ${formData.name}`);
+    }
+    
+    if (formData.hasKitchen) {
+      summary.push("Has access to a kitchen");
+    } else {
+      summary.push("Does not have access to a kitchen");
+    }
+    
+    if (formData.foodFormat && formData.foodFormat.length > 0) {
+      summary.push(`Food format preference: ${formData.foodFormat.join(", ")}`);
+    }
+    
+    if (formData.dietaryPreferences && formData.dietaryPreferences.length > 0 && !formData.dietaryPreferences.includes("None")) {
+      summary.push(`Dietary preferences: ${formData.dietaryPreferences.join(", ")}`);
+    }
+    
+    if (formData.canTravel) {
+      summary.push("Can travel to pick up food");
+      
+      if (formData.dayPreference) {
+        if (formData.dayPreference === "Today") {
+          summary.push("Preferred pickup day: Today");
+        } else if (formData.specificDays && formData.specificDays.length > 0) {
+          summary.push(`Preferred pickup days: ${formData.specificDays.join(", ")}`);
+        }
+      }
+      
+      if (formData.preferredTime) {
+        summary.push(`Preferred pickup time: ${formData.preferredTime}`);
+      }
+    } else if (formData.someoneElseCanPickup) {
+      summary.push("Someone else can pick up food");
+      
+      if (formData.dayPreference) {
+        if (formData.dayPreference === "Today") {
+          summary.push("Preferred pickup day: Today");
+        } else if (formData.specificDays && formData.specificDays.length > 0) {
+          summary.push(`Preferred pickup days: ${formData.specificDays.join(", ")}`);
+        }
+      }
+      
+      if (formData.preferredTime) {
+        summary.push(`Preferred pickup time: ${formData.preferredTime}`);
+      }
+    } else {
+      summary.push("Needs home delivery");
+      
+      if (formData.deliveryTime) {
+        summary.push(`Preferred delivery time: ${formData.deliveryTime}`);
+      }
+    }
+    
+    if (formData.location) {
+      summary.push(`Location: ${formData.location}`);
+    }
+    
+    if (formData.comments) {
+      summary.push(`Additional comments: ${formData.comments}`);
+    }
+    
+    return summary.join(". ");
+  }
+  
+  const fns = {
+    getPageHTML: () => {
+      return { success: true, html: document.documentElement.outerHTML };
+    },
+    changeBackgroundColor: ({ color }) => {
+      document.body.style.backgroundColor = color;
+      return { success: true, color };
+    },
+    changeTextColor: ({ color }) => {
+      document.body.style.color = color;
+      return { success: true, color };
+    },
+    voiceTransit: async ({ location }) => {
+      const formStatus = fns.getFormStatus();
+      if (!formStatus.isCompleted) {
+        return {
+          success: false,
+          message: "User has not filled all details in the form yet - IMPORTANT: Only invoke this after verifying the form is 100% complete by calling getFormStatus first"
+        };
+      }
+
+      try {
+        if (!window.userLocation) {
+          await getUserLocation();
+          if (!window.userLocation) {
+            throw new Error("Could not access your current location");
+          }
+        }
+        const userLat = window.userLocation.latitude;
+        const userLon = window.userLocation.longitude;
+        const locationStr = `${userLat}, ${userLon}`;
+        const nearestFoodBank = findNearestFoodBankVoice(locationStr);
+        if (typeof nearestFoodBank === 'string') {
+          return { success: false, error: nearestFoodBank };
+        }
+        const foodBankLat = nearestFoodBank.lat;
+        const foodBankLon = nearestFoodBank.lon;
+        const newInputStr = `${userLat}, ${userLon}, ${foodBankLat}, ${foodBankLon}`;
+        const results = await planTransit(newInputStr);
+
+        return {
+          success: true,
+          user_location: { latitude: userLat, longitude: userLon },
+          nearest_food_bank: nearestFoodBank.name,
+          distance_km: haversineDistance(userLat, userLon, foodBankLat, foodBankLon).toFixed(2),
+          transit_options: JSON.parse(results)
+        };
+      } catch (e) {
+        return { success: false, error: `Error: ${e.toString()}` };
+      }
+    },
+     
+    
+    processFormInput: ({ questionId, answer }) => {
+      try {
+        const questionElement = document.querySelector(`.form-question[data-question-id="${questionId}"]`);
+        
+        if (!questionElement) {
+          return { success: false, error: "Question not found" };
+        }
+       
+        // Process the answer based on question ID
+        switch(questionId) {
+          case "1": // Name
+            document.getElementById("name").value = answer;
+            break;
+            
+          case "2": // Kitchen access
+            const kitchenAccess = answer.toLowerCase();
+            document.getElementById("kitchen-yes").checked = kitchenAccess === "yes";
+            document.getElementById("kitchen-no").checked = kitchenAccess === "no";
+            
+            // Skip food format question if they don't have kitchen access
+            if (kitchenAccess === "no") {
+              // Auto-complete question 3 with "Prepared meals"
+              const q3Element = document.querySelector('.form-question[data-question-id="3"]');
+              if (q3Element) {
+                document.getElementById("food-prepared").checked = true;
+                q3Element.classList.add("completed");
+              }
+            }
+            break;
+            
+          case "3": // Food format
+            const foodOptions = answer.toLowerCase().split(',').map(opt => opt.trim());
+            document.getElementById("food-loose").checked = foodOptions.includes("loose groceries");
+            document.getElementById("food-packaged").checked = foodOptions.includes("pre-bagged") || foodOptions.includes("boxed") || foodOptions.includes("pre-bagged or boxed groceries");
+            document.getElementById("food-prepared").checked = foodOptions.includes("prepared meals");
+            document.getElementById("food-any").checked = foodOptions.includes("any");
+            break;
+            
+          case "4": // Dietary preferences
+            const dietaryPrefs = answer.toLowerCase().split(',').map(pref => pref.trim());
+            document.getElementById("pref-latin").checked = dietaryPrefs.includes("latin american");
+            document.getElementById("pref-westafrican").checked = dietaryPrefs.includes("west african");
+            document.getElementById("pref-eastafrican").checked = dietaryPrefs.includes("east african");
+            document.getElementById("pref-southasian").checked = dietaryPrefs.includes("central/south asian") || dietaryPrefs.includes("south asian");
+            document.getElementById("pref-eastasian").checked = dietaryPrefs.includes("east asian");
+            document.getElementById("pref-easteuropean").checked = dietaryPrefs.includes("eastern european");
+            document.getElementById("pref-middleeastern").checked = dietaryPrefs.includes("middle eastern") || dietaryPrefs.includes("north african") || dietaryPrefs.includes("middle eastern/north african");
+            document.getElementById("pref-halal").checked = dietaryPrefs.includes("halal");
+            document.getElementById("pref-kosher").checked = dietaryPrefs.includes("kosher");
+            document.getElementById("pref-vegetarian").checked = dietaryPrefs.includes("vegetarian");
+            document.getElementById("pref-vegan").checked = dietaryPrefs.includes("vegan");
+            document.getElementById("pref-none").checked = dietaryPrefs.includes("none");
+            break;
+            
+          case "5": // Travel ability
+            const canTravel = answer.toLowerCase();
+            document.getElementById("travel-yes").checked = canTravel === "yes";
+            document.getElementById("travel-no").checked = canTravel === "no";
+            
+            // Skip to relevant question based on answer
+            if (canTravel === "yes") {
+              // If they can travel, skip to day question (Q7)
+              const q6Element = document.querySelector('.form-question[data-question-id="6"]');
+              if (q6Element) {
+                q6Element.classList.add("completed");
+              }
+            }
+            break;
+            
+          case "6": // Someone else can pick up
+            const someoneElse = answer.toLowerCase();
+            document.getElementById("someone-yes").checked = someoneElse === "yes";
+            document.getElementById("someone-no").checked = someoneElse === "no";
+            
+            // If no one can pick up, skip to delivery questions
+            if (someoneElse === "no") {
+              // Skip questions 7-10 and go to delivery time (Q11)
+              for (let i = 7; i <= 10; i++) {
+                const qElement = document.querySelector(`.form-question[data-question-id="${i}"]`);
+                if (qElement) {
+                  qElement.classList.add("completed");
+                }
+              }
+            }
+            break;
+            
+          case "7": // Day preference (today or another day)
+            const dayPref = answer.toLowerCase();
+            document.getElementById("day-today").checked = dayPref === "today";
+            document.getElementById("day-another").checked = dayPref === "another day";
+            
+            // If today, skip specific day selection
+            if (dayPref === "today") {
+              const q8Element = document.querySelector('.form-question[data-question-id="8"]');
+              if (q8Element) {
+                q8Element.classList.add("completed");
+              }
+            }
+            break;
+            
+          case "8": // Specific day selection
+            const dayOptions = answer.toLowerCase().split(',').map(day => day.trim());
+            document.getElementById("day-tomorrow").checked = dayOptions.includes("tomorrow");
+            document.getElementById("day-monday").checked = dayOptions.includes("monday");
+            document.getElementById("day-tuesday").checked = dayOptions.includes("tuesday");
+            document.getElementById("day-wednesday").checked = dayOptions.includes("wednesday");
+            document.getElementById("day-thursday").checked = dayOptions.includes("thursday");
+            document.getElementById("day-friday").checked = dayOptions.includes("friday");
+            document.getElementById("day-saturday").checked = dayOptions.includes("saturday");
+            document.getElementById("day-sunday").checked = dayOptions.includes("sunday");
+            break;
+            
+          case "9": // Preferred pickup time
+            const selectTime = document.getElementById("preferred-time");
+            for (let i = 0; i < selectTime.options.length; i++) {
+              if (selectTime.options[i].value.toLowerCase().includes(answer.toLowerCase())) {
+                selectTime.selectedIndex = i;
+                break;
+              }
+            }
+            break;
+            
+          case "10": // Location
+            document.getElementById("location").value = answer;
+            break;
+            
+          case "11": // Delivery time
+            const deliveryTime = document.getElementById("delivery-time");
+            for (let i = 0; i < deliveryTime.options.length; i++) {
+              if (deliveryTime.options[i].value.toLowerCase().includes(answer.toLowerCase())) {
+                deliveryTime.selectedIndex = i;
+                break;
+              }
+            }
+            break;
+            
+          case "12": // Comments
+            document.getElementById("comments").value = answer;
+            break;
+        }
+        
+        // Mark current question as completed
+        questionElement.classList.remove("active");
+        questionElement.classList.add("completed");
+        
+        // Determine next question based on user's answers and logic
+        let nextQuestionId = parseInt(questionId) + 1;
+        
+        // Apply skip logic
+        if (questionId === "2" && document.getElementById("kitchen-no").checked) {
+          // Skip food format question
+          nextQuestionId = 4;
+        } else if (questionId === "5" && document.getElementById("travel-yes").checked) {
+          // Skip the someone else question
+          nextQuestionId = 7;
+        } else if (questionId === "6" && document.getElementById("someone-no").checked) {
+          // Skip to delivery time question
+          nextQuestionId = 11;
+        } else if (questionId === "7" && document.getElementById("day-today").checked) {
+          // Skip specific day selection
+          nextQuestionId = 9;
+        }
+        
+        // Activate next question
+        const nextQuestionElement = document.querySelector(`.form-question[data-question-id="${nextQuestionId}"]`);
+        if (nextQuestionElement) {
+          nextQuestionElement.classList.add("active");
+        }
+        
+        // Update progress bar
+        updateFormProgress();
+        
+        return {
+          success: true,
+          questionId: questionId,
+          answer: answer,
+          formCompleted: !nextQuestionElement,
+          nextQuestionId: nextQuestionElement ? nextQuestionId : null,
+          skipLogicApplied: nextQuestionId > parseInt(questionId) + 1
+        };
+      } catch (e) {
+        return { success: false, error: e.toString() };
+      }
+    },
+    
+    // Updated getNextFormQuestion function
+    getNextFormQuestion: () => {
+      const activeQuestion = document.querySelector('.form-question.active');
+      
+      if (!activeQuestion) {
+        // If no question is active, activate the first one
+        const firstQuestion = document.querySelector('.form-question');
+        if (firstQuestion) {
+          firstQuestion.classList.add('active');
+          updateFormProgress();
+          return {
+            success: true,
+            questionId: firstQuestion.dataset.questionId,
+            questionText: firstQuestion.querySelector('.form-label').innerText
+          };
+        } else {
+          return { success: false, error: "No questions found" };
+        }
+      }
+      
+      // Get the current active question information
+      const currentQuestionId = activeQuestion.dataset.questionId;
+      const questionText = activeQuestion.querySelector('.form-label').innerText;
+      
+      // Handle conditional text based on previous answers
+      let modifiedText = questionText;
+      
+      // Modify question text based on previous answers
+      if (currentQuestionId === "6" && document.getElementById("travel-no").checked) {
+        modifiedText = "Can someone else pick up food for you?";
+      }
+      
+      if (currentQuestionId === "7") {
+        // Check if someone else is picking up
+        const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+        if (someoneElse) {
+          modifiedText = "When would they like to go?";
+        }
+      }
+      
+      if (currentQuestionId === "8") {
+        // Check if someone else is picking up
+        const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+        if (someoneElse) {
+          modifiedText = "Which day would they prefer?";
+        }
+      }
+      
+      if (currentQuestionId === "9") {
+        // Check if someone else is picking up
+        const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+        if (someoneElse) {
+          modifiedText = "What time would they prefer?";
+        }
+      }
+      
+      return {
+        success: true,
+        questionId: currentQuestionId,
+        questionText: modifiedText,
+        originalText: questionText
+      };
+    },
+    
+    // Updated getFormStatus function
+    getFormStatus: () => {
+      const totalQuestions = document.querySelectorAll('.form-question').length;
+      const visibleQuestions = document.querySelectorAll('.form-question:not([style*="display: none"])').length || totalQuestions;
+      const completedQuestions = document.querySelectorAll('.form-question.completed').length;
+      const currentQuestion = document.querySelector('.form-question.active');
+      
+      // Calculate progress based on visible questions only, accounting for skip logic
+      const progress = Math.round((completedQuestions / visibleQuestions) * 100);
+      
+      // For backward compatibility with existing code
+      if (document.getElementById("name") && document.getElementById("kitchen-yes")) {
+        // New food bank form is present
+        // Gather form data to summarize user preferences
+        const formData = {
+          name: document.getElementById("name")?.value || "",
+          hasKitchen: document.getElementById("kitchen-yes")?.checked || false,
+          foodFormat: getSelectedCheckboxValues([
+            "food-loose", "food-packaged", "food-prepared", "food-any"
+          ]),
+          dietaryPreferences: getSelectedCheckboxValues([
+            "pref-latin", "pref-westafrican", "pref-eastafrican", "pref-southasian",
+            "pref-eastasian", "pref-easteuropean", "pref-middleeastern", "pref-halal",
+            "pref-kosher", "pref-vegetarian", "pref-vegan", "pref-none"
+          ]),
+          canTravel: document.getElementById("travel-yes")?.checked || false,
+          someoneElseCanPickup: document.getElementById("someone-yes")?.checked || false,
+          dayPreference: document.getElementById("day-today")?.checked ? "Today" : 
+                        (document.getElementById("day-another")?.checked ? "Another day" : ""),
+          specificDays: getSelectedCheckboxValues([
+            "day-tomorrow", "day-monday", "day-tuesday", "day-wednesday",
+            "day-thursday", "day-friday", "day-saturday", "day-sunday"
+          ]),
+          preferredTime: document.getElementById("preferred-time")?.value || "",
+          location: document.getElementById("location")?.value || "",
+          deliveryTime: document.getElementById("delivery-time")?.value || "",
+          comments: document.getElementById("comments")?.value || ""
+        };
+        
+        // Determine if home delivery is required
+        const needsHomeDelivery = !formData.canTravel && !formData.someoneElseCanPickup;
+        
+        return {
+          success: true,
+          totalQuestions: totalQuestions,
+          visibleQuestions: visibleQuestions,
+          completedQuestions: completedQuestions,
+          progress: progress,
+          currentQuestionId: currentQuestion ? currentQuestion.dataset.questionId : null,
+          isCompleted: completedQuestions === visibleQuestions,
+          formData: formData,
+          needsHomeDelivery: needsHomeDelivery,
+          summary: generateFormSummary(formData)
+        };
+      } else {
+        // Original form is present - backward compatibility
+        return {
+          success: true,
+          totalQuestions: totalQuestions,
+          completedQuestions: completedQuestions,
+          progress: Math.round((completedQuestions / totalQuestions) * 100),
+          currentQuestionId: currentQuestion ? currentQuestion.dataset.questionId : null,
+          isCompleted: completedQuestions === totalQuestions
+        };
+      }
+    }
+  };
+
+  function getUserLocation() {
+    return new Promise((resolve, reject) => {
+      if (!navigator.geolocation) {
+        reject(new Error("Geolocation is not supported by this browser"));
+        return;
+      }
+      
+      const statusDiv = document.getElementById('locationStatus');
+      if (statusDiv) {
+        statusDiv.textContent = "Requesting your location...";
+        statusDiv.style.display = "block";
+      }
+      
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const userLat = position.coords.latitude;
+          const userLon = position.coords.longitude;
+          
+          if (statusDiv) {
+            statusDiv.textContent = `Location acquired: ${userLat.toFixed(6)}, ${userLon.toFixed(6)}`;
+            statusDiv.style.color = "green";
+          }
+          
+          window.userLocation = {
+            latitude: userLat,
+            longitude: userLon
+          };
+          
+          const locationInput = document.getElementById('userLocationInput');
+          if (locationInput) {
+            locationInput.value = `${userLat}, ${userLon}`;
+          }
+          
+          resolve({ latitude: userLat, longitude: userLon });
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+          
+          if (statusDiv) {
+            statusDiv.textContent = `Error getting location: ${error.message}`;
+            statusDiv.style.color = "red";
+          }
+          
+          reject(error);
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 0
+        }
+      );
+    });
+  }
+
+  // Updated to handle both form formats
+  function updateFormProgress() {
+    // Check which form is present by looking for a distinctive element
+    const isFoodBankForm = !!document.getElementById("kitchen-yes");
+    
+    if (isFoodBankForm) {
+      // For food bank form with skip logic
+      const visibleQuestions = document.querySelectorAll('.form-question:not([style*="display: none"])').length;
+      const completedQuestions = document.querySelectorAll('.form-question.completed').length;
+      const progress = Math.round((completedQuestions / visibleQuestions) * 100);
+      
+      const progressBar = document.getElementById('formProgress');
+      if (progressBar) {
+        progressBar.style.width = `${progress}%`;
+        progressBar.textContent = `${progress}%`;
+        progressBar.setAttribute('aria-valuenow', progress);
+      }
+    } else {
+      // Original form logic
+      const totalQuestions = document.querySelectorAll('.form-question').length;
+      const completedQuestions = document.querySelectorAll('.form-question.completed').length;
+      const progress = Math.round((completedQuestions / totalQuestions) * 100);
+      
+      const progressBar = document.getElementById('formProgress');
+      if (progressBar) {
+        progressBar.style.width = `${progress}%`;
+        progressBar.textContent = `${progress}%`;
+        progressBar.setAttribute('aria-valuenow', progress);
+      }
+    }
+  }
+
+  // Updated resetForm function to handle food bank form
+  function resetForm() {
+    // Check which form is present by looking for a distinctive element
+    const isFoodBankForm = !!document.getElementById("kitchen-yes");
+    
+    if (isFoodBankForm) {
+      // Reset all input fields
+      document.getElementById('name').value = '';
+      
+      // Reset all radio buttons
+      const radioButtons = document.querySelectorAll('input[type="radio"]');
+      radioButtons.forEach(radio => {
+        radio.checked = false;
+      });
+      
+      // Reset all checkboxes
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+      });
+      
+      // Reset select elements
+      if (document.getElementById('preferred-time')) {
+        document.getElementById('preferred-time').selectedIndex = 0;
+      }
+      if (document.getElementById('delivery-time')) {
+        document.getElementById('delivery-time').selectedIndex = 0;
+      }
+      
+      // Reset textarea
+      document.getElementById('comments').value = '';
+    } else {
+      // Original form reset
+      document.getElementById('name').value = '';
+      document.getElementById('age').value = '';
+      document.getElementById('city').value = '';
+      document.getElementById('transport-bus').checked = false;
+      document.getElementById('transport-subway').checked = false;
+      document.getElementById('transport-walk').checked = false;
+      document.getElementById('comments').value = '';
+    }
+    
+    // Reset question states (works for both forms)
+    const questions = document.querySelectorAll('.form-question');
+    questions.forEach((q, index) => {
+      q.classList.remove('active', 'completed');
+      if (index === 0) {
+        q.classList.add('active');
+      }
+    });
+   
+    // Update progress bar
+    updateFormProgress();
+  }
+
+  async function getLocationName(lat, lon) {
+      const url = "https://nominatim.openstreetmap.org/reverse";
+      const params = new URLSearchParams({
+          format: "json",
+          lat: lat,
+          lon: lon,
+          zoom: 14,
+          addressdetails: 1
+      });
+      
+      const headers = {
+          "User-Agent": "TransitApp/1.0 (your-email@example.com)"
+      };
+      
+      try {
+          const response = await fetch(`${url}?${params}`, {
+              headers: headers,
+              timeout: 10000
+          });
+          
+          const data = await response.json();
+          return data.display_name || `(${lat}, ${lon})`;
+      } catch (e) {
+          return `(${lat}, ${lon})`;
+      }
+  }
+
+
+  function haversineDistance(lat1, lon1, lat2, lon2) {
+      const R = 6371; 
+      const dLat = toRadians(lat2 - lat1);
+      const dLon = toRadians(lon2 - lon1);
+      
+      const a = 
+          Math.pow(Math.sin(dLat / 2), 2) + 
+          Math.cos(toRadians(lat1)) * 
+          Math.cos(toRadians(lat2)) * 
+          Math.pow(Math.sin(dLon / 2), 2);
+      
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    
+      return R * c;
+  }
+
+  function toRadians(degrees) {
+      return degrees * (Math.PI / 180);
+  }
+
+  function extractStationCode(stopId) {
+      if (stopId.startsWith("WMATAS:PF_")) {
+          const remainder = stopId.substring("WMATAS:PF_".length);
+          const parts = remainder.split("_");
+          if (parts.length > 0) {
+              return parts[0];
+          }
+      }
+      return stopId;
+  }
+
+  async function station2Station(inputStr1, inputStr2) {
+      const headers = { 'api_key': wmata_api_key };
+      
+      const fromStation = inputStr1;
+      const toStation = inputStr2;
+      
+      const urlCost = `http://api.wmata.com/Rail.svc/json/jSrcStationToDstStationInfo?FromStationCode=${fromStation}&ToStationCode=${toStation}`;
+      const responseCost = await fetch(urlCost, { headers });
+      const costData = await responseCost.json();
+      const costInfo = costData.StationToStationInfos[0];
+      const fareInfo = costInfo.RailFare;
+      
+      const urlPrediction = `http://api.wmata.com/StationPrediction.svc/json/GetPrediction/${fromStation}`;
+      const responsePrediction = await fetch(urlPrediction, { headers });
+      const predictionData = await responsePrediction.json();
+      const predictions = predictionData.Trains;
+    
+      const timeNow = new Date();
+  
+      const availableTrains = [];
+      for (const train of predictions) {
+          if (train.Min !== "ARR") {
+              try {
+                  const minutes = parseInt(train.Min);
+                  if (minutes >= 5) {
+                      availableTrains.push(train);
+                  }
+              } catch (e) {
+                  continue;
+              }
+          }
+      }
+      
+      const nextTrains = availableTrains.slice(0, 1);
+      
+      const finalTrains = [];
+      for (const train of nextTrains) {
+          const minutes = parseInt(train.Min);
+          const predictedDeparture = new Date(timeNow);
+          predictedDeparture.setMinutes(timeNow.getMinutes() + minutes);
+          
+          const dayOfWeek = new Intl.DateTimeFormat('en-US', { weekday: 'long', timeZone: 'America/New_York' }).format(predictedDeparture);
+          const hour = predictedDeparture.getHours();
+          
+          let finalCost;
+          if (dayOfWeek === "Saturday" || dayOfWeek === "Sunday") {
+              finalCost = fareInfo.OffPeakTime;
+          } else {
+              if ((10 <= hour && hour <= 15) || hour >= 19) {
+                  finalCost = fareInfo.OffPeakTime;
+              } else {
+                  finalCost = fareInfo.PeakTime;
+              }
+          }
+          
+          const trainInfo = {
+              Car: train.Car,
+              Destination: train.Destination,
+              Min: train.Min,
+              PredictedDepartureTime: predictedDeparture.toLocaleString('en-US', { 
+                  timeZone: 'America/New_York',
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                  second: '2-digit',
+                  hour12: false
+              }),
+              FinalCost: finalCost
+          };
+          
+          finalTrains.push(trainInfo);
+      }
+      
+      return finalTrains.length > 0 ? finalTrains[0].FinalCost : "$2.00";
+  }
+
+
+
+  async function createItinerarySummary(itinerary) {
+    
+      const legs = itinerary.legs || [];
+      const summarySentences = [];
+      let totalSubwayCost = 0.0;
+
+      for (const leg of legs) {
+          
+          const startTime = new Date(leg.startTime);
+          const startTimeStr = startTime.toLocaleTimeString('en-US', { 
+              hour: '2-digit', 
+              minute: '2-digit', 
+              hour12: false,
+              timeZone: 'America/New_York'
+          });
+
+          const mode = leg.mode || "travel";
+
+          const fromLocation = leg.from || {};
+          let fromName = (fromLocation.name || "").trim();
+          if (!fromName) {
+              const fromLat = fromLocation.lat;
+              const fromLon = fromLocation.lon;
+              if (fromLat !== undefined && fromLon !== undefined) {
+                  fromName = await getLocationName(fromLat, fromLon);
+              } else {
+                  fromName = "Unknown location";
+              }
+          }
+
+          const toLocation = leg.to || {};
+          let toName = (toLocation.name || "").trim();
+          if (!toName) {
+              const toLat = toLocation.lat;
+              const toLon = toLocation.lon;
+              if (toLat !== undefined && toLon !== undefined) {
+                  toName = await getLocationName(toLat, toLon);
+              } else {
+                  toName = "Unknown location";
+              }
+          }
+
+          let costEstimate = "$5-$10";
+          let sentence = "";
+
+          if (mode.toUpperCase() === "WALK") {
+              sentence = `At ${startTimeStr}, walk from ${fromName} to ${toName}.`;
+          } else if (mode.toUpperCase() === "BUS") {
+              const route = (leg.route || "").trim();
+              if (route) {
+                  sentence = `At ${startTimeStr}, board bus ${route} from ${fromName} to ${toName}.`;
+              } else {
+                  sentence = `At ${startTimeStr}, board the bus from ${fromName} to ${toName}.`;
+              }
+          } else if (mode.toUpperCase() === "SUBWAY") {
+              const route = (leg.route || "").trim();
+              const fromStationId = (fromLocation.stopId || "").trim();
+              const toStationId = (toLocation.stopId || "").trim();
+              const fromStationCode = fromStationId ? extractStationCode(fromStationId) : "";
+              const toStationCode = toStationId ? extractStationCode(toStationId) : "";
+
+              console.log("From station code", fromStationCode);
+              console.log("To station code", toStationCode);
+
+              let currentCost = 0.0;
+              if (fromStationCode && toStationCode) {
+                  try {
+                      costEstimate = station2Station(fromStationCode, toStationCode);
+                      currentCost = parseFloat(costEstimate.replace('$', ''));
+                  } catch (e) {
+                      costEstimate = "$5-$10";
+                      currentCost = 0.0;
+                  }
+              } else {
+                  currentCost = 0.0;
+              }
+              totalSubwayCost += currentCost;
+
+              if (route) {
+                  sentence = `At ${startTimeStr}, take the subway ${route} from ${fromName} to ${toName}. Estimated cost: ${costEstimate}`;
+              } else {
+                  sentence = `At ${startTimeStr}, take the subway from ${fromName} to ${toName}. Estimated cost: ${costEstimate}`;
+              }
+          } else {
+              sentence = `At ${startTimeStr}, travel by ${mode} from ${fromName} to ${toName}.`;
+          }
+
+          summarySentences.push(sentence);
+      }
+
+      let finalSummary = summarySentences.join(" ");
+      finalSummary += ` Total estimated subway cost: $${totalSubwayCost.toFixed(2)}.`;
+      return finalSummary;
+  }
+
+  async function planTransit(inputStr) {
+  try {
+      const parts = inputStr.split(",").map(x => x.trim());
+      if (parts.length !== 4) {
+          return JSON.stringify([{
+              error: "Input should be in the format 'from_lat, from_lon, to_lat, to_lon'."
+          }]);
+      }
+      
+      const [fromLat, fromLon, toLat, toLon] = parts;
+      
+      const departureTime = new Date();
+      departureTime.setMinutes(departureTime.getMinutes() + 10);
+      
+      const dateStr = departureTime.toISOString().split('T')[0];
+      const timeStr = departureTime.toLocaleTimeString('en-US', { 
+          hour: '2-digit', 
+          minute: '2-digit', 
+          hour12: false 
+      });
+      
+      const params = new URLSearchParams({
+          fromPlace: `${fromLat},${fromLon}`,
+          toPlace: `${toLat},${toLon}`,
+          numItineraries: 1,
+          date: dateStr,
+          time: timeStr,
+          mode: "TRANSIT,WALK",
+          arriveBy: "false"
+      });
+      
+      console.log(`Making transit request to proxy: /proxy-transit?${params}`);
+      
+      try {
+          
+          const response = await fetch(` http://localhost:4000/transitPlan?${params}`);
+          
+          if (!response.ok) {
+              const errorText = await response.text();
+              throw new Error(`HTTP error ${response.status}: ${errorText}`);
+          }
+          
+          const data = await response.json();
+          
+          if (!data.plan || !data.plan.itineraries || data.plan.itineraries.length === 0) {
+              return JSON.stringify([{
+                  "start_time": departureTime.toLocaleString('en-US', { timeZone: 'America/New_York' }),
+                  "message": "No transit routes found. Try walking or using another transportation method."
+              }]);
+          }
+          
+          const itinerary = data.plan.itineraries[0];
+          const totalDurationMinutes = itinerary.duration / 60;
+          const itinerarySummary = await createItinerarySummary(itinerary);
+          
+          return JSON.stringify([{
+              "start_from_your_place_at": departureTime.toLocaleString('en-US', { timeZone: 'America/New_York' }),
+              "total_duration_minutes": totalDurationMinutes,
+              "itinerary": itinerarySummary
+          }]);
+      } catch (e) {
+          console.error("Transit planning error:", e);
+          
+          return JSON.stringify([{
+              "error": e.toString(),
+              "fallback_message": "Transit planning service couldn't find a route. The food bank location is available on a map service using the coordinates."
+          }]);
+      }
+  } catch (e) {
+      return JSON.stringify([{
+          "error": `Error parsing transit input: ${e}`
+      }]);
+  }
+}
+
+  function findNearestFoodBankVoice(inputStr) {
+      try {
+          const parts = inputStr.split(",").map(x => x.trim());
+          if (parts.length !== 2) {
+              return "Error: Input should be in the format 'lat, lon'.";
+          }
+          const userLat = parseFloat(parts[0]);
+          const userLon = parseFloat(parts[1]);
+
+          let nearest = null;
+          let minDist = Infinity;
+          
+          for (const fb of foodBanks) {
+              const dist = haversineDistance(userLat, userLon, fb.lat, fb.lon);
+              if (dist < minDist) {
+                  minDist = dist;
+                  nearest = fb;
+              }
+          }
+          
+          return nearest;
+      } catch (e) {
+          return `Error parsing coordinates: ${e}`;
+      }
+  }
+
+
+
+
+  const foodBanks = [
+      // {"name": "Food Bank A - Target", "lat": 38.998959, "lon": -76.906453},
+      {"name": "Food Bank B - Lidl", "lat": 38.996214, "lon": -76.931543},
+      {"name": "Food Bank C - Capitol Hill", "lat": 38.889263, "lon": -76.991530},
+      {"name": "Food Bank D - Trader Joe's", "lat": 38.978089, "lon": -76.938279}
+  ];
+
+  const transit_app_api_key = "d2075a8b39fe7d775cf2a672682dfa41ed554d531095786cfe030853c50e8675";
+
+  const wmata_api_key = "59390b5927944b7ea2fd0680bb36ec33";
+
+
+
+  function configureData(dc) {
+    console.log("Configuring data channel for tool calling");
+    const event = {
+      type: 'session.update',
+      session: {
+        modalities: ['text', 'audio'],
+        tools: [
+          {
+            type: 'function',
+            name: 'changeBackgroundColor',
+            description: 'Changes the background color of the page',
+            parameters: {
+              type: 'object',
+              properties: {
+                color: { type: 'string', description: 'A hex value of the color' },
+              },
+            },
+          },
+          {
+            type: 'function',
+            name: 'changeTextColor',
+            description: 'Changes the text color of the page',
+            parameters: {
+              type: 'object',
+              properties: {
+                color: { type: 'string', description: 'A hex value of the color' },
+              },
+            },
+          },
+          {
+            type: 'function',
+            name: 'getPageHTML',
+            description: 'Gets the HTML for the current page',
+          },
+          {
+            type: 'function',
+            name: 'voiceTransit',
+            description: 'Given the current location of the user, finds the nearest food bank and provides transit options',
+            parameters: {
+              type: 'object',
+              properties: {
+                location: { 
+                  type: 'string', 
+                  description: 'User location in format "latitude,longitude" (e.g. "38.897957,-77.036560")' 
+                }
+              },
+            }
+          },
+          // New form handling tools
+          {
+            type: 'function',
+            name: 'getNextFormQuestion',
+            description: 'Gets the EXACT next question to ask in the food bank form. ALWAYS call this before asking any question to ensure you ask the correct question as shown in the form. Do not make up your own questions.',
+          },
+          {
+            type: 'function',
+            name: 'processFormInput',
+            description: 'Process user input for a food bank form question. Call this after receiving user\'s answer to store their response. ALWAYS check if the form is complete before offering transit options.',
+            parameters: {
+              type: 'object',
+              properties: {
+                questionId: { 
+                  type: 'string', 
+                  description: 'The ID of the question being answered' 
+                },
+                answer: {
+                  type: 'string',
+                  description: 'The user\'s answer to the question'
+                }
+              },
+              required: ['questionId', 'answer']
+            }
+          },
+          {
+            type: 'function',
+            name: 'getFormStatus',
+            description: 'Gets the current status of the form completion',
+          }
+        ],
+      },
+    };
+    dc.send(JSON.stringify(event));
+    console.log("Tool configuration sent:", event);
+  }
+
+
+  async function init() {
+    try {
+      try {
+        await getUserLocation();
+        console.log("User location acquired:", window.userLocation);
+      } catch (locationError) {
+        console.error("Could not get user location:", locationError);
+        // Continue with the rest of initialization even if location fails
+      }
+      
+      const tokenResponse = await fetch("/session");
+      const tokenData = await tokenResponse.json();
+      const EPHEMERAL_KEY = tokenData.client_secret.value;
+      console.log("Ephemeral key received:", EPHEMERAL_KEY);
+
+      
+      const pc = new RTCPeerConnection();
+
+     
+      const audioEl = document.createElement("audio");
+      audioEl.autoplay = true;
+      document.body.appendChild(audioEl);
+      pc.ontrack = e => {
+        if (e.streams && e.streams[0]) {
+          audioEl.srcObject = e.streams[0];
+          startBackendVisualizer(e.streams[0]);
+        }
+      };
+
+      
+      const micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      pc.addTrack(micStream.getTracks()[0]);
+      startLocalVisualizer(micStream);
+
+      
+      const dc = pc.createDataChannel("oai-events");
+
+      dc.addEventListener("open", () => {
+        console.log("Data channel open");
+        configureData(dc);
+      });
+
+    
+      dc.addEventListener("message", async (e) => {
+        console.log("Data Channel message received:", e.data);
+        let msg;
+        try {msg = JSON.parse(e.data);
+        } catch (err) {
+          console.error("Error parsing data channel message:", err);
+          return;
+        }
+      
+        if (msg.type === 'response.function_call_arguments.done') {
+          const fn = fns[msg.name];
+          if (fn !== undefined) {
+            console.log(`Calling local function ${msg.name} with arguments: ${msg.arguments}`);
+            const args = JSON.parse(msg.arguments);
+            try {
+              const result = await fn(args);
+              console.log('Function result:', result);
+             
+              dc.send(JSON.stringify({
+                type: 'conversation.item.create',
+                item: {
+                  type: 'function_call_output',
+                  call_id: msg.call_id, 
+                  output: JSON.stringify(result)
+                }
+              }));
+
+              dc.send(JSON.stringify({ type: "response.create" }));
+            } catch (error) {
+              console.error("Error calling function:", error);
+            }
+          } else {
+            console.warn(`No function defined for name: ${msg.name}`);
+          }
+        }
+      });
+
+      const offer = await pc.createOffer();
+      await pc.setLocalDescription(offer);
+      console.log("SDP offer created and set as local description.");
+
+      const baseUrl = "https://api.openai.com/v1/realtime";
+      const model = "gpt-4o-realtime-preview-2024-12-17";
+      const sdpResponse = await fetch(`${baseUrl}?model=${model}`, {
+        method: "POST",
+        body: offer.sdp,
+        headers: {
+          Authorization: `Bearer ${EPHEMERAL_KEY}`,
+          "Content-Type": "application/sdp"
+        },
+      });
+
+      const answerSdp = await sdpResponse.text();
+      const answer = {
+        type: "answer",
+        sdp: answerSdp,
+      };
+      await pc.setRemoteDescription(answer);
+      console.log("SDP answer received and set as remote description. WebRTC connection established.");
+    } catch (error) {
+      console.error("Error initializing WebRTC connection:", error);
+    }
+  }
+
+
+  function startLocalVisualizer(stream) {
+    const localCanvas = document.getElementById('localVisualizer');
+    const localCtx = localCanvas.getContext('2d');
+    localCanvas.width = localCanvas.offsetWidth;
+    localCanvas.height = localCanvas.offsetHeight;
+
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioContext.createAnalyser();
+    analyser.fftSize = 2048;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+    const source = audioContext.createMediaStreamSource(stream);
+    source.connect(analyser);
+
+    function draw() {
+      requestAnimationFrame(draw);
+      analyser.getByteTimeDomainData(dataArray);
+      localCtx.fillStyle = '#f5f5f5';
+      localCtx.fillRect(0, 0, localCanvas.width, localCanvas.height);
+      localCtx.lineWidth = 2;
+      localCtx.strokeStyle = '#007bff';
+      localCtx.beginPath();
+      const sliceWidth = localCanvas.width / dataArray.length;
+      let x = 0;
+      for (let i = 0; i < dataArray.length; i++) {
+        const v = dataArray[i] / 128.0;
+        const y = v * localCanvas.height / 2;
+        if (i === 0) {
+          localCtx.moveTo(x, y);
+        } else {
+          localCtx.lineTo(x, y);
+        }
+        x += sliceWidth;
+      }
+      localCtx.lineTo(localCanvas.width, localCanvas.height / 2);
+      localCtx.stroke();
+    }
+    draw();
+  }
+
+  function startBackendVisualizer(remoteStream) {
+    const backendCanvas = document.getElementById('backendVisualizer');
+    const backendCtx = backendCanvas.getContext('2d');
+    backendCanvas.width = backendCanvas.offsetWidth;
+    backendCanvas.height = backendCanvas.offsetHeight;
+
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioContext.createAnalyser();
+    analyser.fftSize = 2048;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+    const source = audioContext.createMediaStreamSource(remoteStream);
+    source.connect(analyser);
+
+    function draw() {
+      requestAnimationFrame(draw);
+      analyser.getByteTimeDomainData(dataArray);
+      backendCtx.fillStyle = '#f5f5f5';
+      backendCtx.fillRect(0, 0, backendCanvas.width, backendCanvas.height);
+      backendCtx.lineWidth = 2;
+      backendCtx.strokeStyle = '#ff0000';
+      backendCtx.beginPath();
+      const sliceWidth = backendCanvas.width / dataArray.length;
+      let x = 0;
+      for (let i = 0; i < dataArray.length; i++) {
+        const v = dataArray[i] / 128.0;
+        const y = v * backendCanvas.height / 2;
+        if (i === 0) {
+          backendCtx.moveTo(x, y);
+        } else {
+          backendCtx.lineTo(x, y);
+        }
+        x += sliceWidth;
+      }
+      backendCtx.lineTo(backendCanvas.width, backendCanvas.height / 2);
+      backendCtx.stroke();
+    }
+    draw();
+  }
+
+  // Add event listeners for form controls
+  document.addEventListener('DOMContentLoaded', function() {
+    const startVoiceFormBtn = document.getElementById('startVoiceForm');
+    const resetFormBtn = document.getElementById('resetForm');
+    
+    if (startVoiceFormBtn) {
+      startVoiceFormBtn.addEventListener('click', function() {
+        // Reset and start the form
+        resetForm();
+        
+        const startMessage = {
+          type: 'conversation.item.create',
+          item: {
+            type: 'text',
+            text: "Let's start filling out the form. I'll ask you questions one by one."
+          }
+        };
+        
+        console.log("Form started by user");
+      });
+    }
+    
+    if (resetFormBtn) {
+      resetFormBtn.addEventListener('click', function() {
+        resetForm();
+      });
+    }
+  });
+
+  init().catch(err => console.error("Error initializing connection:", err));
+</script>
+
+
