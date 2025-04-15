@@ -241,5 +241,67 @@ body {
   #hotlineBtn:hover {
     background-color: #a6df3f;
   }
+
+  .language-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 30px; */
+  }
   
+  .toggle-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 120px;
+    height: 50px;
+    background: #183b2a;
+    border: 2px solid #3aa76d;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(58, 167, 109, 0.4);
+    transition: background 0.3s ease;
+  }
+  
+  .lang-text {
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 55px;
+    height: 42px;
+    background: #4caf50;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(76, 175, 80, 0.6);
+    z-index: 1;
+  }
+  
+  #lang-switch {
+    display: none;
+  }
+  
+  #lang-switch:checked + .toggle-label .slider {
+    left: 61px;
+    background: #66bb6a;
+  }
+  
+  #lang-switch:checked + .toggle-label .es {
+    color: #ffffff;
+  }
+  
+  #lang-switch:not(:checked) + .toggle-label .en {
+    color: #ffffff;
+  }
   
