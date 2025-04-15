@@ -1,6 +1,6 @@
 import os
 import httpx
-from flask import Flask, render_template, jsonify
+from flask import Flask, send_file, jsonify
 from flask_cors import CORS
 
 app = Flask("voice_app")
@@ -9,7 +9,7 @@ CORS(app)
 @app.route("/")
 def index():
     try:
-        return render_template("voice.html")
+        return send_file("voice.html")
     except Exception as e:
         return "voice.html not found", 404
 
