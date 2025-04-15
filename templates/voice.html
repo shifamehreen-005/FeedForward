@@ -6,11 +6,14 @@
   <title>FeedForward - Page Title</title>
 
   <!-- Stylesheets -->
-  <link href="css/normalize.css" rel="stylesheet" />
-  <link href="css/webflow.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='webflow.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='fnus-stellar-site.webflow.css') }}">  
+
+  <!-- <link href="css/webflow.css" rel="stylesheet" />
   <link href="css/chatbot.css" rel="stylesheet" />
   <link href="css/explore.css" rel="stylesheet" />
-  <link href="css/fnus-stellar-site.webflow.css" rel="stylesheet" />
+  <link href="css/fnus-stellar-site.webflow.css" rel="stylesheet" /> -->
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -25,7 +28,7 @@
   </script>
 
   <!-- Favicons -->
-  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+  <link href="static/favicon.png" rel="shortcut icon" type="image/x-icon" />
   <link href="images/webclip.png" rel="apple-touch-icon" />
 
 
@@ -125,7 +128,8 @@
 <body >
   <!-- Navigation Bar Component -->
   <special-header></special-header>
-  <script src="js/navfootermanager.js"></script>
+  <script src="{{ url_for('static', filename='navfootermanager.js') }}"></script>
+
 
   <!-- Page content starts here -->
     <div class="container">
@@ -362,8 +366,7 @@
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="js/webflow.js"></script>
-  <script src="js/explore.js"></script>
+  <script src="{{ url_for('static', filename='webflow.js') }}"></script>
 <script>
       document.getElementById('close-chatbot').addEventListener('click', function () {
     // Go back to the previous page
@@ -1475,7 +1478,7 @@
 
     
       dc.addEventListener("message", async (e) => {
-        console.log("Data Channel message received:", e.data);
+        // console.log("Data Channel message received:", e.data);
         let msg;
         try {msg = JSON.parse(e.data);
         } catch (err) {
