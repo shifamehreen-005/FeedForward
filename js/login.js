@@ -129,6 +129,9 @@ async function authenticateUser(endpoint, data) {
       localStorage.setItem("login_time", currentTime);
       window.location.href = "index.html";
     }
+    else if (response.ok && endpoint === "signup") {
+      window.location.href = "login.html";
+    }
   } catch (error) {
     console.error("Error:", error);
     alert("Something went wrong!");
