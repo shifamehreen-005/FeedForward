@@ -84,30 +84,30 @@
 
       // Helper to draw route with custom color
       function drawRoute(origin, destination, mode, color) {
-  directionsService.route(
-    { origin, destination, travelMode: mode },
-    (result, status) => {
-      if (status === "OK") {
-        const isWalking = mode === "WALKING";
+            directionsService.route(
+                { origin, destination, travelMode: mode },
+                (result, status) => {
+                if (status === "OK") {
+                    const isWalking = mode === "WALKING";
 
-        const path = new google.maps.Polyline({
-          path: result.routes[0].overview_path,
-          strokeColor: color,
-          strokeOpacity: 1.0,
-          strokeWeight: 4,
-          geodesic: true,
-          ...(isWalking && {
-            strokeOpacity: 0,
-            icons: [{
-              icon: {
-                path: "M 0,-1 0,1",
-                strokeOpacity: 1,
-                scale: 4
-              },
-              offset: "0",
-              repeat: "15px"
-            }]
-          })
+                    const path = new google.maps.Polyline({
+                    path: result.routes[0].overview_path,
+                    strokeColor: color,
+                    strokeOpacity: 1.0,
+                    strokeWeight: 4,
+                    geodesic: true,
+                    ...(isWalking && {
+                        strokeOpacity: 0,
+                        icons: [{
+                        icon: {
+                            path: "M 0,-1 0,1",
+                            strokeOpacity: 1,
+                            scale: 4
+                        },
+                        offset: "0",
+                        repeat: "15px"
+                        }]
+                    })
         });
 
         path.setMap(map);
