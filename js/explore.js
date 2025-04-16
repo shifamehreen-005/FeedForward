@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const transitBtn = document.getElementById("transit-details");
+  const filterSubmit = document.getElementById("filter_submit");
+  const cardsContainer = document.querySelector(".cards-container");
+
+  filterSubmit.addEventListener("click", function () {
+    cardsContainer.style.display = "block";
+    cardsContainer.scrollIntoView({ behavior: "smooth" });
+  });
 
   transitBtn.addEventListener("click", () => {
     document.getElementById("leaflet-map").style.display = "none";

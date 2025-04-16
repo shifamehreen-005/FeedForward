@@ -37,7 +37,7 @@
       
           <div class="left" id="filterSection">
             <h2 class = "column-title">Filters</h2>
-            <form method="POST" name="wf-form" data-name="Service Form" action="/submit-form" class="wf-form">
+            <div name="wf-form" data-name="Service Form" class="wf-form">
               <div class="filter-group">
                 <label for="address">Address / Location</label>
                 <input type="text" id="address" name="address" placeholder="Search for an address..." list="address-suggestions" autocomplete="off" required />
@@ -104,7 +104,7 @@
                 <label><input type="checkbox" name="distribution" value="pickup"> In-person Pickup</label>
               </div>
             
-              <button type="submit" id="filter_submit" class="primary-button w-inline-block">
+              <button id="filter_submit" class="primary-button w-inline-block">
                 <div class="button-bg"></div>
                 <div class="button-text">Submit</div>
                 <div class="button-icon-block">
@@ -123,7 +123,7 @@
               <div class="w-form-fail" style="display:none;">
                 <p>Oops! Something went wrong while submitting the form.</p>
               </div>
-            </form>
+            </div>
             
           </div>
       
@@ -134,7 +134,7 @@
                 <input type="text" placeholder="Search results...">
               </div>
       
-              <div class="cards-container">
+              <div class="cards-container" style="display: none;">
                 <!-- Card 1 -->
                 <div class="card">
                   <img src="images/new/20200728-ASPCapitolArea-0036-scaled.jpg" alt="Company Image">
