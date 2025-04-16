@@ -30,6 +30,7 @@
   <special-header></special-header>
 <script src = "js/navfootermanager.js"></script>
   <div id="chat-container">
+    <button id="close-chatbot" > ✕ </button>
     <div class="language-toggle">
       <input type="checkbox" id="lang-switch" />
       <label for="lang-switch" class="toggle-label">
@@ -44,7 +45,7 @@
   
   <div id="input-container">
     <input type="text" id="user-input" placeholder="Type your message..." />
-    <button id="micBtn" aria-label="Microphone"">
+    <button id="micBtn" aria-label="Microphone">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 14a3 3 0 003-3V5a3 3 0 10-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 0014 0h-2z"/>
       </svg>
@@ -52,7 +53,7 @@
     <button id="send-button">
         <img src="images\characterIcons\send.png" alt="Send" id="send-icon">
     </button>
-    <button id="close-chatbot" > ✕ </button>
+    
   </div>
 
 <script src = "js/chat.js"></script>
