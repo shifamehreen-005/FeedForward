@@ -1,8 +1,10 @@
 import os
 import httpx
 from flask import Flask, render_template, jsonify
+from flask_cors import CORS
 
 app = Flask("voice_app")
+CORS(app)
 
 @app.route("/")
 def index():
@@ -14,7 +16,7 @@ def index():
 @app.route("/session", methods=["GET"])
 def session_endpoint():
     # openai_api_key = os.environ.get("OPENAI_API_KEY")
-    openai_api_key = "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"
+    openai_api_key = "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"
     if not openai_api_key:
         return jsonify({"error": "OPENAI_API_KEY not set"}), 500
 
