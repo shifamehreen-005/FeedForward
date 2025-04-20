@@ -440,7 +440,6 @@ app.post("/explore", async (req, res) => {
           console.error("Search error:", err);
           res.status(500).json({ error: "Something went wrong." });
         } else {
-            console.log(query);
           res.json(results);  // Return the results
         }
     });
