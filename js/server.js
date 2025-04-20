@@ -382,7 +382,75 @@ app.get("/api/agencies", (req, res) => {
     });
 });
 
+app.post("/explore", async (req, res) => {
+    try {
+      const {
+        culture,
+        distribution = [],
+        diet = [],
+        transport,
+        idinfo = [],
+        dayofweek = []
+      } = req.body;
+  
+      let query = `
+            SELECT 
+            f.agency_id, f.agency_name, f.food_format, f.distribution_models, f.cultural_populations_served,
+            a.day_of_week, a.frequency, a.starting_time, a.ending_time, a.by_appointment_only,
+            l.agency_region, l.county_ward, l.latitude, l.longitude
+            FROM food_agencies f
+            LEFT JOIN availability a ON f.agency_id = a.agency_id
+            LEFT JOIN location l ON f.agency_id = l.agency_id
+            WHERE 1 = 1
+      `;
+      const params = [];
+      
+      if (culture) {
+        query += " AND f.cultural_populations_served LIKE ?";
+        params.push(`%${culture}%`);
+      }
+    
+      if (distribution.length > 0) {
+        query += ` AND (${distribution.map(() => `f.distribution_models LIKE ?`).join(" OR ")})`;
+        params.push(...distribution.map(d => `%${d}%`));
+      }
 
+      if (dayofweek.length > 0) {
+        query += ` AND (${dayofweek.map(() => `a.day_of_week LIKE ?`).join(" OR ")})`;
+        params.push(...dayofweek.map(d => `%${d}%`));
+      }
+    
+      if (diet.length > 0) {
+        query += ` AND (${diet.map(() => `f.food_format LIKE ?`).join(" OR ")})`;
+        params.push(...diet.map(d => `%${d}%`));
+      }
+    
+      if (idinfo.length > 0) {
+        query += ` AND (${idinfo.map(() => `f.food_pantry_requirements LIKE ?`).join(" OR ")})`;
+        params.push(...idinfo.map(s => `%${s}%`));
+      }
+    
+      if (transport) {
+        query += " AND f.food_format LIKE ?"; // Assuming 'transport' could relate to 'food_format'
+        params.push(`%${transport}%`);
+      }
+  
+      db.query(query, params, (err, results) => {
+        if (err) {
+          console.error("Search error:", err);
+          res.status(500).json({ error: "Something went wrong." });
+        } else {
+            console.log(query);
+          res.json(results);  // Return the results
+        }
+    });
+    } catch (err) {
+      console.error("Search error:", err);
+      res.status(500).json({ error: "Something went wrong." });
+    }
+
+  });
+  
 
 // Start Server
 app.listen(3000, () => {
