@@ -45,20 +45,12 @@
               </div>
             
               <div class="filter-group">
-                <label for="radius">Search Radius:</label>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <input type="range" id="radius" name="radius" min="1" max="100" value="10" />
-                  <input type="number" id="radius-number" min="1" max="100" value="10" style="width: 70px;" />
-                  <span>miles</span>
-                </div>
-              </div>
-            
-              <div class="filter-group">
-                <label>Dietary Restrictions</label>
+                <label>How would you like your groceries?</label>
                 <div class="checkbox-group">
                   <label><input type="checkbox" name="diet" value="loose"> Loose groceries</label>
                   <label><input type="checkbox" name="diet" value="boxed"> Pre-bagged or boxed groceries</label>
                   <label><input type="checkbox" name="diet" value="prepared"> Prepared meals</label>
+                  <label><input type="checkbox" name="diet" value="any"> Any</label>
                 </div>
               </div>
 
@@ -140,7 +132,24 @@
 
               <div id="leaflet-map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
               <div id="google-map" style="height: 400px; width: 100%; margin-top: 20px; display: none;"></div>
-
+              <div id="legend" style="margin-top: 10px; font-family: Arial, sans-serif; display: none;">
+                <h4 style="margin-bottom: 5px; color:white">Route Legend</h4>
+                <div style="display: flex; gap: 15px;">
+                  <div style="display: flex; align-items: center;">
+                    <div style="width: 20px; height: 4px; background-color: #2a9d8f; margin-right: 6px;"></div>
+                    <span>WALK</span>
+                  </div>
+                  <div style="display: flex; align-items: center;">
+                    <div style="width: 20px; height: 4px; background-color: #e76f51; margin-right: 6px;"></div>
+                    <span>BUS</span>
+                  </div>
+                  <div style="display: flex; align-items: center;">
+                    <div style="width: 20px; height: 4px; background-color: #264653; margin-right: 6px;"></div>
+                    <span>RAIL</span>
+                  </div>
+                </div>
+              </div>
+              <div id="summary" style="margin-top: 20px; font-family: Arial; display: none;"></div>
           </div>
         </div>
       </section>
