@@ -78,8 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     const results = await res.json();
-    console.log(results); // TODO: display results in your UI
-    // renderCards(results.slice(0, 8));
     currentResults = results;
     currentIndex = 0;
     document.querySelector(".cards-container").innerHTML = ""; // Clear old results
