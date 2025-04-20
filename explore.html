@@ -40,7 +40,7 @@
             <div name="wf-form" data-name="Service Form" class="wf-form">
               <div class="filter-group">
                 <label for="address">Address / Location</label>
-                <input type="text" id="address" name="address" placeholder="Search for an address..." list="address-suggestions" autocomplete="off" required />
+                <input type="text" id="address" name="address" placeholder="Search for an address..." list="address-suggestions" autocomplete="off" />
                 <datalist id="address-suggestions"></datalist>
               </div>
             
@@ -54,21 +54,20 @@
               </div>
             
               <div class="filter-group">
-                <label>Transportation</label>
-                <label><input type="radio" name="transport" value="own" required> Own Transport</label>
-                <label><input type="radio" name="transport" value="public"> Public Transport</label>
-              </div>
-            
-              <div class="filter-group">
                 <label>Dietary Restrictions</label>
                 <div class="checkbox-group">
-                  <label><input type="checkbox" name="diet" value="diabetic"> Diabetic</label>
-                  <label><input type="checkbox" name="diet" value="hypertension"> Have Hypertension</label>
-                  <label><input type="checkbox" name="diet" value="low-sodium"> Need Low Sodium</label>
-                  <label><input type="checkbox" name="diet" value="low-sugar"> Need Low Sugar</label>
-                  <label><input type="checkbox" name="diet" value="fresh-produce"> Want Fresh Produce</label>
-                  <label><input type="checkbox" name="diet" value="all-produce"> All-Produce Menu</label>
-                  <label><input type="checkbox" name="diet" value="halal"> Halal</label>
+                  <label><input type="checkbox" name="diet" value="loose"> Loose groceries</label>
+                  <label><input type="checkbox" name="diet" value="boxed"> Pre-bagged or boxed groceries</label>
+                  <label><input type="checkbox" name="diet" value="prepared"> Prepared meals</label>
+                </div>
+              </div>
+
+              <div class="filter-group">
+                <label>Do you have the following information?</label>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="idinfo" value="id"> ID</label>
+                  <label><input type="checkbox" name="idinfo" value="zipcode"> Zip Code</label>
+                  <label><input type="checkbox" name="idinfo" value="income"> Income</label>
                 </div>
               </div>
             
@@ -78,30 +77,23 @@
               </div>
             
               <div class="filter-group">
-                <label>Do you have access to a kitchen?</label>
-                <label><input type="radio" name="kitchen" value="yes" required> Yes</label>
-                <label><input type="radio" name="kitchen" value="no"> No</label>
-              </div>
-            
-              <div class="filter-group">
-                <label>Do you also need any of these other services?</label>
+                <label>Which day of week is suitable for you?</label>
                 <div class="checkbox-group">
-                  <label><input type="checkbox" name="services" value="housing"> Housing</label>
-                  <label><input type="checkbox" name="services" value="gov-benefits"> Government Benefits</label>
-                  <label><input type="checkbox" name="services" value="financial-aid"> Financial Assistance</label>
-                  <label><input type="checkbox" name="services" value="older-adults"> Services for Older Adults</label>
-                  <label><input type="checkbox" name="services" value="behavioral-health"> Behavioral Health</label>
-                  <label><input type="checkbox" name="services" value="health-care"> Health Care</label>
-                  <label><input type="checkbox" name="services" value="child-care"> Child Care</label>
-                  <label><input type="checkbox" name="services" value="english-classes"> English Language Classes</label>
-                  <label><input type="checkbox" name="services" value="job-training"> Job Training</label>
+                  <label><input type="checkbox" name="dayofweek" value="monday"> Monday</label>
+                  <label><input type="checkbox" name="dayofweek" value="tuesday"> Tuesday</label>
+                  <label><input type="checkbox" name="dayofweek" value="wednesday"> Wednesday</label>
+                  <label><input type="checkbox" name="dayofweek" value="thursday"> Thursday</label>
+                  <label><input type="checkbox" name="dayofweek" value="friday"> Friday</label>
+                  <label><input type="checkbox" name="dayofweek" value="saturday"> Saturday</label>
+                  <label><input type="checkbox" name="dayofweek" value="sunday"> Sunday</label>
                 </div>
               </div>
             
               <div class="filter-group">
                 <label>Distribution</label>
                 <label><input type="checkbox" name="distribution" value="delivery"> Home Delivery</label>
-                <label><input type="checkbox" name="distribution" value="pickup"> In-person Pickup</label>
+                <label><input type="checkbox" name="distribution" value="pickup"> Walk up</label>
+                <label><input type="checkbox" name="distribution" value="drive"> Drive thru</label>
               </div>
             
               <button id="filter_submit" class="primary-button w-inline-block">
@@ -134,31 +126,12 @@
                 <input type="text" placeholder="Search results...">
               </div>
       
-              <div class="cards-container" style="display: none;">
-                <!-- Card 1 -->
-                <div class="card">
-                  <img src="images/new/20200728-ASPCapitolArea-0036-scaled.jpg" alt="Company Image">
-                  <div class="card-content">
-                    <h3>Food Bank 1</h3>
-                    <p><strong>Agency Name</strong>: Mt. Rainier Seventh Day Adventist Spanish Church</p>
-                    <p><strong>Address</strong>: Prince George’s County, MD</p>
-                    <p><strong>Operations Hours</strong>: 7 PM - 9 PM</p>
-                    <p><strong>Contact</strong>: <br> Phone: NA</p>
-                    <button type="button" id="transit-details" class="primary-button w-inline-block">
-                      <div class="button-bg"></div>
-                      <div class="button-text">Transit Details</div>
-                      <div class="button-icon-block">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 19 14" fill="none" class="button-icon">
-                          <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
-                        </svg>
-                      </div>
-                    </button>
-
-                    
-                  </div>
-                </div>
-      
+              <div class="cards-container">
               </div>
+              <button id="load-more" class="primary-button w-inline-block" style="display: none;">
+                <div class="button-bg"></div>
+                <div class="button-text">Load More</div>
+              </button>
       
             </div>
       
