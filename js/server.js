@@ -413,6 +413,18 @@ app.post("/explore", async (req, res) => {
         cultureFilters.push("middle eastern", "north african");
         }
 
+        if (preferences.includes("kosher")) {
+            cultureFilters.push("middle eastern", "north african", "eastern european");
+        }
+
+        if (preferences.includes("vegetarian")) {
+            cultureFilters.push("Central/South Asian", "East Asian");
+        }
+
+        if (preferences.includes("vegan")) {
+            cultureFilters.push("Central/South Asian", "East Asian");
+        }
+
         if (cultureFilters.length > 0) {
         query += ` AND (${cultureFilters.map(() => `LOWER(f.cultural_populations_served) LIKE ?`).join(" OR ")})`;
         params.push(...cultureFilters.map(p => `%${p.toLowerCase()}%`));
@@ -426,7 +438,6 @@ app.post("/explore", async (req, res) => {
       }
   
       const processedDays = [];
-
       if (pickupDayChoice === "today") {
         const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
         processedDays.push(today.toLowerCase());
@@ -437,13 +448,11 @@ app.post("/explore", async (req, res) => {
             tomorrow.setDate(tomorrow.getDate() + 1);
             const tomorrowName = tomorrow.toLocaleDateString("en-US", { weekday: "long" });
             processedDays.push(tomorrowName.toLowerCase());
-            console.log(tomorrowName);
           } else {
             processedDays.push(day.toLowerCase());
           }
         }
       }
-  
       if (processedDays.length > 0) {
         query += ` AND (${processedDays.map(() => `LOWER(a.day_of_week) LIKE ?`).join(" OR ")})`;
         params.push(...processedDays.map(d => `%${d}%`));
