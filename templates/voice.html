@@ -161,6 +161,8 @@
   <special-header></special-header>
   <script src="{{ url_for('static', filename='navfootermanager.js') }}"></script>
 
+  
+
   <!-- Page content starts here -->
     <div class="container">
         <div class="header-row">
@@ -427,20 +429,157 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 
-  let globalFoodBanks = [{"Agency ID":"14222-PART-01","Agency Name":"SevaTruck Foundation : SevaTruck Foundation","Agency Region":"VA","County\/Ward":"VA Fairfax County","Shipping Address":"Attn: SevaTruck Foundation 2815 Old Lee Hwy Fairfax Fairfax VA 22031","Cleaned Address":"2815 Old Lee Hwy Fairfax Fairfax VA 22031","Latitude":38.8757888053,"Longitude":-77.2392202721,"Phone":"(202) 550-3018","Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"15:00:00","Ending Time":"17:00:00","By Appointment Only":"Yes","Food Pantry Requirements":null,"Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East Asian,Latin American","Latin American":"Yes","West African":"No","East African":"No","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-19","Date of Last Verification":"2025-01-16","Additional Note on Hours of Operations":"Braddock ES-7825 Heritage Dr, Annandale, VA 22003"},
-{"Agency ID":"14240-PART-01","Agency Name":"Interfaith Community Action Council : Interfaith Community Action Council - Oxon Hill Food Pantry","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Oxon Hill Food Pantry 4915 Saint Barnabas Road Temple Hills MD 20748","Cleaned Address":"4915 Saint Barnabas Road Temple Hills MD 20748","Latitude":38.8219741,"Longitude":-76.9565648858,"Phone":"(301) 899-8358","Day of Week":"Saturday","Frequency":"2nd of the Month","Starting Time":"10:00:00","Ending Time":"12:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"Zip Code","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Walk up","Cultural Populations Served":"East African,East Asian,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-15","Date of Last Verification":"2024-10-02","Additional Note on Hours of Operations":null},
-{"Agency ID":"14265-PART-01","Agency Name":"St. Martins Social Service : St. Martins Social Service","Agency Region":"DC","County\/Ward":"DC Ward 5","Shipping Address":"Attn: St. Martin's Social Service 1908 North Capitol Street NW Washington DC 20002","Cleaned Address":"1908 North Capitol Street NW Washington DC 20002","Latitude":38.9157583,"Longitude":-77.0095096768,"Phone":"(202) 232-1144","Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"11:30:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":"2025-01-03","Date of Last Verification":"2024-10-07","Additional Note on Hours of Operations":"walkups"},
-{"Agency ID":"14305-PART-01","Agency Name":"THRIVE DC : Thrive DC","Agency Region":"DC","County\/Ward":"DC Ward 1","Shipping Address":"Attn: THRIVE DC 1525 Newton Street NW Washington DC 20010","Cleaned Address":"1525 Newton Street NW Washington DC 20010","Latitude":38.933592,"Longitude":-77.0355665,"Phone":"(202) 737-9311","Day of Week":"Thursday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"12:00:00","By Appointment Only":"No","Food Pantry Requirements":"ID,Income,Zip Code","Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"Central\/South Asian,East Asian,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"No","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-07","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null},
-{"Agency ID":"14355-PART-01","Agency Name":"Family & Medical Counseling Service : Family & Medical Counseling Service","Agency Region":"DC","County\/Ward":"DC Ward 8","Shipping Address":"Attn: Family & Medical Counseling Service 2041 MLK Jr. Ave. SE Suite 303 Washington DC 20020","Cleaned Address":"2041 MLK Jr. Ave. SE Suite 303 Washington DC 20020","Latitude":38.8659889,"Longitude":-76.9897972,"Phone":"(202) 889-7900","Day of Week":"Friday","Frequency":"1st and 3rd of the Month","Starting Time":"10:00:00","Ending Time":"13:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID,Zip Code","Food Format":"Pre-bagged or boxed groceries","Loose groceries":"No","Pre-bagged or boxed groceries":"Yes","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"East African,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-05","Date of Last Verification":"2024-09-25","Additional Note on Hours of Operations":null},
-{"Agency ID":"14375-PART-01","Agency Name":"Agape Early Childhood Learning : Agape Early Childhood Learning","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Agape Early Childhood Learning 4318 Rhode Island Avenue Brentwood MD 20722","Cleaned Address":"4318 Rhode Island Avenue Brentwood MD 20722","Latitude":38.9409284088,"Longitude":-76.9527761367,"Phone":"(301) 927-4674","Day of Week":"Wednesday","Frequency":"4th of the Month","Starting Time":"15:00:00","Ending Time":"17:30:00","By Appointment Only":"Yes","Food Pantry Requirements":null,"Food Format":"Pre-bagged or boxed groceries","Loose groceries":"No","Pre-bagged or boxed groceries":"Yes","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2024-10-21","Date of Last Verification":"2024-10-11","Additional Note on Hours of Operations":"Appointments open to parents, staff, and referred families"},
-{"Agency ID":"14410-PART-01","Agency Name":"Spanish Catholic Center : Spanish Catholic Center","Agency Region":"DC","County\/Ward":"DC Ward 1","Shipping Address":"Attn: Spanish Catholic Center 1618 Monroe St. NW Washington DC 20010","Cleaned Address":"1618 Monroe St. NW Washington DC 20010","Latitude":38.93271405,"Longitude":-77.0373982767,"Phone":null,"Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"16:00:00","By Appointment Only":"No","Food Pantry Requirements":"Zip Code","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2024-08-08","Date of Last Verification":"2024-12-16","Additional Note on Hours of Operations":null},
-{"Agency ID":"14500-PART-01","Agency Name":"Central Union Mission : Central Union Mission","Agency Region":"DC","County\/Ward":"DC Ward 6","Shipping Address":"Attn: Central Union Mission 65 Massachusetts Ave Washington DC 20001","Cleaned Address":"65 Massachusetts Ave Washington DC 20001","Latitude":38.89868405,"Longitude":-77.0110822499,"Phone":"(202) 718-0549","Day of Week":"Monday","Frequency":"Every week","Starting Time":"12:30:00","Ending Time":"18:00:00","By Appointment Only":"No","Food Pantry Requirements":"Zip Code","Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"No","Central\/South Asian":"No","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-24","Date of Last Verification":"2024-10-04","Additional Note on Hours of Operations":"We serve Breakfast -Lunch-Dinner"},
-{"Agency ID":"14520-PART-01","Agency Name":"Father Mckenna Center : The Father McKenna Center","Agency Region":"DC","County\/Ward":"DC Ward 6","Shipping Address":"Attn: The Father McKenna Center 900 North Capital St NW Washington DC DC 20002","Cleaned Address":"900 North Capital St NW Washington DC DC 20002","Latitude":38.9014721,"Longitude":-77.0093608,"Phone":"(202) 842-1112","Day of Week":"Friday","Frequency":"Every week","Starting Time":"13:30:00","Ending Time":"14:30:00","By Appointment Only":"No","Food Pantry Requirements":"ID,Income","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Eastern European,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-26","Date of Last Verification":"2024-09-23","Additional Note on Hours of Operations":"To use our full pantry, we require that in an addition to a photo ID that our visitors provide us with a copy of a proof of residence in DC. This can be a current lease, or a recent utility bill, rent receipt, mortgage, or deed."},
-{"Agency ID":"14540-PART-01","Agency Name":"Miriam's Kitchen : Miriam's Kitchen","Agency Region":"DC","County\/Ward":"DC Ward 2","Shipping Address":"Attn: Miriam's Kitchen 2401 Virginia Ave NW Washington DC 20037","Cleaned Address":"2401 Virginia Ave NW Washington DC 20037","Latitude":38.898593,"Longitude":-77.0516915247,"Phone":"(240) 350-1058","Day of Week":"Friday","Frequency":"Every week","Starting Time":"07:00:00","Ending Time":"08:00:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Eastern European,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-24","Date of Last Verification":"2024-11-12","Additional Note on Hours of Operations":null},
-{"Agency ID":"14545-PART-01","Agency Name":"Mt. Rainier Seventh Day Adventist Spanish Church : Mount Rainier Seventh Day Adventist Spanish Church","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Mount Rainier Seventh Day Adventist Spanish Chuch 6012 Ager Road Hyattsville MD 20782","Cleaned Address":"6012 Ager Road Hyattsville MD 20782","Latitude":38.9542534204,"Longitude":-76.9652870101,"Phone":"(240) 346-9272","Day of Week":"Wednesday","Frequency":"2nd of the Month","Starting Time":"19:00:00","Ending Time":"21:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Home Delivery,Walk up","Cultural Populations Served":"East African,Eastern European,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"No","Last SO Create Date":"2024-12-02","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null},
-{"Agency ID":"14570-PART-01","Agency Name":"ALIVE : ALIVE","Agency Region":"VA","County\/Ward":"VA City of Alexandria","Shipping Address":"Attn: ALIVE 801 S Payne St Alexandria VA 22302","Cleaned Address":"801 S Payne St Alexandria VA 22302","Latitude":38.7977023,"Longitude":-77.0560352676,"Phone":"(703) 837-9300","Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"Central\/South Asian,East African,Eastern European,Latin American,Middle Eastern\/ North African","Latin American":"Yes","West African":"No","East African":"Yes","Central\/South Asian":"Yes","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-11","Date of Last Verification":"2024-09-26","Additional Note on Hours of Operations":"Last Saturday of the month, not necessarily the 4th Saturday"},
-{"Agency ID":"14570-PUSH-06","Agency Name":"William Ramsay Recreation Center","Agency Region":"Virginia","County\/Ward":"City of Alexandria","Shipping Address":"Del Pepper Community Center 4850 Mark Center Dr Alexandria VA 22311","Cleaned Address":"4850 Mark Center Dr Alexandria VA 22311","Latitude":38.8299343,"Longitude":-77.1191301359,"Phone":null,"Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":null,"Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":null,"Date of Last Verification":null,"Additional Note on Hours of Operations":null},
-{"Agency ID":"14570-PUSH-07","Agency Name":"Chick Armstrong Recreation Center","Agency Region":"Virginia","County\/Ward":"City of Alexandria","Shipping Address":"ALIVE Chick Armstrong Rec Center 25 W Reed Ave Alexandria VA 22305","Cleaned Address":"25 W Reed Ave Alexandria VA 22305","Latitude":38.83723415,"Longitude":-77.0580736048,"Phone":null,"Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":null,"Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":null,"Date of Last Verification":null,"Additional Note on Hours of Operations":null}];
+//   let globalFoodBanks = [{"Agency ID":"14222-PART-01","Agency Name":"SevaTruck Foundation : SevaTruck Foundation","Agency Region":"VA","County\/Ward":"VA Fairfax County","Shipping Address":"Attn: SevaTruck Foundation 2815 Old Lee Hwy Fairfax Fairfax VA 22031","Cleaned Address":"2815 Old Lee Hwy Fairfax Fairfax VA 22031","Latitude":38.8757888053,"Longitude":-77.2392202721,"Phone":"(202) 550-3018","Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"15:00:00","Ending Time":"17:00:00","By Appointment Only":"Yes","Food Pantry Requirements":null,"Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East Asian,Latin American","Latin American":"Yes","West African":"No","East African":"No","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-19","Date of Last Verification":"2025-01-16","Additional Note on Hours of Operations":"Braddock ES-7825 Heritage Dr, Annandale, VA 22003"},
+// {"Agency ID":"14240-PART-01","Agency Name":"Interfaith Community Action Council : Interfaith Community Action Council - Oxon Hill Food Pantry","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Oxon Hill Food Pantry 4915 Saint Barnabas Road Temple Hills MD 20748","Cleaned Address":"4915 Saint Barnabas Road Temple Hills MD 20748","Latitude":38.8219741,"Longitude":-76.9565648858,"Phone":"(301) 899-8358","Day of Week":"Saturday","Frequency":"2nd of the Month","Starting Time":"10:00:00","Ending Time":"12:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"Zip Code","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Walk up","Cultural Populations Served":"East African,East Asian,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-15","Date of Last Verification":"2024-10-02","Additional Note on Hours of Operations":null},
+// {"Agency ID":"14265-PART-01","Agency Name":"St. Martins Social Service : St. Martins Social Service","Agency Region":"DC","County\/Ward":"DC Ward 5","Shipping Address":"Attn: St. Martin's Social Service 1908 North Capitol Street NW Washington DC 20002","Cleaned Address":"1908 North Capitol Street NW Washington DC 20002","Latitude":38.9157583,"Longitude":-77.0095096768,"Phone":"(202) 232-1144","Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"11:30:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":"2025-01-03","Date of Last Verification":"2024-10-07","Additional Note on Hours of Operations":"walkups"},
+// {"Agency ID":"14305-PART-01","Agency Name":"THRIVE DC : Thrive DC","Agency Region":"DC","County\/Ward":"DC Ward 1","Shipping Address":"Attn: THRIVE DC 1525 Newton Street NW Washington DC 20010","Cleaned Address":"1525 Newton Street NW Washington DC 20010","Latitude":38.933592,"Longitude":-77.0355665,"Phone":"(202) 737-9311","Day of Week":"Thursday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"12:00:00","By Appointment Only":"No","Food Pantry Requirements":"ID,Income,Zip Code","Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"Central\/South Asian,East Asian,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"No","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-07","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null},
+// {"Agency ID":"14355-PART-01","Agency Name":"Family & Medical Counseling Service : Family & Medical Counseling Service","Agency Region":"DC","County\/Ward":"DC Ward 8","Shipping Address":"Attn: Family & Medical Counseling Service 2041 MLK Jr. Ave. SE Suite 303 Washington DC 20020","Cleaned Address":"2041 MLK Jr. Ave. SE Suite 303 Washington DC 20020","Latitude":38.8659889,"Longitude":-76.9897972,"Phone":"(202) 889-7900","Day of Week":"Friday","Frequency":"1st and 3rd of the Month","Starting Time":"10:00:00","Ending Time":"13:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID,Zip Code","Food Format":"Pre-bagged or boxed groceries","Loose groceries":"No","Pre-bagged or boxed groceries":"Yes","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"East African,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-05","Date of Last Verification":"2024-09-25","Additional Note on Hours of Operations":null},
+// {"Agency ID":"14375-PART-01","Agency Name":"Agape Early Childhood Learning : Agape Early Childhood Learning","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Agape Early Childhood Learning 4318 Rhode Island Avenue Brentwood MD 20722","Cleaned Address":"4318 Rhode Island Avenue Brentwood MD 20722","Latitude":38.9409284088,"Longitude":-76.9527761367,"Phone":"(301) 927-4674","Day of Week":"Wednesday","Frequency":"4th of the Month","Starting Time":"15:00:00","Ending Time":"17:30:00","By Appointment Only":"Yes","Food Pantry Requirements":null,"Food Format":"Pre-bagged or boxed groceries","Loose groceries":"No","Pre-bagged or boxed groceries":"Yes","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2024-10-21","Date of Last Verification":"2024-10-11","Additional Note on Hours of Operations":"Appointments open to parents, staff, and referred families"},
+// {"Agency ID":"14410-PART-01","Agency Name":"Spanish Catholic Center : Spanish Catholic Center","Agency Region":"DC","County\/Ward":"DC Ward 1","Shipping Address":"Attn: Spanish Catholic Center 1618 Monroe St. NW Washington DC 20010","Cleaned Address":"1618 Monroe St. NW Washington DC 20010","Latitude":38.93271405,"Longitude":-77.0373982767,"Phone":null,"Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"16:00:00","By Appointment Only":"No","Food Pantry Requirements":"Zip Code","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2024-08-08","Date of Last Verification":"2024-12-16","Additional Note on Hours of Operations":null},
+// {"Agency ID":"14500-PART-01","Agency Name":"Central Union Mission : Central Union Mission","Agency Region":"DC","County\/Ward":"DC Ward 6","Shipping Address":"Attn: Central Union Mission 65 Massachusetts Ave Washington DC 20001","Cleaned Address":"65 Massachusetts Ave Washington DC 20001","Latitude":38.89868405,"Longitude":-77.0110822499,"Phone":"(202) 718-0549","Day of Week":"Monday","Frequency":"Every week","Starting Time":"12:30:00","Ending Time":"18:00:00","By Appointment Only":"No","Food Pantry Requirements":"Zip Code","Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"No","Central\/South Asian":"No","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-24","Date of Last Verification":"2024-10-04","Additional Note on Hours of Operations":"We serve Breakfast -Lunch-Dinner"},
+// {"Agency ID":"14520-PART-01","Agency Name":"Father Mckenna Center : The Father McKenna Center","Agency Region":"DC","County\/Ward":"DC Ward 6","Shipping Address":"Attn: The Father McKenna Center 900 North Capital St NW Washington DC DC 20002","Cleaned Address":"900 North Capital St NW Washington DC DC 20002","Latitude":38.9014721,"Longitude":-77.0093608,"Phone":"(202) 842-1112","Day of Week":"Friday","Frequency":"Every week","Starting Time":"13:30:00","Ending Time":"14:30:00","By Appointment Only":"No","Food Pantry Requirements":"ID,Income","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Eastern European,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-26","Date of Last Verification":"2024-09-23","Additional Note on Hours of Operations":"To use our full pantry, we require that in an addition to a photo ID that our visitors provide us with a copy of a proof of residence in DC. This can be a current lease, or a recent utility bill, rent receipt, mortgage, or deed."},
+// {"Agency ID":"14540-PART-01","Agency Name":"Miriam's Kitchen : Miriam's Kitchen","Agency Region":"DC","County\/Ward":"DC Ward 2","Shipping Address":"Attn: Miriam's Kitchen 2401 Virginia Ave NW Washington DC 20037","Cleaned Address":"2401 Virginia Ave NW Washington DC 20037","Latitude":38.898593,"Longitude":-77.0516915247,"Phone":"(240) 350-1058","Day of Week":"Friday","Frequency":"Every week","Starting Time":"07:00:00","Ending Time":"08:00:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Eastern European,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-24","Date of Last Verification":"2024-11-12","Additional Note on Hours of Operations":null},
+// {"Agency ID":"14545-PART-01","Agency Name":"Mt. Rainier Seventh Day Adventist Spanish Church : Mount Rainier Seventh Day Adventist Spanish Church","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Mount Rainier Seventh Day Adventist Spanish Chuch 6012 Ager Road Hyattsville MD 20782","Cleaned Address":"6012 Ager Road Hyattsville MD 20782","Latitude":38.9542534204,"Longitude":-76.9652870101,"Phone":"(240) 346-9272","Day of Week":"Wednesday","Frequency":"2nd of the Month","Starting Time":"19:00:00","Ending Time":"21:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Home Delivery,Walk up","Cultural Populations Served":"East African,Eastern European,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"No","Last SO Create Date":"2024-12-02","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null},
+// {"Agency ID":"14570-PART-01","Agency Name":"ALIVE : ALIVE","Agency Region":"VA","County\/Ward":"VA City of Alexandria","Shipping Address":"Attn: ALIVE 801 S Payne St Alexandria VA 22302","Cleaned Address":"801 S Payne St Alexandria VA 22302","Latitude":38.7977023,"Longitude":-77.0560352676,"Phone":"(703) 837-9300","Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"Central\/South Asian,East African,Eastern European,Latin American,Middle Eastern\/ North African","Latin American":"Yes","West African":"No","East African":"Yes","Central\/South Asian":"Yes","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-11","Date of Last Verification":"2024-09-26","Additional Note on Hours of Operations":"Last Saturday of the month, not necessarily the 4th Saturday"},
+
+
+// {"Agency ID":"14570-PUSH-06","Agency Name":"William Ramsay Recreation Center","Agency Region":"Virginia","County\/Ward":"City of Alexandria","Shipping Address":"Del Pepper Community Center 4850 Mark Center Dr Alexandria VA 22311","Cleaned Address":"4850 Mark Center Dr Alexandria VA 22311","Latitude":38.8299343,"Longitude":-77.1191301359,"Phone":null,"Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":null,"Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":null,"Date of Last Verification":null,"Additional Note on Hours of Operations":null},
+// {"Agency ID":"14570-PUSH-07","Agency Name":"Chick Armstrong Recreation Center","Agency Region":"Virginia","County\/Ward":"City of Alexandria","Shipping Address":"ALIVE Chick Armstrong Rec Center 25 W Reed Ave Alexandria VA 22305","Cleaned Address":"25 W Reed Ave Alexandria VA 22305","Latitude":38.83723415,"Longitude":-77.0580736048,"Phone":null,"Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":null,"Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":null,"Date of Last Verification":null,"Additional Note on Hours of Operations":null}];
+
+
+// Add this at the beginning of your script file right after your initial declarations
+
+// Fix the language function to return the correct value
+function getCurrentLanguage() {
+  const langSwitch = document.getElementById('lang-switch');
+  return langSwitch.checked ? "ES" : "EN";
+}
+
+function switchLanguage() {
+  
+  if (window.pc) {
+    console.log("Closing existing peer connection");
+    
+    
+    const dataChannels = window.pc.getDataChannels?.() || [];
+    dataChannels.forEach(channel => {
+      if (channel) {
+        channel.close();
+      }
+    });
+   
+    window.pc.close();
+    window.pc = null;
+  }
+  
+  const audioElements = document.querySelectorAll('audio');
+  audioElements.forEach(element => {
+    element.pause();
+    element.srcObject = null;
+    element.remove();
+  });
+  
+
+  console.log("Reinitializing with new language");
+  setTimeout(() => {
+    init().catch(err => console.error("Error reinitializing connection:", err));
+  }, 500);
+}
+
+function resetAgent() {
+  console.log("Resetting agent for language change...");
+  
+  if (window.pc) {
+    console.log("Closing existing peer connection");
+    window.pc.close();
+    window.pc = null;
+  }
+  
+  
+  const existingAudio = document.querySelector('audio');
+  if (existingAudio) {
+    console.log("Removing existing audio element");
+    existingAudio.remove();
+  }
+
+  updateUIForLanguage(getCurrentLanguage());
+}
+
+function updateUIForLanguage(language) {
+  console.log(`Updating UI for language: ${language}`);
+  const pageTitle = document.querySelector('.page-title');
+  
+  if (language === 'EN') {
+    pageTitle.textContent = 'One voice. One step closer to the help you need.';
+
+    const formTitle = document.querySelector('.form-container h3');
+    if (formTitle) {
+      formTitle.textContent = 'Food Bank Assistance Form';
+    }
+    const formDescription = document.querySelector('.form-container .text-muted');
+    if (formDescription) {
+      formDescription.textContent = 'Our voice assistant will guide you through these questions to help find the right food bank services for your needs.';
+    }
+  } else {
+    pageTitle.textContent = 'Una voz. Un paso más cerca de la ayuda que necesitas.';
+
+    const formTitle = document.querySelector('.form-container h3');
+    if (formTitle) {
+      formTitle.textContent = 'Formulario de Asistencia del Banco de Alimentos';
+    }
+    const formDescription = document.querySelector('.form-container .text-muted');
+    if (formDescription) {
+      formDescription.textContent = 'Nuestro asistente de voz le guiará a través de estas preguntas para ayudarle a encontrar los servicios del banco de alimentos adecuados para sus necesidades.';
+    }
+  }
+}
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   console.log("Setting up language toggle event listener");
+  
+//   const langToggle = document.getElementById('lang-switch');
+//   if (langToggle) {
+//     updateUIForLanguage(getCurrentLanguage());
+  
+//     langToggle.addEventListener('change', function() {
+//       const newLanguage = getCurrentLanguage();
+//       console.log(`Language changed to: ${newLanguage}`);
+    
+//       resetAgent();
+    
+//       setTimeout(() => {
+//         init().catch(err => console.error("Error reinitializing connection:", err));
+//       }, 300);
+//     });
+    
+//     console.log("Language toggle listener setup complete");
+//   } else {
+//     console.warn("Language toggle element not found in the DOM");
+//   }
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("Setting up language toggle event listener");
+  
+  const langToggle = document.getElementById('lang-switch');
+  if (langToggle) {
+    // Add change event listener
+    langToggle.addEventListener('change', function() {
+      const newLanguage = getCurrentLanguage();
+      console.log(`Language changed to: ${newLanguage}`);
+      
+      // Switch to new language
+      switchLanguage();
+    });
+    
+    console.log("Language toggle listener setup complete");
+  } else {
+    console.warn("Language toggle element not found in the DOM");
+  }
+});
+
+
 
   async function loadFoodBankData() {
   try {
@@ -454,7 +593,7 @@
     return foodBanks;
   } catch (error) {
     console.error("Error loading food bank data:", error);
-    // Return fallback data in case of error
+   
     return defaultFoodBanks;
   }
   }
@@ -1546,6 +1685,21 @@
       return finalTrains.length > 0 ? finalTrains[0].FinalCost : "$2.00";
   }
 
+//   function getCurrentLanguage() {
+//   const langSwitch = document.getElementById('lang-switch');
+  
+//   // If checkbox is checked, language is ES (Spanish)
+//   // If checkbox is unchecked, language is EN (English)
+//   return langSwitch.checked ? 'ES' : 'EN';
+// }
+
+function getCurrentLanguage() {
+
+  const langSwitch = document.getElementById('lang-switch');
+
+  return langSwitch.checked ? "ES" : "EN" ;
+
+}
 
 
   async function createItinerarySummary(itinerary) {
@@ -1815,6 +1969,39 @@
         });
       }
     }
+
+
+//     document.addEventListener('DOMContentLoaded', function() {
+//   // Initial setup based on current language
+//   init();
+  
+//   // Add event listener for language toggle
+//   document.getElementById('lang-switch').addEventListener('change', function() {
+//     console.log("Language changed to:", getCurrentLanguage());
+    
+//     // Reinitialize everything with new language
+//     resetAgent();
+//     init();
+//   });
+
+// function resetAgent() {
+
+//   if (window.pc) {
+//     window.pc.close();
+//   }
+
+//   const existingAudio = document.querySelector('audio');
+//   if (existingAudio) {
+//     existingAudio.remove();
+//   }
+//   if (existingAudio) {
+//     existingAudio.remove();
+//   }
+  
+//   const existingAudio_2 = document
+//   // Update UI based on language
+//   updateUIForLanguage(getCurrentLanguage());
+// }
   // function findNearestFoodBankVoice(inputStr) {
   //     try {
   //         const parts = inputStr.split(",").map(x => x.trim());
@@ -1976,8 +2163,40 @@
       }
   }
 
+function updateUIForLanguage(language) {
+  console.log(`Updating UI for language: ${language}`);
+  const pageTitle = document.querySelector('.page-title');
+  
+  if (language === 'EN') {
+    pageTitle.textContent = 'One voice. One step closer to the help you need.';
+    const formTitle = document.querySelector('.form-container h3');
+    if (formTitle) {
+      formTitle.textContent = 'Food Bank Assistance Form';
+    }
+    const formDescription = document.querySelector('.form-container .text-muted');
+    if (formDescription) {
+      formDescription.textContent = 'Our voice assistant will guide you through these questions to help find the right food bank services for your needs.';
+    }
+  } else {
+    pageTitle.textContent = 'Una voz. Un paso más cerca de la ayuda que necesitas.';
+    const formTitle = document.querySelector('.form-container h3');
+    if (formTitle) {
+      formTitle.textContent = 'Formulario de Asistencia del Banco de Alimentos';
+    }
+    const formDescription = document.querySelector('.form-container .text-muted');
+    if (formDescription) {
+      formDescription.textContent = 'Nuestro asistente de voz le guiará a través de estas preguntas para ayudarle a encontrar los servicios del banco de alimentos adecuados para sus necesidades.';
+    }
+  }
+}
 
+// Modify your init function to support language selection
 
+// Initialize on load
+window.addEventListener('load', function() {
+  // Initial startup
+  init().catch(err => console.error("Error initializing connection:", err));
+});
 
   const foodBanks = [
       // {"name": "Food Bank A - Target", "lat": 38.998959, "lon": -76.906453},
@@ -2078,6 +2297,9 @@
   }
 
 
+ 
+
+
   async function init() {
     try {
 
@@ -2090,6 +2312,111 @@
       // } catch (error) {
       //   console.error("Error initializing:", error);
       // }
+
+//       async function init() {
+//   try {
+    
+   
+//     const audioEl = document.createElement("audio");
+//     audioEl.autoplay = true;
+//     document.body.appendChild(audioEl);
+    
+//     window.pc.ontrack = e => {
+//       if (e.streams && e.streams[0]) {
+//         audioEl.srcObject = e.streams[0];
+//         startBackendVisualizer(e.streams[0]);
+//       }
+//     };
+    
+  
+//     const micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+//     window.pc.addTrack(micStream.getTracks()[0]);
+//     startLocalVisualizer(micStream);
+    
+//     const dc = window.pc.createDataChannel("oai-events");
+    
+   
+//     dc.addEventListener("open", () => {
+//       console.log("Data channel open");
+//       configureData(dc);
+//     });
+    
+   
+//     dc.addEventListener("message", async (e) => {
+//       console.log("Data Channel message received:", e.data);
+//       let msg;
+//       try {
+//         msg = JSON.parse(e.data);
+//       } catch (err) {
+//         console.error("Error parsing data channel message:", err);
+//         return;
+//       }
+    
+//       if (msg.type === 'response.function_call_arguments.done') {
+//         const fn = fns[msg.name];
+//         if (fn !== undefined) {
+//           console.log(`Calling local function ${msg.name} with arguments: ${msg.arguments}`);
+//           const args = JSON.parse(msg.arguments);
+//           try {
+//             const result = await fn(args);
+//             console.log('Function result:', result);
+           
+//             dc.send(JSON.stringify({
+//               type: 'conversation.item.create',
+//               item: {
+//                 type: 'function_call_output',
+//                 call_id: msg.call_id, 
+//                 output: JSON.stringify(result)
+//               }
+//             }));
+
+//             dc.send(JSON.stringify({ type: "response.create" }));
+//           } catch (error) {
+//             console.error("Error calling function:", error);
+//           }
+//         } else {
+//           console.warn(`No function defined for name: ${msg.name}`);
+//         }
+//       }
+//     });
+    
+//     const offer = await window.pc.createOffer();
+//     await window.pc.setLocalDescription(offer);
+//     console.log("SDP offer created and set as local description.");
+
+//     const baseUrl = "https://api.openai.com/v1/realtime";
+//     const model = "gpt-4o-realtime-preview-2024-12-17";
+//     const sdpResponse = await fetch(`${baseUrl}?model=${model}`, {
+//       method: "POST",
+//       body: offer.sdp,
+//       headers: {
+//         Authorization: `Bearer ${EPHEMERAL_KEY}`,
+//         "Content-Type": "application/sdp"
+//       },
+//     });
+    
+
+//     const answerSdp = await sdpResponse.text();
+//     const answer = {
+//       type: "answer",
+//       sdp: answerSdp,
+//     };
+//     await window.pc.setRemoteDescription(answer);
+//     console.log("SDP answer received and set as remote description. WebRTC connection established.");
+
+//     updateUIForLanguage(currentLanguage);
+    
+//   } catch (error) {
+//     console.error("Error initializing WebRTC connection:", error);
+//   }
+// }
+
+
+
+
+
+
+
       
       try {
         
@@ -2100,13 +2427,55 @@
         // Continue with the rest of initialization even if location fails
       }
       
-      const tokenResponse = await fetch("/session");
+      const set_language = getCurrentLanguage();
+      updateUIForLanguage(set_language);
+      let tokenResponse;
+      if (set_language === "EN") {
+        tokenResponse = await fetch("/session_english")
+      }
+      else {
+        tokenResponse = await fetch("/session_spanish")
+      }
+
+      // const tokenResponse = await fetch("/session");
+
       const tokenData = await tokenResponse.json();
       const EPHEMERAL_KEY = tokenData.client_secret.value;
       console.log("Ephemeral key received:", EPHEMERAL_KEY);
 
+    //   const tokenData = await tokenResponse.json();
+    // const EPHEMERAL_KEY = tokenData.client_secret.value;
+    // console.log("Ephemeral key received:", EPHEMERAL_KEY);
+    
+    // // Store the peer connection globally so we can close it when switching languages
+    // window.pc = new RTCPeerConnection();
+      window.pc = new RTCPeerConnection();
+    
+    // const audioEl = document.createElement("audio");
+    // audioEl.autoplay = true;
+    // document.body.appendChild(audioEl);
+    // window.pc.ontrack = e => {
+    //   if (e.streams && e.streams[0]) {
+    //     audioEl.srcObject = e.streams[0];
+    //     startBackendVisualizer(e.streams[0]);
+    //   }
+    // };
+    
+    // const micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    // window.pc.addTrack(micStream.getTracks()[0]);
+    // startLocalVisualizer(micStream);
+    
+    // const dc = window.pc.createDataChannel("oai-events");
+    
+    // dc.addEventListener("open", () => {
+    //   console.log("Data channel open");
+    //   configureData(dc);
+    // });
+
       
       const pc = new RTCPeerConnection();
+
+      
 
      
       const audioEl = document.createElement("audio");
@@ -2309,5 +2678,4 @@
 
   init().catch(err => console.error("Error initializing connection:", err));
 </script>
-
 
