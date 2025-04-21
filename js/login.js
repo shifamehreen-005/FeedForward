@@ -120,7 +120,7 @@ async function authenticateUser(endpoint, data) {
     });
     const result = await response.json();
     alert(result.message);
-    if (response.ok && endpoint === "login") {
+    if (response.ok) {
       const currentTime = Date.now();
       localStorage.setItem("token", result.token);
       localStorage.setItem("user_email", data.email);
@@ -128,9 +128,6 @@ async function authenticateUser(endpoint, data) {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("login_time", currentTime);
       window.location.href = "index.html";
-    }
-    else if (response.ok && endpoint === "signup") {
-      window.location.href = "login.html";
     }
   } catch (error) {
     console.error("Error:", error);
