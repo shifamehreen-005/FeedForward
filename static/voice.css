@@ -1,0 +1,115 @@
+.visualizer {
+  width: 100%;
+  height: 150px;
+  background-color: #fffff5;
+  border: 0.5px solid #ddd;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.form-container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-height: 500px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scroll-behavior: smooth; /* Add smooth scrolling */
+  position: relative; /* For positioning the success image */
+
+}
+
+.form-question {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-left: 3px solid #007bff;
+  display: none;
+}
+
+.form-question.active {
+  display: block;
+  background-color: #e7f5ff;
+}
+
+.form-question.completed {
+  display: block;
+  border-left: 3px solid #28a745;
+}
+
+.form-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  height: 8px;
+  margin-bottom: 15px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.completion-image {
+display: none; /* Hidden by default */
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+}
+
+.completion-image img {
+max-width: 80%;
+max-height: 300px;
+    margin-bottom: 20px;
+}
+
+.completion-image h3 {
+    margin-top: 20px;
+    color: #28a745;
+}
+
+p{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.page-title{
+    font-size: 32px;
+    font-weight: lighter;
+    /* margin: 0; */
+    /* font-size: 1.5rem; */
+    flex: 1;
+}
+
+#close-chatbot {
+    z-index: 9999;
+    background-color: #c73434;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    }
+
+    .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    }
