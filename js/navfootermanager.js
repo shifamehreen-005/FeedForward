@@ -5,6 +5,7 @@
 
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
+      const userRole = localStorage.getItem("user_type");
         this.innerHTML = `
         
     <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
@@ -73,9 +74,10 @@ class SpecialHeader extends HTMLElement {
                   </div><img loading="lazy" src="images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
                 </div>
               </li>
+              ${userRole === 'staff' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="feedbacks.html" class="header-nav-text w-nav-link" id="feedback-link" style="display:none;">Feedbacks</a>
+                  <a href="feedbacks.html" class="header-nav-text w-nav-link" id="feedback-link">Feedbacks</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -84,10 +86,11 @@ class SpecialHeader extends HTMLElement {
                     </div>
                   </div>
                 </div>
-              </li>
+              </li>` : ``}
+              ${userRole === 'staff' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="Sdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link-staff" style="display:none;">Dashboard</a>
+                  <a href="Sdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link-staff">Dashboard</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -96,10 +99,11 @@ class SpecialHeader extends HTMLElement {
                     </div>
                   </div>
                 </div>
-              </li>
+              </li>` : ``}
+              ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="Vdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link" style="display:none;">Dashboard</a>
+                  <a href="Vdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link">Dashboard</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -108,10 +112,11 @@ class SpecialHeader extends HTMLElement {
                     </div>
                   </div>
                 </div>
-              </li>
+              </li>` : ``}
+              ${userRole === 'customers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="profile.html" class="header-nav-text w-nav-link" id="profile-link" style="display:none;">Profile</a>
+                  <a href="profile.html" class="header-nav-text w-nav-link" id="profile-link">Profile</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -120,10 +125,11 @@ class SpecialHeader extends HTMLElement {
                     </div>
                   </div>
                 </div>
-              </li>
+              </li>` : ``}
+              ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="profile-volunteer.html" class="header-nav-text w-nav-link" id="profile-volunteer-link" style="display:none;">Profile</a>
+                  <a href="heatmap.html" class="header-nav-text w-nav-link" id="volunteer-heatmap">Heatmap</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -132,7 +138,20 @@ class SpecialHeader extends HTMLElement {
                     </div>
                   </div>
                 </div>
-              </li>
+              </li>` : ``}
+              ${userRole === 'volunteers' ? `
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="profile-volunteer.html" class="header-nav-text w-nav-link" id="profile-volunteer-link">Profile</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>` : ``}
               <li class="header-list-item header-button-item" id="login-button" display="inline-block">
                 <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="login.html" class="primary-button w-inline-block">
                   <div class="button-bg"></div>
