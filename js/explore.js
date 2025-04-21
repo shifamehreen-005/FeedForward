@@ -287,11 +287,9 @@ async function generateSummary(steps) {
       address: form.querySelector("#address")?.value,
       diet: getCheckedValues("diet"),
       preferences: getCheckedValues("preferences"),
-      pickupdaychoice: getRadioValue("pickupDayChoice"), // ✅ fix here
-      pickupdays: getCheckedValues("dayofweek"), // in case they chose "Another day"
-      pickuptime: form.querySelector('input[name="pickupTime"]')?.value,
-      deliverytime: form.querySelector('input[name="deliveryTime"]')?.value,
-      deliverylocation: form.querySelector('input[name="deliveryLocation"]')?.value
+      pickupDayChoice: getRadioValue("pickupDayChoice"), // ✅ fix here
+      dayofweek: getCheckedValues("dayofweek"), // in case they chose "Another day"
+      pickuptime: form.querySelector('input[name="pickupTime"]')?.value
     };
 
     const res = await fetch('http://localhost:3000/explore', {
@@ -301,6 +299,11 @@ async function generateSummary(steps) {
     });
   
     const results = await res.json();
+    results.sort((a, b) => {
+      const distA = haversineDistance(userLat, userLon, a.latitude, a.longitude);
+      const distB = haversineDistance(userLat, userLon, b.latitude, b.longitude);
+      return distA - distB;
+    });    
     currentResults = results;
     currentIndex = 0;
     document.querySelector(".cards-container").innerHTML = ""; // Clear old results
@@ -308,7 +311,25 @@ async function generateSummary(steps) {
     renderCardsChunk();
   });
   
+  function haversineDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; 
+    const dLat = toRadians(lat2 - lat1);
+    const dLon = toRadians(lon2 - lon1);
+    
+    const a = 
+        Math.pow(Math.sin(dLat / 2), 2) + 
+        Math.cos(toRadians(lat1)) * 
+        Math.cos(toRadians(lat2)) * 
+        Math.pow(Math.sin(dLon / 2), 2);
+    
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  
+    return R * c;
+  }
 
+  function toRadians(degrees) {
+      return degrees * (Math.PI / 180);
+  }
   // transitBtn.addEventListener("click", () => {
   //   document.getElementById("leaflet-map").style.display = "none";
   //   document.getElementById("google-map").style.display = "block";
