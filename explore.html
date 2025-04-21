@@ -43,8 +43,16 @@
                 <input type="text" id="address" name="address" placeholder="Search for an address..." list="address-suggestions" autocomplete="off" />
                 <datalist id="address-suggestions"></datalist>
               </div>
-            
+              
               <div class="filter-group">
+                <label>Do you have access to a kitchen?</label>
+                <div class="checkbox-group">
+                  <label><input type="radio" name="kitchenAccess" value="yes"> Yes</label>
+                  <label><input type="radio" name="kitchenAccess" value="no"> No</label>
+                </div>
+              </div>
+
+              <div class="filter-group" id="grocery-options" style="display:none;">
                 <label>How would you like your groceries?</label>
                 <div class="checkbox-group">
                   <label><input type="checkbox" name="diet" value="loose"> Loose groceries</label>
@@ -54,23 +62,64 @@
                 </div>
               </div>
 
+              <div class="filter-group" id="no-kitchen-message" style="display:none;">
+                <label> No worries, we can get you prepared meals.</label>
+              </div>
+
               <div class="filter-group">
-                <label>Do you have the following information?</label>
-                <div class="checkbox-group">
-                  <label><input type="checkbox" name="idinfo" value="id"> ID</label>
-                  <label><input type="checkbox" name="idinfo" value="zipcode"> Zip Code</label>
-                  <label><input type="checkbox" name="idinfo" value="income"> Income</label>
+                <label>Do you have any cultural, religious, or dietary preferences?</label>
+                <div class="checkbox-group" id="preference-options">
+                  <label><input type="checkbox" name="preferences" value="latin_america"> Latin America</label>
+                  <label><input type="checkbox" name="preferences" value="west_africa"> West Africa</label>
+                  <label><input type="checkbox" name="preferences" value="east_africa"> East Africa</label>
+                  <label><input type="checkbox" name="preferences" value="central_south_asian"> Central/South Asian</label>
+                  <label><input type="checkbox" name="preferences" value="east_asian"> East Asian</label>
+                  <label><input type="checkbox" name="preferences" value="eastern_europe"> Eastern Europe</label>
+                  <label><input type="checkbox" name="preferences" value="mena"> Middle Eastern/North African</label>
+                  <label><input type="checkbox" name="preferences" value="halal"> Halal</label>
+                  <label><input type="checkbox" name="preferences" value="kosher"> Kosher</label>
+                  <label><input type="checkbox" name="preferences" value="vegetarian"> Vegetarian</label>
+                  <label><input type="checkbox" name="preferences" value="vegan"> Vegan</label>
+                  <label><input type="checkbox" name="preferences" value="none" id="pref-none"> None</label>
                 </div>
               </div>
             
               <div class="filter-group">
-                <label for="culture">Culture</label>
-                <input type="text" id="culture" name="culture" />
+                <label>Are you able to travel to pick up food?</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="canTravel" value="yes"> Yes</label>
+                  <label><input type="radio" name="canTravel" value="no"> No</label>
+                </div>
               </div>
-            
-              <div class="filter-group">
-                <label>Which day of week is suitable for you?</label>
+              
+              <div class="filter-group" id="someoneElsePickupGroup" style="display: none;">
+                <label>Can someone else pick up food for you?</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="someoneElse" value="yes"> Yes</label>
+                  <label><input type="radio" name="someoneElse" value="no"> No</label>
+                </div>
+              </div>
+              
+              <div class="filter-group" id="deliveryInfoGroup" style="display: none;">
+                <label>Do you have a preferred time for delivery?</label>
+                <input type="time" name="deliveryTime" />
+              
+                <label>What location should we use for delivery?</label>
+                <input type="text" name="deliveryLocation" placeholder="Delivery location" />
+              </div>
+              
+              <div class="filter-group" id="pickupTimeGroup" style="display: none;">
+                <label>When would you like to go?</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="pickupDayChoice" value="today"> Today</label>
+                  <label><input type="radio" name="pickupDayChoice" value="another"> Another day</label>
+                </div>
+              </div>
+              
+              <div class="filter-group" id="pickupDayOptions" style="display: none;">
+                <label>Which days would you like to go?</label>
                 <div class="checkbox-group">
+                  <label><input type="checkbox" name="dayofweek" value="tomorrow"> Tomorrow</label>
                   <label><input type="checkbox" name="dayofweek" value="monday"> Monday</label>
                   <label><input type="checkbox" name="dayofweek" value="tuesday"> Tuesday</label>
                   <label><input type="checkbox" name="dayofweek" value="wednesday"> Wednesday</label>
@@ -80,13 +129,12 @@
                   <label><input type="checkbox" name="dayofweek" value="sunday"> Sunday</label>
                 </div>
               </div>
-            
-              <div class="filter-group">
-                <label>Distribution</label>
-                <label><input type="checkbox" name="distribution" value="delivery"> Home Delivery</label>
-                <label><input type="checkbox" name="distribution" value="pickup"> Walk up</label>
-                <label><input type="checkbox" name="distribution" value="drive"> Drive thru</label>
+              
+              <div class="filter-group" id="pickupTimeInput" style="display: none;">
+                <label>What time would you prefer?</label>
+                <input type="time" name="pickupTime" />
               </div>
+              
             
               <button id="filter_submit" class="primary-button w-inline-block">
                 <div class="button-bg"></div>

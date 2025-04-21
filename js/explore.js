@@ -192,6 +192,86 @@ async function generateSummary(steps) {
     renderCardsChunk();
   });
 
+  const kitchenRadios = document.querySelectorAll('input[name="kitchenAccess"]');
+  const groceryOptions = document.getElementById("grocery-options");
+  const noKitchenMessage = document.getElementById("no-kitchen-message");
+
+  kitchenRadios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "yes") {
+        groceryOptions.style.display = "block";
+        noKitchenMessage.style.display = "none";
+      } else if (radio.value === "no") {
+        groceryOptions.style.display = "none";
+        noKitchenMessage.style.display = "block";
+
+        // Set 'Prepared meals' as default
+        document.querySelectorAll('input[name="diet"]').forEach(checkbox => {
+          checkbox.checked = checkbox.value === "prepared";
+        });
+      }
+    });
+  });
+  const canTravelRadios = document.getElementsByName("canTravel");
+  const someoneElseGroup = document.getElementById("someoneElsePickupGroup");
+  const deliveryGroup = document.getElementById("deliveryInfoGroup");
+  const pickupTimeGroup = document.getElementById("pickupTimeGroup");
+  const pickupDayChoice = document.getElementsByName("pickupDayChoice");
+  const pickupDayOptions = document.getElementById("pickupDayOptions");
+  const pickupTimeInput = document.getElementById("pickupTimeInput");
+
+  let travel_ok = null;
+  let delivery_required = false;
+
+  canTravelRadios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "yes") {
+        travel_ok = true;
+        delivery_required = false;
+        someoneElseGroup.style.display = "none";
+        deliveryGroup.style.display = "none";
+        pickupTimeGroup.style.display = "block";
+      } else {
+        travel_ok = false;
+        someoneElseGroup.style.display = "block";
+        pickupTimeGroup.style.display = "none";
+        pickupDayOptions.style.display = "none";
+        pickupTimeInput.style.display = "none";
+      }
+    });
+  });
+
+  const someoneElseRadios = document.getElementsByName("someoneElse");
+  someoneElseRadios.forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "yes") {
+        travel_ok = true;
+        delivery_required = false;
+        deliveryGroup.style.display = "none";
+        pickupTimeGroup.style.display = "block";
+      } else {
+        travel_ok = false;
+        delivery_required = true;
+        deliveryGroup.style.display = "block";
+        pickupTimeGroup.style.display = "none";
+        pickupDayOptions.style.display = "none";
+        pickupTimeInput.style.display = "none";
+      }
+    });
+  });
+
+  pickupDayChoice.forEach(radio => {
+    radio.addEventListener("change", () => {
+      if (radio.value === "another") {
+        pickupDayOptions.style.display = "block";
+      } else {
+        pickupDayOptions.style.display = "none";
+      }
+      pickupTimeInput.style.display = "block";
+    });
+  });
+
+
   filterSubmit.addEventListener("click", async (e) => {
     e.preventDefault();
   
@@ -200,16 +280,20 @@ async function generateSummary(steps) {
     const getCheckedValues = (name) =>
       Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.value);
   
+    const getRadioValue = (name) =>
+      form.querySelector(`input[name="${name}"]:checked`)?.value;
+  
     const data = {
       address: form.querySelector("#address")?.value,
-      radius: form.querySelector("#radius")?.value,
-      culture: form.querySelector("#culture")?.value,
       diet: getCheckedValues("diet"),
-      distribution: getCheckedValues("distribution"),
-      idinfo: getCheckedValues("idinfo"),
-      dayofweek: getCheckedValues("dayofweek")
-    };  
-  
+      preferences: getCheckedValues("preferences"),
+      pickupdaychoice: getRadioValue("pickupDayChoice"), // ✅ fix here
+      pickupdays: getCheckedValues("dayofweek"), // in case they chose "Another day"
+      pickuptime: form.querySelector('input[name="pickupTime"]')?.value,
+      deliverytime: form.querySelector('input[name="deliveryTime"]')?.value,
+      deliverylocation: form.querySelector('input[name="deliveryLocation"]')?.value
+    };
+
     const res = await fetch('http://localhost:3000/explore', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
