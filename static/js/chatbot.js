@@ -13,7 +13,11 @@ class ChatBot extends HTMLElement {
       <!-- Collapsed chatbot -->
       <div class="chat-init" id="chatInit">
         <span>
+<<<<<<< HEAD
             <img src="/static/images/characterIcons/shiba-inu.png" alt="Bot Icon" class="bot-icon" />
+=======
+            <img src="static/images/characterIcons/shiba-inu.png" alt="Bot Icon" class="bot-icon" />
+>>>>>>> bafb4c05eec79db985f9a8150af7875cc299dc40
             <p class="bot-message">Hi, do you need any help?</p>
         </span>
         <div class="chat-buttons">          

@@ -34,6 +34,27 @@ def about():
     except Exception as e:
         return "about.html not found", 404
     
+@app.route("/login")
+def login():
+    try:
+        return render_template("login.html")
+    except Exception as e:
+        return "login.html not found", 404
+    
+@app.route("/profilevolunteer")
+def profilevolunteer():
+    try:
+        return render_template("profilevolunteer.html")
+    except Exception as e:
+        return "profilevolunteer.html not found", 404
+        
+@app.route("/Vdashboard")
+def Vdashboard():
+    try:
+        return render_template("Vdashboard.html")
+    except Exception as e:
+        return "Vdashboard.html not found", 404
+    
 @app.route("/donate")
 def donate():
     try:
