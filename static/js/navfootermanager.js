@@ -11,12 +11,12 @@ class SpecialHeader extends HTMLElement {
     <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
       <div class="container-default w-container">
         <div class="header-block">
-          <a href="index.html" aria-current="page" class="header-brand w-nav-brand w--current"><img loading="lazy" src="images/Logo.webp" alt="" class="header-brand-logo"></a>
+          <a href="http://127.0.0.1:8116/" aria-current="page" class="header-brand w-nav-brand w--current"><img src="{{ url_for('static', filename='images/Logo.webp') }}" loading="lazy" alt="" class="header-brand-logo"></a>
           <nav role="navigation" class="header-nav-menu w-nav-menu">
             <ul role="list" class="header-list">
               <li class="header-list-item">
                 <div data-w-id="38b61dad-ec44-5bf7-f9d3-c95b9a806f53" class="header-nav-link">
-                  <a href="index.html" aria-current="page" class="header-nav-text w-nav-link w--current">Home</a>
+                  <a href="http://127.0.0.1:8116/" aria-current="page" class="header-nav-text w-nav-link w--current">Home</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -28,7 +28,7 @@ class SpecialHeader extends HTMLElement {
               </li>
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="about.html" class="header-nav-text w-nav-link">About</a>
+                  <a href="http://127.0.0.1:8116/about" class="header-nav-text w-nav-link">About</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -40,7 +40,7 @@ class SpecialHeader extends HTMLElement {
               </li>
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="explore.html" class="header-nav-text w-nav-link">Explore</a>
+                  <a href="http://127.0.0.1:8116/explore" class="header-nav-text w-nav-link">Explore</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -52,7 +52,7 @@ class SpecialHeader extends HTMLElement {
               </li>
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="contact-us.html" class="header-nav-text w-nav-link">Contact</a>
+                  <a href="http://127.0.0.1:8116/contact" class="header-nav-text w-nav-link">Contact</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -64,20 +64,20 @@ class SpecialHeader extends HTMLElement {
               </li>
               <li class="header-list-item">
                 <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
-                  <a href="donate.html" class="header-nav-text w-nav-link">Donate</a>
+                  <a href="http://127.0.0.1:8116/donate" class="header-nav-text w-nav-link">Donate</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
                       <div class="nav-hover-line"></div>
                       <div class="nav-hover-bg"></div>
                     </div>
-                  </div><img loading="lazy" src="images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
+                  </div><img loading="lazy" src="{{ url_for('static', filename='images/Header-Arow-Icon.svg') }}" alt="" class="header-arrow-icon">
                 </div>
               </li>
               ${userRole === 'staff' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="feedbacks.html" class="header-nav-text w-nav-link" id="feedback-link">Feedbacks</a>
+                  <a href="http://127.0.0.1:8116/feedbacks" class="header-nav-text w-nav-link" id="feedback-link">Feedbacks</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -90,7 +90,7 @@ class SpecialHeader extends HTMLElement {
               ${userRole === 'staff' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="Sdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link-staff">Dashboard</a>
+                  <a href="http://127.0.0.1:8116/Sdashboard" class="header-nav-text w-nav-link" id="dashboard-link-staff">Dashboard</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -103,7 +103,7 @@ class SpecialHeader extends HTMLElement {
               ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="Vdashboard.html" class="header-nav-text w-nav-link" id="dashboard-link">Dashboard</a>
+                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Dashboard</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -116,7 +116,7 @@ class SpecialHeader extends HTMLElement {
               ${userRole === 'customers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="profile.html" class="header-nav-text w-nav-link" id="profile-link">Profile</a>
+                  <a href="http://127.0.0.1:8116/profile" class="header-nav-text w-nav-link" id="profile-link">Profile</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -129,7 +129,7 @@ class SpecialHeader extends HTMLElement {
               ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="heatmap.html" class="header-nav-text w-nav-link" id="volunteer-heatmap">Heatmap</a>
+                  <a href="http://127.0.0.1:8116/heatmap" class="header-nav-text w-nav-link" id="volunteer-heatmap">Heatmap</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -142,7 +142,7 @@ class SpecialHeader extends HTMLElement {
               ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="profile-volunteer.html" class="header-nav-text w-nav-link" id="profile-volunteer-link">Profile</a>
+                  <a href="http://127.0.0.1:8116/profile-volunteer" class="header-nav-text w-nav-link" id="profile-volunteer-link">Profile</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -153,7 +153,7 @@ class SpecialHeader extends HTMLElement {
                 </div>
               </li>` : ``}
               <li class="header-list-item header-button-item" id="login-button" display="inline-block">
-                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="login.html" class="primary-button w-inline-block">
+                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="http://127.0.0.1:8116/login" class="primary-button w-inline-block">
                   <div class="button-bg"></div>
                   <div class="button-text">Login/Signup</div>
                   <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
@@ -162,7 +162,7 @@ class SpecialHeader extends HTMLElement {
                 </a>
               </li>
               <li class="header-list-item header-logout-button-item" id="logout-button" display="None">
-                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="login.html" class="primary-button w-inline-block">
+                <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="http://127.0.0.1:8116/login" class="primary-button w-inline-block">
                   <div class="button-bg"></div>
                   <div class="button-text">Logout</div>
                   <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
@@ -195,7 +195,7 @@ class SpecialFooter extends HTMLElement {
     <div class="w-layout-blockcontainer container-default w-container">
       <div class="footer-block">
         <div class="footer-nav-block">
-          <a href="index.html" aria-current="page" class="footer-brand w-inline-block w--current"><img src="images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
+          <a href="http://127.0.0.1:8116/" aria-current="page" class="footer-brand w-inline-block w--current"><img src="images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
           <div class="footer-social-block">
             <a href="https://www.facebook.com" target="_blank" class="footer-social-link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 42 42" fill="none" class="footer-social-icon">
                 <circle cx="21" cy="21" r="20.5" stroke="currentColor"></circle>
