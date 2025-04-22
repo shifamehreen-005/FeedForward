@@ -40,6 +40,13 @@ def login():
         return render_template("login.html")
     except Exception as e:
         return "login.html not found", 404
+    
+@app.route("/profilevolunteer")
+def profilevolunteer():
+    try:
+        return render_template("profilevolunteer.html")
+    except Exception as e:
+        return "profilevolunteer.html not found", 404
         
 @app.route("/Vdashboard")
 def Vdashboard():
