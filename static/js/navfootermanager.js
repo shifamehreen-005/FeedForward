@@ -181,11 +181,7 @@ class SpecialFooter extends HTMLElement {
     <div class="w-layout-blockcontainer container-default w-container">
       <div class="footer-block">
         <div class="footer-nav-block">
-<<<<<<< HEAD
           <a href="http://127.0.0.1:8116/" aria-current="page" class="footer-brand w-inline-block w--current"><img src="/static/images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
-=======
-          <a href="http://127.0.0.1:8116/" aria-current="page" class="footer-brand w-inline-block w--current"><img src="static/images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
->>>>>>> bafb4c05eec79db985f9a8150af7875cc299dc40
           <div class="footer-social-block">
             <a href="https://www.facebook.com" target="_blank" class="footer-social-link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 42 42" fill="none" class="footer-social-icon">
                 <circle cx="21" cy="21" r="20.5" stroke="currentColor"></circle>
