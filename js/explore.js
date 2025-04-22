@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error getting user location:", error);
   }
 
-  const transitBtn = document.getElementById("transit-details");
   const filterSubmit = document.getElementById("filter_submit");
   const summaryContainer = document.getElementById("summary");
 
