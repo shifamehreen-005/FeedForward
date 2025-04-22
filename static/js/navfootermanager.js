@@ -11,11 +11,7 @@ class SpecialHeader extends HTMLElement {
     <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
       <div class="container-default w-container">
         <div class="header-block">
-<<<<<<< HEAD
           <a href="http://127.0.0.1:8116/" aria-current="page" class="header-brand w-nav-brand w--current"><img src="/static/images/Logo.webp" loading="lazy" alt="" class="header-brand-logo"></a>
-=======
-          <a href="http://127.0.0.1:8116/" aria-current="page" class="header-brand w-nav-brand w--current"><img src="static/images/Logo.webp" loading="lazy" alt="" class="header-brand-logo"></a>
->>>>>>> bafb4c05eec79db985f9a8150af7875cc299dc40
           <nav role="navigation" class="header-nav-menu w-nav-menu">
             <ul role="list" class="header-list">
               <li class="header-list-item">
