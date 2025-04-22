@@ -23,200 +23,462 @@
   <link href="images/webclip.png" rel="apple-touch-icon">
 
   <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
-      margin: 0;
-      padding: 0;
+        background-color: #fffff5;
     }
 
+    a.read-more{
+      color: #87af32;
+    }
     .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
+        margin: 30px 192px;
     }
 
-
-
-    p.description {
-      text-align: center;
-      margin-top: 30px;
-      margin-bottom: 30px;
-      color: #555;
+    .search-container {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        gap: 1rem;
     }
 
-    p{
-      text-align: center;
+    #searchInput {
+        flex: 1;
+        padding: 1rem;
+        font-size: 1.1rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
     }
 
-    .cta-section {
-      text-align: center;
-      margin-bottom: 20px;
+    #searchInput:focus {
+        outline: none;
+        border-color: #87af32;
     }
 
-    .cta-section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
+    .add-blog-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.1rem;
+        background-color: #87af32;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
     }
 
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    .add-blog-btn:hover {
+        background-color: #87af32;
     }
 
-    .cta-buttons button {
-      padding: 12px 24px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s ease;
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        overflow-y: auto;
     }
 
-    .btn-partner {
-      background-color: #4CAF50;
-      color: white;
+    .modal-content {
+        position: relative;
+        background-color: white;
+        margin: 2rem auto;
+        padding: 2rem;
+        width: 90%;
+        max-width: 600px;
+        max-height: 75vh;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
     }
 
-    .btn-partner:hover {
-      background-color: #45a049;
+    /* Custom Scrollbar Styles */
+    .modal-content::-webkit-scrollbar {
+        width: 10px;
+        }
+
+    .modal-content::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+        }
+
+    .modal-content::-webkit-scrollbar-thumb {
+        background: #b6b6b6;
+        border-radius: 10px;
+        border: 2px solid #f1f1f1;
+        }
+
+    .close-btn {
+        position: absolute;
+        right: 1.5rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #666;
     }
 
-    .btn-resources {
-      background-color: #007BFF;
-      color: white;
+    .blog-form {
+        display: grid;
+        gap: 1.5rem;
+        padding-right: 10px; 
     }
 
-    .btn-resources:hover {
-      background-color: #0056b3;
+    .form-group {
+        display: grid;
+        gap: 0.5rem;
     }
 
-    .benefits {
-      background-color: fffff5;
-      border-radius: 10px;
-      padding: 30px;
+    .form-group label {
+        font-weight: 500;
+        color: #333;
     }
 
-    .benefits h3 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      text-align: center;
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 5px;
+        font-size: 1rem;
     }
 
-    .benefits ul {
-      list-style: none;
-      padding: 0;
+    .form-group textarea {
+        min-height: 100px; /* Reduced height of textarea */
+        max-height: 200px;
+        resize: vertical;
     }
 
-    .benefits ul li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-      font-size: 1.05rem;
+    .submit-btn {
+        padding: 1rem;
+        background-color: #87af32;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
     }
 
-    .benefits ul li:last-child {
-      border-bottom: none;
+    .submit-btn:hover {
+        background-color: #87af32;
     }
 
-    .card-container {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+    .blog-container {
+        display: grid;
+        gap: 2rem;
+    }
 
-.card {
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  flex: 1 1 45%;
-  min-width: 280px;
-  transition: transform 0.3s ease;
-}
+    .blog-post {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 2rem;
+        align-items: center;
+        border: none;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+    .blog-post h2 {
+        color: #333;
+        margin-bottom: 1rem;
+    }
 
-.card h4 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  color: #2b2b2b;
-}
+    .blog-post .meta {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
 
-.card ul {
-  list-style: none;
-  padding: 0;
-}
+    .blog-post .content {
+        color: #444;
+        line-height: 1.6;
+    }
 
-.card li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-  font-size: 1rem;
-}
+    .blog-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
+    .read-more {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+    }
 
-  </style>
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    .no-results {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .blog-post {
+            grid-template-columns: 1fr;
+        }
+
+        .blog-image {
+            order: -1;
+        }
+    }
+</style>
 </head>
 <body>
   <div class="page-wrapper">
     <chat-bot></chat-bot>
     <special-header></special-header>
-    <div class="main-wrapper">
-      <div class="container">
-        <div data-wf--section-title--variant="uppercase-left" data-w-id="22cd4ff5-a96b-5d62-516b-20aabf06b224" class="section-title-block w-variant-495f1e34-01d2-0949-8d3e-e07ab94a23a6">
+    <div>
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search blogs...">
+                <button class="add-blog-btn" id="addBlogBtn" style="display: none;">Add Blog</button>
+            </div>
+            
+            <div class="blog-container">
+                <article class="blog-post">
+                    <div class="blog-content">
+                        <h2>Getting Started with Web Development</h2>
+                        <div class="meta">Posted by John Doe | June 15, 2023</div>
+                        <div class="content">
+                            <p>Web development is an exciting journey that begins with understanding the basics of HTML, CSS, and JavaScript. These three technologies form the foundation of modern web development...</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6" alt="Web Development" class="blog-image">
+                </article>
+    
+                <article class="blog-post">
+                    <div class="blog-content">
+                        <h2>The Future of Artificial Intelligence</h2>
+                        <div class="meta">Posted by Jane Smith | June 10, 2023</div>
+                        <div class="content">
+                            <p>Artificial Intelligence is revolutionizing the way we live and work. From autonomous vehicles to smart home devices, AI is becoming increasingly integrated into our daily lives...</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" alt="Artificial Intelligence" class="blog-image">
+                </article>
+    
+                <article class="blog-post">
+                    <div class="blog-content">
+                        <h2>Mastering CSS Grid Layout</h2>
+                        <div class="meta">Posted by Mike Johnson | June 5, 2023</div>
+                        <div class="content">
+                            <p>CSS Grid Layout is a powerful tool for creating complex web layouts. In this post, we'll explore how to use CSS Grid to create responsive and flexible layouts...</p>
+                            <a href="#" class="read-more">Read More →</a>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2" alt="CSS Grid Layout" class="blog-image">
+                </article>
+            </div>
+    
+            <div class="no-results">No matching blog posts found.</div>
+        </div>
+    
+        <!-- Add Blog Modal -->
+        <div class="modal" id="addBlogModal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Add New Blog Post</h2>
+                <form class="blog-form" id="blogForm">
+                    <div class="form-group">
+                        <label for="blogTitle">Title</label>
+                        <input type="text" id="blogTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogDate">Date</label>
+                        <input type="date" id="blogDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogDescription">Description</label>
+                        <textarea id="blogDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="blogImage">Image URL</label>
+                        <input type="url" id="blogImage" required placeholder="Enter image URL">
+                    </div>
+                    <button type="submit" class="submit-btn">Add Blog Post</button>
+                </form>
+            </div>
+        </div>
+    
+        <script>
+            // Check if user is authenticated as staff
+            function checkStaffStatus() {
+                const isLoggedIn = localStorage.getItem('isLoggedIn');
+                const userType = localStorage.getItem('user_type');
                 
-          <h2 class="section-title" style="text-align: center;">Partners</h2><div class="text-animation-overlay" style="display: block; transform: translate3d(110%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; "></div>
-        </div>
-        <p class="description">
-          Partners receive food and health education materials from the food bank and distribute them through the Washington metropolitan area to help create access to good, healthy food in every community. There are all types of food assistance partners. They include organizations that offer food-related services like meal and grocery programs, along with organizations that focus on job training and housing assistance. The food bank supplies the food so that these organizations can focus their resources on other services.
-        </p>
+                if (isLoggedIn === 'true' && userType === 'staff') {
+                    document.getElementById('addBlogBtn').style.display = 'block';
+                }
+            }
     
-        <div class="cta-section">
-          <h2>Want to collaborate with us?</h2>
-          <div class="cta-buttons">
-            <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="https://capitalareafoodbank.zoom.us/zbook/cafb-shoppingpartners/partnering-to-end-hunger" class="primary-button w-inline-block">
-              <div class="button-bg"></div>
-              <div class="button-text">Become a Partner</div>
-              <div class="button-icon-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 19 14" fill="none" class="button-icon">
-                  <path d="M18.5758 7.89493L14.4485 0.530929C14.3358 0.337808 14.1518 0.196676 13.9361 0.137929C13.7203 0.0791811 13.4901 0.107519 13.2951 0.216839C13.1 0.326159 12.9557 0.507714 12.8932 0.722401C12.8307 0.937088 12.8551 1.16773 12.961 1.36465L16.0818 6.93289L1.64709 2.86716C1.42939 2.80585 1.19626 2.83352 0.998971 2.94409C0.801683 3.05467 0.656401 3.23909 0.595085 3.45678C0.533769 3.67447 0.561443 3.90761 0.672018 4.10489C0.782593 4.30218 0.967011 4.44746 1.1847 4.50878L15.6195 8.57451L10.0512 11.6954C9.9515 11.749 9.86346 11.822 9.79223 11.91C9.72101 11.998 9.66803 12.0993 9.63638 12.2081C9.60474 12.3168 9.59506 12.4307 9.60792 12.5432C9.62078 12.6557 9.65592 12.7645 9.71128 12.8633C9.76664 12.9621 9.84112 13.0488 9.93037 13.1185C10.0196 13.1882 10.1219 13.2394 10.2311 13.2692C10.3404 13.2989 10.4544 13.3066 10.5667 13.2918C10.679 13.277 10.7871 13.24 10.8849 13.1829L18.2489 9.05556C18.4462 8.94497 18.5914 8.76058 18.6527 8.54293C18.714 8.32528 18.6864 8.0922 18.5758 7.89493Z" fill="currentColor"></path>
-                </svg></div>
-            </a>
-            <a data-w-id="ceca53e4-e1c0-4dd1-f35f-a9c7aaacfedf" href="xyz.html" class="primary-button w-inline-block">
-              <div class="button-bg"></div>
-              <div class="button-text">View Resources</div>
-            </a>
-          </div>
-        </div>
+            // Call this function when page loads
+            document.addEventListener('DOMContentLoaded', checkStaffStatus);
     
-        <div class="benefits">
-          <h3>Benefits of Partnership</h3>
-          <p>The Capital Area Food Bank’s nonprofit Food Assistance Partners receive access to food, training, and more in support of their work.</p>
-        
-          <div class="card-container">
-            <div class="card">
-              <h4>Food Benefits</h4>
-              <ul>
-                <li>Order food</li>
-                <li>Ordering site for DC and MD Partners</li>
-                <li>Ordering site for VA Partners</li>
-                <li>Receive free government commodities through the USDA/TEFAP program</li>
-                <li>Connect with local grocery and retail stores through Partner Direct</li>
-              </ul>
-            </div>
-            <div class="card">
-              <h4>Education Benefits</h4>
-              <ul>
-                <li>Learn the basics with Shopping 101</li>
-                <li>Partnership 101 training sessions</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+            // Add event listener for authentication changes
+            window.addEventListener('storage', function(e) {
+                if (e.key === 'isLoggedIn' || e.key === 'user_type') {
+                    checkStaffStatus();
+                }
+            });
     
+            const searchInput = document.getElementById('searchInput');
+            const blogPosts = document.querySelectorAll('.blog-post');
+            const noResults = document.querySelector('.no-results');
+            const modal = document.getElementById('addBlogModal');
+            const addBlogBtn = document.querySelector('.add-blog-btn');
+            const closeBtn = document.querySelector('.close-btn');
+            const blogForm = document.getElementById('blogForm');
+            const blogContainer = document.querySelector('.blog-container');
+    
+            // Add authentication check before showing modal
+            addBlogBtn.addEventListener('click', () => {
+                const isLoggedIn = localStorage.getItem('isLoggedIn');
+                const userType = localStorage.getItem('user_type');
+    
+                if (!isLoggedIn || isLoggedIn !== 'true') {
+                    window.location.href = 'login.html';
+                    return;
+                }
+                
+                if (userType !== 'staff') {
+                    alert('Only staff members can add blog posts');
+                    return;
+                }
+    
+                modal.style.display = 'block';
+            });
+    
+            // Add authentication check before form submission
+            blogForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+    
+                const isLoggedIn = localStorage.getItem('isLoggedIn');
+                const userType = localStorage.getItem('user_type');
+    
+                if (!isLoggedIn || isLoggedIn !== 'true') {
+                    window.location.href = 'login.html';
+                    return;
+                }
+    
+                if (userType !== 'staff') {
+                    alert('Only staff members can add blog posts');
+                    return;
+                }
+    
+                try {
+                    const title = document.getElementById('blogTitle').value;
+                    const date = new Date(document.getElementById('blogDate').value);
+                    const description = document.getElementById('blogDescription').value;
+                    const imageUrl = document.getElementById('blogImage').value;
+    
+                    // You can add API call here to save the blog post
+                    // Example:
+                    // try {
+                    //     const response = await fetch('/api/blogs', {
+                    //         method: 'POST',
+                    //         headers: {
+                    //             'Content-Type': 'application/json',
+                    //             'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    //         },
+                    //         body: JSON.stringify({
+                    //             title,
+                    //             date: date.toISOString(),
+                    //             description,
+                    //             imageUrl
+                    //         })
+                    //     });
+                    //     if (!response.ok) throw new Error('Failed to save blog post');
+                    // } catch (error) {
+                    //     console.error('Error saving blog post:', error);
+                    //     alert('Failed to save blog post. Please try again.');
+                    //     return;
+                    // }
+    
+                    const formattedDate = date.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+    
+                    const newBlog = document.createElement('article');
+                    newBlog.className = 'blog-post';
+                    newBlog.innerHTML = `
+                        <div class="blog-content">
+                            <h2>${title}</h2>
+                            <div class="meta">Posted on ${formattedDate}</div>
+                            <div class="content">
+                                <p>${description}</p>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                        <img src="${imageUrl}" alt="${title}" class="blog-image">
+                    `;
+    
+                    blogContainer.insertBefore(newBlog, blogContainer.firstChild);
+                    modal.style.display = 'none';
+                    blogForm.reset();
+                } catch (error) {
+                    console.error('Error processing form submission:', error);
+                    alert('An error occurred. Please try again.');
+                }
+            });
+    
+            // Modal close handlers
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+    
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+    
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                let hasResults = false;
+    
+                blogPosts.forEach(post => {
+                    const title = post.querySelector('h2').textContent.toLowerCase();
+                    const content = post.querySelector('.content').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                        post.style.display = 'grid';
+                        hasResults = true;
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+    
+                noResults.style.display = hasResults ? 'none' : 'block';
+            });
+        </script>
     </div>
     <special-footer></special-footer>
   </div>
