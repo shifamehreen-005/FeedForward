@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Food Bank Staff Dashboard</title>
+  <link rel="stylesheet" href="css/sdashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Staff Dashboard</h1>
+    <div class="summary-cards">
+      <div class="card" id="logins">
+        <h2>Monthly Logins</h2>
+        <p id="monthlyLoginsCount">0</p>
+      </div>
+      <div class="card" id="new-users">
+        <h2>New Users</h2>
+        <p id="newUsersCount">0</p>
+      </div>
+    </div>
+    
+    <!-- Add these below the existing summary cards section -->
+<div class="extra-cards">
+  <div class="card">
+    <h2>Total Food Distributed</h2>
+    <p id="foodDistributed">0 lbs</p>
+  </div>
+  <div class="card">
+    <h2>Volunteer Hours</h2>
+    <p id="volunteerHours">0 hrs</p>
+  </div>
+  <div class="card">
+    <h2>Avg. Wait Time</h2>
+    <p id="waitTime">0 min</p>
+  </div>
+</div>
+
+<div class="charts-grid">
+  <div class="chart-container">
+    <h3>Monthly Logins Trend</h3>
+    <canvas id="loginsChart"></canvas>
+  </div>
+  <div class="chart-container">
+    <h3>Visits to Food Banks</h3>
+    <canvas id="visitsChart"></canvas>
+  </div>
+  <div class="chart-container">
+    <h3>Top Requested Items</h3>
+    <canvas id="itemsChart"></canvas>
+  </div>
+  <div class="chart-container">
+    <h3>Donations Over 6 Months</h3>
+    <canvas id="donationChart"></canvas>
+  </div>
+</div>
+</div>
+  <script src="js/sdashboard.js"></script>
+</body>
+</html>
+
+
