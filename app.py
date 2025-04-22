@@ -13,6 +13,28 @@ def index():
     except Exception as e:
         return "index.html not found", 404
 
+@app.route("/about")
+def about():
+    try:
+        return render_template("about.html")
+    except Exception as e:
+        return "about.html not found", 404
+    
+@app.route("/donate")
+def donate():
+    try:
+        return render_template("donate.html")
+    except Exception as e:
+        return "donate.html not found", 404
+    
+@app.route("/explore")
+def explore():
+    try:
+        return render_template("explore.html")
+    except Exception as e:
+        return "explore.html not found", 404
+    
+
 @app.route("/session_english", methods=["GET"])
 def english_session():
     # openai_api_key = os.environ.get("OPENAI_API_KEY")
