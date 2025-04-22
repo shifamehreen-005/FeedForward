@@ -9,9 +9,23 @@ CORS(app)
 @app.route("/")
 def index():
     try:
-        return render_template("voice.html")
+        return render_template("index.html")
     except Exception as e:
         return "index.html not found", 404
+    
+@app.route("/contact")
+def contact():
+    try:
+        return render_template("contact.html")
+    except Exception as e:
+        return "contact.html not found", 404
+    
+@app.route("/voice")
+def voice():
+    try:
+        return render_template("voice.html")
+    except Exception as e:
+        return "voice.html not found", 404
 
 @app.route("/session_english", methods=["GET"])
 def english_session():
