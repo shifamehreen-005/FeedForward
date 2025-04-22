@@ -20,6 +20,66 @@
 // Add this at the beginning of your script file right after your initial declarations
 
 // Fix the language function to return the correct value
+
+
+/*****************************************************************
+ *  Unified audio visualiser – draws any number of streams onto
+ *  the same canvas in different colours
+ *****************************************************************/
+const visualiser = {
+  canvas   : null,
+  ctx      : null,
+  analysers: [],          // { analyser, colour }[]
+  width    : 0,
+  height   : 0,
+  init() {
+    this.canvas  = document.getElementById('audioVisualizer');
+    this.ctx     = this.canvas.getContext('2d');
+    this.width   = this.canvas.offsetWidth;
+    this.height  = this.canvas.offsetHeight;
+    this.canvas.width  = this.width;
+    this.canvas.height = this.height;
+    requestAnimationFrame(this.draw.bind(this));
+  },
+  /** Add a new audio stream in the given colour */
+  addStream(stream, colour) {
+    const audioCtx  = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser  = audioCtx.createAnalyser();
+    analyser.fftSize = 2048;
+    audioCtx.createMediaStreamSource(stream).connect(analyser);
+    this.analysers.push({ analyser, colour });
+  },
+  draw() {
+    requestAnimationFrame(this.draw.bind(this));
+    // clear
+    this.ctx.fillStyle = '#f5f5f5';
+    this.ctx.fillRect(0, 0, this.width, this.height);
+
+    this.analysers.forEach(({ analyser, colour }) => {
+      const bufferLength = analyser.frequencyBinCount;
+      const dataArray    = new Uint8Array(bufferLength);
+      analyser.getByteTimeDomainData(dataArray);
+
+      this.ctx.lineWidth   = 2;
+      this.ctx.strokeStyle = colour;
+      this.ctx.beginPath();
+
+      const sliceWidth = this.width / bufferLength;
+      let   x          = 0;
+      for (let i = 0; i < bufferLength; i++) {
+        const v = dataArray[i] / 128.0;
+        const y = v * this.height / 2;
+        i === 0 ? this.ctx.moveTo(x, y) : this.ctx.lineTo(x, y);
+        x += sliceWidth;
+      }
+      this.ctx.lineTo(this.width, this.height / 2);
+      this.ctx.stroke();
+    });
+  }
+};
+
+// visualiser.init();
+
 function getCurrentLanguage() {
   const langSwitch = document.getElementById('lang-switch');
   return langSwitch.checked ? "ES" : "EN";
@@ -1925,6 +1985,8 @@ window.addEventListener('load', function() {
 //         console.error("Error parsing data channel message:", err);
 //         return;
 //       }
+
+
     
 //       if (msg.type === 'response.function_call_arguments.done') {
 //         const fn = fns[msg.name];
@@ -2055,17 +2117,29 @@ window.addEventListener('load', function() {
       const audioEl = document.createElement("audio");
       audioEl.autoplay = true;
       document.body.appendChild(audioEl);
-      pc.ontrack = e => {
-        if (e.streams && e.streams[0]) {
-          audioEl.srcObject = e.streams[0];
-          startBackendVisualizer(e.streams[0]);
-        }
-      };
+      // pc.ontrack = e => {
+      //   if (e.streams && e.streams[0]) {
+      //     audioEl.srcObject = e.streams[0];
+      //     startBackendVisualizer(e.streams[0]);
+      //   }
+      // };
+
+      // / After micStream is obtained
+
+
+// After remote track callback
+          pc.ontrack = e => {
+            if (e.streams && e.streams[0]) {
+              audioEl.srcObject = e.streams[0];
+              visualiser.addStream(e.streams[0], '#ff0000'); // agent voice – red
+            }
+          };
 
       
       const micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
       pc.addTrack(micStream.getTracks()[0]);
-      startLocalVisualizer(micStream);
+      // startLocalVisualizer(micStream);
+      visualiser.addStream(micStream, '#007bff');   // user voice – blue
 
       
       const dc = pc.createDataChannel("oai-events");
@@ -2124,10 +2198,25 @@ window.addEventListener('load', function() {
         body: offer.sdp,
         headers: {
           Authorization: `Bearer ${EPHEMERAL_KEY}`,
-          "Content-Type": "application/sdp"
+          "Content-Type": "application/sdp",
+          "OpenAI-Beta": "realtime=v1",
         },
       });
 
+      // const answerSdp = await sdpResponse.text();
+      // const answer = {
+      //   type: "answer",
+      //   sdp: answerSdp,
+      // };
+      // await pc.setRemoteDescription(answer);
+
+      if (!sdpResponse.ok) {
+        const err = await sdpResponse.json();   // <-- keep the JSON around
+        console.error("Realtime API error", err);
+        alert(JSON.stringify(err, null, 2)); 
+        console.error("Realtime API error:", await sdpResponse.json());
+        return;
+        }
       const answerSdp = await sdpResponse.text();
       const answer = {
         type: "answer",
@@ -2223,6 +2312,7 @@ window.addEventListener('load', function() {
 
   // Add event listeners for form controls
   document.addEventListener('DOMContentLoaded', function() {
+    visualiser.init()
     const startVoiceFormBtn = document.getElementById('startVoiceForm');
     const resetFormBtn = document.getElementById('resetForm');
     
