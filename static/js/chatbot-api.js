@@ -6,10 +6,10 @@ const email = localStorage.getItem("user_email");
 
 document.getElementById("micBtn").addEventListener("click", () => {
     // Trigger a fetch to your local Python backend
-    fetch("http://127.0.0.1:8116/")
+    fetch("http://127.0.0.1:8116/voice")
       .then(response => {
         if (response.ok) {
-          window.location.href = "http://127.0.0.1:8116/";  // Redirect on success
+          window.location.href = "http://127.0.0.1:8116/voice";  // Redirect on success
         } else {
           alert("Could not connect to Python app.");
         }

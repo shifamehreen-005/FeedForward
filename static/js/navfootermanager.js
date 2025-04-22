@@ -11,7 +11,11 @@ class SpecialHeader extends HTMLElement {
     <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
       <div class="container-default w-container">
         <div class="header-block">
+<<<<<<< HEAD
           <a href="http://127.0.0.1:8116/" aria-current="page" class="header-brand w-nav-brand w--current"><img src="/static/images/Logo.webp" loading="lazy" alt="" class="header-brand-logo"></a>
+=======
+          <a href="http://127.0.0.1:8116/" aria-current="page" class="header-brand w-nav-brand w--current"><img src="static/images/Logo.webp" loading="lazy" alt="" class="header-brand-logo"></a>
+>>>>>>> bafb4c05eec79db985f9a8150af7875cc299dc40
           <nav role="navigation" class="header-nav-menu w-nav-menu">
             <ul role="list" class="header-list">
               <li class="header-list-item">
@@ -71,7 +75,7 @@ class SpecialHeader extends HTMLElement {
                       <div class="nav-hover-line"></div>
                       <div class="nav-hover-bg"></div>
                     </div>
-                  </div><img loading="lazy" src="{{ url_for('static', filename='images/Header-Arow-Icon.svg') }}" alt="" class="header-arrow-icon">
+                  </div><img loading="lazy" src="static/images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
                 </div>
               </li>
               ${userRole === 'staff' ? `
@@ -100,10 +104,9 @@ class SpecialHeader extends HTMLElement {
                   </div>
                 </div>
               </li>` : ``}
-              ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Dashboard</a>
+                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Feed</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -112,7 +115,7 @@ class SpecialHeader extends HTMLElement {
                     </div>
                   </div>
                 </div>
-              </li>` : ``}
+              </li>
               ${userRole === 'customers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
@@ -129,20 +132,7 @@ class SpecialHeader extends HTMLElement {
               ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/heatmap" class="header-nav-text w-nav-link" id="volunteer-heatmap">Heatmap</a>
-                  <div class="header-hover-block">
-                    <div class="nav-hover-circle"></div>
-                    <div class="nav-line-block">
-                      <div class="nav-hover-line"></div>
-                      <div class="nav-hover-bg"></div>
-                    </div>
-                  </div>
-                </div>
-              </li>` : ``}
-              ${userRole === 'volunteers' ? `
-              <li class="header-list-item">
-                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/profile-volunteer" class="header-nav-text w-nav-link" id="profile-volunteer-link">Profile</a>
+                  <a href="http://127.0.0.1:8116/profilevolunteer" class="header-nav-text w-nav-link" id="profile-volunteer-link">Profile</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -195,7 +185,11 @@ class SpecialFooter extends HTMLElement {
     <div class="w-layout-blockcontainer container-default w-container">
       <div class="footer-block">
         <div class="footer-nav-block">
+<<<<<<< HEAD
           <a href="http://127.0.0.1:8116/" aria-current="page" class="footer-brand w-inline-block w--current"><img src="/static/images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
+=======
+          <a href="http://127.0.0.1:8116/" aria-current="page" class="footer-brand w-inline-block w--current"><img src="static/images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
+>>>>>>> bafb4c05eec79db985f9a8150af7875cc299dc40
           <div class="footer-social-block">
             <a href="https://www.facebook.com" target="_blank" class="footer-social-link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 42 42" fill="none" class="footer-social-icon">
                 <circle cx="21" cy="21" r="20.5" stroke="currentColor"></circle>
