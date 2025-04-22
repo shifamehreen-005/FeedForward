@@ -71,7 +71,7 @@ class SpecialHeader extends HTMLElement {
                       <div class="nav-hover-line"></div>
                       <div class="nav-hover-bg"></div>
                     </div>
-                  </div><img loading="lazy" src="{{ url_for('static', filename='images/Header-Arow-Icon.svg') }}" alt="" class="header-arrow-icon">
+                  </div><img loading="lazy" src="static/images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
                 </div>
               </li>
               ${userRole === 'staff' ? `
@@ -100,10 +100,9 @@ class SpecialHeader extends HTMLElement {
                   </div>
                 </div>
               </li>` : ``}
-              ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Dashboard</a>
+                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Feed</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -112,7 +111,7 @@ class SpecialHeader extends HTMLElement {
                     </div>
                   </div>
                 </div>
-              </li>` : ``}
+              </li>
               ${userRole === 'customers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
@@ -129,7 +128,7 @@ class SpecialHeader extends HTMLElement {
               ${userRole === 'volunteers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/profile-volunteer" class="header-nav-text w-nav-link" id="profile-volunteer-link">Profile</a>
+                  <a href="http://127.0.0.1:8116/profilevolunteer" class="header-nav-text w-nav-link" id="profile-volunteer-link">Profile</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
