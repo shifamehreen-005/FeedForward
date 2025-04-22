@@ -6,29 +6,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
     if (!isLoggedIn) {
-        window.location.href = "login.html"; // Or you can redirect to the home page
+        window.location.href = "login.html";
     }
-
 
     // Fetch and Populate Profile
     fetch(`http://localhost:3000/get-profile?email=${encodeURIComponent(email)}`)
         .then(res => res.json())
         .then(profile => {
             if (profile) {
-                document.querySelector(".profile-name").textContent = profile.name;
-                document.querySelector(".profile-email").textContent = profile.email;
-                document.querySelector(".profile-phone").textContent = profile.phone;
-                document.querySelector(".profile-info").textContent = profile.location;
-                document.querySelector(".profile-transport").textContent = profile.transport;
-                document.querySelector(".profile-diet").textContent = profile.dietary_restrictions;
-                document.querySelector(".profile-culture").textContent = profile.culture;
-                document.querySelector(".profile-kitchen").textContent = profile.kitchen_access;
-                document.querySelector(".profile-distribution").textContent = profile.distribution;
-                document.querySelector(".profile-services").textContent = profile.services;
-                document.querySelector(".profile-bio").textContent = `"${profile.bio}"`;
+                document.querySelector(".profile-email").textContent = profile.email || "";
+                document.querySelector(".profile-address").textContent = profile.address || profile.location || "";
+                document.querySelector(".profile-transport").textContent = profile.transport || "";
+                document.querySelector(".profile-diet").textContent = profile.dietary_restrictions || "";
+                document.querySelector(".profile-kitchen").textContent = profile.kitchen_access || "";
             }
         })
-        .catch(err => console.error("Failed to load profile:", err));
+        .catch(err => {
+            console.error("Failed to load profile:", err);
+            showNotification("Failed to load profile data", "error");
+        });
 
     editButton.addEventListener("click", function () {
         openEditForm();
@@ -39,142 +35,148 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="edit-form-container">
                 <div class="edit-form">
                     <h2>Edit Profile</h2>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" value="Full Name">
                     
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" disabled style="background-color:#eee; cursor:not-allowed;">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" disabled>
+                        <div class="field-help">Email cannot be changed</div>
+                    </div>
                     
-                    <label for="phone">Phone:</label>
-                    <input type="text" id="phone" value="+1 (234) 567-8901">
-                    
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" value="New York, USA">
+                    <div class="form-group">
+                        <label for="address">Address/Location:</label>
+                        <input type="text" id="address" placeholder="Enter your city, state, or country">
+                    </div>
 
-                    <label for="kitchen-access">Do you have access to a kitchen to store and/or cook food?</label>
-                    <input type="text" id="kitchen-access" name="kitchen-access" value="Yes">
+                    <div class="form-group">
+                        <label for="kitchen-access">Do you have access to a kitchen?</label>
+                        <select id="kitchen-access">
+                            <option value="">Please select</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
 
-                    <label for="culture">Culture:</label>
-                    <input type="text" id="culture" name="culture" value="Middle Eastern">
+                    <div class="form-group">
+                        <label for="transport">Transportation:</label>
+                        <select id="transport">
+                            <option value="">Please select</option>
+                            <option value="Own Transport">Own Transport</option>
+                            <option value="Public Transport">Public Transport</option>
+                        </select>
+                    </div>
 
-                    <label for="transport">Own Transport / Public Transport:</label>
-                    <select id="transport" name="transport" mutliple size = "1">
-                        <option value="Own">Own Transport</option>
-                        <option value="Public">Public Transport</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="dietary-restrictions">Dietary Preferences/Restrictions:</label>
+                        <select id="dietary-restrictions" multiple size="6">
+                            <option value="Latin American">Latin American</option>
+                            <option value="West African">West African</option>
+                            <option value="East African">East African</option>
+                            <option value="Central/South Asian">Central/South Asian</option>
+                            <option value="East Asian">East Asian</option>
+                            <option value="Eastern European">Eastern European</option>
+                            <option value="Middle Eastern/North African">Middle Eastern/North African</option>
+                            <option value="Halal">Halal</option>
+                            <option value="Kosher">Kosher</option>
+                            <option value="Vegetarian">Vegetarian</option>
+                            <option value="Vegan">Vegan</option>
+                            <option value="None">None</option>
+                        </select>
+                        <div class="field-help">Hold Ctrl/Cmd to select multiple options</div>
+                    </div>
 
-                    <label for="dietary-restrictions">Dietary Restrictions:</label>
-                    <select id="dietary-restrictions" name="dietary-restrictions" multiple size="3">
-                        <option value="diabetic">Diabetic</option>
-                        <option value="hypertension">Have Hypertension</option>
-                        <option value="low-sodium">Need Low Sodium</option>
-                        <option value="low-sugar">Need Low Sugar</option>
-                        <option value="fresh-produce">Want Fresh Produce</option>
-                        <option value="all-produce">All-Produce Menu</option>
-                        <option value="halal">Halal</option>
-                    </select>
-
-                    <label for="services-needed">Do you also need any of these other services?</label>
-                    <select id="services-needed" name="services-needed" multiple size="3">
-                        <option value="housing">Housing</option>
-                        <option value="government-benefits">Government benefits</option>
-                        <option value="financial-assistance">Financial assistance</option>
-                        <option value="services-for-older-adults">Services for older adults</option>
-                        <option value="behavioral-health">Behavioral health</option>
-                        <option value="health-care">Health care</option>
-                        <option value="child-care">Child care</option>
-                        <option value="english-language-classes">English language classes</option>
-                        <option value="job-training">Job training</option>
-                    </select>
-
-                    <label for="distribution">Distribution?</label>
-                    <select id="distribution" name="distribution" multiple>
-                        <option value="home-delivery">Home Delivery</option>
-                        <option value="in-person-pickup">In Person Pickup</option>
-                    </select>
-
-                    <label for="bio">Bio:</label>
-                    <input type="text" id="bio" value="Add about you">
-                    
-                    <button class="save-button">Save</button>
-                    <button class="cancel-button">Cancel</button>
+                    <div class="form-buttons">
+                        <button class="save-button">Save Changes</button>
+                        <button class="cancel-button">Cancel</button>
+                    </div>
                 </div>
             </div>
         `;
 
         profileCard.insertAdjacentHTML("afterend", formHtml);
 
-        // Pre-fill fields from profile page
-        document.getElementById("name").value = document.querySelector(".profile-name").textContent;
-        document.getElementById("email").value = localStorage.getItem("user_email") || "";
-        document.getElementById("phone").value = document.querySelector(".profile-phone").textContent;
-        document.getElementById("location").value = document.querySelector(".profile-info").textContent;
-        document.getElementById("kitchen-access").value = document.querySelector(".profile-kitchen").textContent;
-        document.getElementById("culture").value = document.querySelector(".profile-culture").textContent;
-        document.getElementById("transport").value = document.querySelector(".profile-transport").textContent;
-        document.getElementById("distribution").value = document.querySelector(".profile-distribution").textContent;
-        document.getElementById("bio").value = document.querySelector(".profile-bio").textContent.replace(/"/g, "");
+        if (!document.getElementById('enhanced-form-styles')) {
+            const styleSheet = document.createElement('link');
+            styleSheet.rel = 'stylesheet';
+            styleSheet.href = 'css/profile-enhanced.css'; 
+            styleSheet.id = 'enhanced-form-styles';
+            document.head.appendChild(styleSheet);
+        }
 
+ 
+        document.getElementById("email").value = localStorage.getItem("user_email") || "";
+        document.getElementById("address").value = document.querySelector(".profile-address").textContent || "";
+    
+        const kitchenValue = document.querySelector(".profile-kitchen").textContent;
+        const kitchenSelect = document.getElementById("kitchen-access");
+        setSelectValue(kitchenSelect, kitchenValue);
+     
+        const transportValue = document.querySelector(".profile-transport").textContent;
+        const transportSelect = document.getElementById("transport");
+        setSelectValue(transportSelect, transportValue);
+
+        const dietaryValue = document.querySelector(".profile-diet").textContent;
+        setMultiSelectValues("dietary-restrictions", dietaryValue);
 
         document.querySelector(".save-button").addEventListener("click", saveChanges);
         document.querySelector(".cancel-button").addEventListener("click", closeEditForm);
     }
+    
+    function setSelectValue(selectElement, value) {
+        if (!selectElement) return;
+        
+        for (let i = 0; i < selectElement.options.length; i++) {
+            if (selectElement.options[i].value === value || 
+                selectElement.options[i].text === value) {
+                selectElement.selectedIndex = i;
+                break;
+            }
+        }
+    }
+  
+    function setMultiSelectValues(selectId, valuesString) {
+        const selectElement = document.getElementById(selectId);
+        if (!selectElement) return;
+        
+        const values = valuesString.split(',').map(v => v.trim());
+        
+        for (let i = 0; i < selectElement.options.length; i++) {
+            selectElement.options[i].selected = false;
+            const option = selectElement.options[i];
+            
+            if (values.some(val => val === option.value || val === option.text)) {
+                option.selected = true;
+            }
+        }
+    }
 
     function saveChanges() {
-        // Update DOM elements with new input values
-        document.querySelector(".profile-name").textContent = document.getElementById("name").value;
-        document.querySelector(".profile-email").textContent = document.getElementById("email").value;
-        document.querySelector(".profile-phone").textContent = document.getElementById("phone").value;
-        document.querySelector(".profile-info").textContent = document.getElementById("location").value;
-        document.querySelector(".profile-transport").textContent = document.getElementById("transport").value;
-        document.querySelector(".profile-culture").textContent = document.getElementById("culture").value;
-        document.querySelector(".profile-kitchen").textContent = document.getElementById("kitchen-access").value;
-        document.querySelector(".profile-distribution").textContent = document.getElementById("distribution").value;
-        document.querySelector(".profile-bio").textContent = `"${document.getElementById("bio").value}"`;
-    
-
-        // Get selected dietary-restrictions  as comma-separated string
-        const dietary_select = document.getElementById('dietary-restrictions');
-        const dietary_selectedOptions = Array.from(dietary_select.selectedOptions);
-        const selectedRestrictions = dietary_selectedOptions.map(option => option.value).join(', ');
-        document.querySelector(".profile-diet").textContent = selectedRestrictions;
-
-        // Get selected services as comma-separated string
-        const services_select = document.getElementById('services-needed');
-        const services_selectedOptions = Array.from(services_select.selectedOptions);
-        const selectedServices = services_selectedOptions.map(option => option.value).join(', ');
-        document.querySelector(".profile-services").textContent = selectedServices;
-    
-        // Prepare data to send to backend
+        
+        const email = document.getElementById("email").value;
+        const address = document.getElementById("address").value;
+        const kitchenAccess = document.getElementById("kitchen-access").value;
+        const transport = document.getElementById("transport").value;
+        
+        const dietarySelect = document.getElementById('dietary-restrictions');
+        const selectedOptions = Array.from(dietarySelect.selectedOptions);
+        const selectedRestrictions = selectedOptions.map(option => option.text).join(', ');
+        
         const profileData = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            location: document.getElementById("location").value,
-            transport: document.getElementById("transport").value,
+            email: email,
+            address: address,
+            location: address,
+            transport: transport,
             dietary_restrictions: selectedRestrictions,
-            culture: document.getElementById("culture").value,
-            kitchen_access: document.getElementById("kitchen-access").value,
-            distribution: document.getElementById("distribution").value,
-            services: selectedServices,
-            bio: document.getElementById("bio").value
+            kitchen_access: kitchenAccess
         };
+        
 
-
-        // Update profile page
-        document.querySelector(".profile-name").textContent = profileData.name;
         document.querySelector(".profile-email").textContent = profileData.email;
-        document.querySelector(".profile-phone").textContent = profileData.phone;
-        document.querySelector(".profile-info").textContent = profileData.location;
+        document.querySelector(".profile-address").textContent = profileData.address;
         document.querySelector(".profile-transport").textContent = profileData.transport;
         document.querySelector(".profile-diet").textContent = profileData.dietary_restrictions;
-        document.querySelector(".profile-culture").textContent = profileData.culture;
         document.querySelector(".profile-kitchen").textContent = profileData.kitchen_access;
-        document.querySelector(".profile-distribution").textContent = profileData.distribution;
-        document.querySelector(".profile-services").textContent = profileData.services;
-        document.querySelector(".profile-bio").textContent = `"${profileData.bio}"`;
     
-        // Send to server
+
         fetch("http://localhost:3000/save-profile", {
             method: "POST",
             headers: {
@@ -182,21 +184,66 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             body: JSON.stringify(profileData)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
         .then(data => {
             console.log("Server response:", data);
-            alert("Profile saved successfully!");
+            showNotification("Profile saved successfully!");
         })
         .catch(error => {
             console.error("Error saving profile:", error);
-            alert("Failed to save profile.");
+            showNotification("Failed to save profile.", "error");
         });
     
-        closeEditForm(); // Close the form after saving
+        closeEditForm(); 
     }
     
-
     function closeEditForm() {
-        document.querySelector(".edit-form-container").remove();
+        const formContainer = document.querySelector(".edit-form-container");
+        if (formContainer) {
+            
+            formContainer.style.animation = "fadeOut 0.3s forwards";
+            
+            setTimeout(() => {
+                formContainer.remove();
+            }, 300);
+        }
+    }
+    
+    function showNotification(message, type = "success") {
+        // Create notification element
+        const notification = document.createElement("div");
+        notification.className = `notification ${type}`;
+        notification.textContent = message;
+        
+        // Style based on type
+        notification.style.position = "fixed";
+        notification.style.top = "20px";
+        notification.style.right = "20px";
+        notification.style.padding = "15px 25px";
+        notification.style.borderRadius = "8px";
+        notification.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
+        notification.style.zIndex = "1100";
+        notification.style.animation = "slideInRight 0.4s, fadeOut 0.4s 3s forwards";
+        
+        if (type === "success") {
+            notification.style.backgroundColor = "#2ecc71";
+            notification.style.color = "white";
+        } else {
+            notification.style.backgroundColor = "#e74c3c";
+            notification.style.color = "white";
+        }
+        
+        // Add to DOM
+        document.body.appendChild(notification);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            notification.remove();
+        }, 3500);
     }
 });
