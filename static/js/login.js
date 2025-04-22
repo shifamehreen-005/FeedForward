@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("login_time");
   
-    window.location.href = "login.html";
+    window.location.href = "http://127.0.0.1:8116/login";
   }
   
   function removeConfirmPassword() {
@@ -127,7 +127,7 @@ async function authenticateUser(endpoint, data) {
       localStorage.setItem("user_type", data.user_type); // Store user type
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("login_time", currentTime);
-      window.location.href = "index.html";
+      window.location.href = "http://127.0.0.1:8116/";
     }
   } catch (error) {
     console.error("Error:", error);
