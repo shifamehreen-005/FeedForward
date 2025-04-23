@@ -160,6 +160,18 @@ class SpecialHeaderr extends HTMLElement {
         <nav role="navigation" class="header-nav-menu w-nav-menu">
           <ul role="list" class="header-list">
             <li class="header-list-item">
+              <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                <a href="http://127.0.0.1:8116/blogs" class="header-nav-text w-nav-link">Blogs</a>
+                <div class="header-hover-block">
+                  <div class="nav-hover-circle"></div>
+                  <div class="nav-line-block">
+                    <div class="nav-hover-line"></div>
+                    <div class="nav-hover-bg"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-list-item">
               <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
                 <a href="http://127.0.0.1:8116/feedback" class="header-nav-text w-nav-link">Give Feedback</a>
                 <div class="header-hover-block">
