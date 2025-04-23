@@ -82,6 +82,13 @@ def blogs():
         return render_template("blogs.html")
     except Exception as e:
         return "blogs.html not found", 404
+
+@app.route("/blogs")
+def blogs():
+    try:
+        return render_template("blogs.html")
+    except Exception as e:
+        return "blogs.html not found", 404
     
 @app.route("/donate")
 def donate():
