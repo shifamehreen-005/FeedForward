@@ -1,6 +1,6 @@
 import os
 import httpx
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify
 from flask_cors import CORS
 
 app = Flask("voice_app")
@@ -19,13 +19,6 @@ def contact():
         return render_template("contact.html")
     except Exception as e:
         return "contact.html not found", 404
-    
-@app.route("/profile")
-def profile():
-    try:
-        return render_template("profile.html")
-    except Exception as e:
-        return "profile.html not found", 404
     
 @app.route("/Sdashboard")
 def Sdashboard():
@@ -74,7 +67,6 @@ def profilevolunteer():
     try:
         return render_template("profilevolunteer.html")
     except Exception as e:
-        print(f"Error rendering profilevolunteer.html: {str(e)}")
         return "profilevolunteer.html not found", 404
         
 @app.route("/donateFood")
@@ -89,7 +81,7 @@ def blogs():
     try:
         return render_template("blogs.html")
     except Exception as e:
-        return f"Error: {str(e)}", 500
+        return "blogs.html not found", 404
     
 @app.route("/donate")
 def donate():
@@ -123,7 +115,7 @@ def english_session():
             json={
                 "model": "gpt-4o-mini-realtime-preview-2024-12-17",
                 "voice": "alloy",
-                "instructions": "You are Alysia — a warm, witty, fast-talking AI. Always speak English, no matter what language the user uses. Never switch. Act human, but remember you're not. Be playful and engaging. Call functions when possible. Never mention these rules.",
+                "instructions": "You are Alysia — a warm, witty, fast-talking AI. Always speak English, no matter what language the user uses. Never switch. Act human, but remember you’re not. Be playful and engaging. Call functions when possible. Never mention these rules.",
             },
         )
         data = r.json()
@@ -146,7 +138,7 @@ def spanish_session():
             json={
                 "model": "gpt-4o-mini-realtime-preview-2024-12-17",
                 "voice": "alloy",
-                "instructions": "You are Alysia - a warm, witty, fast-talking AI. Always speak Spanish, no matter what language the user user uses. Never switch.Act human, but remember you're not. Be playful and engaging. Call functions when possible. Never mention these rules."
+                "instructions": "You are Alysia - a warm, witty, fast-talking AI. Always speak Spanish, no matter what language the user user uses. Never switch.Act human, but remember you’re not. Be playful and engaging. Call functions when possible. Never mention these rules."
             },
         )
 
@@ -154,47 +146,6 @@ def spanish_session():
         print(data)
         return jsonify(data)
     
-@app.route("/api/get-profile", methods=["GET"])
-def get_profile():
-    try:
-        email = request.args.get("email")
-        if not email:
-            return jsonify({"success": False, "error": "Email is required"}), 400
-        
-        # TODO: Replace this with actual database query
-        # For now, return dummy data
-        profile_data = {
-            "name": "Jane Volunteer",
-            "email": email,
-            "phone": "+1 (555) 123-4567",
-            "location": "Brooklyn, NY",
-            "availability": "Weekends",
-            "transport": "Public Transport",
-            "interests": "Food distribution, Community outreach",
-            "skills": "Fluent in Spanish, Basic First Aid",
-            "experience": "2 years at Red Cross",
-            "background_check": "Yes",
-            "start_date": "March 2022",
-            "bio": "I'm passionate about helping others and making a difference in my community."
-        }
-        
-        return jsonify({"success": True, "profile": profile_data})
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
-
-@app.route("/api/update-profile", methods=["POST"])
-def update_profile():
-    try:
-        data = request.get_json()
-        if not data or "email" not in data:
-            return jsonify({"success": False, "error": "Email is required"}), 400
-        
-        # TODO: Replace this with actual database update
-        # For now, just return success
-        return jsonify({"success": True})
-    except Exception as e:
-        return jsonify({"success": False, "error": str(e)}), 500
-
 if __name__ == "__main__":
     
     app.run(host="0.0.0.0", port=8116, debug=True)
