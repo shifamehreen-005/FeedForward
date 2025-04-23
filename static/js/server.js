@@ -66,6 +66,45 @@ app.post("/signup", async (req, res) => {
     }
 });
 
+// **Feedbacks
+app.post('/feedback', (req, res) => {
+    const {
+      name,
+      visitReason,
+      exceeded,
+      improvement,
+      shoutout,
+      featureUsed,
+      featureExperience
+    } = req.body;
+  
+    const sql = `
+      INSERT INTO feedback (
+        name, visit_reason, exceeded, improvement,
+        shoutout, feature_used, feature_experience, submitted_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())
+    `;
+  
+    const values = [
+      name,
+      visitReason,
+      exceeded || null,
+      improvement || null,
+      shoutout || null,
+      featureUsed || null,
+      featureExperience || null
+    ];
+  
+    db.query(sql, values, (err, result) => {
+      if (err) {
+        console.error('❌ Error inserting feedback:', err);
+        return res.status(500).send('Server error');
+      }
+      console.log('✅ Feedback inserted:', result.insertId);
+      res.status(200).send('Feedback received!');
+    });
+  });
+  
 // **User Login**
 app.post("/login", (req, res) => {
     const { email, password, user_type } = req.body;
