@@ -72,23 +72,7 @@ def volunteer():
 @app.route("/profilevolunteer")
 def profilevolunteer():
     try:
-        # Get user data from localStorage or session
-        # For now, we'll use dummy data
-        user_data = {
-            "name": "Jane Volunteer",
-            "email": "janevolunteer@example.com",
-            "phone": "+1 (555) 123-4567",
-            "location": "Brooklyn, NY",
-            "availability": "Weekends",
-            "transport": "Public Transport",
-            "interests": "Food distribution, Community outreach",
-            "skills": "Fluent in Spanish, Basic First Aid",
-            "experience": "2 years at Red Cross",
-            "background_check": "Yes",
-            "start_date": "March 2022",
-            "bio": "I'm passionate about helping others and making a difference in my community."
-        }
-        return render_template("profilevolunteer.html", user=user_data)
+        return render_template("profilevolunteer.html")
     except Exception as e:
         print(f"Error rendering profilevolunteer.html: {str(e)}")
         return "profilevolunteer.html not found", 404
