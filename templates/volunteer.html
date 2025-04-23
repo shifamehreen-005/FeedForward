@@ -681,13 +681,13 @@
                   }
               }
 
-              // Logout functionality
+              // Logout
               logoutBtn.addEventListener('click', function() {
                   localStorage.removeItem('userData');
                   updateUIForStaffAuth(false);
               });
 
-              // Initialize UI based on login state
+              // Initialize UI
               updateUIForStaffAuth(isStaffLoggedIn);
 
               // Store events in localStorage with proper date formatting
