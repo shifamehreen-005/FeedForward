@@ -40,6 +40,18 @@ class SpecialHeader extends HTMLElement {
               </li>
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                  <a href="http://127.0.0.1:8116/volunteer" class="header-nav-text w-nav-link">Volunteer</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
                   <a href="http://127.0.0.1:8116/explore" class="header-nav-text w-nav-link">Explore</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
