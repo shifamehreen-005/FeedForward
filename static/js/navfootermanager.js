@@ -11,7 +11,7 @@ class SpecialHeader extends HTMLElement {
     <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
       <div class="container-default w-container">
         <div class="header-block">
-          <a href="http://127.0.0.1:8116/" aria-current="page" class="header-brand w-nav-brand w--current"><img src="static/images/Logo.webp" loading="lazy" alt="" class="header-brand-logo"></a>
+          <a href="http://127.0.0.1:8116/" aria-current="page" class="header-brand w-nav-brand w--current"><img src="/static/images/Logo.webp" loading="lazy" alt="" class="header-brand-logo"></a>
           <nav role="navigation" class="header-nav-menu w-nav-menu">
             <ul role="list" class="header-list">
               <li class="header-list-item">
@@ -193,7 +193,7 @@ class SpecialFooter extends HTMLElement {
     <div class="w-layout-blockcontainer container-default w-container">
       <div class="footer-block">
         <div class="footer-nav-block">
-          <a href="http://127.0.0.1:8116/" aria-current="page" class="footer-brand w-inline-block w--current"><img src="static/images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
+          <a href="http://127.0.0.1:8116/" aria-current="page" class="footer-brand w-inline-block w--current"><img src="/static/images/Logo_1.webp" loading="lazy" alt="" class="footer-brand-logo"></a>
           <div class="footer-social-block">
             <a href="https://www.facebook.com" target="_blank" class="footer-social-link w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 42 42" fill="none" class="footer-social-icon">
                 <circle cx="21" cy="21" r="20.5" stroke="currentColor"></circle>
