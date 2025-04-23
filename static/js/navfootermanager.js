@@ -64,7 +64,7 @@ class SpecialHeader extends HTMLElement {
               </li>
               <li class="header-list-item">
                 <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/donate" class="header-nav-text w-nav-link">Donate</a>
+                  <a href="http://127.0.0.1:8116/donate" class="header-nav-text w-nav-link">Donate Money</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">
@@ -72,6 +72,18 @@ class SpecialHeader extends HTMLElement {
                       <div class="nav-hover-bg"></div>
                     </div>
                   </div><img loading="lazy" src="static/images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
+                </div>
+              </li>
+              <li class="header-list-item">
+                <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
+                  <a href="http://127.0.0.1:8116/feedback" class="header-nav-text w-nav-link">Give Feedback</a>
+                  <div class="header-hover-block">
+                    <div class="nav-hover-circle"></div>
+                    <div class="nav-line-block">
+                      <div class="nav-hover-line"></div>
+                      <div class="nav-hover-bg"></div>
+                    </div>
+                  </div>
                 </div>
               </li>
               ${userRole === 'staff' ? `
@@ -102,7 +114,7 @@ class SpecialHeader extends HTMLElement {
               </li>` : ``}
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Feed</a>
+                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Donate Food</a>
                   <div class="header-hover-block">
                     <div class="nav-hover-circle"></div>
                     <div class="nav-line-block">

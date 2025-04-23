@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f0e6;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+  } 
+
+  .feedback-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+  }
+
+  h3 {
+    color: #2f5d3f;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fffaf2;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .form-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #888;
+    transition: 0.2s;
+    pointer-events: none;
+  }
+
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label,
+  .form-group textarea:focus + label,
+  .form-group textarea:not(:placeholder-shown) + label,
+  .form-group select:focus + label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: #2f5d3f;
+  }
+
+  .submit-btn {
+    background-color: #2f5d3f;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .submit-btn:hover {
+    background-color: #3f7d55;
+  }
+
+  #satisfactionLabel {
+  font-weight: 500;
+  margin-top: 6px;
+  color: #2f5d3f;
+  text-align: right;
+  } 
