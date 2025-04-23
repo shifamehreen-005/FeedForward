@@ -62,43 +62,6 @@ class SpecialHeader extends HTMLElement {
                   </div>
                 </div>
               </li>
-              <li class="header-list-item">
-                <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/donate" class="header-nav-text w-nav-link">Donate Money</a>
-                  <div class="header-hover-block">
-                    <div class="nav-hover-circle"></div>
-                    <div class="nav-line-block">
-                      <div class="nav-hover-line"></div>
-                      <div class="nav-hover-bg"></div>
-                    </div>
-                  </div><img loading="lazy" src="static/images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
-                </div>
-              </li>
-              <li class="header-list-item">
-                <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/feedback" class="header-nav-text w-nav-link">Give Feedback</a>
-                  <div class="header-hover-block">
-                    <div class="nav-hover-circle"></div>
-                    <div class="nav-line-block">
-                      <div class="nav-hover-line"></div>
-                      <div class="nav-hover-bg"></div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              ${userRole === 'staff' ? `
-              <li class="header-list-item">
-                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/feedbacks" class="header-nav-text w-nav-link" id="feedback-link">Feedbacks</a>
-                  <div class="header-hover-block">
-                    <div class="nav-hover-circle"></div>
-                    <div class="nav-line-block">
-                      <div class="nav-hover-line"></div>
-                      <div class="nav-hover-bg"></div>
-                    </div>
-                  </div>
-                </div>
-              </li>` : ``}
               ${userRole === 'staff' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
@@ -112,18 +75,6 @@ class SpecialHeader extends HTMLElement {
                   </div>
                 </div>
               </li>` : ``}
-              <li class="header-list-item">
-                <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
-                  <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Donate Food</a>
-                  <div class="header-hover-block">
-                    <div class="nav-hover-circle"></div>
-                    <div class="nav-line-block">
-                      <div class="nav-hover-line"></div>
-                      <div class="nav-hover-bg"></div>
-                    </div>
-                  </div>
-                </div>
-              </li>
               ${userRole === 'customers' ? `
               <li class="header-list-item">
                 <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
@@ -184,6 +135,70 @@ class SpecialHeader extends HTMLElement {
     
     `
     }
+}
+
+class SpecialHeaderr extends HTMLElement {
+  connectedCallback() {
+    const userRole = localStorage.getItem("user_type");
+      this.innerHTML = `
+      
+  <div data-w-id="c1f4b892-086f-1ac0-1aa5-19ff6d687988" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="header-section w-nav">
+    <div class="container-default w-container">
+      <div class="header-block">
+        <nav role="navigation" class="header-nav-menu w-nav-menu">
+          <ul role="list" class="header-list">
+            <li class="header-list-item">
+              <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
+                <a href="http://127.0.0.1:8116/feedback" class="header-nav-text w-nav-link">Give Feedback</a>
+                <div class="header-hover-block">
+                  <div class="nav-hover-circle"></div>
+                  <div class="nav-line-block">
+                    <div class="nav-hover-line"></div>
+                    <div class="nav-hover-bg"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-list-item">
+              <div data-w-id="e133c5d6-6137-74d7-2b7f-bafcb9dccf21" class="header-nav-link">
+                <a href="http://127.0.0.1:8116/Vdashboard" class="header-nav-text w-nav-link" id="dashboard-link">Donate Food</a>
+                <div class="header-hover-block">
+                  <div class="nav-hover-circle"></div>
+                  <div class="nav-line-block">
+                    <div class="nav-hover-line"></div>
+                    <div class="nav-hover-bg"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-list-item">
+              <div data-w-id="81cb6348-367b-d211-28b8-81ba90276b69" class="header-nav-link">
+                <a href="http://127.0.0.1:8116/donate" class="header-nav-text w-nav-link">Donate Money</a>
+                <div class="header-hover-block">
+                  <div class="nav-hover-circle"></div>
+                  <div class="nav-line-block">
+                    <div class="nav-hover-line"></div>
+                    <div class="nav-hover-bg"></div>
+                  </div>
+                </div><img loading="lazy" src="static/images/Header-Arow-Icon.svg" alt="" class="header-arrow-icon">
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-menu-button w-nav-button">
+          <div class="header-menu-button-block">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+  
+  `
+  }
 }
 
 class SpecialFooter extends HTMLElement {
@@ -307,4 +322,5 @@ class SpecialFooter extends HTMLElement {
 }
 
 customElements.define('special-header', SpecialHeader)
+customElements.define('special-headerr', SpecialHeaderr)
 customElements.define('special-footer', SpecialFooter)

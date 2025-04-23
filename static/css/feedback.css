@@ -19,13 +19,16 @@ body {
 
   h3 {
     color: #2f5d3f;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem !important;
     text-align: center;
   }
 
   .form-group {
     position: relative;
     margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
   }
 
   .form-group input,
@@ -69,12 +72,15 @@ body {
     color: white;
     padding: 12px;
     border: none;
-    width: 100%;
+    width: 60%; /* Adjust width as needed */
     font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s;
-  }
+    display: block; /* Ensure it's treated as a block element */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
 
   .submit-btn:hover {
     background-color: #3f7d55;
