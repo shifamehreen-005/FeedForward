@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Get user email from localStorage
-    const userEmail = localStorage.getItem("userEmail");
+    const userEmail = localStorage.getItem("user_email");
     if (!userEmail) {
         window.location.href = "/login";
         return;
