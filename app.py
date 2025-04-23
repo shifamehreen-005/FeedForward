@@ -20,6 +20,13 @@ def contact():
     except Exception as e:
         return "contact.html not found", 404
     
+@app.route("/profile")
+def profile():
+    try:
+        return render_template("profile.html")
+    except Exception as e:
+        return "profile.html not found", 404
+    
 @app.route("/Sdashboard")
 def Sdashboard():
     try:
