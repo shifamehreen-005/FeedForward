@@ -70,7 +70,7 @@ def Vdashboard():
         return "Vdashboard.html not found", 404
     
 @app.route("/blogs")
-def Vdashboard():
+def blogs():
     try:
         return render_template("blogs.html")
     except Exception as e:
