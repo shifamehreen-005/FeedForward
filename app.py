@@ -26,6 +26,13 @@ def voice():
         return render_template("voice.html")
     except Exception as e:
         return "voice.html not found", 404
+    
+@app.route("/feedback")
+def feedback():
+    try:
+        return render_template("feedback.html")
+    except Exception as e:
+        return "feedback.html not found", 404
 
 @app.route("/about")
 def about():
