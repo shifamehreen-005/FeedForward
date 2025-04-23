@@ -20,12 +20,26 @@ def contact():
     except Exception as e:
         return "contact.html not found", 404
     
+@app.route("/Sdashboard")
+def Sdashboard():
+    try:
+        return render_template("Sdashboard.html")
+    except Exception as e:
+        return "Sdashboard.html not found", 404
+    
 @app.route("/voice")
 def voice():
     try:
         return render_template("voice.html")
     except Exception as e:
         return "voice.html not found", 404
+    
+@app.route("/feedback")
+def feedback():
+    try:
+        return render_template("feedback.html")
+    except Exception as e:
+        return "feedback.html not found", 404
 
 @app.route("/about")
 def about():
