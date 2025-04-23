@@ -76,6 +76,13 @@ def Vdashboard():
     except Exception as e:
         return "Vdashboard.html not found", 404
     
+@app.route("/blogs")
+def blogs():
+    try:
+        return render_template("blogs.html")
+    except Exception as e:
+        return "blogs.html not found", 404
+    
 @app.route("/donate")
 def donate():
     try:
