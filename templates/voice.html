@@ -38,263 +38,268 @@
 </head>
 
 <body >
-  <!-- Navigation Bar Component -->
+
   <special-header></special-header>
   
-
+  <div class="container">
+    <div class="header-row">
+        <h1 class="page-title">One voice. One step closer to the help you need.</h1>
+        <button id="close-chatbot" on>✕</button>
+        <div class="language-toggle">
+          <input type="checkbox" id="lang-switch" />
+          <label for="lang-switch" class="toggle-label">
+            <span class="lang-text en">EN</span>
+            <span class="slider"></span>
+            <span class="lang-text es">ES</span>
+          </label>
+      </div>
   
-
-  <!-- Page content starts here -->
-    <div class="container">
-        <div class="header-row">
-            <h1 class="page-title">One voice. One step closer to the help you need.</h1>
-            <button id="close-chatbot" on>✕</button>
-            <div class="language-toggle">
-              <input type="checkbox" id="lang-switch" />
-              <label for="lang-switch" class="toggle-label">
-                <span class="lang-text en">EN</span>
-                <span class="slider"></span>
-                <span class="lang-text es">ES</span>
-              </label>
-          </div>
-      
-      <div class="row">
-        <div class="col-md-6">
-          <!-- <div class="mb-3">
-            <p><strong>User Voice:</strong></p>
-            <canvas id="localVisualizer" class="visualizer"></canvas>
-          </div>
-          <div class="mb-3">
-            <p><strong>Agent Voice:</strong></p>
-            <canvas id="backendVisualizer" class="visualizer"></canvas>
-          </div> -->
-          <div class="mb-3">
-            <p><strong>Unified Visualizer</strong></p>
-            <canvas id="audioVisualizer" class="visualizer"></canvas>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-container">
-            <h3>Food Bank Assistance Form</h3>
-            <p class="text-muted">Our voice assistant will guide you through these questions to help find the right food bank services for your needs.</p>
-            
-            <div class="progress">
-              <div id="formProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-            </div>
-            
-            <div id="formQuestions">
-              <div class="form-question" data-question-id="1">
-                <label class="form-label">What is your name?</label>
-                <input type="text" class="form-control" id="name" placeholder="Your name">
-              </div>
-              
-              <div class="form-question" data-question-id="2">
-                <label class="form-label">Do you have access to a kitchen?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="kitchen-access" id="kitchen-yes" value="Yes">
-                  <label class="form-check-label" for="kitchen-yes">Yes</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="kitchen-access" id="kitchen-no" value="No">
-                  <label class="form-check-label" for="kitchen-no">No</label>
-                </div>
-              </div>
-              
-              <div class="form-question" data-question-id="3">
-                <label class="form-label">How would you like your food?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="food-loose" value="Loose groceries">
-                  <label class="form-check-label" for="food-loose">Loose groceries</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="food-packaged" value="Pre-bagged or boxed groceries">
-                  <label class="form-check-label" for="food-packaged">Pre-bagged or boxed groceries</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="food-prepared" value="Prepared meals">
-                  <label class="form-check-label" for="food-prepared">Prepared meals</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="food-any" value="Any">
-                  <label class="form-check-label" for="food-any">Any</label>
-                </div>
-              </div>
-              
-              <div class="form-question" data-question-id="4">
-                <label class="form-label">Do you have any dietary preferences?</label>
-                <div class="checkbox-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-latin" value="Latin American">
-                    <label class="form-check-label" for="pref-latin">Latin American</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-westafrican" value="West African">
-                    <label class="form-check-label" for="pref-westafrican">West African</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-eastafrican" value="East African">
-                    <label class="form-check-label" for="pref-eastafrican">East African</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-southasian" value="Central/South Asian">
-                    <label class="form-check-label" for="pref-southasian">Central/South Asian</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-eastasian" value="East Asian">
-                    <label class="form-check-label" for="pref-eastasian">East Asian</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-easteuropean" value="Eastern European">
-                    <label class="form-check-label" for="pref-easteuropean">Eastern European</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-middleeastern" value="Middle Eastern/North African">
-                    <label class="form-check-label" for="pref-middleeastern">Middle Eastern/North African</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-halal" value="Halal">
-                    <label class="form-check-label" for="pref-halal">Halal</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-kosher" value="Kosher">
-                    <label class="form-check-label" for="pref-kosher">Kosher</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-vegetarian" value="Vegetarian">
-                    <label class="form-check-label" for="pref-vegetarian">Vegetarian</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-vegan" value="Vegan">
-                    <label class="form-check-label" for="pref-vegan">Vegan</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="pref-none" value="None">
-                    <label class="form-check-label" for="pref-none">None</label>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="form-question" data-question-id="5">
-                <label class="form-label">Are you able to travel to pick up food?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="travel-ability" id="travel-yes" value="Yes">
-                  <label class="form-check-label" for="travel-yes">Yes</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="travel-ability" id="travel-no" value="No">
-                  <label class="form-check-label" for="travel-no">No</label>
-                </div>
-              </div>
-              
-              <div class="form-question" data-question-id="6">
-                <label class="form-label">Can someone else pick up food for you?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="someone-else" id="someone-yes" value="Yes">
-                  <label class="form-check-label" for="someone-yes">Yes</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="someone-else" id="someone-no" value="No">
-                  <label class="form-check-label" for="someone-no">No</label>
-                </div>
-              </div>
-              
-              <div class="form-question" data-question-id="7">
-                <label class="form-label">When would you like to go?</label>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="day-preference" id="day-today" value="Today">
-                  <label class="form-check-label" for="day-today">Today</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="day-preference" id="day-another" value="Another day">
-                  <label class="form-check-label" for="day-another">Another day</label>
-                </div>
-              </div>
-              
-              <div class="form-question" data-question-id="8">
-                <label class="form-label">Which day would you prefer?</label>
-                <div class="checkbox-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-tomorrow" value="Tomorrow">
-                    <label class="form-check-label" for="day-tomorrow">Tomorrow</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-monday" value="Monday">
-                    <label class="form-check-label" for="day-monday">Monday</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-tuesday" value="Tuesday">
-                    <label class="form-check-label" for="day-tuesday">Tuesday</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-wednesday" value="Wednesday">
-                    <label class="form-check-label" for="day-wednesday">Wednesday</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-thursday" value="Thursday">
-                    <label class="form-check-label" for="day-thursday">Thursday</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-friday" value="Friday">
-                    <label class="form-check-label" for="day-friday">Friday</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-saturday" value="Saturday">
-                    <label class="form-check-label" for="day-saturday">Saturday</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="day-sunday" value="Sunday">
-                    <label class="form-check-label" for="day-sunday">Sunday</label>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="form-question" data-question-id="9">
-                <label class="form-label">What time would you prefer?</label>
-                <select class="form-select" id="preferred-time">
-                  <option value="">Select a time range</option>
-                  <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
-                  <option value="Afternoon (12pm-4pm)">Afternoon (12pm-4pm)</option>
-                  <option value="Evening (4pm-7pm)">Evening (4pm-7pm)</option>
-                </select>
-              </div>
-              
-              <div class="form-question" data-question-id="10">
-                <label class="form-label">What is your location?</label>
-                <input type="text" class="form-control" id="location" placeholder="Your address or neighborhood">
-              </div>
-              
-              <div class="form-question" data-question-id="11">
-                <label class="form-label">For home delivery, what time would you prefer?</label>
-                <select class="form-select" id="delivery-time">
-                  <option value="">Select a time range</option>
-                  <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
-                  <option value="Afternoon (12pm-4pm)">Afternoon (12pm-4pm)</option>
-                  <option value="Evening (4pm-7pm)">Evening (4pm-7pm)</option>
-                </select>
-              </div>
-              
-              <div class="form-question" data-question-id="12">
-                <label class="form-label">Any additional comments or needs?</label>
-                <textarea class="form-control" id="comments" rows="3" placeholder="Please share any other information that might help us serve you better"></textarea>
-              </div>
-            </div>
-            
-            <div class="form-controls">
-              <button type="button" id="startVoiceForm" class="btn btn-primary">Start Voice Form</button>
-              <button type="button" id="resetForm" class="btn btn-secondary">Reset Form</button>
-            </div>
-
-          <div class="completion-image">
-            <h3>Form Complete!</h3>
-            <img src="/api/placeholder/400/300" alt="Food bank services available">
-            <p class="lead">Thank you for completing the form. We've found food bank services that match your preferences.</p>
-            <p>Transit options are being calculated to help you reach your nearest food bank.</p>
-          </div>
-
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-md-6">
+      <!-- <div class="mb-3">
+        <p><strong>User Voice:</strong></p>
+        <canvas id="localVisualizer" class="visualizer"></canvas>
+      </div>
+      <div class="mb-3">
+        <p><strong>Agent Voice:</strong></p>
+        <canvas id="backendVisualizer" class="visualizer"></canvas>
+      </div> -->
+      <div class="mb-3">
+        <p><strong>Unified Visualizer</strong></p>
+        <canvas id="audioVisualizer" class="visualizer"></canvas>
       </div>
     </div>
+    <div class="col-md-6">
+      <div class="form-container">
+        <h3>Food Bank Assistance Form</h3>
+        <p class="text-muted">Our voice assistant will guide you through these questions to help find the right food bank services for your needs.</p>
+        
+        <div class="progress">
+          <div id="formProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+        
+        <div id="formQuestions">
+          <div class="form-question" data-question-id="1">
+            <label class="form-label">What is your name?</label>
+            <input type="text" class="form-control" id="name" placeholder="Your name">
+          </div>
+          
+          <div class="form-question" data-question-id="2">
+            <label class="form-label">Do you have access to a kitchen?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="kitchen-access" id="kitchen-yes" value="Yes">
+              <label class="form-check-label" for="kitchen-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="kitchen-access" id="kitchen-no" value="No">
+              <label class="form-check-label" for="kitchen-no">No</label>
+            </div>
+          </div>
+          
+          <div class="form-question" data-question-id="3">
+            <label class="form-label">How would you like your food?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="food-loose" value="Loose groceries">
+              <label class="form-check-label" for="food-loose">Loose groceries</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="food-packaged" value="Pre-bagged or boxed groceries">
+              <label class="form-check-label" for="food-packaged">Pre-bagged or boxed groceries</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="food-prepared" value="Prepared meals">
+              <label class="form-check-label" for="food-prepared">Prepared meals</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="food-any" value="Any">
+              <label class="form-check-label" for="food-any">Any</label>
+            </div>
+          </div>
+          
+          <div class="form-question" data-question-id="4">
+            <label class="form-label">Do you have any dietary preferences?</label>
+            <div class="checkbox-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-latin" value="Latin American">
+                <label class="form-check-label" for="pref-latin">Latin American</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-westafrican" value="West African">
+                <label class="form-check-label" for="pref-westafrican">West African</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-eastafrican" value="East African">
+                <label class="form-check-label" for="pref-eastafrican">East African</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-southasian" value="Central/South Asian">
+                <label class="form-check-label" for="pref-southasian">Central/South Asian</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-eastasian" value="East Asian">
+                <label class="form-check-label" for="pref-eastasian">East Asian</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-easteuropean" value="Eastern European">
+                <label class="form-check-label" for="pref-easteuropean">Eastern European</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-middleeastern" value="Middle Eastern/North African">
+                <label class="form-check-label" for="pref-middleeastern">Middle Eastern/North African</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-halal" value="Halal">
+                <label class="form-check-label" for="pref-halal">Halal</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-kosher" value="Kosher">
+                <label class="form-check-label" for="pref-kosher">Kosher</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-vegetarian" value="Vegetarian">
+                <label class="form-check-label" for="pref-vegetarian">Vegetarian</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-vegan" value="Vegan">
+                <label class="form-check-label" for="pref-vegan">Vegan</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="pref-none" value="None">
+                <label class="form-check-label" for="pref-none">None</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-question" data-question-id="5">
+            <label class="form-label">Are you able to travel to pick up food?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="travel-ability" id="travel-yes" value="Yes">
+              <label class="form-check-label" for="travel-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="travel-ability" id="travel-no" value="No">
+              <label class="form-check-label" for="travel-no">No</label>
+            </div>
+          </div>
+          
+          <!-- <div class="form-question" data-question-id="6">
+            <label class="form-label">Can someone else pick up food for you?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="someone-else" id="someone-yes" value="Yes">
+              <label class="form-check-label" for="someone-yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="someone-else" id="someone-no" value="No">
+              <label class="form-check-label" for="someone-no">No</label>
+            </div>
+          </div> -->
+          
+          <div class="form-question" data-question-id="7">
+            <label class="form-label">When would you like to go?</label>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="day-preference" id="day-today" value="Today">
+              <label class="form-check-label" for="day-today">Today</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="day-preference" id="day-another" value="Another day">
+              <label class="form-check-label" for="day-another">Another day</label>
+            </div>
+          </div>
+          
+          <div class="form-question" data-question-id="8">
+            <label class="form-label">Which day would you prefer?</label>
+            <div class="checkbox-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-tomorrow" value="Tomorrow">
+                <label class="form-check-label" for="day-tomorrow">Tomorrow</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-monday" value="Monday">
+                <label class="form-check-label" for="day-monday">Monday</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-tuesday" value="Tuesday">
+                <label class="form-check-label" for="day-tuesday">Tuesday</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-wednesday" value="Wednesday">
+                <label class="form-check-label" for="day-wednesday">Wednesday</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-thursday" value="Thursday">
+                <label class="form-check-label" for="day-thursday">Thursday</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-friday" value="Friday">
+                <label class="form-check-label" for="day-friday">Friday</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-saturday" value="Saturday">
+                <label class="form-check-label" for="day-saturday">Saturday</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="day-sunday" value="Sunday">
+                <label class="form-check-label" for="day-sunday">Sunday</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-question" data-question-id="9">
+            <label class="form-label">What time would you prefer?</label>
+            <div class="checkbox-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="time-morning" value="Morning (9am-12pm)">
+                <label class="form-check-label" for="time-morning">Morning (9am-12pm)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="time-afternoon" value="Afternoon (12pm-4pm)">
+                <label class="form-check-label" for="time-afternoon">Afternoon (12pm-4pm)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="time-evening" value="Evening (4pm-7pm)">
+                <label class="form-check-label" for="time-evening">Evening (4pm-7pm)</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-question" data-question-id="10">
+            <label class="form-label">What is your address (please give full address) ?</label>
+            <input type="text" class="form-control" id="location" placeholder="Your address or neighborhood">
+          </div>
+<!--               
+          <div class="form-question" data-question-id="11">
+            <label class="form-label">For home delivery, what time would you prefer?</label>
+            <select class="form-select" id="delivery-time">
+              <option value="">Select a time range</option>
+              <option value="Morning (9am-12pm)">Morning (9am-12pm)</option>
+              <option value="Afternoon (12pm-4pm)">Afternoon (12pm-4pm)</option>
+              <option value="Evening (4pm-7pm)">Evening (4pm-7pm)</option>
+            </select>
+          </div> -->
+          
+          
+          <div class="form-question" data-question-id="12">
+            <label class="form-label">Any additional comments or needs?</label>
+            <textarea class="form-control" id="comments" rows="3" placeholder="Please share any other information that might help us serve you better"></textarea>
+          </div>
+        </div>
+        
+        <div class="form-controls">
+          <button type="button" id="startVoiceForm" class="btn btn-primary">Start Voice Form</button>
+          <button type="button" id="resetForm" class="btn btn-secondary">Reset Form</button>
+        </div>
+
+      <div class="completion-image">
+        <h3>Form Complete!</h3>
+        <img src="/api/placeholder/400/300" alt="Food bank services available">
+        <p class="lead">Thank you for completing the form. We've found food bank services that match your preferences.</p>
+        <p>Transit options are being calculated to help you reach your nearest food bank.</p>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Scripts -->
   <script src="{{ url_for('static', filename='js/navfootermanager.js') }}"></script>

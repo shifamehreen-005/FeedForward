@@ -137,7 +137,7 @@ async function generateSummary(steps) {
       const card = document.createElement("div");
       card.className = "card";
       card.innerHTML = `
-        <img src="images/new/20200728-ASPCapitolArea-0036-scaled.jpg" alt="Company Image">
+        <img src="static/images/new/20200728-ASPCapitolArea-0036-scaled.jpg" alt="Company Image">
         <div class="card-content">
           <h3>${item.agency_name}</h3>
           <p><strong>Region:</strong> ${item.agency_region}</p>
