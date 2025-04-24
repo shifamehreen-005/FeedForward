@@ -1,35 +1,8 @@
 
-//   let globalFoodBanks = [{"Agency ID":"14222-PART-01","Agency Name":"SevaTruck Foundation : SevaTruck Foundation","Agency Region":"VA","County\/Ward":"VA Fairfax County","Shipping Address":"Attn: SevaTruck Foundation 2815 Old Lee Hwy Fairfax Fairfax VA 22031","Cleaned Address":"2815 Old Lee Hwy Fairfax Fairfax VA 22031","Latitude":38.8757888053,"Longitude":-77.2392202721,"Phone":"(202) 550-3018","Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"15:00:00","Ending Time":"17:00:00","By Appointment Only":"Yes","Food Pantry Requirements":null,"Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East Asian,Latin American","Latin American":"Yes","West African":"No","East African":"No","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-19","Date of Last Verification":"2025-01-16","Additional Note on Hours of Operations":"Braddock ES-7825 Heritage Dr, Annandale, VA 22003"},
-// {"Agency ID":"14240-PART-01","Agency Name":"Interfaith Community Action Council : Interfaith Community Action Council - Oxon Hill Food Pantry","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Oxon Hill Food Pantry 4915 Saint Barnabas Road Temple Hills MD 20748","Cleaned Address":"4915 Saint Barnabas Road Temple Hills MD 20748","Latitude":38.8219741,"Longitude":-76.9565648858,"Phone":"(301) 899-8358","Day of Week":"Saturday","Frequency":"2nd of the Month","Starting Time":"10:00:00","Ending Time":"12:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"Zip Code","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Walk up","Cultural Populations Served":"East African,East Asian,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-15","Date of Last Verification":"2024-10-02","Additional Note on Hours of Operations":null},
-// {"Agency ID":"14265-PART-01","Agency Name":"St. Martins Social Service : St. Martins Social Service","Agency Region":"DC","County\/Ward":"DC Ward 5","Shipping Address":"Attn: St. Martin's Social Service 1908 North Capitol Street NW Washington DC 20002","Cleaned Address":"1908 North Capitol Street NW Washington DC 20002","Latitude":38.9157583,"Longitude":-77.0095096768,"Phone":"(202) 232-1144","Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"11:30:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":"2025-01-03","Date of Last Verification":"2024-10-07","Additional Note on Hours of Operations":"walkups"},
-// {"Agency ID":"14305-PART-01","Agency Name":"THRIVE DC : Thrive DC","Agency Region":"DC","County\/Ward":"DC Ward 1","Shipping Address":"Attn: THRIVE DC 1525 Newton Street NW Washington DC 20010","Cleaned Address":"1525 Newton Street NW Washington DC 20010","Latitude":38.933592,"Longitude":-77.0355665,"Phone":"(202) 737-9311","Day of Week":"Thursday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"12:00:00","By Appointment Only":"No","Food Pantry Requirements":"ID,Income,Zip Code","Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"Central\/South Asian,East Asian,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"No","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-07","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null},
-// {"Agency ID":"14355-PART-01","Agency Name":"Family & Medical Counseling Service : Family & Medical Counseling Service","Agency Region":"DC","County\/Ward":"DC Ward 8","Shipping Address":"Attn: Family & Medical Counseling Service 2041 MLK Jr. Ave. SE Suite 303 Washington DC 20020","Cleaned Address":"2041 MLK Jr. Ave. SE Suite 303 Washington DC 20020","Latitude":38.8659889,"Longitude":-76.9897972,"Phone":"(202) 889-7900","Day of Week":"Friday","Frequency":"1st and 3rd of the Month","Starting Time":"10:00:00","Ending Time":"13:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID,Zip Code","Food Format":"Pre-bagged or boxed groceries","Loose groceries":"No","Pre-bagged or boxed groceries":"Yes","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"East African,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2025-02-05","Date of Last Verification":"2024-09-25","Additional Note on Hours of Operations":null},
-// {"Agency ID":"14375-PART-01","Agency Name":"Agape Early Childhood Learning : Agape Early Childhood Learning","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Agape Early Childhood Learning 4318 Rhode Island Avenue Brentwood MD 20722","Cleaned Address":"4318 Rhode Island Avenue Brentwood MD 20722","Latitude":38.9409284088,"Longitude":-76.9527761367,"Phone":"(301) 927-4674","Day of Week":"Wednesday","Frequency":"4th of the Month","Starting Time":"15:00:00","Ending Time":"17:30:00","By Appointment Only":"Yes","Food Pantry Requirements":null,"Food Format":"Pre-bagged or boxed groceries","Loose groceries":"No","Pre-bagged or boxed groceries":"Yes","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2024-10-21","Date of Last Verification":"2024-10-11","Additional Note on Hours of Operations":"Appointments open to parents, staff, and referred families"},
-// {"Agency ID":"14410-PART-01","Agency Name":"Spanish Catholic Center : Spanish Catholic Center","Agency Region":"DC","County\/Ward":"DC Ward 1","Shipping Address":"Attn: Spanish Catholic Center 1618 Monroe St. NW Washington DC 20010","Cleaned Address":"1618 Monroe St. NW Washington DC 20010","Latitude":38.93271405,"Longitude":-77.0373982767,"Phone":null,"Day of Week":"Wednesday","Frequency":"Every week","Starting Time":"10:00:00","Ending Time":"16:00:00","By Appointment Only":"No","Food Pantry Requirements":"Zip Code","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"No","Middle Eastern\/North African":"No","Last SO Create Date":"2024-08-08","Date of Last Verification":"2024-12-16","Additional Note on Hours of Operations":null},
-// {"Agency ID":"14500-PART-01","Agency Name":"Central Union Mission : Central Union Mission","Agency Region":"DC","County\/Ward":"DC Ward 6","Shipping Address":"Attn: Central Union Mission 65 Massachusetts Ave Washington DC 20001","Cleaned Address":"65 Massachusetts Ave Washington DC 20001","Latitude":38.89868405,"Longitude":-77.0110822499,"Phone":"(202) 718-0549","Day of Week":"Monday","Frequency":"Every week","Starting Time":"12:30:00","Ending Time":"18:00:00","By Appointment Only":"No","Food Pantry Requirements":"Zip Code","Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"No","Central\/South Asian":"No","East Asian":"No","Eastern European":"No","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-24","Date of Last Verification":"2024-10-04","Additional Note on Hours of Operations":"We serve Breakfast -Lunch-Dinner"},
-// {"Agency ID":"14520-PART-01","Agency Name":"Father Mckenna Center : The Father McKenna Center","Agency Region":"DC","County\/Ward":"DC Ward 6","Shipping Address":"Attn: The Father McKenna Center 900 North Capital St NW Washington DC DC 20002","Cleaned Address":"900 North Capital St NW Washington DC DC 20002","Latitude":38.9014721,"Longitude":-77.0093608,"Phone":"(202) 842-1112","Day of Week":"Friday","Frequency":"Every week","Starting Time":"13:30:00","Ending Time":"14:30:00","By Appointment Only":"No","Food Pantry Requirements":"ID,Income","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Eastern European,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-26","Date of Last Verification":"2024-09-23","Additional Note on Hours of Operations":"To use our full pantry, we require that in an addition to a photo ID that our visitors provide us with a copy of a proof of residence in DC. This can be a current lease, or a recent utility bill, rent receipt, mortgage, or deed."},
-// {"Agency ID":"14540-PART-01","Agency Name":"Miriam's Kitchen : Miriam's Kitchen","Agency Region":"DC","County\/Ward":"DC Ward 2","Shipping Address":"Attn: Miriam's Kitchen 2401 Virginia Ave NW Washington DC 20037","Cleaned Address":"2401 Virginia Ave NW Washington DC 20037","Latitude":38.898593,"Longitude":-77.0516915247,"Phone":"(240) 350-1058","Day of Week":"Friday","Frequency":"Every week","Starting Time":"07:00:00","Ending Time":"08:00:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":"Prepared meals","Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"Yes","Distribution Models":"Walk up","Cultural Populations Served":"Central\/South Asian,East African,East Asian,Eastern European,Latin American,Middle Eastern\/ North African,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"Yes","East Asian":"Yes","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-24","Date of Last Verification":"2024-11-12","Additional Note on Hours of Operations":null},
-// {"Agency ID":"14545-PART-01","Agency Name":"Mt. Rainier Seventh Day Adventist Spanish Church : Mount Rainier Seventh Day Adventist Spanish Church","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Mount Rainier Seventh Day Adventist Spanish Chuch 6012 Ager Road Hyattsville MD 20782","Cleaned Address":"6012 Ager Road Hyattsville MD 20782","Latitude":38.9542534204,"Longitude":-76.9652870101,"Phone":"(240) 346-9272","Day of Week":"Wednesday","Frequency":"2nd of the Month","Starting Time":"19:00:00","Ending Time":"21:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Home Delivery,Walk up","Cultural Populations Served":"East African,Eastern European,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"No","Last SO Create Date":"2024-12-02","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null},
-// {"Agency ID":"14570-PART-01","Agency Name":"ALIVE : ALIVE","Agency Region":"VA","County\/Ward":"VA City of Alexandria","Shipping Address":"Attn: ALIVE 801 S Payne St Alexandria VA 22302","Cleaned Address":"801 S Payne St Alexandria VA 22302","Latitude":38.7977023,"Longitude":-77.0560352676,"Phone":"(703) 837-9300","Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":"No","Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":"Central\/South Asian,East African,Eastern European,Latin American,Middle Eastern\/ North African","Latin American":"Yes","West African":"No","East African":"Yes","Central\/South Asian":"Yes","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"Yes","Last SO Create Date":"2025-02-11","Date of Last Verification":"2024-09-26","Additional Note on Hours of Operations":"Last Saturday of the month, not necessarily the 4th Saturday"},
-
-
-// {"Agency ID":"14570-PUSH-06","Agency Name":"William Ramsay Recreation Center","Agency Region":"Virginia","County\/Ward":"City of Alexandria","Shipping Address":"Del Pepper Community Center 4850 Mark Center Dr Alexandria VA 22311","Cleaned Address":"4850 Mark Center Dr Alexandria VA 22311","Latitude":38.8299343,"Longitude":-77.1191301359,"Phone":null,"Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":null,"Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":null,"Date of Last Verification":null,"Additional Note on Hours of Operations":null},
-// {"Agency ID":"14570-PUSH-07","Agency Name":"Chick Armstrong Recreation Center","Agency Region":"Virginia","County\/Ward":"City of Alexandria","Shipping Address":"ALIVE Chick Armstrong Rec Center 25 W Reed Ave Alexandria VA 22305","Cleaned Address":"25 W Reed Ave Alexandria VA 22305","Latitude":38.83723415,"Longitude":-77.0580736048,"Phone":null,"Day of Week":"Saturday","Frequency":"4th of the Month","Starting Time":"08:30:00","Ending Time":"10:30:00","By Appointment Only":null,"Food Pantry Requirements":null,"Food Format":null,"Loose groceries":"No","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":null,"Cultural Populations Served":null,"Latin American":null,"West African":null,"East African":null,"Central\/South Asian":null,"East Asian":null,"Eastern European":null,"Middle Eastern\/North African":null,"Last SO Create Date":null,"Date of Last Verification":null,"Additional Note on Hours of Operations":null}];
-
-
-// Add this at the beginning of your script file right after your initial declarations
-
-// Fix the language function to return the correct value
-
-
-/*****************************************************************
- *  Unified audio visualiser – draws any number of streams onto
- *  the same canvas in different colours
- *****************************************************************/
 const visualiser = {
   canvas   : null,
   ctx      : null,
-  analysers: [],          // { analyser, colour }[]
+  analysers: [],          
   width    : 0,
   height   : 0,
   init() {
@@ -78,7 +51,169 @@ const visualiser = {
   }
 };
 
+let userProfileData = null;
+
+let rtcStarted = false;  
+
+// async function loadUserProfile() {
+//   try {
+  
+//     const email = localStorage.getItem("user_email");
+//     const isLoggedIn = localStorage.getItem("isLoggedIn");
+    
+//     if (!isLoggedIn || !email) {
+//       console.log("User not logged in, no profile data to load");
+//       return null;
+//     }
+    
+//     const response = await fetch(`http://localhost:3000/get-profile?email=${encodeURIComponent(email)}`);
+//     if (!response.ok) {
+//       throw new Error("Failed to fetch profile data");
+//     }
+    
+//     const profile = await response.json();
+//     console.log("Loaded profile data:", profile);
+//     return profile;
+//   } catch (error) {
+//     console.error("Error loading user profile:", error);
+//     return null;
+//   }
+// }
+
 // visualiser.init();
+function teardownRTC() {
+  if (window.pc) {
+    try {
+      window.pc.getSenders().forEach(s => s.track?.stop());
+      window.pc.close();
+    } catch (e) {
+      console.warn("Error closing PC:", e);
+    }
+    window.pc = null;
+  }
+  rtcStarted = false;      
+}
+
+
+async function loadUserProfile() {
+  // Return cached profile data if available
+  if (userProfileData !== null) {
+    console.log("Using cached profile data");
+    return userProfileData;
+  }
+  
+  try {
+    // Check if user is logged in
+    const email = localStorage.getItem("user_email");
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    
+    if (!isLoggedIn || !email) {
+      console.log("User not logged in, no profile data to load");
+      userProfileData = null;
+      return null;
+    }
+    
+    // Fetch profile data
+    const response = await fetch(`http://localhost:3000/get-profile?email=${encodeURIComponent(email)}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch profile data");
+    }
+    
+    const profile = await response.json();
+    console.log("Loaded profile data:", profile);
+    
+    // Cache the profile data
+    userProfileData = profile;
+    return profile;
+  } catch (error) {
+    console.error("Error loading user profile:", error);
+    userProfileData = null;
+    return null;
+  }
+}
+
+// Function to check if a question has been answered
+function checkIfQuestionHasResponse(questionId) {
+  switch(questionId) {
+    case "1": // Name
+      return !!document.getElementById("name")?.value;
+    
+    case "2": // Kitchen access
+      return document.getElementById("kitchen-yes")?.checked || 
+             document.getElementById("kitchen-no")?.checked;
+    
+    case "3": // Food format
+      return document.getElementById("food-loose")?.checked || 
+             document.getElementById("food-packaged")?.checked ||
+             document.getElementById("food-prepared")?.checked ||
+             document.getElementById("food-any")?.checked;
+    
+    case "4": // Dietary preferences
+      const dietaryCheckboxes = [
+        "pref-latin", "pref-westafrican", "pref-eastafrican", "pref-southasian",
+        "pref-eastasian", "pref-easteuropean", "pref-middleeastern", "pref-halal",
+        "pref-kosher", "pref-vegetarian", "pref-vegan", "pref-none"
+      ];
+      return dietaryCheckboxes.some(id => document.getElementById(id)?.checked);
+    
+    case "5": // Travel ability
+      return document.getElementById("travel-yes")?.checked || 
+             document.getElementById("travel-no")?.checked;
+    
+    case "6": // Someone else can pick up
+      return document.getElementById("someone-yes")?.checked || 
+             document.getElementById("someone-no")?.checked;
+    
+    case "7": // Day preference
+      return document.getElementById("day-today")?.checked || 
+             document.getElementById("day-another")?.checked;
+    
+    case "8": // Specific day selection
+      const dayCheckboxes = [
+        "day-tomorrow", "day-monday", "day-tuesday", "day-wednesday",
+        "day-thursday", "day-friday", "day-saturday", "day-sunday"
+      ];
+      return dayCheckboxes.some(id => document.getElementById(id)?.checked);
+    
+    case "9": // Preferred pickup time (now checkboxes)
+      return document.getElementById("time-morning")?.checked || 
+            document.getElementById("time-afternoon")?.checked ||
+            document.getElementById("time-evening")?.checked;
+    
+    case "10": // Location
+      return !!document.getElementById("location")?.value;
+    
+    case "11": // Delivery time
+      return !!document.getElementById("delivery-time")?.value;
+    
+    case "12": // Comments
+
+      return !!document.getElementById("comments")?.value;
+    
+    default:
+      return false;
+  }
+}
+
+function getNextQuestionElement(currentQuestionId) {
+  let nextQuestionId = parseInt(currentQuestionId) + 1;
+  
+  if (currentQuestionId === "2" && document.getElementById("kitchen-no")?.checked) {
+    nextQuestionId = 4;
+  } else if (currentQuestionId === "5") {
+   
+    if (document.getElementById("travel-no")?.checked) {
+      nextQuestionId = 12;
+    } else {
+      nextQuestionId = 7;
+    }
+  } else if (currentQuestionId === "7" && document.getElementById("day-today")?.checked) {
+    nextQuestionId = 9;
+  }
+  
+  const nextQuestionElement = document.querySelector(`.form-question[data-question-id="${nextQuestionId}"]`);
+  return nextQuestionElement;
+}
 
 function getCurrentLanguage() {
   const langSwitch = document.getElementById('lang-switch');
@@ -94,6 +229,7 @@ function switchLanguage() {
   if (window.pc) {
     console.log("Closing existing peer connection");
     
+
     
     const dataChannels = window.pc.getDataChannels?.() || [];
     dataChannels.forEach(channel => {
@@ -106,6 +242,7 @@ function switchLanguage() {
     window.pc = null;
   }
   
+  teardownRTC();  
   const audioElements = document.querySelectorAll('audio');
   audioElements.forEach(element => {
     element.pause();
@@ -129,6 +266,7 @@ function resetAgent() {
     window.pc = null;
   }
   
+  teardownRTC(); 
   
   const existingAudio = document.querySelector('audio');
   if (existingAudio) {
@@ -276,7 +414,6 @@ document.addEventListener('DOMContentLoaded', function() {
     return updatedForm;
   }
   
-
   function getSelectedCheckboxValues(idArray) {
     return idArray
       .filter(id => document.getElementById(id)?.checked)
@@ -285,27 +422,37 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function shouldShowQuestion(questionId) {
     switch(questionId) {
-      case "3": // Food format question
+      case "3": 
         return document.getElementById("kitchen-yes")?.checked || false;
         
-      case "6": // Someone else can pick up
-        return document.getElementById("travel-no")?.checked || false;
+      case "6": 
+        return false;
         
-      case "7": // Day preference
+      case "7": 
         return document.getElementById("travel-yes")?.checked || 
                document.getElementById("someone-yes")?.checked || false;
         
-      case "8": // Specific day
+      case "8": 
         return document.getElementById("day-another")?.checked || false;
         
-      case "9": // Preferred time
-      case "10": // Location for pickup
+      case "9":
+      case "10": 
         return document.getElementById("travel-yes")?.checked || 
                document.getElementById("someone-yes")?.checked || false;
         
-      case "11": // Delivery time
-        return document.getElementById("travel-no")?.checked && 
-               document.getElementById("someone-no")?.checked || false;
+      case "11":
+        return false;
+
+      case "12":
+        return true;
+
+      // case "1":
+      // case "2": 
+      // case "4":
+      // case "5":
+      // case "12":
+      //   return true;
+    
         
       default:
         return true;
@@ -344,29 +491,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
       
-      if (formData.preferredTime) {
-        summary.push(`Preferred pickup time: ${formData.preferredTime}`);
-      }
-    } else if (formData.someoneElseCanPickup) {
-      summary.push("Someone else can pick up food");
-      
-      if (formData.dayPreference) {
-        if (formData.dayPreference === "Today") {
-          summary.push("Preferred pickup day: Today");
-        } else if (formData.specificDays && formData.specificDays.length > 0) {
-          summary.push(`Preferred pickup days: ${formData.specificDays.join(", ")}`);
-        }
-      }
-      
-      if (formData.preferredTime) {
-        summary.push(`Preferred pickup time: ${formData.preferredTime}`);
+      if (formData.preferredTime && formData.preferredTime.length > 0) {
+        summary.push(`Preferred pickup time: ${formData.preferredTime.join(", ")}`);
       }
     } else {
       summary.push("Needs home delivery");
-      
-      if (formData.deliveryTime) {
-        summary.push(`Preferred delivery time: ${formData.deliveryTime}`);
-      }
     }
     
     if (formData.location) {
@@ -725,47 +854,50 @@ document.addEventListener('DOMContentLoaded', function() {
             break;
             
           case "9": // Preferred pickup time
-            const selectTime = document.getElementById("preferred-time");
-          if (selectTime) {
-            // Set the value directly first
-            selectTime.value = "";
+            const timeOptions = answer.toLowerCase().split(',').map(time => time.trim());
             
-            // Try to find the best match for the time in the options
-            for (let i = 0; i < selectTime.options.length; i++) {
-              const optionText = selectTime.options[i].text.toLowerCase();
-              if (answer.toLowerCase().includes(optionText) || 
-                  optionText.includes(answer.toLowerCase())) {
-                selectTime.selectedIndex = i;
-                console.log(`Set preferred time to option ${i}: ${selectTime.options[i].text}`);
-                break;
+            // Clear previous selections
+            const timeCheckboxes = ["time-morning", "time-afternoon", "time-evening"];
+            timeCheckboxes.forEach(id => {
+              const checkbox = document.getElementById(id);
+              if (checkbox) {
+                checkbox.checked = false;
               }
-            }
+            });
             
-            // If no match found but answer contains time indicators, try best guess
-            if (selectTime.selectedIndex === 0) {
-              if (answer.toLowerCase().includes("morning") || 
-                  answer.toLowerCase().includes("9") || 
-                  answer.toLowerCase().includes("10") || 
-                  answer.toLowerCase().includes("11")) {
-                selectTime.selectedIndex = 1; // Morning option
-              } else if (answer.toLowerCase().includes("afternoon") || 
-                        answer.toLowerCase().includes("12") || 
-                        answer.toLowerCase().includes("1") || 
-                        answer.toLowerCase().includes("2") || 
-                        answer.toLowerCase().includes("3")) {
-                selectTime.selectedIndex = 2; // Afternoon option
-              } else if (answer.toLowerCase().includes("evening") || 
-                        answer.toLowerCase().includes("4") || 
-                        answer.toLowerCase().includes("5") || 
-                        answer.toLowerCase().includes("6")) {
-                selectTime.selectedIndex = 3; // Evening option
+            // Then check the ones mentioned in answer
+            const timeKeywords = {
+              "morning": "time-morning",
+              "9": "time-morning",
+              "10": "time-morning",
+              "11": "time-morning",
+              "afternoon": "time-afternoon",
+              "12": "time-afternoon",
+              "1": "time-afternoon",
+              "2": "time-afternoon",
+              "3": "time-afternoon",
+              "evening": "time-evening",
+              "4": "time-evening",
+              "5": "time-evening",
+              "6": "time-evening",
+              "7": "time-evening"
+            };
+            
+            // Check matching times
+            timeOptions.forEach(time => {
+              for (const [keyword, id] of Object.entries(timeKeywords)) {
+                if (time.includes(keyword)) {
+                  const checkbox = document.getElementById(id);
+                  if (checkbox) {
+                    checkbox.checked = true;
+                    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+                    console.log(`Set ${id} to checked`);
+                  }
+                }
               }
-            }
-            
-            // Trigger change event
-            selectTime.dispatchEvent(new Event('change', { bubbles: true }));
-            }
+            });
             break;
+          
             
           case "10": // Location
           const locationInput = document.getElementById("location");
@@ -832,7 +964,35 @@ document.addEventListener('DOMContentLoaded', function() {
             commentsInput.dispatchEvent(new Event('input', { bubbles: true }));
             commentsInput.dispatchEvent(new Event('change', { bubbles: true }));
           }
-            break;
+          questionElement.classList.remove("active");
+          questionElement.classList.add("completed");
+          
+          const formQuestions = document.getElementById('formQuestions');
+          const formControls = document.querySelector('.form-controls');
+          const completionImage = document.querySelector('.completion-image');
+          
+          if (formQuestions) formQuestions.style.display = 'none';
+          if (formControls) formControls.style.display = 'none';
+          if (completionImage) completionImage.style.display = 'flex';
+          
+          const progressBar = document.getElementById('formProgress');
+          if (progressBar) {
+            progressBar.style.width = '100%';
+            progressBar.textContent = '100%';
+            progressBar.setAttribute('aria-valuenow', 100);
+          }
+          
+          return {
+            success: true,
+            questionId: questionId,
+            answer: answer,
+            formCompleted: true,
+            nextQuestionId: null,
+            skipLogicApplied: false,
+            recordedAnswer: answer,
+            message: "Form has been completed successfully! Proceed to finding transit options to the nearest food bank"
+          };
+          break;
         }
         
         // Mark current question as completed
@@ -866,17 +1026,19 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Update progress bar
         updateFormProgress();
-        if (nextQuestionId > 9) {
-          // Mark the form as completed by setting nextQuestionId = null
-          nextQuestionId = null;
-        }
+        // if (nextQuestionId > 9) {
+        //   // Mark the form as completed by setting nextQuestionId = null
+        //   nextQuestionId = null;
+        // }
         return {
           success: true,
           questionId: questionId,
           answer: answer,
           formCompleted: !nextQuestionElement,
           nextQuestionId: nextQuestionElement ? nextQuestionId : null,
-          skipLogicApplied: nextQuestionId > parseInt(questionId) + 1
+          skipLogicApplied: nextQuestionId > parseInt(questionId) + 1,
+          recordedAnswer: answer,            // 📣 echo back what was set
+          message: `Recorded answer for question ${questionId}: "${answer}"`
         };
       } catch (e) {
         return { success: false, error: e.toString() };
@@ -884,83 +1046,343 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     
     // Updated getNextFormQuestion function
-    getNextFormQuestion: () => {
+
+    // getNextFormQuestion: async() => {
+    //   const profileData = await loadUserProfile();
+    //   const activeQuestion = document.querySelector('.form-question.active');
+    //   if(!activeQuestion){
+    //     const questions = document.querySelectorAll('.form-question');
+    //     let firstUnansweredQuestion = null;
+
+    //     for (const question of questions){
+    //       const questionId = question.dataset.questionId;
+    //       if (prodileData && isQuestionAnsweredFromProfile(questionId, profileData)){
+    //         autoFillQuestionFromProfile(questionId, profileData);
+
+    //       }
+    //     }
+    //   }
+
+    // }
+
+    
+
+    // getNextFormQuestion: async () => {
+    //   // First load profile data if available
+    //   const profileData = await loadUserProfile();
+      
+    //   // If there's no active question, find the first unanswered question
+    //   const activeQuestion = document.querySelector('.form-question.active');
+      
+    //   if (!activeQuestion) {
+    //     // Start from the beginning and find first unanswered question
+    //     const questions = document.querySelectorAll('.form-question');
+    //     let firstUnansweredQuestion = null;
+        
+    //     for (const question of questions) {
+    //       const questionId = question.dataset.questionId;
+          
+    //       // Check if this question is already answered from profile
+    //       if (profileData && isQuestionAnsweredFromProfile(questionId, profileData)) {
+    //         // Auto-fill this question with profile data
+    //         autoFillQuestionFromProfile(questionId, profileData);
+    //         question.classList.add('completed');
+    //       } else if (!firstUnansweredQuestion) {
+    //         // This is the first question without an answer
+    //         firstUnansweredQuestion = question;
+    //         break;
+    //       }
+    //     }
+        
+    //     // Activate the first unanswered question
+    //     if (firstUnansweredQuestion) {
+    //       firstUnansweredQuestion.classList.add('active');
+    //       updateFormProgress();
+    //       setTimeout(scrollToActiveQuestion, 100);
+    //       return {
+    //         success: true,
+    //         questionId: firstUnansweredQuestion.dataset.questionId,
+    //         questionText: firstUnansweredQuestion.querySelector('.form-label').innerText,
+    //         exactQuestion: true
+    //       };
+    //     } else {
+    //       // All questions are answered
+    //       return { 
+    //         success: true,
+    //         formCompleted: true,
+    //         message: "All questions have been answered based on your profile data."
+    //       };
+    //     }
+    //   }
+      
+    //   // Get the current active question information
+    //   const currentQuestionId = activeQuestion.dataset.questionId;
+    //   const questionText = activeQuestion.querySelector('.form-label').innerText;
+      
+    //   // Modify question text based on previous answers (same as your existing code)
+    //   let modifiedText = questionText;
+      
+    //   if (currentQuestionId === "6" && document.getElementById("travel-no")?.checked) {
+    //     modifiedText = "Can someone else pick up food for you?";
+    //   }
+      
+    //   if (currentQuestionId === "7") {
+    //     const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+    //     if (someoneElse) {
+    //       modifiedText = "When would they like to go?";
+    //     }
+    //   }
+      
+    //   if (currentQuestionId === "8") {
+    //     const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+    //     if (someoneElse) {
+    //       modifiedText = "Which day would they prefer?";
+    //     }
+    //   }
+      
+    //   if (currentQuestionId === "9") {
+    //     const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+    //     if (someoneElse) {
+    //       modifiedText = "What time would they prefer?";
+    //     }
+    //   }
+      
+    //   return {
+    //     success: true,
+    //     questionId: currentQuestionId,
+    //     questionText: modifiedText,
+    //     originalText: questionText
+    //   };
+    // },
+
+    getNextFormQuestion: async () => {
+      // Load profile data if not already loaded
+      if (userProfileData === null) {
+        userProfileData = await loadUserProfile();
+        
+        if (userProfileData) {
+          console.log("First load of profile data, auto-filling form");
+          const questions = document.querySelectorAll('.form-question');
+          questions.forEach(question => {
+            const questionId = question.dataset.questionId;
+            if (isQuestionAnsweredFromProfile(questionId, userProfileData)) {
+              autoFillQuestionFromProfile(questionId, userProfileData);
+              question.classList.add('completed');
+            }
+          });
+          updateFormProgress();
+        }
+      }
+      
       const activeQuestion = document.querySelector('.form-question.active');
       
       if (!activeQuestion) {
-        // If no question is active, activate the first one
-        const firstQuestion = document.querySelector('.form-question');
-        if (firstQuestion) {
-          firstQuestion.classList.add('active');
+        // Find first unanswered question
+        const questions = document.querySelectorAll('.form-question');
+        let firstUnansweredQuestion = null;
+        
+        for (const question of questions) {
+          if (!question.classList.contains('completed')) {
+            firstUnansweredQuestion = question;
+            break;
+          }
+        }
+        
+        if (firstUnansweredQuestion) {
+          firstUnansweredQuestion.classList.add('active');
           updateFormProgress();
           setTimeout(scrollToActiveQuestion, 100);
           return {
             success: true,
-            questionId: firstQuestion.dataset.questionId,
-            questionText: firstQuestion.querySelector('.form-label').innerText,
+            questionId: firstUnansweredQuestion.dataset.questionId,
+            questionText: firstUnansweredQuestion.querySelector('.form-label').innerText,
             exactQuestion: true
           };
         } else {
-          return { success: false, error: "No questions found" };
+          return { 
+            success: true,
+            formCompleted: true,
+            message: "All questions have been answered based on your profile data."
+          };
         }
       }
       
-      // Get the current active question information
       const currentQuestionId = activeQuestion.dataset.questionId;
-      const questionText = activeQuestion.querySelector('.form-label').innerText;
+      const hasValue = checkIfQuestionHasResponse(currentQuestionId);
       
-      // Handle conditional text based on previous answers
-      let modifiedText = questionText;
-      
-      // Modify question text based on previous answers
-      if (currentQuestionId === "6" && document.getElementById("travel-no").checked) {
-        modifiedText = "Can someone else pick up food for you?";
+      if (!hasValue) {
+        // Current question hasn't been answered yet, don't move to next question
+        return {
+          success: false,
+          questionId: currentQuestionId,
+          questionText: activeQuestion.querySelector('.form-label').innerText,
+          message: "Please answer this question before moving to the next one.",
+          needsAnswer: true
+        };
       }
       
-      if (currentQuestionId === "7") {
-        // Check if someone else is picking up
-        const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
-        if (someoneElse) {
-          modifiedText = "When would they like to go?";
+      // Current question has been answered but not marked as completed yet
+      // This means processFormInput wasn't called, so we need to keep asking this question
+      if (!activeQuestion.classList.contains('completed')) {
+        const questionText = activeQuestion.querySelector('.form-label').innerText;
+        
+        // Apply question text modifications based on previous answers
+        let modifiedText = questionText;
+        
+        if (currentQuestionId === "6" && document.getElementById("travel-no")?.checked) {
+          modifiedText = "Can someone else pick up food for you?";
         }
-      }
-      
-      if (currentQuestionId === "8") {
-        // Check if someone else is picking up
-        const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
-        if (someoneElse) {
-          modifiedText = "Which day would they prefer?";
+        
+        if (currentQuestionId === "7") {
+          const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+          if (someoneElse) {
+            modifiedText = "When would they like to go?";
+          }
         }
-      }
-      
-      if (currentQuestionId === "9") {
-        // Check if someone else is picking up
-        const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
-        if (someoneElse) {
-          modifiedText = "What time would they prefer?";
+        
+        if (currentQuestionId === "8") {
+          const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+          if (someoneElse) {
+            modifiedText = "Which day would they prefer?";
+          }
         }
+        
+        if (currentQuestionId === "9") {
+          const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+          if (someoneElse) {
+            modifiedText = "What time would they prefer?";
+          }
+        }
+        
+        return {
+          success: false,
+          questionId: currentQuestionId,
+          questionText: modifiedText,
+          originalText: questionText,
+          message: "Please process this answer with processFormInput before continuing.",
+          needsProcessing: true
+        };
       }
       
-      return {
-        success: true,
-        questionId: currentQuestionId,
-        questionText: modifiedText,
-        originalText: questionText
-      };
+      // If we reach here, the question is completed, find the next question
+      const nextQuestion = getNextQuestionElement(currentQuestionId);
+      
+      if (nextQuestion) {
+        return {
+          success: true,
+          questionId: nextQuestion.dataset.questionId,
+          questionText: nextQuestion.querySelector('.form-label').innerText,
+          exactQuestion: true
+        };
+      } else {
+        return {
+          success: true,
+          formCompleted: true,
+          message: "All questions have been answered. The form is complete."
+        };
+      }
     },
+
+    // getNextFormQuestionNext: (async) => {
+    //   const activequestion = document.querySelector('.form-question.active')
+
+    //   const firstquestion = document.querySelector('.form-question')
+
+    // }
+    // getNextFormQuestion: () => {
+    //   const activeQuestion = document.querySelector('.form-question.active');
+      
+    //   if (!activeQuestion) {
+    //     // If no question is active, activate the first one
+    //     const firstQuestion = document.querySelector('.form-question');
+    //     if (firstQuestion) {
+    //       firstQuestion.classList.add('active');
+    //       updateFormProgress();
+    //       setTimeout(scrollToActiveQuestion, 100);
+    //       return {
+    //         success: true,
+    //         questionId: firstQuestion.dataset.questionId,
+    //         questionText: firstQuestion.querySelector('.form-label').innerText,
+    //         exactQuestion: true
+    //       };
+    //     } else {
+    //       return { success: false, error: "No questions found" };
+    //     }
+    //   }
+      
+    //   // Get the current active question information
+    //   const currentQuestionId = activeQuestion.dataset.questionId;
+    //   const questionText = activeQuestion.querySelector('.form-label').innerText;
+      
+    //   // Handle conditional text based on previous answers
+    //   let modifiedText = questionText;
+      
+    //   // Modify question text based on previous answers
+    //   if (currentQuestionId === "6" && document.getElementById("travel-no").checked) {
+    //     modifiedText = "Can someone else pick up food for you?";
+    //   }
+      
+    //   if (currentQuestionId === "7") {
+    //     // Check if someone else is picking up
+    //     const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+    //     if (someoneElse) {
+    //       modifiedText = "When would they like to go?";
+    //     }
+    //   }
+      
+    //   if (currentQuestionId === "8") {
+    //     // Check if someone else is picking up
+    //     const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+    //     if (someoneElse) {
+    //       modifiedText = "Which day would they prefer?";
+    //     }
+    //   }
+      
+    //   if (currentQuestionId === "9") {
+    //     // Check if someone else is picking up
+    //     const someoneElse = document.getElementById("someone-yes") && document.getElementById("someone-yes").checked;
+    //     if (someoneElse) {
+    //       modifiedText = "What time would they prefer?";
+    //     }
+    //   }
+      
+    //   return {
+    //     success: true,
+    //     questionId: currentQuestionId,
+    //     questionText: modifiedText,
+    //     originalText: questionText
+    //   };
+    // },
     
     // Updated getFormStatus function
     getFormStatus: () => {
       const totalQuestions = document.querySelectorAll('.form-question').length;
-      const visibleQuestions = document.querySelectorAll('.form-question:not([style*="display: none"])').length || totalQuestions;
+      // const visibleQuestions = document.querySelectorAll('.form-question:not([style*="display: none"])').length || totalQuestions;
       const completedQuestions = document.querySelectorAll('.form-question.completed').length;
       const currentQuestion = document.querySelector('.form-question.active');
+      let visibleQuestions = 0;
+      document.querySelectorAll('.form-question').forEach(question => {
+        const questionId = question.dataset.questionId;
+        if (shouldShowQuestion(questionId)) {
+          visibleQuestions++;
+        }
+      });
+    
+      // Calculate completed visible questions
+      let completedVisibleQuestions = 0;
+      document.querySelectorAll('.form-question.completed').forEach(question => {
+        const questionId = question.dataset.questionId;
+        if (shouldShowQuestion(questionId)) {
+          completedVisibleQuestions++;
+        }
+      });
       
       // Calculate progress based on visible questions only, accounting for skip logic
-      const progress = Math.round((completedQuestions / visibleQuestions) * 100);
+      const progress = visibleQuestions === 0 ? 0 : Math.round((completedVisibleQuestions / visibleQuestions) * 100);
+
 
               // Check if form is completed
-      const isCompleted = completedQuestions === visibleQuestions;
+      const isCompleted = visibleQuestions > 0 && completedVisibleQuestions >= visibleQuestions;
       
       if (isCompleted) {
         // Hide the form questions and controls
@@ -989,21 +1411,29 @@ document.addEventListener('DOMContentLoaded', function() {
             "pref-kosher", "pref-vegetarian", "pref-vegan", "pref-none"
           ]),
           canTravel: document.getElementById("travel-yes")?.checked || false,
-          someoneElseCanPickup: document.getElementById("someone-yes")?.checked || false,
+          // Remove someoneElseCanPickup field
           dayPreference: document.getElementById("day-today")?.checked ? "Today" : 
                         (document.getElementById("day-another")?.checked ? "Another day" : ""),
           specificDays: getSelectedCheckboxValues([
             "day-tomorrow", "day-monday", "day-tuesday", "day-wednesday",
             "day-thursday", "day-friday", "day-saturday", "day-sunday"
           ]),
-          preferredTime: document.getElementById("preferred-time")?.value || "",
+          preferredTime: getSelectedCheckboxValues([
+            "time-morning", "time-afternoon", "time-evening"
+          ]),
           location: document.getElementById("location")?.value || "",
-          deliveryTime: document.getElementById("delivery-time")?.value || "",
           comments: document.getElementById("comments")?.value || ""
         };
         
         // Determine if home delivery is required
-        const needsHomeDelivery = !formData.canTravel && !formData.someoneElseCanPickup;
+        const needsHomeDelivery = !formData.canTravel;
+
+
+        // const check_summary = generateFormSummary(formData)
+        // console.log(check_summary)
+
+        const check_summary = generateFormSummary(formData)
+        console.log(check_summary)
         
         return {
           success: true,
@@ -1018,7 +1448,8 @@ document.addEventListener('DOMContentLoaded', function() {
           summary: generateFormSummary(formData)
         };
       } else {
-        // Original form is present - backward compatibility
+        // Original form is present - backward compati
+        // bility
         return {
           success: true,
           totalQuestions: totalQuestions,
@@ -1030,6 +1461,106 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   };
+
+  // Checks if a question can be answered from profile data
+function isQuestionAnsweredFromProfile(questionId, profileData) {
+  if (!profileData) return false;
+  
+  switch(questionId) {
+    case "2": 
+      return !!profileData.kitchen_access;
+    
+    case "4": 
+      return !!profileData.dietary_restrictions;
+    
+    case "5": 
+      return !!profileData.transport;
+    
+    case "10":
+      return !!(profileData.address || profileData.location);
+    
+    default:
+      return false;
+  }
+}
+
+function autoFillQuestionFromProfile(questionId, profileData) {
+  if (!profileData) return;
+  
+  console.log(`Auto-filling question ${questionId} from profile data`);
+  
+  switch(questionId) {
+    case "2": 
+      if (profileData.kitchen_access === "Yes") {
+        document.getElementById("kitchen-yes").checked = true;
+      } else if (profileData.kitchen_access === "No") {
+        document.getElementById("kitchen-no").checked = true;
+      }
+      
+      const kitchenEvent = new Event('change', { bubbles: true });
+      document.getElementById("kitchen-yes").checked ? 
+        document.getElementById("kitchen-yes").dispatchEvent(kitchenEvent) : 
+        document.getElementById("kitchen-no").dispatchEvent(kitchenEvent);
+      break;
+    
+    case "4": 
+      if (profileData.dietary_restrictions) {
+        const dietaryPrefs = profileData.dietary_restrictions.split(',').map(pref => pref.trim());
+        
+        const dietaryMap = {
+          "Latin American": "pref-latin",
+          "West African": "pref-westafrican", 
+          "East African": "pref-eastafrican",
+          "Central/South Asian": "pref-southasian",
+          "East Asian": "pref-eastasian",
+          "Eastern European": "pref-easteuropean",
+          "Middle Eastern/North African": "pref-middleeastern",
+          "Halal": "pref-halal",
+          "Kosher": "pref-kosher",
+          "Vegetarian": "pref-vegetarian",
+          "Vegan": "pref-vegan"
+        };
+       
+        dietaryPrefs.forEach(pref => {
+          const checkboxId = dietaryMap[pref];
+          if (checkboxId && document.getElementById(checkboxId)) {
+            document.getElementById(checkboxId).checked = true;
+            document.getElementById(checkboxId).dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        });
+        
+        if (!dietaryPrefs.some(pref => dietaryMap[pref])) {
+          document.getElementById("pref-none").checked = true;
+          document.getElementById("pref-none").dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
+      break;
+    
+    case "5": 
+      if (profileData.transport) {
+        if (profileData.transport.includes("Own Transport")) {
+          document.getElementById("travel-yes").checked = true;
+        } else {
+          document.getElementById("travel-no").checked = true;
+        }
+       
+        const travelEvent = new Event('change', { bubbles: true });
+        document.getElementById("travel-yes").checked ? 
+          document.getElementById("travel-yes").dispatchEvent(travelEvent) : 
+          document.getElementById("travel-no").dispatchEvent(travelEvent);
+      }
+      break;
+    
+    case "10": 
+      const locationInput = document.getElementById("location");
+      if (locationInput) {
+        locationInput.value = profileData.address || profileData.location || "";
+        locationInput.dispatchEvent(new Event('input', { bubbles: true }));
+        locationInput.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+      break;
+  }
+}
 
   function getUserLocation() {
     return new Promise((resolve, reject) => {
@@ -1118,69 +1649,136 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Updated resetForm function to handle food bank form
-  function resetForm() {
-    // Check which form is present by looking for a distinctive element
-    const isFoodBankForm = !!document.getElementById("kitchen-yes");
+  // function resetForm() {
+  //   // Check which form is present by looking for a distinctive element
+  //   const isFoodBankForm = !!document.getElementById("kitchen-yes");
     
-    if (isFoodBankForm) {
-      // Reset all input fields
-      document.getElementById('name').value = '';
+  //   if (isFoodBankForm) {
+  //     // Reset all input fields
+  //     document.getElementById('name').value = '';
       
-      // Reset all radio buttons
-      const radioButtons = document.querySelectorAll('input[type="radio"]');
-      radioButtons.forEach(radio => {
-        radio.checked = false;
-      });
+  //     // Reset all radio buttons
+  //     const radioButtons = document.querySelectorAll('input[type="radio"]');
+  //     radioButtons.forEach(radio => {
+  //       radio.checked = false;
+  //     });
       
-      // Reset all checkboxes
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-      });
+  //     // Reset all checkboxes
+  //     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  //     checkboxes.forEach(checkbox => {
+  //       checkbox.checked = false;
+  //     });
       
-      // Reset select elements
-      if (document.getElementById('preferred-time')) {
-        document.getElementById('preferred-time').selectedIndex = 0;
-      }
-      if (document.getElementById('delivery-time')) {
-        document.getElementById('delivery-time').selectedIndex = 0;
-      }
+  //     // Reset select elements
+  //     if (document.getElementById('preferred-time')) {
+  //       document.getElementById('preferred-time').selectedIndex = 0;
+  //     }
+  //     if (document.getElementById('delivery-time')) {
+  //       document.getElementById('delivery-time').selectedIndex = 0;
+  //     }
       
-      // Reset textarea
-      document.getElementById('comments').value = '';
-    } else {
-      // Original form reset
-      document.getElementById('name').value = '';
-      document.getElementById('age').value = '';
-      document.getElementById('city').value = '';
-      document.getElementById('transport-bus').checked = false;
-      document.getElementById('transport-subway').checked = false;
-      document.getElementById('transport-walk').checked = false;
-      document.getElementById('comments').value = '';
-    }
+  //     // Reset textarea
+  //     document.getElementById('comments').value = '';
+  //   } else {
+  //     // Original form reset
+  //     document.getElementById('name').value = '';
+  //     document.getElementById('age').value = '';
+  //     document.getElementById('city').value = '';
+  //     document.getElementById('transport-bus').checked = false;
+  //     document.getElementById('transport-subway').checked = false;
+  //     document.getElementById('transport-walk').checked = false;
+  //     document.getElementById('comments').value = '';
+  //   }
     
-    // Reset question states (works for both forms)
-    const questions = document.querySelectorAll('.form-question');
-    questions.forEach((q, index) => {
-      q.classList.remove('active', 'completed');
-      if (index === 0) {
-        q.classList.add('active');
-      }
+  //   // Reset question states (works for both forms)
+  //   const questions = document.querySelectorAll('.form-question');
+  //   questions.forEach((q, index) => {
+  //     q.classList.remove('active', 'completed');
+  //     if (index === 0) {
+  //       q.classList.add('active');
+  //     }
+  //   });
+   
+  //   // Show form questions and controls, hide completion image
+  //   const formQuestions = document.getElementById('formQuestions');
+  //   const formControls = document.querySelector('.form-controls');
+  //   const completionImage = document.querySelector('.completion-image');
+    
+  //   if (formQuestions) formQuestions.style.display = 'block';
+  //   if (formControls) formControls.style.display = 'flex';
+  //   if (completionImage) completionImage.style.display = 'none';
+   
+  //   setTimeout(scrollToActiveQuestion, 100);
+  //   // Update progress bar
+  //   updateFormProgress();
+  // }
+  
+async function resetForm() {
+
+  const isFoodBankForm = !!document.getElementById("kitchen-yes");
+  
+  if (isFoodBankForm) {
+
+    document.getElementById('name').value = '';
+    
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(radio => {
+      radio.checked = false;
+    });
+    
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = false;
     });
    
-    // Show form questions and controls, hide completion image
-    const formQuestions = document.getElementById('formQuestions');
-    const formControls = document.querySelector('.form-controls');
-    const completionImage = document.querySelector('.completion-image');
-    
-    if (formQuestions) formQuestions.style.display = 'block';
-    if (formControls) formControls.style.display = 'flex';
-    if (completionImage) completionImage.style.display = 'none';
-   
-    setTimeout(scrollToActiveQuestion, 100);
-    // Update progress bar
-    updateFormProgress();
+    if (document.getElementById('preferred-time')) {
+      document.getElementById('preferred-time').selectedIndex = 0;
+    }
+    if (document.getElementById('delivery-time')) {
+      document.getElementById('delivery-time').selectedIndex = 0;
+    }
+  
+    document.getElementById('comments').value = '';
+  } else {
+
   }
+  
+
+  const questions = document.querySelectorAll('.form-question');
+  questions.forEach(q => {
+    q.classList.remove('active', 'completed');
+  });
+  
+  const formQuestions = document.getElementById('formQuestions');
+  const formControls = document.querySelector('.form-controls');
+  const completionImage = document.querySelector('.completion-image');
+  
+  if (formQuestions) formQuestions.style.display = 'block';
+  if (formControls) formControls.style.display = 'flex';
+  if (completionImage) completionImage.style.display = 'none';
+
+  if (userProfileData) {
+    console.log("Auto-filling form from cached profile after reset");
+    for (const question of questions) {
+      const questionId = question.dataset.questionId;
+      if (isQuestionAnsweredFromProfile(questionId, userProfileData)) {
+        autoFillQuestionFromProfile(questionId, userProfileData);
+        question.classList.add('completed');
+      }
+    }
+  }
+  
+
+  const firstUnansweredQuestion = Array.from(questions).find(q => !q.classList.contains('completed'));
+  if (firstUnansweredQuestion) {
+    firstUnansweredQuestion.classList.add('active');
+  } else if (questions.length > 0) {
+    questions[0].classList.add('active');
+  }
+  
+  setTimeout(scrollToActiveQuestion, 100);
+  updateFormProgress();
+}
 
   async function getLocationName(lat, lon) {
       const url = "https://nominatim.openstreetmap.org/reverse";
@@ -1319,13 +1917,7 @@ document.addEventListener('DOMContentLoaded', function() {
       return finalTrains.length > 0 ? finalTrains[0].FinalCost : "$2.00";
   }
 
-//   function getCurrentLanguage() {
-//   const langSwitch = document.getElementById('lang-switch');
-  
-//   // If checkbox is checked, language is ES (Spanish)
-//   // If checkbox is unchecked, language is EN (English)
-//   return langSwitch.checked ? 'ES' : 'EN';
-// }
+
 
 function getCurrentLanguage() {
 
@@ -1431,80 +2023,6 @@ function getCurrentLanguage() {
       return finalSummary;
   }
 
-//     async function planTransit(inputStr) {
-//     try {
-//         const parts = inputStr.split(",").map(x => x.trim());
-//         if (parts.length !== 4) {
-//             return JSON.stringify([{
-//                 error: "Input should be in the format 'from_lat, from_lon, to_lat, to_lon'."
-//             }]);
-//         }
-      
-//         const [fromLat, fromLon, toLat, toLon] = parts;
-      
-//         const departureTime = new Date();
-//         departureTime.setMinutes(departureTime.getMinutes() + 10);
-      
-//         const dateStr = departureTime.toISOString().split('T')[0];
-//         const timeStr = departureTime.toLocaleTimeString('en-US', { 
-//             hour: '2-digit', 
-//             minute: '2-digit', 
-//             hour12: false 
-//         });
-      
-//         const params = new URLSearchParams({
-//             fromPlace: `${fromLat},${fromLon}`,
-//             toPlace: `${toLat},${toLon}`,
-//             numItineraries: 1,
-//             date: dateStr,
-//             time: timeStr,
-//             mode: "TRANSIT,WALK",
-//             arriveBy: "false"
-//         });
-      
-//         console.log(`Making transit request to proxy: /proxy-transit?${params}`);
-      
-//         try {
-          
-//             const response = await fetch(` http://localhost:4000/transitPlan?${params}`);
-          
-//             if (!response.ok) {
-//                 const errorText = await response.text();
-//                 throw new Error(`HTTP error ${response.status}: ${errorText}`);
-//             }
-          
-//             const data = await response.json();
-          
-//             if (!data.plan || !data.plan.itineraries || data.plan.itineraries.length === 0) {
-//                 return JSON.stringify([{
-//                     "start_time": departureTime.toLocaleString('en-US', { timeZone: 'America/New_York' }),
-//                     "message": "No transit routes found. Try walking or using another transportation method."
-//                 }]);
-//             }
-          
-//             const itinerary = data.plan.itineraries[0];
-//             const totalDurationMinutes = itinerary.duration / 60;
-//             const itinerarySummary = await createItinerarySummary(itinerary);
-          
-//             return JSON.stringify([{
-//                 "start_from_your_place_at": departureTime.toLocaleString('en-US', { timeZone: 'America/New_York' }),
-//                 "total_duration_minutes": totalDurationMinutes,
-//                 "itinerary": itinerarySummary
-//             }]);
-//         } catch (e) {
-//             console.error("Transit planning error:", e);
-          
-//             return JSON.stringify([{
-//                 "error": e.toString(),
-//                 "fallback_message": "Transit planning service couldn't find a route. The food bank location is available on a map service using the coordinates."
-//             }]);
-//         }
-//     } catch (e) {
-//         return JSON.stringify([{
-//             "error": `Error parsing transit input: ${e}`
-//         }]);
-//     }
-// }
 
   async function planTransit(inputStr) {
   try {
@@ -1584,13 +2102,13 @@ function getCurrentLanguage() {
       }]);
   }
 }
-// Function to auto-scroll to the active question
+
     function scrollToActiveQuestion() {
       const activeQuestion = document.querySelector('.form-question.active');
       const formContainer = document.querySelector('.form-container');
       
       if (activeQuestion && formContainer) {
-        // Calculate the position to scroll to (element's position relative to the container)
+       
         const containerRect = formContainer.getBoundingClientRect();
         const questionRect = activeQuestion.getBoundingClientRect();
         const relativePosition = questionRect.top - containerRect.top;
@@ -1605,167 +2123,50 @@ function getCurrentLanguage() {
     }
 
 
-//     document.addEventListener('DOMContentLoaded', function() {
-//   // Initial setup based on current language
-//   init();
-  
-//   // Add event listener for language toggle
-//   document.getElementById('lang-switch').addEventListener('change', function() {
-//     console.log("Language changed to:", getCurrentLanguage());
-    
-//     // Reinitialize everything with new language
-//     resetAgent();
-//     init();
-//   });
 
-// function resetAgent() {
-
-//   if (window.pc) {
-//     window.pc.close();
-//   }
-
-//   const existingAudio = document.querySelector('audio');
-//   if (existingAudio) {
-//     existingAudio.remove();
-//   }
-//   if (existingAudio) {
-//     existingAudio.remove();
-//   }
-  
-//   const existingAudio_2 = document
-//   // Update UI based on language
-//   updateUIForLanguage(getCurrentLanguage());
-// }
-  // function findNearestFoodBankVoice(inputStr) {
-  //     try {
-  //         const parts = inputStr.split(",").map(x => x.trim());
-  //         if (parts.length !== 2) {
-  //             return "Error: Input should be in the format 'lat, lon'.";
-  //         }
-  //         const userLat = parseFloat(parts[0]);
-  //         const userLon = parseFloat(parts[1]);
-
-  //         let nearest = null;
-  //         let minDist = Infinity;
-          
-  //         for (const fb of foodBanks) {
-  //             const dist = haversineDistance(userLat, userLon, fb.lat, fb.lon);
-  //             if (dist < minDist) {
-  //                 minDist = dist;
-  //                 nearest = fb;
-  //             }
-  //         }
-          
-  //         return nearest;
-  //     } catch (e) {
-  //         return `Error parsing coordinates: ${e}`;
-  //     }
-  // }
-
-  function findNearestFoodBankVoice(inputStr) {
+async function findNearestFoodBankVoice(inputStr) {
       try {
-    // const parts = inputStr.split(",").map(x => x.trim());
-    // if (parts.length !== 2) {
-    //   return "Error: Input should be in the format 'lat, lon'.";
-    // }
-    // const userLat = parseFloat(parts[0]);
-    // const userLon = parseFloat(parts[1]);
-  
-    // const formStatus = fns.getFormStatus();
-    
-    // const normalizedFormData = normalizeFormData(formStatus.formData || {});
-    // console.log("Normalized form data:", normalizedFormData);
+
     
 
-    // let filteredBanks = globalFoodBanks.length > 0 ? globalFoodBanks : defaultFoodBanks;
-    
-    // if (normalizedFormData.foodFormat && normalizedFormData.foodFormat.length > 0) {
-    //   const formatBanks = filteredBanks.filter(fb => {
-    //     return normalizedFormData.foodFormat.some(format => {
-    //       // Check if the specific format column is "Yes"
-    //       const formatKey = format.replace(/\s+/g, ' ').trim();
-    //       return fb[formatKey] === "Yes";
-    //     });
-    //   });
-  
-    //   if (formatBanks.length > 0) {
-    //     filteredBanks = formatBanks;
-    //     console.log(`Filtered to ${filteredBanks.length} banks by food format`);
-    //   }
-    // }
-    
-    // if (normalizedFormData.dietaryPreferences && normalizedFormData.dietaryPreferences.length > 0) {
-    //   const dietaryBanks = filteredBanks.filter(fb => {
-    //     return normalizedFormData.dietaryPreferences.some(pref => {
-    //       const prefKey = pref.replace(/\//g, '\\/').trim();
-    //       return fb[prefKey] === "Yes";
-    //     });
-    //   });
-      
-    //   if (dietaryBanks.length > 0) {
-    //     filteredBanks = dietaryBanks;
-    //     console.log(`Filtered to ${filteredBanks.length} banks by dietary preferences`);
-    //   }
-    // }
-   
-    // const dayPreference = normalizedFormData.dayPreference || "Today";
-
-    // let targetDay;
-    // if (dayPreference === "Today") {
-    //   const today = new Date();
-    //   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    //   targetDay = daysOfWeek[today.getDay()];
-    // } else if (dayPreference === "Another day" && normalizedFormData.specificDays && normalizedFormData.specificDays.length > 0) {
-      
-    //   targetDay = normalizedFormData.specificDays[0];
-    // } else {
-     
-    //   const today = new Date();
-    //   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    //   targetDay = daysOfWeek[today.getDay()];
-    // }
- 
-    // const dayFilteredBanks = filteredBanks.filter(fb => {
-    //   const dayOfWeek = fb["Day of Week"] || "";
-    //   const frequency = fb["Frequency"] || "";
-    //   return dayOfWeek === targetDay || frequency.includes("Every week");
-    // });
- 
-    // if (dayFilteredBanks.length > 0) {
-    //   filteredBanks = dayFilteredBanks;
-    //   console.log(`Filtered to ${filteredBanks.length} banks by day: ${targetDay}`);
-    // }
+    const formData = formStatus.formData;
+    console.log("Sending form data to filter-foodbanks:", formData);
     
 
-    // const needsDelivery = normalizedFormData.canTravel === false && 
-    //                       normalizedFormData.someoneElseCanPickup === false;
+    const response = await fetch('http://localhost:3000/filter-foodbanks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
     
-    // if (needsDelivery) {
-    //   const deliveryBanks = filteredBanks.filter(fb => {
-    //     const distributionModels = fb["Distribution Models"] || "";
-    //     return distributionModels.toLowerCase().includes("delivery");
-    //   });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     
-    //   if (deliveryBanks.length > 0) {
-    //     filteredBanks = deliveryBanks;
-    //     console.log(`Filtered to ${filteredBanks.length} banks that offer delivery`);
-    //   }
-    // }
+    const data = await response.json();
+    
+    if (!data.success || !data.foodBanks || data.foodBanks.length === 0) {
+      return { 
+        success: false, 
+        error: "No matching food banks found based on your preferences." 
+      };
+    }
 
-    // if (filteredBanks.length === 0) {
-    //   console.log("No food banks match the filters. Using all available food banks.");
-    //   filteredBanks = globalFoodBanks.length > 0 ? globalFoodBanks : defaultFoodBanks;
-    // }
-
-          let nearest = null;
-          let minDist = Infinity;
-    filteredBanks = [{"Agency ID":"14545-PART-01","Agency Name":"Mt. Rainier Seventh Day Adventist Spanish Church : Mount Rainier Seventh Day Adventist Spanish Church","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Mount Rainier Seventh Day Adventist Spanish Chuch 6012 Ager Road Hyattsville MD 20782","Cleaned Address":"6012 Ager Road Hyattsville MD 20782","Latitude":38.9542534204,"Longitude":-76.9652870101,"Phone":"(240) 346-9272","Day of Week":"Wednesday","Frequency":"2nd of the Month","Starting Time":"19:00:00","Ending Time":"21:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Home Delivery,Walk up","Cultural Populations Served":"East African,Eastern European,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"No","Last SO Create Date":"2024-12-02","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null}]
+    let nearest = null;
+    let minDist = Infinity;
+    
+    const foodBanks = data.foodBanks;
+    
+    
+    // filteredBanks = [{"Agency ID":"14545-PART-01","Agency Name":"Mt. Rainier Seventh Day Adventist Spanish Church : Mount Rainier Seventh Day Adventist Spanish Church","Agency Region":"MD","County\/Ward":"MD Prince George's County","Shipping Address":"Attn: Mount Rainier Seventh Day Adventist Spanish Chuch 6012 Ager Road Hyattsville MD 20782","Cleaned Address":"6012 Ager Road Hyattsville MD 20782","Latitude":38.9542534204,"Longitude":-76.9652870101,"Phone":"(240) 346-9272","Day of Week":"Wednesday","Frequency":"2nd of the Month","Starting Time":"19:00:00","Ending Time":"21:00:00","By Appointment Only":"Yes","Food Pantry Requirements":"ID","Food Format":"Loose groceries","Loose groceries":"Yes","Pre-bagged or boxed groceries":"No","Prepared meals":"No","Distribution Models":"Drive thru,Home Delivery,Walk up","Cultural Populations Served":"East African,Eastern European,Latin American,West African","Latin American":"Yes","West African":"Yes","East African":"Yes","Central\/South Asian":"No","East Asian":"No","Eastern European":"Yes","Middle Eastern\/North African":"No","Last SO Create Date":"2024-12-02","Date of Last Verification":"2024-10-09","Additional Note on Hours of Operations":null}]
     for (const fb of filteredBanks) {
       const fbLat = parseFloat(fb["Latitude"]);
       const fbLon = parseFloat(fb["Longitude"]);
       
       if (isNaN(fbLat) || isNaN(fbLon)) {
-        continue; // Skip invalid coordinates
+        continue; 
       }
       
       const dist = haversineDistance(userLat, userLon, fbLat, fbLon);
@@ -1824,11 +2225,8 @@ function updateUIForLanguage(language) {
   }
 }
 
-// Modify your init function to support language selection
-
-// Initialize on load
 window.addEventListener('load', function() {
-  // Initial startup
+
   init().catch(err => console.error("Error initializing connection:", err));
 });
 
@@ -1882,7 +2280,7 @@ window.addEventListener('load', function() {
           {
             type: 'function',
             name: 'voiceTransit',
-            description: 'Given the current location of the user, finds the nearest food bank and provides transit options',
+            description: 'Given the current location of the user , finds the nearest food bank and provides transit options- before that check if form is filled, if not fill the form using the tools',
             parameters: {
               type: 'object',
               properties: {
@@ -1897,7 +2295,7 @@ window.addEventListener('load', function() {
           {
             type: 'function',
             name: 'getNextFormQuestion',
-            description: 'Gets the EXACT next question to ask in the food bank form. ALWAYS call this before asking any question to ensure you ask the correct question as shown in the form. Do not make up your own questions.',
+            description: 'Gets the EXACT next question to ask in the food bank form. ALWAYS call this before asking any question to ensure you ask the correct question as shown in the form. Do not make up your own questions. Make sure the previous input is not empty',
           },
           {
             type: 'function',
@@ -1937,130 +2335,28 @@ window.addEventListener('load', function() {
   async function init() {
     try {
 
-      // try {
-      //   // Load food bank data first
-      //   globalFoodBanks = await loadFoodBankData();
-      //   console.log(`Loaded ${globalFoodBanks.length} food banks successfully`);
-        
-      //   // Rest of your initialization code...
-      // } catch (error) {
-      //   console.error("Error initializing:", error);
-      // }
-
-//       async function init() {
-//   try {
-    
-   
-//     const audioEl = document.createElement("audio");
-//     audioEl.autoplay = true;
-//     document.body.appendChild(audioEl);
-    
-//     window.pc.ontrack = e => {
-//       if (e.streams && e.streams[0]) {
-//         audioEl.srcObject = e.streams[0];
-//         startBackendVisualizer(e.streams[0]);
-//       }
-//     };
-    
-  
-//     const micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-//     window.pc.addTrack(micStream.getTracks()[0]);
-//     startLocalVisualizer(micStream);
-    
-//     const dc = window.pc.createDataChannel("oai-events");
-    
-   
-//     dc.addEventListener("open", () => {
-//       console.log("Data channel open");
-//       configureData(dc);
-//     });
-    
-   
-//     dc.addEventListener("message", async (e) => {
-//       console.log("Data Channel message received:", e.data);
-//       let msg;
-//       try {
-//         msg = JSON.parse(e.data);
-//       } catch (err) {
-//         console.error("Error parsing data channel message:", err);
-//         return;
-//       }
-
-
-    
-//       if (msg.type === 'response.function_call_arguments.done') {
-//         const fn = fns[msg.name];
-//         if (fn !== undefined) {
-//           console.log(`Calling local function ${msg.name} with arguments: ${msg.arguments}`);
-//           const args = JSON.parse(msg.arguments);
-//           try {
-//             const result = await fn(args);
-//             console.log('Function result:', result);
-           
-//             dc.send(JSON.stringify({
-//               type: 'conversation.item.create',
-//               item: {
-//                 type: 'function_call_output',
-//                 call_id: msg.call_id, 
-//                 output: JSON.stringify(result)
-//               }
-//             }));
-
-//             dc.send(JSON.stringify({ type: "response.create" }));
-//           } catch (error) {
-//             console.error("Error calling function:", error);
-//           }
-//         } else {
-//           console.warn(`No function defined for name: ${msg.name}`);
-//         }
-//       }
-//     });
-    
-//     const offer = await window.pc.createOffer();
-//     await window.pc.setLocalDescription(offer);
-//     console.log("SDP offer created and set as local description.");
-
-//     const baseUrl = "https://api.openai.com/v1/realtime";
-//     const model = "gpt-4o-realtime-preview-2024-12-17";
-//     const sdpResponse = await fetch(`${baseUrl}?model=${model}`, {
-//       method: "POST",
-//       body: offer.sdp,
-//       headers: {
-//         Authorization: `Bearer ${EPHEMERAL_KEY}`,
-//         "Content-Type": "application/sdp"
-//       },
-//     });
-    
-
-//     const answerSdp = await sdpResponse.text();
-//     const answer = {
-//       type: "answer",
-//       sdp: answerSdp,
-//     };
-//     await window.pc.setRemoteDescription(answer);
-//     console.log("SDP answer received and set as remote description. WebRTC connection established.");
-
-//     updateUIForLanguage(currentLanguage);
-    
-//   } catch (error) {
-//     console.error("Error initializing WebRTC connection:", error);
-//   }
-// }
 
 
 
 
+
+      const profileData = await loadUserProfile();
+      if (profileData) {
+        console.log("User profile loaded, will auto-fill form fields");
+      }
 
 
 
       
       try {
+
+
         
         await getUserLocation();
         console.log("User location acquired:", window.userLocation);
       } catch (locationError) {
         console.error("Could not get user location:", locationError);
-        // Continue with the rest of initialization even if location fails
+       
       }
       
       const set_language = getCurrentLanguage();
@@ -2073,43 +2369,18 @@ window.addEventListener('load', function() {
         tokenResponse = await fetch("/session_spanish")
       }
 
-      // const tokenResponse = await fetch("/session");
-
       const tokenData = await tokenResponse.json();
       const EPHEMERAL_KEY = tokenData.client_secret.value;
       console.log("Ephemeral key received:", EPHEMERAL_KEY);
 
-    //   const tokenData = await tokenResponse.json();
-    // const EPHEMERAL_KEY = tokenData.client_secret.value;
-    // console.log("Ephemeral key received:", EPHEMERAL_KEY);
-    
-    // // Store the peer connection globally so we can close it when switching languages
-    // window.pc = new RTCPeerConnection();
+
+      if (rtcStarted) return;    // guard
+      rtcStarted = true;
+
       window.pc = new RTCPeerConnection();
     
-    // const audioEl = document.createElement("audio");
-    // audioEl.autoplay = true;
-    // document.body.appendChild(audioEl);
-    // window.pc.ontrack = e => {
-    //   if (e.streams && e.streams[0]) {
-    //     audioEl.srcObject = e.streams[0];
-    //     startBackendVisualizer(e.streams[0]);
-    //   }
-    // };
-    
-    // const micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    // window.pc.addTrack(micStream.getTracks()[0]);
-    // startLocalVisualizer(micStream);
-    
-    // const dc = window.pc.createDataChannel("oai-events");
-    
-    // dc.addEventListener("open", () => {
-    //   console.log("Data channel open");
-    //   configureData(dc);
-    // });
 
-      
-      const pc = new RTCPeerConnection();
+      const pc = window.pc;
 
       
 
@@ -2117,17 +2388,7 @@ window.addEventListener('load', function() {
       const audioEl = document.createElement("audio");
       audioEl.autoplay = true;
       document.body.appendChild(audioEl);
-      // pc.ontrack = e => {
-      //   if (e.streams && e.streams[0]) {
-      //     audioEl.srcObject = e.streams[0];
-      //     startBackendVisualizer(e.streams[0]);
-      //   }
-      // };
 
-      // / After micStream is obtained
-
-
-// After remote track callback
           pc.ontrack = e => {
             if (e.streams && e.streams[0]) {
               audioEl.srcObject = e.streams[0];
@@ -2138,8 +2399,8 @@ window.addEventListener('load', function() {
       
       const micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
       pc.addTrack(micStream.getTracks()[0]);
-      // startLocalVisualizer(micStream);
-      visualiser.addStream(micStream, '#007bff');   // user voice – blue
+     
+      visualiser.addStream(micStream, '#007bff');  
 
       
       const dc = pc.createDataChannel("oai-events");
@@ -2203,15 +2464,10 @@ window.addEventListener('load', function() {
         },
       });
 
-      // const answerSdp = await sdpResponse.text();
-      // const answer = {
-      //   type: "answer",
-      //   sdp: answerSdp,
-      // };
-      // await pc.setRemoteDescription(answer);
+
 
       if (!sdpResponse.ok) {
-        const err = await sdpResponse.json();   // <-- keep the JSON around
+        const err = await sdpResponse.json();  
         console.error("Realtime API error", err);
         alert(JSON.stringify(err, null, 2)); 
         console.error("Realtime API error:", await sdpResponse.json());
@@ -2340,4 +2596,3 @@ window.addEventListener('load', function() {
     }
   });
 
-  init().catch(err => console.error("Error initializing connection:", err));
