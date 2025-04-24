@@ -421,101 +421,194 @@ app.get("/api/agencies", (req, res) => {
     });
 });
 
-app.post("/explore", async (req, res) => {
-    try {
-      const {
-        address = "",
-        diet = [],
-        preferences = [],
-        pickupDayChoice = "",
-        dayofweek = [],
-        pickuptime = ""
-      } = req.body;
+
+// Find food banks based on preferences
+function buildFoodBankQuery(formData) {
+    const now = new Date();
+    const currentTime = now.toTimeString().slice(0, 8); // "HH:MM:SS"
+    const allWeekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   
-      let query = `
-        SELECT 
-          f.agency_id, f.agency_name, f.food_format, f.distribution_models, f.cultural_populations_served,
-          a.day_of_week, a.frequency, a.starting_time, a.ending_time, a.by_appointment_only,
-          l.agency_region, l.county_ward, l.latitude, l.longitude
-        FROM food_agencies f
-        LEFT JOIN availability a ON f.agency_id = a.agency_id
-        LEFT JOIN location l ON f.agency_id = l.agency_id
-        WHERE 1 = 1
-      `;
-      const params = [];
-
-        // --- Cultural preferences from 'preferences' + special cases from 'diet' ---
-        const cultureFilters = [...preferences]; // start with explicitly chosen preferences
-
-        // If user mentions 'halal' in diet, infer Middle Eastern / North African
-        if (preferences.includes("halal")) {
-        cultureFilters.push("middle eastern", "north african");
-        }
-
-        if (preferences.includes("kosher")) {
-            cultureFilters.push("middle eastern", "north african", "eastern european");
-        }
-
-        if (preferences.includes("vegetarian")) {
-            cultureFilters.push("Central/South Asian", "East Asian");
-        }
-
-        if (preferences.includes("vegan")) {
-            cultureFilters.push("Central/South Asian", "East Asian");
-        }
-
-        if (cultureFilters.length > 0) {
-        query += ` AND (${cultureFilters.map(() => `LOWER(f.cultural_populations_served) LIKE ?`).join(" OR ")})`;
-        params.push(...cultureFilters.map(p => `%${p.toLowerCase()}%`));
-        }
-
+    function getWeekOccurrence(date) {
+      const day = date.getDate();
+      const weekday = date.getDay();
+      let count = 0;
+      for (let i = 1; i <= day; i++) {
+        const d = new Date(date.getFullYear(), date.getMonth(), i);
+        if (d.getDay() === weekday) count++;
+      }
+      return count;
+    }
   
-      // Diet maps to food_format
-      if (diet.length > 0) {
-        query += ` AND (${diet.map(() => `f.food_format LIKE ?`).join(" OR ")})`;
-        params.push(...diet.map(d => `%${d}%`));
-      }
+    // --- Resolve day type to actual weekday strings ---
+    let targetDays = [];
   
-      const processedDays = [];
-      if (pickupDayChoice === "today") {
-        const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
-        processedDays.push(today.toLowerCase());
-      } else if (pickupDayChoice === "another") {
-        for (let day of dayofweek) {
-          if (day.toLowerCase() === "tomorrow") {
-            const tomorrow = new Date();
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            const tomorrowName = tomorrow.toLocaleDateString("en-US", { weekday: "long" });
-            processedDays.push(tomorrowName.toLowerCase());
-          } else {
-            processedDays.push(day.toLowerCase());
-          }
-        }
+    if (formData.day_type === "Today") {
+      targetDays.push(now.toLocaleString("en-US", { weekday: "long", timeZone: "America/New_York" }));
+    } else if (formData.day_type === "Tomorrow") {
+      const tomorrow = new Date(now);
+      tomorrow.setDate(now.getDate() + 1);
+      targetDays.push(tomorrow.toLocaleString("en-US", { weekday: "long", timeZone: "America/New_York" }));
+    } else if (formData.day_type === "Another day" && formData.days?.length) {
+      if (formData.days.includes("Tomorrow")) {
+        const tomorrow = new Date(now);
+        tomorrow.setDate(now.getDate() + 1);
+        targetDays.push(tomorrow.toLocaleString("en-US", { weekday: "long", timeZone: "America/New_York" }));
       }
-      if (processedDays.length > 0) {
-        query += ` AND (${processedDays.map(() => `LOWER(a.day_of_week) LIKE ?`).join(" OR ")})`;
-        params.push(...processedDays.map(d => `%${d}%`));
-      }
-  
-      // Pickup time filtering (optional)
-      if (pickuptime) {
-        query += " AND a.starting_time <= ? AND a.ending_time >= ?";
-        params.push(pickuptime, pickuptime);
-      }
-      console.log("-----------------------");
-      db.query(query, params, (err, results) => {
-        if (err) {
-          console.error("Search error:", err);
-          res.status(500).json({ error: "Something went wrong." });
-        } else {
-          res.json(results);
+      formData.days.forEach(selectedDay => {
+        if (selectedDay !== "Tomorrow" && allWeekdays.includes(selectedDay)) {
+          targetDays.push(selectedDay);
         }
       });
-    } catch (err) {
-      console.error("Search error:", err);
-      res.status(500).json({ error: "Something went wrong." });
     }
+  
+    if (targetDays.length === 0) {
+      targetDays.push(now.toLocaleString("en-US", { weekday: "long", timeZone: "America/New_York" }));
+    }
+  
+    console.log("🗓 Target Days:", targetDays);
+  
+    const weekOccurrences = targetDays.map(day => {
+      const dayIndex = allWeekdays.indexOf(day);
+      const targetDate = new Date(now);
+      const offset = (dayIndex - now.getDay() + 7) % 7;
+      targetDate.setDate(now.getDate() + offset);
+      const occurrence = getWeekOccurrence(targetDate);
+      return { day, occurrence };
+    });
+  
+    console.log("📆 Week Occurrences:", weekOccurrences);
+  
+    let query = 
+      `SELECT fa.agency_id, fa.agency_name, fa.food_format, fa.cultural_populations_served,
+      a.day_of_week, a.frequency, a.starting_time, a.ending_time,
+             l.latitude, l.longitude, l.agency_region, l.county_ward
+      FROM food_agencies AS fa
+      JOIN availability AS a ON fa.agency_id = a.agency_id
+      JOIN location AS l ON fa.agency_id = l.agency_id
+      WHERE 1=1 `;
+
+    
+  
+    const params = [];
+  
+    // --- Delivery logic ---
+    if (formData.can_travel === "No" && formData.someone_else === "No") {
+      query +=  `AND LOWER(fa.distribution_models) LIKE ?`;
+      params.push('%home delivery%');
+    }
+
+    if (formData.delivery_day?.length) {
+        formData.delivery_day.forEach(selectedDay => {
+          if (allWeekdays.includes(selectedDay)) {
+            targetDays.push(selectedDay);
+          }
+        });
+      }
+      
+  
+    // --- Food format filter ---
+    if (formData.food_format?.length && !formData.food_format.includes("Any")) {
+      const formatConditions = [];
+      formData.food_format.forEach(format => {
+        formatConditions.push('LOWER(fa.food_format) LIKE ?');
+        params.push(`%${format.toLowerCase().trim()}%`);
+      });
+      query +=  `AND (${formatConditions.join(' OR ')})`;
+    }
+  
+    console.log("🥫 Food format filters:", formData.food_format);
+  
+    // --- Dietary preferences filter ---
+    if (formData.dietary_pref?.length && !formData.dietary_pref.includes("None")) {
+      const dietConditions = [];
+      formData.dietary_pref.forEach(diet => {
+        dietConditions.push('LOWER(fa.cultural_populations_served) LIKE ?');
+        params.push(`%${diet.toLowerCase().trim()}%`);
+      });
+      query +=  `AND (${dietConditions.join(' OR ')})`;
+    }
+  
+    console.log("🍽️ Dietary preference filters:", formData.dietary_pref);
+  
+    // --- Day of week filter ---
+    if (targetDays.length) {
+      query +=  `AND (${targetDays.map(() => 'a.day_of_week = ?').join(' OR ')})`;
+      params.push(...targetDays);
+    }
+  
+    // --- Frequency filter ---
+    const frequencyLabels = ["1st", "2nd", "3rd", "4th", "5th"];
+    const frequencyConditions = ['LOWER(a.frequency) LIKE LOWER(?)', 'LOWER(a.frequency) LIKE LOWER(?)'];
+    const frequencyParams = ['%every week%', '%as needed%'];
+  
+    weekOccurrences.forEach(dayInfo => {
+      const matchedFreqLabel = frequencyLabels[dayInfo.occurrence - 1] || "1st";
+      frequencyConditions.push('LOWER(a.frequency) LIKE LOWER(?)');
+      frequencyParams.push(`%${matchedFreqLabel}%`);
+    });
+  
+    query +=  `AND (${frequencyConditions.join(' OR ')})`;
+    params.push(...frequencyParams);
+  
+    console.log("⏳ Frequency Params:", frequencyParams);
+  
+    // --- Combined Time filter (preferred + delivery) ---
+    const timeRanges = [];
+    const combinedTimes = [...(formData.preferred_time || []), ...(formData.delivery_time || [])];
+  
+    if (combinedTimes.length) {
+      combinedTimes.forEach(slot => {
+        if (slot.includes("Morning")) timeRanges.push({ start: "09:00:00", end: "12:00:00" });
+        if (slot.includes("Afternoon")) timeRanges.push({ start: "12:00:00", end: "16:00:00" });
+        if (slot.includes("Evening")) timeRanges.push({ start: "16:00:00", end: "19:00:00" });
+        if (slot.includes("Night")) timeRanges.push({ start: "19:00:00", end: "23:00:00" });
+      });
+    }
+  
+    if (timeRanges.length === 0) {
+      timeRanges.push({ start: currentTime, end: currentTime });
+    }
+  
+    console.log("⏰ Time Ranges:", timeRanges);
+  
+    const timeConditions = [];
+    const timeParams = [];
+  
+    timeRanges.forEach(range => {
+      timeConditions.push(`(
+        (a.starting_time <= ? AND a.ending_time >= ?) OR
+        LOWER(a.starting_time) = 'as needed' OR
+        LOWER(a.ending_time) = 'until food runs out'
+      )`);
+      timeParams.push(range.end, range.start);
+    });
+  
+    query +=  `AND (${timeConditions.join(' OR ')})`;
+    params.push(...timeParams);
+  
+    console.log("🕐 Time Params:", timeParams);
+    console.log("📄 Final SQL Query:\n", query);
+    console.log("📦 Final SQL Params:\n", params);
+  
+    return { query, params };
+  }  
+  
+
+
+// POST /search route
+app.post('/search', (req, res) => {
+  const formData = req.body;
+  console.log("📥 Form Data Received:", formData);
+  const { query, params } = buildFoodBankQuery(formData);
+
+  db.query(query, params, (err, results) => {
+    if (err) {
+      console.error('❌ SQL error:', err);
+      return res.status(500).json({ error: 'Query failed' });
+    }
+    res.json(results);
   });
+});
   
   
 

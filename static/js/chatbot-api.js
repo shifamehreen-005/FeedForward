@@ -19,6 +19,22 @@ document.getElementById("micBtn").addEventListener("click", () => {
       });
   });
 
+  //help button - lets chat
+  document.getElementById("helpBtn").addEventListener("click", () => {
+    // Trigger a fetch to your local Python backend
+    fetch("http://127.0.0.1:8116/chat")
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "http://127.0.0.1:8116/chat";  // Redirect on success
+        } else {
+          alert("Could not connect to Python app.");
+        }
+      })
+      .catch(err => {
+        alert("Error: " + err);
+      });
+  });
+
 
 function expandChat() {
   chatInit.style.display = "none";
@@ -31,47 +47,47 @@ chatContainer.style.display = "none";
 chatInit.style.display = "flex";
 }
 
-function sendMessage(optionText) {
-  addMessage(optionText, "user");
+// function sendMessage(optionText) {
+  // addMessage(optionText, "user");
 
-  fetch('http://localhost:8000/chat', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ user_input: optionText })
-  })
-    .then(res => res.json())
-    .then(data => {
-      const botResponse = data.assistant_response || "Sorry, I didn't understand that.";
-      setTimeout(() => {
-        addMessage(botResponse, "bot");
-        const options = getNextOptions(botResponse);
+  // fetch('http://localhost:8000/chat', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({ user_input: optionText })
+  // })
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     const botResponse = data.assistant_response || "Sorry, I didn't understand that.";
+  //     setTimeout(() => {
+  //       addMessage(botResponse, "bot");
+  //       const options = getNextOptions(botResponse);
 
-        // Only render options if they haven't been rendered already
-        if (!optionsRendered) {
-          renderOptions(options);
-          optionsRendered = true; // Mark options as rendered
-        }
-      }, 500);
-    })
-    .catch(error => {
-      console.error("API error:", error);
-      addMessage("Sorry, there was an error connecting to the server.", "bot");
-    });
-}
+  //       // Only render options if they haven't been rendered already
+  //       if (!optionsRendered) {
+  //         renderOptions(options);
+  //         optionsRendered = true; // Mark options as rendered
+  //       }
+  //     }, 500);
+  //   })
+  //   .catch(error => {
+  //     console.error("API error:", error);
+  //     addMessage("Sorry, there was an error connecting to the server.", "bot");
+  //   });
+// }
 
-function addMessage(text, sender) {
-const message = document.createElement('div');
-message.classList.add('message', sender);
+// function addMessage(text, sender) {
+// const message = document.createElement('div');
+// message.classList.add('message', sender);
 
-const bubble = document.createElement('p');
-bubble.textContent = text;
-message.appendChild(bubble);
+// const bubble = document.createElement('p');
+// bubble.textContent = text;
+// message.appendChild(bubble);
 
-chatBox.appendChild(message);
-chatBox.scrollTop = chatBox.scrollHeight;
-}
+// chatBox.appendChild(message);
+// chatBox.scrollTop = chatBox.scrollHeight;
+// }
 
 // 🎤 Speech Recognition Setup
 const micBtn = document.getElementById('micBtn');
@@ -83,6 +99,10 @@ recognition.lang = 'en-US';
 micBtn.addEventListener("click", () => {
   recognition.start();
 });
+
+
+// 🎤 Chat Recognition Setup
+const helpBtn = document.getElementById('helpBtn');
 
 recognition.onresult = (event) => {
   const transcript = event.results[0][0].transcript;
