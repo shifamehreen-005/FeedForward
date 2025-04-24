@@ -247,6 +247,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-right: auto;
+    gap: 20px;
   }
   
   .toggle-label {
@@ -303,4 +304,184 @@ body {
   #lang-switch:not(:checked) + .toggle-label .en {
     color: #ffffff;
   }
-  
+
+
+  /* Chat message container */
+#messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Agent message (left-aligned) */
+.message.bot {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  color: #333;
+  border-radius: 20px;
+}
+
+/* .message.bot {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px 14px;
+  border-radius: 16px;
+  border-top-left-radius: 0;
+  max-width: 70%;
+  word-wrap: break-word;
+} */
+
+/* User message (right-aligned) */
+
+.message.user {
+  align-self: flex-end;
+  background: #e1fbaa;
+  color: #0f5132;
+  border-radius: 20px;
+}
+
+/* .message.user {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 16px;
+  border-top-right-radius: 0;
+  max-width: 70%;
+  word-wrap: break-word;
+} */
+
+/* System message */
+.message.system {
+  align-self: center;
+  background-color: #ffefc1;
+  color: #444;
+  font-style: italic;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Input container layout */
+#input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Input field */
+#chat-input {
+  flex-grow: 1;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* Microphone and send buttons */
+#micBtn,
+#send-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#micBtn svg,
+#send-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Optional: Add hover effects */
+#micBtn:hover,
+#send-button:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+/* ===== New: Form Questions ===== */
+.form-question {
+  background-color: #f6ffe0;
+  border: 1px solid #d0f26c;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #183b2a;
+  box-shadow: 0 4px 12px rgba(190, 247, 70, 0.2);
+}
+
+/* ===== New: Form Labels (Radio/Checkbox) ===== */
+.form-question label {
+  display: flex;
+  align-items: center;
+  padding: 10px 14px;
+  margin: 10px 0;
+  background: #f9ffe6;
+  border: 1px solid #d8f97c;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #2b3b1a;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-question label:hover {
+  background-color: #ecffbf;
+}
+
+.form-question input[type="radio"],
+.form-question input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #c6f64e; /* Makes checkbox/radio green */
+}
+
+/* ===== New: Submit Button (Save Button) ===== */
+.form-question .submit-button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  font-size: 15px;
+  background-color: #d4f94a;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #183b2a;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.form-question .submit-button:hover {
+  background-color: #c3ef42;
+}
+
+/* ===== Tweaked: User Message (already exists, confirm override is fine) ===== */
+.message.user,
+.user-message {
+  background-color: #e1fbaa !important;
+  color: #183b2a !important;
+  border: 1px solid #c8f64d;
+  font-weight: 500;
+}
+
+/* ===== Optional: Summary Block Styling ===== */
+.summary {
+  background-color: #f5fff0;
+  border: 1px solid #ccf97a;
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #183b2a;
+}
+
