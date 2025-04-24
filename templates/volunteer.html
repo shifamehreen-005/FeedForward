@@ -660,7 +660,7 @@
                   </div>
                   <div class="form-group">
                       <label for="eventImage">Image URL</label>
-                      <input type="url" id="eventImage" required>
+                      <input type="url" id="eventImage">
                   </div>
                   <img id="imagePreview" class="preview-image" alt="Event image preview">
                   <button type="submit" class="register-btn">Add Event</button>
@@ -672,7 +672,9 @@
           document.addEventListener('DOMContentLoaded', function() {
               // Check user authentication state from localStorage
               const userData = JSON.parse(localStorage.getItem('userData'));
-              const isStaffLoggedIn = userData && userData.role === 'staff';
+              const usertype = localStorage.getItem('user_type');
+              console.log(usertype);
+              const isStaffLoggedIn = usertype === 'staff';
               const userInfo = document.getElementById('userInfo');
               const staffName = document.getElementById('staffName');
               const logoutBtn = document.getElementById('logoutBtn');
@@ -684,11 +686,11 @@
                 document.getElementById('loginContainer').style.display = 'none';
                 document.getElementById('registerOnlyContainer').style.display = 'block';
 }
-              function updateUIForStaffAuth(isLoggedIn) {
-                  if (isLoggedIn) {
+              function updateUIForStaffAuth(isStaffLoggedIn) {
+                  if (isStaffLoggedIn) {
                       userInfo.style.display = 'inline-block';
                       addEventBtn.style.display = 'inline-block';
-                      staffName.textContent = userData.name;
+                      staffName.textContent = 'James';
                   } else {
                       userInfo.style.display = 'none';
                       addEventBtn.style.display = 'none';
