@@ -1,0 +1,3530 @@
+[
+    {
+        "Agency ID": "23210",
+        "Agency Name": "NHT Communities : Washington View Apartments",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8570042,
+        "Longitude": -76.9894293
+    },
+    {
+        "Agency ID": "14030-PART-01",
+        "Agency Name": "SOME : So Others Might Eat",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9089563,
+        "Longitude": -77.01143162412514
+    },
+    {
+        "Agency ID": "14040-PART-01",
+        "Agency Name": "Community Family Life Services : Community Family Life Services",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.89621,
+        "Longitude": -77.01536959214857
+    },
+    {
+        "Agency ID": "14050-PART-01",
+        "Agency Name": "Bread for the City : Bread for the City SE Center",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8595984,
+        "Longitude": -76.9680857
+    },
+    {
+        "Agency ID": "14050-PART-02",
+        "Agency Name": "Bread for the City : Bread For The City NW Center",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.91032075,
+        "Longitude": -77.02159038396766
+    },
+    {
+        "Agency ID": "14065-PART-01",
+        "Agency Name": "Lorton Community Action Center : Lorton Community Action Center",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.6985664,
+        "Longitude": -77.21365759999999
+    },
+    {
+        "Agency ID": "14081-PART-01",
+        "Agency Name": "District House GWU : DC University Food Pantry GWU",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.8999239,
+        "Longitude": -77.0471129
+    },
+    {
+        "Agency ID": "14085-PART-01",
+        "Agency Name": "Ward 7 Food Center of Peace Lutheran Church : Ward 7 Food Center of Peace Lutheran Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.8904539,
+        "Longitude": -76.9307871
+    },
+    {
+        "Agency ID": "14140-PART-01",
+        "Agency Name": "The Holy Temple Church of Christ, Inc. : The Holy Temple Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.883213600000005,
+        "Longitude": -76.99055774718776
+    },
+    {
+        "Agency ID": "14215-PART-01",
+        "Agency Name": "Metropolitan Baptist Church : Metropolitan Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9067476,
+        "Longitude": -76.8388004
+    },
+    {
+        "Agency ID": "14220-PART-01",
+        "Agency Name": "Purity Baptist Church : Purity Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.8981599,
+        "Longitude": -76.98725560362348
+    },
+    {
+        "Agency ID": "14222-PART-01",
+        "Agency Name": "SevaTruck Foundation : SevaTruck Foundation",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.87578880527489,
+        "Longitude": -77.23922027212186
+    },
+    {
+        "Agency ID": "14240-PART-01",
+        "Agency Name": "Interfaith Community Action Council : Interfaith Community Action Council - Oxon Hill Food Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8219741,
+        "Longitude": -76.956564885787
+    },
+    {
+        "Agency ID": "14265-PART-01",
+        "Agency Name": "St. Martins Social Service : St. Martins Social Service",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9157583,
+        "Longitude": -77.00950967678156
+    },
+    {
+        "Agency ID": "14305-PART-01",
+        "Agency Name": "THRIVE DC : Thrive DC",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.933592,
+        "Longitude": -77.0355665
+    },
+    {
+        "Agency ID": "14355-PART-01",
+        "Agency Name": "Family & Medical Counseling Service : Family & Medical Counseling Service",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8659889,
+        "Longitude": -76.9897972
+    },
+    {
+        "Agency ID": "14375-PART-01",
+        "Agency Name": "Agape Early Childhood Learning : Agape Early Childhood Learning",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.94092840881472,
+        "Longitude": -76.95277613673896
+    },
+    {
+        "Agency ID": "14410-PART-01",
+        "Agency Name": "Spanish Catholic Center : Spanish Catholic Center",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.93271405,
+        "Longitude": -77.03739827672516
+    },
+    {
+        "Agency ID": "14500-PART-01",
+        "Agency Name": "Central Union Mission : Central Union Mission",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.89868405,
+        "Longitude": -77.01108224989343
+    },
+    {
+        "Agency ID": "14520-PART-01",
+        "Agency Name": "Father Mckenna Center : The Father McKenna Center",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.9014721,
+        "Longitude": -77.0093608
+    },
+    {
+        "Agency ID": "14540-PART-01",
+        "Agency Name": "Miriam's Kitchen : Miriam's Kitchen",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.898593000000005,
+        "Longitude": -77.0516915246757
+    },
+    {
+        "Agency ID": "14545-PART-01",
+        "Agency Name": "Mt. Rainier Seventh Day Adventist Spanish Church : Mount Rainier Seventh Day Adventist Spanish Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.95425342038164,
+        "Longitude": -76.96528701009872
+    },
+    {
+        "Agency ID": "14570-PART-01",
+        "Agency Name": "ALIVE : ALIVE",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Alexandria",
+        "Latitude": 38.7977023,
+        "Longitude": -77.05603526763497
+    },
+    {
+        "Agency ID": "14570-PUSH-06",
+        "Agency Name": "William Ramsay Recreation Center",
+        "Agency Region": "Virginia",
+        "County/Ward": "City of Alexandria",
+        "Latitude": 38.829934300000005,
+        "Longitude": -77.11913013589607
+    },
+    {
+        "Agency ID": "14570-PUSH-07",
+        "Agency Name": "Chick Armstrong Recreation Center",
+        "Agency Region": "Virginia",
+        "County/Ward": "City of Alexandria",
+        "Latitude": 38.83723415,
+        "Longitude": -77.05807360478575
+    },
+    {
+        "Agency ID": "14572-PART-01",
+        "Agency Name": "Emmanuel Worship Center Seventh Day Adventist Church : Emmanuel Worship Center Seventh Day Adventist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.79261558337248,
+        "Longitude": -77.05673696812964
+    },
+    {
+        "Agency ID": "14590-PART-01",
+        "Agency Name": "ACTS : ACTS",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.56441413265191,
+        "Longitude": -77.3289089182643
+    },
+    {
+        "Agency ID": "14600-PART-01",
+        "Agency Name": "National City Christian Church : National City Christian Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.906499800000006,
+        "Longitude": -77.03272731212886
+    },
+    {
+        "Agency ID": "14630-PART-01",
+        "Agency Name": "Good Samaritan : Good Samaritan Ministry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.959575,
+        "Longitude": -76.98351485
+    },
+    {
+        "Agency ID": "14665-PART-01",
+        "Agency Name": "Brighter Day Ministries Food Pantry : Brighter Day Ministries Food Pantry",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.84261695,
+        "Longitude": -76.99974977951646
+    },
+    {
+        "Agency ID": "14675-PART-01",
+        "Agency Name": "Foggy Bottom Food Pantry : Foggy Bottom Food Pantry (United Church)",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.89807135,
+        "Longitude": -77.0446812892784
+    },
+    {
+        "Agency ID": "14755-PART-01",
+        "Agency Name": "Latin American Youth Center : Latin American Youth Center",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.927790900000005,
+        "Longitude": -77.03335556914894
+    },
+    {
+        "Agency ID": "14770-PART-01",
+        "Agency Name": "Food for Others : Food For Others",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.87212041131634,
+        "Longitude": -77.23685938125666
+    },
+    {
+        "Agency ID": "14790-PART-01",
+        "Agency Name": "Damien Ministries Food Pantry : Damien Ministries Food Pantry",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9304186,
+        "Longitude": -76.97395159254545
+    },
+    {
+        "Agency ID": "14810-PART-01",
+        "Agency Name": "Covenant Baptist Food Pantry : Covenant Baptist Food Pantry",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8341748,
+        "Longitude": -77.00896213130943
+    },
+    {
+        "Agency ID": "14820-PART-01",
+        "Agency Name": "Nineteenth Street Baptist Church : Nineteenth Street Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.9468507,
+        "Longitude": -77.036771
+    },
+    {
+        "Agency ID": "14830-PART-01",
+        "Agency Name": "Faith United Ministries Outreach : Faith United Ministries Outreach",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.84624480000001,
+        "Longitude": -76.8685067
+    },
+    {
+        "Agency ID": "14850-PART-01",
+        "Agency Name": "First Baptist Church of Capitol Heights : First Baptist Church of Capitol Heights",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.88520755,
+        "Longitude": -76.91387479518005
+    },
+    {
+        "Agency ID": "14885-PART-01",
+        "Agency Name": "Assumption Outreach : Assumption Outreach",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.84150505,
+        "Longitude": -77.00456136678378
+    },
+    {
+        "Agency ID": "14895-PART-01",
+        "Agency Name": "Cornerstones Inc. : Cornerstones, Inc.",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.9685189,
+        "Longitude": -77.3425682
+    },
+    {
+        "Agency ID": "14910-PART-01",
+        "Agency Name": "Mary House : Mary House",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9420099,
+        "Longitude": -76.98804500407891
+    },
+    {
+        "Agency ID": "15010-MOMK-01",
+        "Agency Name": "Garfield Terrace Resident Council",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.9215178,
+        "Longitude": -77.02581545665099
+    },
+    {
+        "Agency ID": "15015-MOMK-01",
+        "Agency Name": "MSB Community Outreach",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.9319534,
+        "Longitude": -76.97153246918046
+    },
+    {
+        "Agency ID": "15015-PART-01",
+        "Agency Name": "McKendree-Simms-Brookland United Methodist Church : MSB Outreach House",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9319534,
+        "Longitude": -76.97153246918046
+    },
+    {
+        "Agency ID": "15031-PART-01",
+        "Agency Name": "The Episcopal Church of Atonement : Atonement Food Pantry",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.88946475,
+        "Longitude": -76.92734662957164
+    },
+    {
+        "Agency ID": "15060-PART-02",
+        "Agency Name": "Food for the Elderly, Inc. : At Home Away from Home",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.79485635,
+        "Longitude": -76.9893534352941
+    },
+    {
+        "Agency ID": "15060-PART-03",
+        "Agency Name": "Food for the Elderly, Inc. : Tender Love & Care",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9656228,
+        "Longitude": -76.99338937894366
+    },
+    {
+        "Agency ID": "15095-PART-01",
+        "Agency Name": "Dupont Park SDA Church : Dupont Park SDA Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.86964565,
+        "Longitude": -76.9480238916791
+    },
+    {
+        "Agency ID": "15130-PART-01",
+        "Agency Name": "Metropolitan SDA Church : Metropolitan SDA Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9659515,
+        "Longitude": -76.9863627
+    },
+    {
+        "Agency ID": "15135-PART-01",
+        "Agency Name": "Sixth Church Food Closet : Sixth Church Food Closet",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.9559,
+        "Longitude": -77.0359
+    },
+    {
+        "Agency ID": "15285-PART-01",
+        "Agency Name": "Columbia Baptist Church : Columbia Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.85773289999999,
+        "Longitude": -77.1384695
+    },
+    {
+        "Agency ID": "15390-PART-01",
+        "Agency Name": "Salvation Army : The Salvation Army - Solomon G Brown",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8629362,
+        "Longitude": -76.99121749999999
+    },
+    {
+        "Agency ID": "15390-PART-02",
+        "Agency Name": "Salvation Army : The Salvation Army - Sherman Ave",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.9315816,
+        "Longitude": -77.0263815
+    },
+    {
+        "Agency ID": "15395-PART-01",
+        "Agency Name": "Adventist Community Services : Adventist Community Services of Greater Washington",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.991754,
+        "Longitude": -77.0118123
+    },
+    {
+        "Agency ID": "15530-PART-01",
+        "Agency Name": "Arlington Bridge Builders : Arlington Bridge Builders",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.85708678372771,
+        "Longitude": -77.12607391426145
+    },
+    {
+        "Agency ID": "15550-PART-01",
+        "Agency Name": "Church of Christ of Dale City : Church of Christ of Dale City",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.6665752,
+        "Longitude": -77.3354289
+    },
+    {
+        "Agency ID": "15566-MOMK-01",
+        "Agency Name": "Georgetown South Community Council",
+        "Agency Region": "Virginia",
+        "County/Ward": "Manassas (city)",
+        "Latitude": 38.74097755,
+        "Longitude": -77.472276589113
+    },
+    {
+        "Agency ID": "15567-MOMK-01",
+        "Agency Name": "Academy of Hope",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.9207541,
+        "Longitude": -76.97773896031546
+    },
+    {
+        "Agency ID": "15610-PART-01",
+        "Agency Name": "Food For All : Food For All",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.9143737,
+        "Longitude": -77.03695129886664
+    },
+    {
+        "Agency ID": "15620-PART-01",
+        "Agency Name": "Grace Episcopal Church : Grace Episcopal Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Alexandria",
+        "Latitude": 38.83727545,
+        "Longitude": -77.06481578853109
+    },
+    {
+        "Agency ID": "15650-PUSH-01",
+        "Agency Name": "Calvary Assembly of Holy Cross",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.9331541975813,
+        "Longitude": -76.87802212372692
+    },
+    {
+        "Agency ID": "15830-PART-01",
+        "Agency Name": "United Community : United Community Ministry",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7537937,
+        "Longitude": -77.0851831
+    },
+    {
+        "Agency ID": "15830-PUSH-01",
+        "Agency Name": "United Community",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.7537937,
+        "Longitude": -77.0851831
+    },
+    {
+        "Agency ID": "15870-PART-01",
+        "Agency Name": "Fort Foote Baptist Church : Fort Foote Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.7669059,
+        "Longitude": -77.0251975
+    },
+    {
+        "Agency ID": "15920-PART-01",
+        "Agency Name": "Our Lady of Perpetual Help Church : Our Lady of Perpetual Help Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8578053,
+        "Longitude": -76.98150597179256
+    },
+    {
+        "Agency ID": "15922-PART-01",
+        "Agency Name": "Mount Moriah Baptist Church : Mount Moriah Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.8901022,
+        "Longitude": -76.9811829
+    },
+    {
+        "Agency ID": "15980-PART-01",
+        "Agency Name": "Paramount Baptist Church : Paramount Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8321095,
+        "Longitude": -77.00026395539084
+    },
+    {
+        "Agency ID": "15990-PART-01",
+        "Agency Name": "DC Central Kitchen : DC Central Kitchen",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.8638958,
+        "Longitude": -77.0124762
+    },
+    {
+        "Agency ID": "15990-PART-02",
+        "Agency Name": "DC Central Kitchen : DC Food Project",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.9221431,
+        "Longitude": -77.07120330190045
+    },
+    {
+        "Agency ID": "16011-PART-01",
+        "Agency Name": "North Capitol Collaborative, Inc. : North Capitol Collaborative, Inc.",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.8697081,
+        "Longitude": -76.95957
+    },
+    {
+        "Agency ID": "16050-PART-01",
+        "Agency Name": "Fort Washington Food Pantry : Fort Washington Food Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.7556609,
+        "Longitude": -77.00096642162931
+    },
+    {
+        "Agency ID": "16090-PART-01",
+        "Agency Name": "Walker Mill Community Development : Walker Mill Community Development Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8686339,
+        "Longitude": -76.8906355
+    },
+    {
+        "Agency ID": "16175-PART-01",
+        "Agency Name": "ISKCON of Washington : ISKCON of Washington",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.001591,
+        "Longitude": -77.214365
+    },
+    {
+        "Agency ID": "16185-PART-01",
+        "Agency Name": "City of Greenbelt Food Pantry : City of Greenbelt Food Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.0005734,
+        "Longitude": -76.87738567504655
+    },
+    {
+        "Agency ID": "16185-PUSH-01",
+        "Agency Name": "City of Greenbelt Food Pantry",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 39.00117485,
+        "Longitude": -76.87875199860795
+    },
+    {
+        "Agency ID": "16245-PART-01",
+        "Agency Name": "WFCM Food Pantry : WFCM Food Pantry",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8835707,
+        "Longitude": -77.44200049999999
+    },
+    {
+        "Agency ID": "16330-PART-01",
+        "Agency Name": "Greater Refuge Ministries : Greater Refuge Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.740942670660594,
+        "Longitude": -76.93934448179881
+    },
+    {
+        "Agency ID": "16380-MOMK-01",
+        "Agency Name": "Brotherhood of the Cross and Star",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.96311585,
+        "Longitude": -77.02742029994576
+    },
+    {
+        "Agency ID": "16400-PART-01",
+        "Agency Name": "Nick's Place : Nick's Place",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.0489757,
+        "Longitude": -76.91263229570227
+    },
+    {
+        "Agency ID": "16475-MOMK-01",
+        "Agency Name": "Northern Virginia Family Service SERVE",
+        "Agency Region": "Virginia",
+        "County/Ward": "Manassas (city)",
+        "Latitude": 38.7446355,
+        "Longitude": -77.50069154648342
+    },
+    {
+        "Agency ID": "16475-PART-01",
+        "Agency Name": "Northern Virginia Family Service SERVE : Northern Virginia Family Services SERVE",
+        "Agency Region": "VA",
+        "County/Ward": "VA Manassas City",
+        "Latitude": 38.7446355,
+        "Longitude": -77.50069154648342
+    },
+    {
+        "Agency ID": "16490-PART-01",
+        "Agency Name": "St. Michael and All Angels : St. Michael and All Angels",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.99777887326719,
+        "Longitude": -76.98385275588991
+    },
+    {
+        "Agency ID": "16505-PART-01",
+        "Agency Name": "City of Praise Family Ministries : City of Praise Family Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.91601988734717,
+        "Longitude": -76.86031786588487
+    },
+    {
+        "Agency ID": "16566-PART-01",
+        "Agency Name": "Ebenezer Church of God : Ebenezer Church of God",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.94761753788418,
+        "Longitude": -76.93965265791337
+    },
+    {
+        "Agency ID": "16660-PART-01",
+        "Agency Name": "Washington Spanish SDA Church : Washington Spanish SDA Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.07574585,
+        "Longitude": -77.00205455
+    },
+    {
+        "Agency ID": "16700-PART-01",
+        "Agency Name": "Gethsemane United Methodist Church : Gethsemane United Methodist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.87050888667888,
+        "Longitude": -76.89413495637913
+    },
+    {
+        "Agency ID": "16705-PART-01",
+        "Agency Name": "Bread & Fishes : Bread & Fishes",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.56864218367347,
+        "Longitude": -77.32878351020408
+    },
+    {
+        "Agency ID": "16730-PART-01",
+        "Agency Name": "Northeastern Presbyterian Church : Northeastern Presbyterian Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9433381,
+        "Longitude": -76.97535733430911
+    },
+    {
+        "Agency ID": "16745-PART-01",
+        "Agency Name": "Urban Outreach Inc. : Urban Outreach Inc.",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.8843185,
+        "Longitude": -76.9246125
+    },
+    {
+        "Agency ID": "16790-MOMK-01",
+        "Agency Name": "Prince Georges Social Services - Gwynn Park High School",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.694820906278366,
+        "Longitude": -76.82985371883508
+    },
+    {
+        "Agency ID": "16815-MOMK-01",
+        "Agency Name": "James Apartments Resident Council",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.90747645,
+        "Longitude": -77.03310470756122
+    },
+    {
+        "Agency ID": "16840-MOMK-01",
+        "Agency Name": "Woodrow Wilson Library",
+        "Agency Region": "Virginia",
+        "County/Ward": "Falls Church (city)",
+        "Latitude": 38.88460737893532,
+        "Longitude": -77.18999841153558
+    },
+    {
+        "Agency ID": "16850-PART-01",
+        "Agency Name": "LINK Incorporated : LINK Mobile Food Pantry - Christ the Redeemer",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 39.01752845,
+        "Longitude": -77.37971188639646
+    },
+    {
+        "Agency ID": "16850-PUSH-01",
+        "Agency Name": "Christ the Redeemer Catholic Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Loudoun County",
+        "Latitude": 39.01752845,
+        "Longitude": -77.37971188639646
+    },
+    {
+        "Agency ID": "16885-MOMK-01",
+        "Agency Name": "Silver Spring UMC",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.001107950000005,
+        "Longitude": -77.03428948234219
+    },
+    {
+        "Agency ID": "16890-MOMK-01",
+        "Agency Name": "Zion Baptist Church (North Campus)",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.0364521,
+        "Longitude": -77.0431574
+    },
+    {
+        "Agency ID": "16960-MOMK-01",
+        "Agency Name": "Southern Friendship Missionary Baptist Church",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.8315316,
+        "Longitude": -76.9306031
+    },
+    {
+        "Agency ID": "16960-PART-01",
+        "Agency Name": "Southern Friendship Missionary Baptist Church : Southern Friendship Missionary Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8315316,
+        "Longitude": -76.9306031
+    },
+    {
+        "Agency ID": "17020-MOMK-01",
+        "Agency Name": "Latin American Youth Center",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.965683078781154,
+        "Longitude": -76.93816071776234
+    },
+    {
+        "Agency ID": "17065-MOMK-01",
+        "Agency Name": "Faith Temple #2",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.8915346,
+        "Longitude": -76.9092392
+    },
+    {
+        "Agency ID": "17065-PART-01",
+        "Agency Name": "Faith Temple #2 : Faith Temple #2",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8915346,
+        "Longitude": -76.9092392
+    },
+    {
+        "Agency ID": "17080-PART-02",
+        "Agency Name": "New Hope Housing Kennedy : New Hope Housing Kennedy Shelter",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7168981,
+        "Longitude": -77.13264079999999
+    },
+    {
+        "Agency ID": "17105-MOMK-01",
+        "Agency Name": "Inwood House",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.03612785,
+        "Longitude": -77.03637900000001
+    },
+    {
+        "Agency ID": "17115-MOMK-01",
+        "Agency Name": "Southern Hills Community Center",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.8280382,
+        "Longitude": -76.9997472
+    },
+    {
+        "Agency ID": "17722-MOMK-01",
+        "Agency Name": "First Agape Baptist Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "City of Alexandria",
+        "Latitude": 38.83723415,
+        "Longitude": -77.05807360478575
+    },
+    {
+        "Agency ID": "17845-MOMK-01",
+        "Agency Name": "Hyattsville Courthouse Parole and Probation",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.950205800000006,
+        "Longitude": -76.94264275795612
+    },
+    {
+        "Agency ID": "18015-PART-01",
+        "Agency Name": "Bethlehem Baptist Church : Bethlehem Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7436933,
+        "Longitude": -77.0817187
+    },
+    {
+        "Agency ID": "18035-PART-01",
+        "Agency Name": "Greater Fellowship Missionary Baptist Church : Greater Fellowship Missionary Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8440468,
+        "Longitude": -76.99387716502258
+    },
+    {
+        "Agency ID": "18105-MOMK-01",
+        "Agency Name": "Pin Oak Village Senior",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.9407685,
+        "Longitude": -76.7252214
+    },
+    {
+        "Agency ID": "18110-MOMK-01",
+        "Agency Name": "Alafia Baptist Church",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.93596555113637,
+        "Longitude": -76.96457169886364
+    },
+    {
+        "Agency ID": "18132-COMK-01",
+        "Agency Name": "Community Marketplace at Rosedale Rec",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.8976079,
+        "Longitude": -76.9789889964074
+    },
+    {
+        "Agency ID": "18134-COMK-01",
+        "Agency Name": "Community Marketplace - Reston",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.9476313,
+        "Longitude": -77.3294947736112
+    },
+    {
+        "Agency ID": "18134-COMK-02",
+        "Agency Name": "Community Marketplace - Arlington",
+        "Agency Region": "Virginia",
+        "County/Ward": "Arlington County",
+        "Latitude": 38.8563787,
+        "Longitude": -77.11219267471901
+    },
+    {
+        "Agency ID": "18155-MOMK-01",
+        "Agency Name": "Fairmont Gardens Apartments",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.836382,
+        "Longitude": -77.203879
+    },
+    {
+        "Agency ID": "18205-MOMK-01",
+        "Agency Name": "Faith United Church of Christ",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.9485524,
+        "Longitude": -76.99303636157066
+    },
+    {
+        "Agency ID": "18245-PART-04",
+        "Agency Name": "Enterprise Community Development : ECD - Edgewood Commons",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9948747,
+        "Longitude": -77.0315286
+    },
+    {
+        "Agency ID": "18245-PART-07",
+        "Agency Name": "Enterprise Community Development : ECD - Overlook at Oxon Run",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8358957,
+        "Longitude": -76.99426163118102
+    },
+    {
+        "Agency ID": "18280-MOMK-01",
+        "Agency Name": "CMPGC - Belulah Baptist",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.88500345,
+        "Longitude": -76.912713984047
+    },
+    {
+        "Agency ID": "18280-MOMK-02",
+        "Agency Name": "CMPGC - Seat Pleasant",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.9049722,
+        "Longitude": -76.91901519999999
+    },
+    {
+        "Agency ID": "18280-MOMK-03",
+        "Agency Name": "CMPGC - New Craig",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.9076981,
+        "Longitude": -76.9149325
+    },
+    {
+        "Agency ID": "18280-MOMK-04",
+        "Agency Name": "CMPGC - Oxon Hill",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.78516846938776,
+        "Longitude": -76.99119485714286
+    },
+    {
+        "Agency ID": "18295-MOMK-01",
+        "Agency Name": "Coverstone Apartments",
+        "Agency Region": "Virginia",
+        "County/Ward": "Prince William County",
+        "Latitude": 38.7944532,
+        "Longitude": -77.5221038
+    },
+    {
+        "Agency ID": "18295-MOMK-02",
+        "Agency Name": "Hermosa Valley Mobile Home Park",
+        "Agency Region": "Virginia",
+        "County/Ward": "Prince William County",
+        "Latitude": 38.652663,
+        "Longitude": -77.2600291
+    },
+    {
+        "Agency ID": "18385-MOMK-01",
+        "Agency Name": "Woodland Springs Apartment",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.8610623,
+        "Longitude": -76.8924232
+    },
+    {
+        "Agency ID": "18410-MOMK-01",
+        "Agency Name": "St. Luke Church",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.8893042,
+        "Longitude": -76.9307709528784
+    },
+    {
+        "Agency ID": "18410-MOMK-02",
+        "Agency Name": "Church of Christ",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.9485013,
+        "Longitude": -77.03585381777555
+    },
+    {
+        "Agency ID": "18475-MOMK-01",
+        "Agency Name": "4-H Club Park and Planning",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.9238379,
+        "Longitude": -76.89298869999999
+    },
+    {
+        "Agency ID": "18480-MOMK-01",
+        "Agency Name": "James Creek Resident Council",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.8744705,
+        "Longitude": -77.01236739821694
+    },
+    {
+        "Agency ID": "18530-MOMK-01",
+        "Agency Name": "Frederick Douglass Community Center",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.8508138,
+        "Longitude": -76.97583215704627
+    },
+    {
+        "Agency ID": "18676-MOMK-01",
+        "Agency Name": "University of Shady Grove",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.0935532,
+        "Longitude": -77.2023469
+    },
+    {
+        "Agency ID": "18706-PART-01",
+        "Agency Name": "Freedom Way Missionary Baptist Church : Freedom Way Missionary Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.87347325,
+        "Longitude": -76.92858029161167
+    },
+    {
+        "Agency ID": "18714-PART-01",
+        "Agency Name": "St. Joseph Catholic Church : St. Joseph Catholic Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9176794,
+        "Longitude": -76.8447355
+    },
+    {
+        "Agency ID": "18722-PART-01",
+        "Agency Name": "Prince George's County DSS : Prince George's County DSS",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.91601988734717,
+        "Longitude": -76.86031786588487
+    },
+    {
+        "Agency ID": "18732-PART-01",
+        "Agency Name": "St. Paul UMC : St. Paul UMC",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.7980724,
+        "Longitude": -76.98230478341381
+    },
+    {
+        "Agency ID": "18738-PART-01",
+        "Agency Name": "St. Margaret of Scotland Catholic Church : St. Margaret of Scotland Catholic Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.882853,
+        "Longitude": -76.8964021
+    },
+    {
+        "Agency ID": "18742-PART-01",
+        "Agency Name": "FISH of Laurel, Inc. : FISH of Laurel, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.0984608,
+        "Longitude": -76.850611379725
+    },
+    {
+        "Agency ID": "18744-PART-01",
+        "Agency Name": "Life Builders - Harvest Temple Church of God : Life Builders",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.840773,
+        "Longitude": -76.89329912365622
+    },
+    {
+        "Agency ID": "18756-PART-04",
+        "Agency Name": "Shepherd's Table - Progress Place Building : Shepherd's Table - Progress Place Building",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.990835,
+        "Longitude": -77.0275932
+    },
+    {
+        "Agency ID": "18762-PART-01",
+        "Agency Name": "Rainbow Community Development Center : Rainbow Community Development Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0550814,
+        "Longitude": -76.96897109999999
+    },
+    {
+        "Agency ID": "18782-PART-01",
+        "Agency Name": "Wells Robertson House : Wells Robertson House",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.14099835,
+        "Longitude": -77.19231725099044
+    },
+    {
+        "Agency ID": "18786-PART-01",
+        "Agency Name": "Bethesda Cares : Bethesda Cares",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.989604848853226,
+        "Longitude": -77.1229785253272
+    },
+    {
+        "Agency ID": "18910-MOMK-01",
+        "Agency Name": "Prince George's Dept of Social Services SEED",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.958311645317366,
+        "Longitude": -76.90659066065422
+    },
+    {
+        "Agency ID": "18910-MOMK-02",
+        "Agency Name": "Prince George's Dept of Social Services Shabach",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.91601988734717,
+        "Longitude": -76.86031786588487
+    },
+    {
+        "Agency ID": "19014-PART-01",
+        "Agency Name": "SEED Inc. : Sowing Empowerment & Economic Development, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.958311645317366,
+        "Longitude": -76.90659066065422
+    },
+    {
+        "Agency ID": "19024-PART-02",
+        "Agency Name": "Community Support Systems Inc : Community Support Systems Inc BADEN",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.6604406,
+        "Longitude": -76.7723369
+    },
+    {
+        "Agency ID": "19035-PART-01",
+        "Agency Name": "Edward C Mazique Child Care Center : Edward C Mazique Child Care Center",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.91327205,
+        "Longitude": -77.02927659998232
+    },
+    {
+        "Agency ID": "19047-PART-01",
+        "Agency Name": "Church of the Incarnation, St. Vincent De Paul Society : Church of the Incarnation, St. Vincent De Paul Society",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.90708913191751,
+        "Longitude": -76.92754242008859
+    },
+    {
+        "Agency ID": "19048-PART-01",
+        "Agency Name": "Shabach Emergency Resource & Empowerment Center : Shabach Emergency Empowerment Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.91601988734717,
+        "Longitude": -76.86031786588487
+    },
+    {
+        "Agency ID": "19054-PART-01",
+        "Agency Name": "T&T Tutorworld : T&T Provider My Little World",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9262089,
+        "Longitude": -77.00871775790075
+    },
+    {
+        "Agency ID": "19059-PART-01",
+        "Agency Name": "Victory Drug Center : Victory Drug Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8653116,
+        "Longitude": -76.9235721
+    },
+    {
+        "Agency ID": "19062-PART-01",
+        "Agency Name": "Saint Benedict The Moor : Saint Benedict The Moor",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.8942259,
+        "Longitude": -76.9754575
+    },
+    {
+        "Agency ID": "19065-PART-01",
+        "Agency Name": "Capital Christian Fellowship : Capital Christian Fellowship",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9889346,
+        "Longitude": -76.8249383
+    },
+    {
+        "Agency ID": "19066-PART-01",
+        "Agency Name": "Community Multi-Service : Community Multi-Service",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.96634695,
+        "Longitude": -77.02624829951398
+    },
+    {
+        "Agency ID": "19067-MOMK-01",
+        "Agency Name": "Ambassador Baptist Church",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.86692085,
+        "Longitude": -76.98435930693273
+    },
+    {
+        "Agency ID": "19071-PART-01",
+        "Agency Name": "St. Paul's United Methodist Church : St. Paul United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.66066634880635,
+        "Longitude": -77.25291838131292
+    },
+    {
+        "Agency ID": "19076-PART-01",
+        "Agency Name": "Greater New Hope Baptist Church : Greater New Hope Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.9000705830446,
+        "Longitude": -77.02304812774312
+    },
+    {
+        "Agency ID": "19079-PART-02",
+        "Agency Name": "Children of Mine : Children of Mine",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.86292400000001,
+        "Longitude": -76.9902018
+    },
+    {
+        "Agency ID": "19104-PART-01",
+        "Agency Name": "Grace Ministries - Culmore : Grace Ministries - Culmore",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8538189,
+        "Longitude": -77.1358731
+    },
+    {
+        "Agency ID": "19105-PART-01",
+        "Agency Name": "Divine Grace Mission : Divine Grace Mission",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9476348,
+        "Longitude": -76.8014795
+    },
+    {
+        "Agency ID": "19111-PART-01",
+        "Agency Name": "Corinth Baptist Church Outreach Pro : Corinth Baptist Church Outreach Program",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9021864,
+        "Longitude": -76.90582739999999
+    },
+    {
+        "Agency ID": "19120-PART-01",
+        "Agency Name": "Woodlawn United Methodist Church : Woodlawn United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7468711,
+        "Longitude": -77.081947
+    },
+    {
+        "Agency ID": "19143-PART-01",
+        "Agency Name": "Woodbridge Workers : Woodbridge Workers",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.6520572,
+        "Longitude": -77.260103
+    },
+    {
+        "Agency ID": "19200-PART-01",
+        "Agency Name": "Floris United Methodist Church : Floris United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.94278449999999,
+        "Longitude": -77.4168389
+    },
+    {
+        "Agency ID": "19227-PART-01",
+        "Agency Name": "Crowder Owen's Calvary Food Bank : Crowder Owens Calvary Food Bank (The Bishop Alfred A. Owens, Jr. Family Life CC)",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.91983055,
+        "Longitude": -76.99814655866356
+    },
+    {
+        "Agency ID": "19231-PART-01",
+        "Agency Name": "The Lord's Chosen Food Pantry : The Lord's Chosen Food Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.013564936836666,
+        "Longitude": -76.69951421296821
+    },
+    {
+        "Agency ID": "19236-PART-01",
+        "Agency Name": "Bull Run Unitarian Universalists : Bull Run Unitarian Universalists",
+        "Agency Region": "VA",
+        "County/Ward": "VA Manassas City",
+        "Latitude": 38.75161105,
+        "Longitude": -77.47204023991009
+    },
+    {
+        "Agency ID": "19240-PART-01",
+        "Agency Name": "Rising Hope Mission Church : Rising Hope Methodist Mission Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.807880296066095,
+        "Longitude": -77.06281231226768
+    },
+    {
+        "Agency ID": "19240-PUSH-01",
+        "Agency Name": "Rising Hope Mission Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "City of Alexandria",
+        "Latitude": 38.807880296066095,
+        "Longitude": -77.06281231226768
+    },
+    {
+        "Agency ID": "19261-PART-01",
+        "Agency Name": "St. Anthony of Padua Catholic Church : St. Anthony of Padua Catholic Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8562742,
+        "Longitude": -77.1377006
+    },
+    {
+        "Agency ID": "19261-PUSH-01",
+        "Agency Name": "St. Anthony of Padua Catholic Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.8562742,
+        "Longitude": -77.1377006
+    },
+    {
+        "Agency ID": "19262-PART-01",
+        "Agency Name": "St. Thomas United Methodist Church : St. Thomas United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Manassas City",
+        "Latitude": 38.76376275,
+        "Longitude": -77.47836686745964
+    },
+    {
+        "Agency ID": "19276-PART-01",
+        "Agency Name": "Womens Collective : The Women's Collective",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9176751,
+        "Longitude": -76.97674976222733
+    },
+    {
+        "Agency ID": "19278-PART-01",
+        "Agency Name": "First Baptist Church Ken-Gar : First Baptist Church Ken-Gar",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0315438,
+        "Longitude": -77.07977897309026
+    },
+    {
+        "Agency ID": "19280-PART-01",
+        "Agency Name": "Galilee Community Development Corporation : Galilee Community Development Corporation",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.862301,
+        "Longitude": -76.932234
+    },
+    {
+        "Agency ID": "19283-PART-01",
+        "Agency Name": "Ebenezer We Care We Share Community : Ebenezer We Care We Share Community",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.964637,
+        "Longitude": -76.8654351
+    },
+    {
+        "Agency ID": "19290-PART-01",
+        "Agency Name": "Shiloh Church Of God 7 Day : Shiloh Church Of God 7 Day",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9584607,
+        "Longitude": -76.99275659999999
+    },
+    {
+        "Agency ID": "19295-PART-01",
+        "Agency Name": "Metropolis Club : Metropolis Club",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.92264025,
+        "Longitude": -76.99263352644311
+    },
+    {
+        "Agency ID": "19302-PART-01",
+        "Agency Name": "Crossover Church : Crossover Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.95513155,
+        "Longitude": -76.94088503703213
+    },
+    {
+        "Agency ID": "19304-MOMK-01",
+        "Agency Name": "Mount Olivet United Methodist Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Arlington County",
+        "Latitude": 38.88899755,
+        "Longitude": -77.11933355435254
+    },
+    {
+        "Agency ID": "19307-PART-01",
+        "Agency Name": "Luther Rice Neighborhood Center : Luther Rice Neighborhood Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.04124137770749,
+        "Longitude": -77.05240825627024
+    },
+    {
+        "Agency ID": "19313-PART-01",
+        "Agency Name": "Sydenstricker UMC : Sydenstricker UMC",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7563214,
+        "Longitude": -77.2394234999968
+    },
+    {
+        "Agency ID": "19318-PART-01",
+        "Agency Name": "Builders, Inc : Builders, Inc",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.87230036949226,
+        "Longitude": -76.92564762638871
+    },
+    {
+        "Agency ID": "19322-PART-01",
+        "Agency Name": "Allen Chapel AME Church : Allen Chapel AME Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8568567,
+        "Longitude": -76.97029608849742
+    },
+    {
+        "Agency ID": "19338-PART-01",
+        "Agency Name": "RCCG New Wine Assembly : RCCG New Wine Assembly",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.91048648323854,
+        "Longitude": -76.93347325625476
+    },
+    {
+        "Agency ID": "19341-PART-01",
+        "Agency Name": "Clothing of Power Eternal Church : Clothing of Power Eternal Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.88633715,
+        "Longitude": -76.9120974132785
+    },
+    {
+        "Agency ID": "19351-PART-01",
+        "Agency Name": "National Baptist Memorial Church : National Baptist Memorial Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.92705075,
+        "Longitude": -77.03598836497602
+    },
+    {
+        "Agency ID": "19357-PART-01",
+        "Agency Name": "Centreville United Methodist Church : Centreville UMC",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.82568185,
+        "Longitude": -77.43977743153991
+    },
+    {
+        "Agency ID": "19370-PART-01",
+        "Agency Name": "St. Paul's Lutheran Church : St. Paul's Lutheran Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 3",
+        "Latitude": 38.954414,
+        "Longitude": -77.069584
+    },
+    {
+        "Agency ID": "19382-PART-01",
+        "Agency Name": "College Park Church of the Nazarene : College Park Community Food Bank",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.012036122448976,
+        "Longitude": -76.9216420510204
+    },
+    {
+        "Agency ID": "19385-PART-01",
+        "Agency Name": "Emmanuel United Methodist Church : Emmanuel UMC",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.04237987606086,
+        "Longitude": -76.91817539924989
+    },
+    {
+        "Agency ID": "19395-PART-01",
+        "Agency Name": "Christ House : Alexandria Food Pantry",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Alexandria",
+        "Latitude": 38.81298573098723,
+        "Longitude": -77.11083971270617
+    },
+    {
+        "Agency ID": "19402-PART-01",
+        "Agency Name": "St. Stephen's United Methodist Church : St. Stephen's UMC",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8095365,
+        "Longitude": -77.2628454
+    },
+    {
+        "Agency ID": "19402-PUSH-01",
+        "Agency Name": "St. Stephen's United Methodist Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.8095365,
+        "Longitude": -77.2628454
+    },
+    {
+        "Agency ID": "19412-PART-01",
+        "Agency Name": "Little David Baptist Church : Little David Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.93954345,
+        "Longitude": -76.96362109581683
+    },
+    {
+        "Agency ID": "19415-PART-01",
+        "Agency Name": "St. Camillus Catholic Church : St. Camillus Catholic Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0094437,
+        "Longitude": -76.98166253442182
+    },
+    {
+        "Agency ID": "19426-PART-01",
+        "Agency Name": "Fountain Community Enrichment Inc : Fountain Community Enrichment Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8849887,
+        "Longitude": -76.73088
+    },
+    {
+        "Agency ID": "19428-PART-01",
+        "Agency Name": "Whosoever Will Christian Church : Whosoever Will Christian Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.03579195,
+        "Longitude": -76.91373660987915
+    },
+    {
+        "Agency ID": "19433-PART-01",
+        "Agency Name": "Great Commission Change of Life Ministries : Great Commission Change of Life Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8334642,
+        "Longitude": -76.8667253
+    },
+    {
+        "Agency ID": "19454-PART-01",
+        "Agency Name": "Faith Social  Services : Faith Social Services",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.9721304,
+        "Longitude": -77.38558320000001
+    },
+    {
+        "Agency ID": "19458-PART-01",
+        "Agency Name": "The Hope Center : The Hope Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.82170485,
+        "Longitude": -76.96886062519661
+    },
+    {
+        "Agency ID": "19462-PART-01",
+        "Agency Name": "Grace of God Ministry : Grace of God Ministry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.93813768187772,
+        "Longitude": -76.93616974036192
+    },
+    {
+        "Agency ID": "19464-PART-01",
+        "Agency Name": "Fountain of Restoration Church Inc : Fountain of Restoration Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.720596,
+        "Longitude": -76.98520346883929
+    },
+    {
+        "Agency ID": "19466-PART-01",
+        "Agency Name": "Mt. Ennon Baptist Church : Mount Ennon Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.753789600000005,
+        "Longitude": -76.9223848291719
+    },
+    {
+        "Agency ID": "19467-PART-01",
+        "Agency Name": "House of Mercy : House of Mercy",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.7816723,
+        "Longitude": -77.55791169999999
+    },
+    {
+        "Agency ID": "19471-PART-01",
+        "Agency Name": "Community Outreach and Development CDC : Community Outreach and Development Center CDC",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.87373503635034,
+        "Longitude": -76.93334215678678
+    },
+    {
+        "Agency ID": "19471-PUSH-01",
+        "Agency Name": "Community Outreach and Development CDC",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.87373634654277,
+        "Longitude": -76.93341989487095
+    },
+    {
+        "Agency ID": "19471-PUSH-01",
+        "Agency Name": "Community Outreach and Development CDC",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.87373634654277,
+        "Longitude": -76.93341989487095
+    },
+    {
+        "Agency ID": "19472-PART-01",
+        "Agency Name": "Montgomery County Family Center : Montgomery County Family Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.056536688649786,
+        "Longitude": -77.05017158618534
+    },
+    {
+        "Agency ID": "19472-PUSH-01",
+        "Agency Name": "Catholic Charities - Montgomery County Family Center",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.056536688649786,
+        "Longitude": -77.05017158618534
+    },
+    {
+        "Agency ID": "19475-PART-01",
+        "Agency Name": "Holiness Tabernacle Church of God in Christ : Holiness Tabernacle Church of God",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.645601,
+        "Longitude": -77.3364973
+    },
+    {
+        "Agency ID": "19477-PART-01",
+        "Agency Name": "Maryland Umbrella Group : Maryland Umbrella Group",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.88585789323514,
+        "Longitude": -76.89784382843398
+    },
+    {
+        "Agency ID": "19483-PART-01",
+        "Agency Name": "Women Who Care Ministries : Women Who Care Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.1741148,
+        "Longitude": -77.2078185
+    },
+    {
+        "Agency ID": "19485-PART-01",
+        "Agency Name": "Manna Food Center Inc. : Manna Food Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.1185452,
+        "Longitude": -77.1920257
+    },
+    {
+        "Agency ID": "19488-PART-01",
+        "Agency Name": "Koinonia Foundation, Inc. : Koinonia Foundation, Inc.",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7819518,
+        "Longitude": -77.1444269
+    },
+    {
+        "Agency ID": "19490-PART-01",
+        "Agency Name": "Allen Chapel AME Church Outreach MD : Allen Chapel AME Church Outreach Ministry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0772320604392,
+        "Longitude": -76.95877957683875
+    },
+    {
+        "Agency ID": "19506-PART-01",
+        "Agency Name": "Mid County United Ministries (MUM) : Mid County United Ministries (MUM)",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0350138,
+        "Longitude": -77.0524089
+    },
+    {
+        "Agency ID": "19507-PART-01",
+        "Agency Name": "Haymarket Regional Food Pantry : Haymarket Regional Food Pantry",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.7901929,
+        "Longitude": -77.59820719999999
+    },
+    {
+        "Agency ID": "19508-PART-01",
+        "Agency Name": "Educare Support Services : Educare Support Services",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.976952,
+        "Longitude": -76.992273
+    },
+    {
+        "Agency ID": "19514-PART-01",
+        "Agency Name": "Little Rock Bibleway Church : Gallaudet University Food Pantry",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9059868,
+        "Longitude": -76.9935299
+    },
+    {
+        "Agency ID": "19515-PART-01",
+        "Agency Name": "Faith Tabernacle of Prayer : Faith Tabernacle of Prayer",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8546279,
+        "Longitude": -76.96963032495472
+    },
+    {
+        "Agency ID": "19519-PART-01",
+        "Agency Name": "River of Life Redeemed Christian Church of God : River of Life Redeemed Christian Church of God",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9590389,
+        "Longitude": -76.92267310154324
+    },
+    {
+        "Agency ID": "19522-PART-01",
+        "Agency Name": "Marlboro Churches Food Bank : Marlboro Churches Food Bank",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8253853,
+        "Longitude": -76.74905059999999
+    },
+    {
+        "Agency ID": "19534-PART-01",
+        "Agency Name": "Iglesia Pentecostal Trono de Jehova : Iglesia Pentecostal Trono de Jehova",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.65418,
+        "Longitude": -77.279687
+    },
+    {
+        "Agency ID": "19548-PART-01",
+        "Agency Name": "Laurel Advocacy & Referral Services, Inc. : Laurel Advocacy & Referral Services, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.10165889738615,
+        "Longitude": -76.84777515038601
+    },
+    {
+        "Agency ID": "19549-PART-01",
+        "Agency Name": "Dar Al-Hijrah Islamic Center : Dar Al-Hijrah Islamic Center",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8613588,
+        "Longitude": -77.1466361
+    },
+    {
+        "Agency ID": "19552-PART-01",
+        "Agency Name": "Our Lady Queen of Peace Church : Our Lady Queen of Peace Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Arlington County",
+        "Latitude": 38.8541288,
+        "Longitude": -77.08315132188675
+    },
+    {
+        "Agency ID": "19556-PART-01",
+        "Agency Name": "Salvation Army (PW County) : Salvation Army  (PW County)",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.6724879,
+        "Longitude": -77.2616851
+    },
+    {
+        "Agency ID": "19556-PUSH-01",
+        "Agency Name": "Debre Medehanit Eyesus Ethiopian Ortodox Tewahido Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Prince William County",
+        "Latitude": 38.66961679420839,
+        "Longitude": -77.28611511195112
+    },
+    {
+        "Agency ID": "19559-PART-01",
+        "Agency Name": "Emory Beacon of Light, Inc. : Emory Beacon of Light, Inc.",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.9641578,
+        "Longitude": -77.02819262970587
+    },
+    {
+        "Agency ID": "19565-PART-01",
+        "Agency Name": "Temple of Praise : Temple of Praise",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.82790042376373,
+        "Longitude": -76.99281638830571
+    },
+    {
+        "Agency ID": "19569-PART-01",
+        "Agency Name": "Recovery Program Solutions of Virginia : Recovery Program Solutions of Virginia",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8318963,
+        "Longitude": -77.20879819999999
+    },
+    {
+        "Agency ID": "19582-PART-01",
+        "Agency Name": "We Are Family : We Are Family",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.9315816,
+        "Longitude": -77.0263815
+    },
+    {
+        "Agency ID": "19583-PART-01",
+        "Agency Name": "Gospel Assembly Church : Gospel Assembly Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 10.0527943,
+        "Longitude": -84.4457365
+    },
+    {
+        "Agency ID": "19587-PART-01",
+        "Agency Name": "Restoration Church : Restoration Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.0019064,
+        "Longitude": -76.87643039999999
+    },
+    {
+        "Agency ID": "19588-PART-01",
+        "Agency Name": "Clifton Park Baptist Church : Clifton Park Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.986909185851154,
+        "Longitude": -77.01318495712907
+    },
+    {
+        "Agency ID": "19588-PUSH-01",
+        "Agency Name": "Clifton Park Baptist Church",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 38.986909185851154,
+        "Longitude": -77.01318495712907
+    },
+    {
+        "Agency ID": "19588-PUSH-01",
+        "Agency Name": "Clifton Park Baptist Church",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 38.986909185851154,
+        "Longitude": -77.01318495712907
+    },
+    {
+        "Agency ID": "19593-PART-01",
+        "Agency Name": "River Jordan, Inc. : River Jordan, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.67072210704104,
+        "Longitude": -77.01330005492284
+    },
+    {
+        "Agency ID": "19594-PART-01",
+        "Agency Name": "Oxon Hill Church of Christ : Oxon Hill Church of Christ",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.80400233851092,
+        "Longitude": -76.95207425091674
+    },
+    {
+        "Agency ID": "19595-PART-01",
+        "Agency Name": "Beltsville Seventh-Day Adventist Church : Beltsville Adventist Community Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.052904,
+        "Longitude": -76.921884
+    },
+    {
+        "Agency ID": "19601-PART-01",
+        "Agency Name": "Silver Spring Christian Reformed Church : Silver Spring Christian Reformed Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.04713445675139,
+        "Longitude": -77.04976722480518
+    },
+    {
+        "Agency ID": "19603-PART-01",
+        "Agency Name": "Sterling United Methodist Church : Sterling United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "**Outside CAFB Service Area**",
+        "Latitude": 39.0078829,
+        "Longitude": -77.39281675034144
+    },
+    {
+        "Agency ID": "19604-PART-01",
+        "Agency Name": "Springfield Christian Church : Springfield Christian Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.75410916116352,
+        "Longitude": -77.18465956580894
+    },
+    {
+        "Agency ID": "19606-PART-01",
+        "Agency Name": "Revival Baptist Ministries INT : Revival Baptist Ministries INT",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.79261558337248,
+        "Longitude": -77.05673696812964
+    },
+    {
+        "Agency ID": "19608-PART-01",
+        "Agency Name": "Montgomery County Muslim Foundation : Montgomery County Muslim Foundation",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.14316465,
+        "Longitude": -77.19465555
+    },
+    {
+        "Agency ID": "19616-PART-01",
+        "Agency Name": "Mt. Calvary Catholic Church Ladies of Charity Food Pantry : Mt. Calvary Catholic Church, Ladies of Charity Food Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.85242565,
+        "Longitude": -76.88969490070338
+    },
+    {
+        "Agency ID": "19617-PART-01",
+        "Agency Name": "Zion Church Inc. : Zion Church Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.996288785461445,
+        "Longitude": -76.89667534859282
+    },
+    {
+        "Agency ID": "19618-PART-01",
+        "Agency Name": "St. Anne's Episcopal Church ( Food Pantry) : St. Anne's Episcopal Church ( Food Pantry)",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.9669009,
+        "Longitude": -77.35285429999999
+    },
+    {
+        "Agency ID": "19621-PART-01",
+        "Agency Name": "New Macedonia Baptist Church : New Macedonia Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.87060965,
+        "Longitude": -76.9422795830038
+    },
+    {
+        "Agency ID": "19623-PART-01",
+        "Agency Name": "Iglesia De Dios Pentecostal Nuevo Renacer : Iglesia De Dios Pentecostal Nuevo Renacer",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.1153592,
+        "Longitude": -76.62087369999999
+    },
+    {
+        "Agency ID": "19624-PART-01",
+        "Agency Name": "Calvary Pentecostal Ministries : Calvary Pentecostal Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.1722055,
+        "Longitude": -77.1620999
+    },
+    {
+        "Agency ID": "19625-PART-01",
+        "Agency Name": "New Samaritan Baptist Church : New Samaritan Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.9036929,
+        "Longitude": -76.99155439538498
+    },
+    {
+        "Agency ID": "19627-PART-01",
+        "Agency Name": "Yad Yehuda of Greater Washington : Yad Yehuda of Greater Washington",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.01192751635243,
+        "Longitude": -77.01726923812905
+    },
+    {
+        "Agency ID": "19630-PART-01",
+        "Agency Name": "Messiah United Methodist Church : Messiah United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7826545,
+        "Longitude": -77.23400287447916
+    },
+    {
+        "Agency ID": "19630-PUSH-01",
+        "Agency Name": "Messiah United Methodist Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.7826545,
+        "Longitude": -77.23400287447916
+    },
+    {
+        "Agency ID": "19634-PART-01",
+        "Agency Name": "This Generation Ministries : This Generation Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9660919,
+        "Longitude": -76.84177960000001
+    },
+    {
+        "Agency ID": "19645-PART-01",
+        "Agency Name": "ADAMS CENTER : ADAMS CENTER",
+        "Agency Region": "VA",
+        "County/Ward": "**Outside CAFB Service Area**",
+        "Latitude": 39.0065126,
+        "Longitude": -77.37929950076663
+    },
+    {
+        "Agency ID": "19647-PART-01",
+        "Agency Name": "Kitchen of Purpose : Kitchen of Purpose",
+        "Agency Region": "VA",
+        "County/Ward": "VA Arlington County",
+        "Latitude": 38.8614122,
+        "Longitude": -77.0934224
+    },
+    {
+        "Agency ID": "19648-PART-01",
+        "Agency Name": "Greater Morning Star Apostolic Church : Greater Morning Star Apostolic Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.79261558337248,
+        "Longitude": -77.05673696812964
+    },
+    {
+        "Agency ID": "19652-MOMK-01",
+        "Agency Name": "Culmore United Methodist Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.853306,
+        "Longitude": -77.1363176
+    },
+    {
+        "Agency ID": "19653-PART-01",
+        "Agency Name": "Groveton Baptist Church : Groveton Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.79261558337248,
+        "Longitude": -77.05673696812964
+    },
+    {
+        "Agency ID": "19654-PART-01",
+        "Agency Name": "The St. Lucy Project : The St. Lucy Project",
+        "Agency Region": "VA",
+        "County/Ward": "VA Manassas City",
+        "Latitude": 10.02313665,
+        "Longitude": -84.18955331666666
+    },
+    {
+        "Agency ID": "19656-PART-01",
+        "Agency Name": "Brookland Senior Day Care Center, Inc. : Brookland Senior Day Care Center, Inc.",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.96604715,
+        "Longitude": -77.01115469961297
+    },
+    {
+        "Agency ID": "19658-PART-01",
+        "Agency Name": "Nourish Now : Nourish Now",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.10637475757576,
+        "Longitude": -77.15167015151515
+    },
+    {
+        "Agency ID": "19661-PART-01",
+        "Agency Name": "Salvation Army - Arlington Corp : Salvation Army Arlington Corps",
+        "Agency Region": "VA",
+        "County/Ward": "VA Arlington County",
+        "Latitude": 38.86650405,
+        "Longitude": -77.09538789774413
+    },
+    {
+        "Agency ID": "19676-PART-01",
+        "Agency Name": "Calvary Christian Church : Calvary Christian Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.77436525,
+        "Longitude": -77.28355049658279
+    },
+    {
+        "Agency ID": "19690-PART-01",
+        "Agency Name": "Mt. Jezreel Baptist Church : Mt. Jezreel Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.00875540000001,
+        "Longitude": -76.9973509
+    },
+    {
+        "Agency ID": "19691-PART-01",
+        "Agency Name": "Muslim Community Center : Muslim Community Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.076572,
+        "Longitude": -77.00186210000001
+    },
+    {
+        "Agency ID": "19692-PART-01",
+        "Agency Name": "Helping Hungry Kids of NOVA : Helping Hungry Kids of NOVA",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.95212155987427,
+        "Longitude": -77.33504244112287
+    },
+    {
+        "Agency ID": "19698-PART-01",
+        "Agency Name": "Good Success Christian Church : Good Success Christian Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.9025459,
+        "Longitude": -76.93898240837427
+    },
+    {
+        "Agency ID": "19699-PART-01",
+        "Agency Name": "ABSYNA, Inc. : ABSYNA, Inc. - Brentwood",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.93968846891766,
+        "Longitude": -76.95301323936948
+    },
+    {
+        "Agency ID": "19703-PART-01",
+        "Agency Name": "CAC Wosem DC : CAC Wosem- 24th Place",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.92013729999999,
+        "Longitude": -76.97199822483249
+    },
+    {
+        "Agency ID": "19705-PART-01",
+        "Agency Name": "WeSERVE CDC : WeSERVE CDC",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.56244,
+        "Longitude": -77.32867940625
+    },
+    {
+        "Agency ID": "19711-PART-01",
+        "Agency Name": "Royal Missionary Baptist Church : Royal Missionary Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7234109,
+        "Longitude": -77.11806829999999
+    },
+    {
+        "Agency ID": "19712-PART-01",
+        "Agency Name": "First Baptist Church of Silver Spring Food Closet : First Baptist Church of Silver Spring Food Closet",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.99652194937678,
+        "Longitude": -77.02254600416246
+    },
+    {
+        "Agency ID": "19714-PART-01",
+        "Agency Name": "Cornerstone Peaceful Bible Baptist Church : Cornerstone Peaceful Bible Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.766912,
+        "Longitude": -76.82958219999999
+    },
+    {
+        "Agency ID": "19719-PART-01",
+        "Agency Name": "Kings and Priests International Ministries : Kings and Priests International Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.06392648909864,
+        "Longitude": -76.96745250295417
+    },
+    {
+        "Agency ID": "19721-PART-01",
+        "Agency Name": "Second Baptist Church of Southwest : Second Baptist Church Southwest",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.859762553583856,
+        "Longitude": -76.90287933491462
+    },
+    {
+        "Agency ID": "19724-PART-01",
+        "Agency Name": "First Baptist Church of District Heights : First Baptist Church of District Heights",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.85901195,
+        "Longitude": -76.88089983810953
+    },
+    {
+        "Agency ID": "19725-PART-01",
+        "Agency Name": "Our Savior Lutheran Church : Our Savior Lutheran Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.07376160204082,
+        "Longitude": -76.84802530612245
+    },
+    {
+        "Agency ID": "19726-PART-01",
+        "Agency Name": "Prince Emmanuel All Nations SDA Church : Prince Emmanuel All Nations SDA Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9156728,
+        "Longitude": -76.72165230618842
+    },
+    {
+        "Agency ID": "19727-PART-01",
+        "Agency Name": "No Limits Outreach Ministries : No Limits Outreach Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.91817066044289,
+        "Longitude": -76.8735706758193
+    },
+    {
+        "Agency ID": "19731-PART-01",
+        "Agency Name": "Ark of Grace Mission, Inc : Ark of Grace Mission, Inc",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9299248,
+        "Longitude": -76.85924607138085
+    },
+    {
+        "Agency ID": "19733-PART-01",
+        "Agency Name": "St. Stephen's Baptist Church : St. Stephen's Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8040834,
+        "Longitude": -76.93327180186222
+    },
+    {
+        "Agency ID": "19734-PART-01",
+        "Agency Name": "Breath of Life SDA Church : Breath of Life SDA Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.739606300000005,
+        "Longitude": -77.00003265318273
+    },
+    {
+        "Agency ID": "19736-PART-01",
+        "Agency Name": "University of Maryland College Park Foundation : University of Maryland College Park Food Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9830927,
+        "Longitude": -76.94368377302294
+    },
+    {
+        "Agency ID": "19737-PART-01",
+        "Agency Name": "Resurrection Bible Church : Resurrection Bible Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9857004,
+        "Longitude": -76.8215007
+    },
+    {
+        "Agency ID": "19739-PART-01",
+        "Agency Name": "Victory Christian Ministries International : Victory Christian Ministries International",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.83601013265306,
+        "Longitude": -76.94013186734693
+    },
+    {
+        "Agency ID": "19740-PART-01",
+        "Agency Name": "St. Mark The Evangelist Catholic Church : St. Mark The Evangelist Catholic Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.98309825,
+        "Longitude": -76.95405003358131
+    },
+    {
+        "Agency ID": "19742-PART-01",
+        "Agency Name": "Boat People SOS : Boat People SOS",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8578536,
+        "Longitude": -77.1418671
+    },
+    {
+        "Agency ID": "19745-PART-01",
+        "Agency Name": "Chrisma Charities : Chrisma Charities",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0843802428756,
+        "Longitude": -77.07821425607631
+    },
+    {
+        "Agency ID": "19746-PART-01",
+        "Agency Name": "CAC Bethel Fellowship Church : CAC Bethel Fellowship Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9934902,
+        "Longitude": -76.82014456250096
+    },
+    {
+        "Agency ID": "19748-PART-01",
+        "Agency Name": "Church of the Resurrection : Church of the Resurrection",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Alexandria",
+        "Latitude": 38.83868475,
+        "Longitude": -77.1177196076846
+    },
+    {
+        "Agency ID": "19751-PART-01",
+        "Agency Name": "Community of Faith United Methodist Church : Community of Faith United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.9088706,
+        "Longitude": -77.4077067
+    },
+    {
+        "Agency ID": "19752-PART-01",
+        "Agency Name": "ICNA Relief USA Programs Inc. : ICNA Relief USA Programs Inc.",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7516846,
+        "Longitude": -77.0822025
+    },
+    {
+        "Agency ID": "19753-PART-01",
+        "Agency Name": "City of David Ministries : City of David Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8498172,
+        "Longitude": -76.8806769
+    },
+    {
+        "Agency ID": "19755-PART-01",
+        "Agency Name": "Mission of Love Charities, Inc. : Mission of Love Charities, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8865221,
+        "Longitude": -76.90285539999999
+    },
+    {
+        "Agency ID": "19757-PART-01",
+        "Agency Name": "Freedom Community Church : Freedom Community Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.78158445,
+        "Longitude": -77.47867972197093
+    },
+    {
+        "Agency ID": "19758-PART-01",
+        "Agency Name": "Ebenezer Baptist Church : Ebenezer Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.66143922299823,
+        "Longitude": -77.28470899256058
+    },
+    {
+        "Agency ID": "19761-PART-01",
+        "Agency Name": "Salvation Army (Fairfax) : Salvation Army (Fairfax)",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.82528918911828,
+        "Longitude": -77.3170192384267
+    },
+    {
+        "Agency ID": "19768-PART-01",
+        "Agency Name": "A Place For Hashem Ministries : A Place for Hashem Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.7783273,
+        "Longitude": -76.8886053
+    },
+    {
+        "Agency ID": "19770-PART-01",
+        "Agency Name": "Apostolic Church Glorious Vision : Apostolic Church Glorious Vision",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.93160895,
+        "Longitude": -76.80647080299434
+    },
+    {
+        "Agency ID": "19771-PART-01",
+        "Agency Name": "New Hope and Life Church of God, Inc : New Hope and Life Church of God, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8809969,
+        "Longitude": -76.856538
+    },
+    {
+        "Agency ID": "19773-PART-01",
+        "Agency Name": "Cheer, Inc : Cheer, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.985941057748,
+        "Longitude": -76.99656847318487
+    },
+    {
+        "Agency ID": "19775-PART-01",
+        "Agency Name": "Bethesda Help : Bethesda Help",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.99915518946343,
+        "Longitude": -77.10948881586513
+    },
+    {
+        "Agency ID": "19776-PART-01",
+        "Agency Name": "Friends Of Douglas Community Center : Friends Of Douglass Community Center",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.84772054985388,
+        "Longitude": -76.98070191848284
+    },
+    {
+        "Agency ID": "19786-PART-01",
+        "Agency Name": "Plenty to Eat : Plenty to Eat",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9207541,
+        "Longitude": -76.97773896031546
+    },
+    {
+        "Agency ID": "19787-PART-01",
+        "Agency Name": "First African Methodist Episcopal Church of Alexandria : First African Methodist Episcopal Church of Alexandria",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.79261558337248,
+        "Longitude": -77.05673696812964
+    },
+    {
+        "Agency ID": "19790-PART-01",
+        "Agency Name": "St. Francis Xavier Food Pantry : St. Francis Xavier Church Food Pantry",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.87251805,
+        "Longitude": -76.96726839532798
+    },
+    {
+        "Agency ID": "19792-PART-01",
+        "Agency Name": "Holy Mountain International Ministries : Holy Mountain International Ministries",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.05376073582716,
+        "Longitude": -76.88861355640124
+    },
+    {
+        "Agency ID": "19793-PART-01",
+        "Agency Name": "Ayuda, Inc. : Ayuda, Inc.",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.902316,
+        "Longitude": -77.0444673
+    },
+    {
+        "Agency ID": "19796-PART-01",
+        "Agency Name": "Oxon Hill UMC : Oxon Hill UMC",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.801123,
+        "Longitude": -76.9862885050253
+    },
+    {
+        "Agency ID": "19798-PART-01",
+        "Agency Name": "Christ Embassy Maryland : Christ Embassy Maryland",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9065423,
+        "Longitude": -76.8437379
+    },
+    {
+        "Agency ID": "19799-PART-01",
+        "Agency Name": "Iglesia Evangelica Cristo Promesa Fiel : Iglesia Evangelica Cristo Promesa Fiel",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.13580938740304,
+        "Longitude": -77.06968139055076
+    },
+    {
+        "Agency ID": "19801-PART-01",
+        "Agency Name": "Operation Ernie's Plate : Operation Earnie's Plate",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.7724945,
+        "Longitude": -76.881756
+    },
+    {
+        "Agency ID": "19805-PART-01",
+        "Agency Name": "Calvary Episcopal Church : Calvary Episcopal Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.90112235,
+        "Longitude": -76.99876211140527
+    },
+    {
+        "Agency ID": "19808-PART-01",
+        "Agency Name": "Tutoring Cafe : Tutoring Cafe",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.9739669,
+        "Longitude": -77.01836349999999
+    },
+    {
+        "Agency ID": "19809-PART-01",
+        "Agency Name": "First African Methodist Episcopal Church of Gaithersburg : First African Methodist Episcopal Church of Gaithersburg",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.139264471723386,
+        "Longitude": -77.17995659904469
+    },
+    {
+        "Agency ID": "19810-PART-01",
+        "Agency Name": "Ebenezer AME Church : Ebenezer AME Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.7844212,
+        "Longitude": -76.942036
+    },
+    {
+        "Agency ID": "19814-PART-01",
+        "Agency Name": "ECWA USA Evangelical Church Winning All : ECWA USA Evangelical Church Winning All",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.85298104909591,
+        "Longitude": -76.8961705922031
+    },
+    {
+        "Agency ID": "19815-PART-01",
+        "Agency Name": "Harvest Gleaners : Harvest Gleaners",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.1109562,
+        "Longitude": -77.0653842
+    },
+    {
+        "Agency ID": "19819-PART-01",
+        "Agency Name": "Impact One Church : Impact One Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.8884061,
+        "Longitude": -76.8813292
+    },
+    {
+        "Agency ID": "19823-PART-01",
+        "Agency Name": "Royalhouse Chapel International : Royalhouse Chapel International",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.08040255555556,
+        "Longitude": -76.87074733333333
+    },
+    {
+        "Agency ID": "19830-PART-01",
+        "Agency Name": "Community Health Foundation : Community Health Foundation",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.96756335,
+        "Longitude": -76.85635011922226
+    },
+    {
+        "Agency ID": "19832-PART-01",
+        "Agency Name": "Turner AME Church : Turner AME Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.97903165,
+        "Longitude": -76.98105800478723
+    },
+    {
+        "Agency ID": "19833-PART-01",
+        "Agency Name": "The Sanctuary : The Sanctuary",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.81300569550389,
+        "Longitude": -76.75844381916919
+    },
+    {
+        "Agency ID": "19834-PART-01",
+        "Agency Name": "St. Jude Catholic Church : St. Jude Catholic Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.07374715997069,
+        "Longitude": -77.11244283179857
+    },
+    {
+        "Agency ID": "19836-PART-01",
+        "Agency Name": "Jamil-UL Jalil : Jamil-UL Jalil",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9859145,
+        "Longitude": -76.8210757
+    },
+    {
+        "Agency ID": "19837-PART-01",
+        "Agency Name": "Church of The Redeemer of Gaithersburg : Church of The Redeemer of Gaithersburg",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.15097232655878,
+        "Longitude": -77.17429898367422
+    },
+    {
+        "Agency ID": "19838-PART-01",
+        "Agency Name": "Antioch Baptist Church of Clinton : Antioch Baptist Church of Clinton",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.7645018,
+        "Longitude": -76.8895155
+    },
+    {
+        "Agency ID": "19839-PART-01",
+        "Agency Name": "Central Baptist Church of Camp Springs : Central Baptist Church of Camp Springs",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.81305995,
+        "Longitude": -76.91308710850741
+    },
+    {
+        "Agency ID": "19841-PART-01",
+        "Agency Name": "South Lakes High School PTSA Food Pantry : South Lakes High School PTSA Food Pantry : South Lakes High School PTSA Food Pantry",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.99613965,
+        "Longitude": -77.34184272302132
+    },
+    {
+        "Agency ID": "19842-PART-01",
+        "Agency Name": "Mother of Light Center : Mother of Light Center",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Alexandria",
+        "Latitude": 38.83203359729929,
+        "Longitude": -77.05309971236312
+    },
+    {
+        "Agency ID": "19843-PART-01",
+        "Agency Name": "St. Matthias Catholic Church : St. Matthias Catholic Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.96548176394495,
+        "Longitude": -76.8450683795678
+    },
+    {
+        "Agency ID": "19844-PART-01",
+        "Agency Name": "Lifehouse Church : Lifehouse Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.05403558945594,
+        "Longitude": -76.89361493630453
+    },
+    {
+        "Agency ID": "19845-PART-01",
+        "Agency Name": "First Baptist Church of Highland Park : First Baptist Church of Highland Park",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.909774,
+        "Longitude": -76.890797
+    },
+    {
+        "Agency ID": "19846-PART-01",
+        "Agency Name": "Hope Presbyterian Church : Hope Presbyterian Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.90492975,
+        "Longitude": -76.79768876491049
+    },
+    {
+        "Agency ID": "19849-PART-01",
+        "Agency Name": "Alexander Memorial Baptist Church : Alexander Memorial Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.81300569550389,
+        "Longitude": -76.75844381916919
+    },
+    {
+        "Agency ID": "19850-PART-01",
+        "Agency Name": "St. John's Norwood Episcopal Church : Nourishing Bethesda",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.99219341836277,
+        "Longitude": -77.10137668507404
+    },
+    {
+        "Agency ID": "19854-PART-01",
+        "Agency Name": "Living Legends Awards for Service to Humanity : Living Legends Awards for Service to Humanity",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.16457,
+        "Longitude": -77.015446
+    },
+    {
+        "Agency ID": "19855-PART-01",
+        "Agency Name": "Mollemm Food Pantry : Mollemm Food Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.98312955,
+        "Longitude": -76.84119569907169
+    },
+    {
+        "Agency ID": "19856-PART-01",
+        "Agency Name": "Guru Nanak Foundation of America (GNFA) : Guru Nanak Foundation of America (GNFA)",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.07367219004716,
+        "Longitude": -76.95917760107217
+    },
+    {
+        "Agency ID": "19857-PART-01",
+        "Agency Name": "Faith Village of Greater Laurel, Inc. : Faith Village of Greater Laurel, Inc.",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.079974423432986,
+        "Longitude": -76.85608301228632
+    },
+    {
+        "Agency ID": "19859-PART-01",
+        "Agency Name": "Hughes United Methodist Church : Hughes United Methodist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0307141,
+        "Longitude": -77.0483782
+    },
+    {
+        "Agency ID": "19860-PART-01",
+        "Agency Name": "Gaithersburg CARES Hub at Seneca Creek Community Church : Seneca Creek Community Church (Gaithersburg CARES)",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.140033,
+        "Longitude": -77.225364
+    },
+    {
+        "Agency ID": "19861-PART-01",
+        "Agency Name": "St. Philip's Episcopal Church : St. Philip's Episcopal Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.1072638,
+        "Longitude": -76.85169724250056
+    },
+    {
+        "Agency ID": "19862-PART-01",
+        "Agency Name": "The Upcounty Hub Inc : The Upcounty Hub Inc",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.1789613,
+        "Longitude": -77.26846479999999
+    },
+    {
+        "Agency ID": "19863-MOMK-01",
+        "Agency Name": "Montgomery College - Rockville",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.0985195,
+        "Longitude": -77.15878854682828
+    },
+    {
+        "Agency ID": "19864-MOMK-01",
+        "Agency Name": "Montgomery College - Germantown",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.197692,
+        "Longitude": -77.254443
+    },
+    {
+        "Agency ID": "19865-MOMK-01",
+        "Agency Name": "Montgomery College - Takoma Park",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 38.9854118,
+        "Longitude": -77.0230843
+    },
+    {
+        "Agency ID": "19868-PART-01",
+        "Agency Name": "InterFaith Works : InterFaith Works",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.08139466060817,
+        "Longitude": -77.11403939880667
+    },
+    {
+        "Agency ID": "19871-PART-01",
+        "Agency Name": "Oak Chapel UMC : Oak Chapel UMC",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.094781,
+        "Longitude": -77.0455908
+    },
+    {
+        "Agency ID": "19872-PART-01",
+        "Agency Name": "Reid Temple AME Church : Reid Temple AME Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.984805,
+        "Longitude": -76.81173
+    },
+    {
+        "Agency ID": "19873-PART-01",
+        "Agency Name": "GAP Food Program : GAP Food Program",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.82814245945946,
+        "Longitude": -76.8942521081081
+    },
+    {
+        "Agency ID": "21528-MOMK-01",
+        "Agency Name": "Ward Memorial AME Church",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.89409335,
+        "Longitude": -76.94226164807466
+    },
+    {
+        "Agency ID": "21650-PART-01",
+        "Agency Name": "Christ United Methodist : Christ United Methodist 5000 Food Ministry",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 6",
+        "Latitude": 38.8789091,
+        "Longitude": -77.01675469999999
+    },
+    {
+        "Agency ID": "21711-PART-01",
+        "Agency Name": "La Iglesia Episcopal de Santa Maria : La Iglesia Episcopal de Santa Maria",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.86853485,
+        "Longitude": -77.1854891946843
+    },
+    {
+        "Agency ID": "21755-PART-01",
+        "Agency Name": "Kingdom Global Community Development Corporation : East Montgomery County Hub",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.05431148981027,
+        "Longitude": -76.93234251545174
+    },
+    {
+        "Agency ID": "21755-PART-02",
+        "Agency Name": "Kingdom Global Community Development Corporation : Kingdom Cares Center",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.05431148981027,
+        "Longitude": -76.93234251545174
+    },
+    {
+        "Agency ID": "21762-PART-01",
+        "Agency Name": "Small Things Matter, Inc : Small Things Matter, Inc",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.97768405,
+        "Longitude": -77.00591147436528
+    },
+    {
+        "Agency ID": "21860-PART-01",
+        "Agency Name": "So What Else, Inc : So What Else, Inc",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.0437816,
+        "Longitude": -77.0985504
+    },
+    {
+        "Agency ID": "21861-MOMK-01",
+        "Agency Name": "Willston Multicultural Center",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.8703678,
+        "Longitude": -77.14882012682962
+    },
+    {
+        "Agency ID": "21874-PART-01",
+        "Agency Name": "DMV Food Justice Initiative : DMV Food Justice Initiative",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.86450525,
+        "Longitude": -77.24865990979391
+    },
+    {
+        "Agency ID": "21894-PART-01",
+        "Agency Name": "The House, Inc. : The House, Inc.",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.6500665,
+        "Longitude": -77.3109626
+    },
+    {
+        "Agency ID": "21906-PART-01",
+        "Agency Name": "YWCA National Capital Area : YWCA National Capital Area",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.9206528,
+        "Longitude": -77.031461
+    },
+    {
+        "Agency ID": "21930-MOMK-01",
+        "Agency Name": "Barcroft Elementary School",
+        "Agency Region": "Virginia",
+        "County/Ward": "Arlington County",
+        "Latitude": 38.86017515,
+        "Longitude": -77.1106300066327
+    },
+    {
+        "Agency ID": "21933-PART-01",
+        "Agency Name": "Catholic University of America : The Cardinal Cupboard",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.932941150000005,
+        "Longitude": -76.99776961879198
+    },
+    {
+        "Agency ID": "21947-PART-01",
+        "Agency Name": "Celestial Church of Christ : Celestial Church of Christ",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.92052,
+        "Longitude": -76.97762650601439
+    },
+    {
+        "Agency ID": "21950-PART-01",
+        "Agency Name": "Lutheran Church of the Abiding Presence : Lutheran Church of the Abiding Presence",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.78180877598098,
+        "Longitude": -77.2778334525692
+    },
+    {
+        "Agency ID": "21967-MOMK-01",
+        "Agency Name": "Dale City Christian Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Prince William County",
+        "Latitude": 38.648477,
+        "Longitude": -77.3600068
+    },
+    {
+        "Agency ID": "21989-PART-01",
+        "Agency Name": "The Gourmet Angel Food Bank : The Gourmet Angel Food Bank",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Alexandria",
+        "Latitude": 38.80877125,
+        "Longitude": -77.05250975641263
+    },
+    {
+        "Agency ID": "22016-PART-01",
+        "Agency Name": "Park Road Community Church : Park Road Community Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.93222525,
+        "Longitude": -77.02780599058174
+    },
+    {
+        "Agency ID": "22017-PART-01",
+        "Agency Name": "Loaves & Fishes : Loaves & Fishes",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.933592,
+        "Longitude": -77.0355665
+    },
+    {
+        "Agency ID": "22050-PART-01",
+        "Agency Name": "Francis On The Hill : Francis On The Hill",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.96106275,
+        "Longitude": -77.03747759963088
+    },
+    {
+        "Agency ID": "22051-MOMK-01",
+        "Agency Name": "THEARC Farm",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.84371309750828,
+        "Longitude": -76.97735356121274
+    },
+    {
+        "Agency ID": "22052-PART-01",
+        "Agency Name": "NHT Communities : R Street Apartments",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 2",
+        "Latitude": 38.91237125,
+        "Longitude": -77.03401475141398
+    },
+    {
+        "Agency ID": "22052-PART-02",
+        "Agency Name": "NHT Communities : Monsenor Romero",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.92985945,
+        "Longitude": -77.03756701368609
+    },
+    {
+        "Agency ID": "22052-PART-03",
+        "Agency Name": "NHT Communities : Villages of East River",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 7",
+        "Latitude": 38.88541785,
+        "Longitude": -76.95333671296719
+    },
+    {
+        "Agency ID": "22053-PART-01",
+        "Agency Name": "Walker Memorial Baptist Church : Walker Memorial Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.9176047,
+        "Longitude": -77.02998370051743
+    },
+    {
+        "Agency ID": "22071-MOMK-01",
+        "Agency Name": "Francis C. Hammond Middle School",
+        "Agency Region": "Virginia",
+        "County/Ward": "City of Alexandria",
+        "Latitude": 38.826189150000005,
+        "Longitude": -77.11061320867647
+    },
+    {
+        "Agency ID": "22118-MOMK-01",
+        "Agency Name": "Mount Olive Baptist Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Arlington County",
+        "Latitude": 38.86270985,
+        "Longitude": -77.07145028139198
+    },
+    {
+        "Agency ID": "22119-PART-01",
+        "Agency Name": "Covenant House Greater Washington : Covenant House Greater Washington",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8435958,
+        "Longitude": -76.9742321
+    },
+    {
+        "Agency ID": "22120-PART-01",
+        "Agency Name": "Columbia Heights Village Tenant Association : Columbia Heights Village Tenant Association",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.9269726,
+        "Longitude": -77.03274309999999
+    },
+    {
+        "Agency ID": "22177-PART-01",
+        "Agency Name": "Luther Jackson Middle School Food Pantry : Luther Jackson Middle School Food Pantry",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8681917,
+        "Longitude": -77.2293207
+    },
+    {
+        "Agency ID": "22181-MOMK-01",
+        "Agency Name": "James Lee Community Center",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.8779035375794,
+        "Longitude": -77.17329485058858
+    },
+    {
+        "Agency ID": "22183-PART-01",
+        "Agency Name": "The ARK of DC Foundation : The ARK of DC Foundation",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.9176751,
+        "Longitude": -76.97674976222733
+    },
+    {
+        "Agency ID": "22202-PART-01",
+        "Agency Name": "First SDA Church : First SDA Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 4",
+        "Latitude": 38.93956175,
+        "Longitude": -77.02360248561413
+    },
+    {
+        "Agency ID": "22203-PART-01",
+        "Agency Name": "Emmanuel Baptist Church : Emmanuel Baptist Church",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.856557,
+        "Longitude": -76.97188230413443
+    },
+    {
+        "Agency ID": "22207-PART-01",
+        "Agency Name": "Burke United Methodist Church : Burke United Methodist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.783982,
+        "Longitude": -77.2809001
+    },
+    {
+        "Agency ID": "22208-PART-01",
+        "Agency Name": "Northern Virginia Food Rescue : Northern Virginia Food Rescue",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.8048137,
+        "Longitude": -77.517806
+    },
+    {
+        "Agency ID": "22249-PART-01",
+        "Agency Name": "Buddhist Tzu Chi Foundation : Buddhist Tzu Chi Foundation",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.9684707,
+        "Longitude": -77.33913079999999
+    },
+    {
+        "Agency ID": "22259-PART-01",
+        "Agency Name": "The Redeemed Christian Church of God - Victory Temple : The Redeemed Christian Church of God - Victory Temple",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.71607710000001,
+        "Longitude": -77.1925026
+    },
+    {
+        "Agency ID": "22261-PART-01",
+        "Agency Name": "Greater Little Zion Baptist Church : Greater Little Zion Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.8057495,
+        "Longitude": -77.29761494444443
+    },
+    {
+        "Agency ID": "22288-PART-01",
+        "Agency Name": "Mount Olive Baptist Church : Mount Olive Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.819456,
+        "Longitude": -77.446485
+    },
+    {
+        "Agency ID": "22293-MOMK-01",
+        "Agency Name": "Chantilly Baptist Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.899583,
+        "Longitude": -77.44291
+    },
+    {
+        "Agency ID": "22308-PART-01",
+        "Agency Name": "LindaBen Foundation : LindaBen Foundation",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.0261161,
+        "Longitude": -76.9083386
+    },
+    {
+        "Agency ID": "223241-PART-01",
+        "Agency Name": "Love Church : Love Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.7946267,
+        "Longitude": -77.6206905
+    },
+    {
+        "Agency ID": "22380-PART-01",
+        "Agency Name": "She Believes in Me : She Believes in Me",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.96952511467296,
+        "Longitude": -77.38669521051553
+    },
+    {
+        "Agency ID": "22404-MOMK-01",
+        "Agency Name": "Maranatha Springfield Church",
+        "Agency Region": "Virginia",
+        "County/Ward": "Fairfax County",
+        "Latitude": 38.8047031,
+        "Longitude": -77.1671494
+    },
+    {
+        "Agency ID": "22436-MOMK-01",
+        "Agency Name": "SeVerna",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.90298165,
+        "Longitude": -77.01148052798898
+    },
+    {
+        "Agency ID": "22443-PART-01",
+        "Agency Name": "Tommy's Pantry : Tommy's Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 38.99190345,
+        "Longitude": -77.01474205000001
+    },
+    {
+        "Agency ID": "22457-PART-01",
+        "Agency Name": "Mid-County Hub at Harvest Intercontinental Church Olney : Mid-County Hub at Harvest Intercontinental Church Olney",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.1199465,
+        "Longitude": -77.0669472
+    },
+    {
+        "Agency ID": "22458-PART-01",
+        "Agency Name": "Destiny Driven : Destiny Driven",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.96581593606438,
+        "Longitude": -76.86457061669275
+    },
+    {
+        "Agency ID": "22459-PART-01",
+        "Agency Name": "Love Donation Pantry : Love Donation Pantry",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 39.1002803,
+        "Longitude": -76.8146551
+    },
+    {
+        "Agency ID": "22468-PART-01",
+        "Agency Name": "Largo Community Church : Largo Community Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9137359,
+        "Longitude": -76.797911
+    },
+    {
+        "Agency ID": "22468-PART-02",
+        "Agency Name": "Largo Community Church : International High School at Largo",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.886355,
+        "Longitude": -76.82034159999999
+    },
+    {
+        "Agency ID": "22504-PART-01",
+        "Agency Name": "The Hope Association : Hope Multiplied",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 8",
+        "Latitude": 38.8767875,
+        "Longitude": -77.006359
+    },
+    {
+        "Agency ID": "22520-MOMK-01",
+        "Agency Name": "City of Hyattsville",
+        "Agency Region": "Maryland",
+        "County/Ward": "Prince George's County",
+        "Latitude": 38.9649117,
+        "Longitude": -76.95166928191351
+    },
+    {
+        "Agency ID": "22531-PART-01",
+        "Agency Name": "Gaithersburg HELP : Gaithersburg HELP",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.12918349043851,
+        "Longitude": -77.20784709617905
+    },
+    {
+        "Agency ID": "22555-PART-02",
+        "Agency Name": "Annandale UMC : Annandale UMC",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.82525414266103,
+        "Longitude": -77.21329243900739
+    },
+    {
+        "Agency ID": "22561-PART-01",
+        "Agency Name": "NW Community Food : NW Community Food",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 3",
+        "Latitude": 38.94390235,
+        "Longitude": -77.06297070709765
+    },
+    {
+        "Agency ID": "22570-PART-01",
+        "Agency Name": "Code 3 Association : Code 3 Association",
+        "Agency Region": "DC",
+        "County/Ward": "VA Falls Church City",
+        "Latitude": 38.8713085,
+        "Longitude": -77.1907655
+    },
+    {
+        "Agency ID": "22580-PART-01",
+        "Agency Name": "First Alliance Church : First Alliance Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.07574585,
+        "Longitude": -77.00205455
+    },
+    {
+        "Agency ID": "22602-MOMK-01",
+        "Agency Name": "HC - Silver Spring",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.01490625,
+        "Longitude": -77.0351497865924
+    },
+    {
+        "Agency ID": "22602-MOMK-02",
+        "Agency Name": "HC - Germantown",
+        "Agency Region": "Maryland",
+        "County/Ward": "Montgomery County",
+        "Latitude": 39.1820436,
+        "Longitude": -77.24280680277937
+    },
+    {
+        "Agency ID": "22621-MOMK-01",
+        "Agency Name": "Lederer Gardens",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.89850345,
+        "Longitude": -76.93355053318584
+    },
+    {
+        "Agency ID": "22629-MOMK-01",
+        "Agency Name": "Congress Heights Family Success Center",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.84358400000001,
+        "Longitude": -76.98637529061871
+    },
+    {
+        "Agency ID": "22633-PART-01",
+        "Agency Name": "St Matthews Ken Jackson Food Closet : St. Matthews Ken Jackson Food Closet",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.83345450821658,
+        "Longitude": -77.21417328899655
+    },
+    {
+        "Agency ID": "22634-PART-01",
+        "Agency Name": "Grace Baptist Church : Grace Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9750465,
+        "Longitude": -76.7470449
+    },
+    {
+        "Agency ID": "22639-PART-01",
+        "Agency Name": "Ports Town Church : Ports Town Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Prince George's County",
+        "Latitude": 38.9455463,
+        "Longitude": -76.91744579269741
+    },
+    {
+        "Agency ID": "22650-PART-01",
+        "Agency Name": "Christ4Crisis : Christ4Crisis",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.6410081,
+        "Longitude": -77.26604309999999
+    },
+    {
+        "Agency ID": "22662-MOMK-01",
+        "Agency Name": "City Blossoms",
+        "Agency Region": "District of Columbia",
+        "County/Ward": "District of Columbia",
+        "Latitude": 38.9562334,
+        "Longitude": -77.02065335192437
+    },
+    {
+        "Agency ID": "22663-PART-01",
+        "Agency Name": "St. Peters in the Woods : St. Peters in the Woods",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.7970591,
+        "Longitude": -77.32728910697195
+    },
+    {
+        "Agency ID": "22685-PART-01",
+        "Agency Name": "Gaithersburg Soup Kitchen : Gaithersburg Soup Kitchen",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.1272669,
+        "Longitude": -77.1858704301415
+    },
+    {
+        "Agency ID": "22687-PART-01",
+        "Agency Name": "Centro de Apoyo Familiar (CAF) : Centro de Apoyo Familiar (CAF)",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.66961679420839,
+        "Longitude": -77.28611511195112
+    },
+    {
+        "Agency ID": "22694-MOMK-01",
+        "Agency Name": "Park Shirlington Apartments",
+        "Agency Region": "Virginia",
+        "County/Ward": "Arlington County",
+        "Latitude": 38.837488050000005,
+        "Longitude": -77.09281063766734
+    },
+    {
+        "Agency ID": "22697-PART-01",
+        "Agency Name": "Mount Calvary Baptist Church : Mount Calvary Baptist Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.092926,
+        "Longitude": -77.1441281
+    },
+    {
+        "Agency ID": "22702-PART-01",
+        "Agency Name": "American University : American University",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 3",
+        "Latitude": 38.9362087,
+        "Longitude": -77.0868176
+    },
+    {
+        "Agency ID": "22731-PART-01",
+        "Agency Name": "CFH Inc. : CFH Inc.",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Manassas",
+        "Latitude": 38.75907553488372,
+        "Longitude": -77.46264934883722
+    },
+    {
+        "Agency ID": "22737-PART-01",
+        "Agency Name": "The Family Place : The Family Place",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 1",
+        "Latitude": 38.931914250000005,
+        "Longitude": -77.03606295219534
+    },
+    {
+        "Agency ID": "22739-PART-01",
+        "Agency Name": "University of District of Columbia : University of District of Columbia",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 3",
+        "Latitude": 38.9444744,
+        "Longitude": -77.064239
+    },
+    {
+        "Agency ID": "22863-PART-01",
+        "Agency Name": "St. John's Community Service Center : St. John's Community Service Center",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.83227407705615,
+        "Longitude": -77.20810906363562
+    },
+    {
+        "Agency ID": "22877-PART-01",
+        "Agency Name": "True Ground Housing : True Ground Housing",
+        "Agency Region": "VA",
+        "County/Ward": "VA Arlington County",
+        "Latitude": 38.8775698740614,
+        "Longitude": -77.11219439364872
+    },
+    {
+        "Agency ID": "23013-PART-01",
+        "Agency Name": "Fairfax Church Resource Center : Fairfax Church Resource Center",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.83292635,
+        "Longitude": -77.33976361849298
+    },
+    {
+        "Agency ID": "23030-PART-01",
+        "Agency Name": "Living Faith Lutheran Church : Living Faith Lutheran Church",
+        "Agency Region": "MD",
+        "County/Ward": "MD Montgomery County",
+        "Latitude": 39.07685580210768,
+        "Longitude": -77.123624237618
+    },
+    {
+        "Agency ID": "23055-PART-01",
+        "Agency Name": "Woodbridge Church of the Nazarene : Woodbridge Church of the Nazarene",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.644923,
+        "Longitude": -77.30102029999999
+    },
+    {
+        "Agency ID": "23173-PART-01",
+        "Agency Name": "DC Doors : DC Doors",
+        "Agency Region": "DC",
+        "County/Ward": "DC Ward 5",
+        "Latitude": 38.911636035649394,
+        "Longitude": -77.02341486914406
+    },
+    {
+        "Agency ID": "23200-PART-01",
+        "Agency Name": "Holy Family Catholic Church Food Pantry : Holy Family Catholic Church Food Pantry",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.6465076,
+        "Longitude": -77.3210169
+    },
+    {
+        "Agency ID": "23202-PART-01",
+        "Agency Name": "Sacred Heart Catholic Church : Sacred Heart Catholic Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA Prince William County",
+        "Latitude": 38.67514269999999,
+        "Longitude": -77.3971486
+    },
+    {
+        "Agency ID": "23204-PART-01",
+        "Agency Name": "Manassas Baptist Church : Manassas Baptist Church",
+        "Agency Region": "VA",
+        "County/Ward": "VA City of Manassas",
+        "Latitude": 38.76556045,
+        "Longitude": -77.4838594552962
+    },
+    {
+        "Agency ID": "23214-PART-01",
+        "Agency Name": "INOVA Cares for Women and Children Falls Church : Inova Cares Clinics",
+        "Agency Region": "VA",
+        "County/Ward": "VA Fairfax County",
+        "Latitude": 38.86767725,
+        "Longitude": -77.1868163
+    }
+]
