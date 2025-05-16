@@ -106,4 +106,4 @@ For any questions, reach out to:
 - `nithin10@umd.edu`
 - `shifam@umd.edu`
 - `vellelath@umd.edu`
-- `sahu1210@gmail.com`
+- `ssahu12@gmail.com`
