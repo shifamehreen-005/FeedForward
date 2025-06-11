@@ -92,7 +92,7 @@ The system flow includes:
 
 ## 👥 Contributors
 
-- Nithin Skandha M  
+- Nithin Skantha M  
 - Shifa Mehreen  
 - Sneha Vellelath  
 - Swapnita Sahu
