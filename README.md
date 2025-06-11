@@ -104,6 +104,6 @@ The system flow includes:
 For any questions, reach out to:
 
 - `nithin10@umd.edu`
-- `shifam@umd.edu`
+- `shifam5@umd.edu`
 - `vellelath@umd.edu`
 - `ssahu12@gmail.com`
