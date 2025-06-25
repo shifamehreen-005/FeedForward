@@ -105,5 +105,5 @@ For any questions, reach out to:
 
 - `nithin10@umd.edu`
 - `shifam5@umd.edu`
-- `vellelath@umd.edu`
+- `velsneha@umd.edu`
 - `ssahu12@gmail.com`
