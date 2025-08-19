@@ -47,48 +47,6 @@ chatContainer.style.display = "none";
 chatInit.style.display = "flex";
 }
 
-// function sendMessage(optionText) {
-  // addMessage(optionText, "user");
-
-  // fetch('http://localhost:8000/chat', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify({ user_input: optionText })
-  // })
-  //   .then(res => res.json())
-  //   .then(data => {
-  //     const botResponse = data.assistant_response || "Sorry, I didn't understand that.";
-  //     setTimeout(() => {
-  //       addMessage(botResponse, "bot");
-  //       const options = getNextOptions(botResponse);
-
-  //       // Only render options if they haven't been rendered already
-  //       if (!optionsRendered) {
-  //         renderOptions(options);
-  //         optionsRendered = true; // Mark options as rendered
-  //       }
-  //     }, 500);
-  //   })
-  //   .catch(error => {
-  //     console.error("API error:", error);
-  //     addMessage("Sorry, there was an error connecting to the server.", "bot");
-  //   });
-// }
-
-// function addMessage(text, sender) {
-// const message = document.createElement('div');
-// message.classList.add('message', sender);
-
-// const bubble = document.createElement('p');
-// bubble.textContent = text;
-// message.appendChild(bubble);
-
-// chatBox.appendChild(message);
-// chatBox.scrollTop = chatBox.scrollHeight;
-// }
-
 // 🎤 Speech Recognition Setup
 const micBtn = document.getElementById('micBtn');
 
@@ -309,3 +267,4 @@ function showFieldEditor(currentProfile, field, currentValue, label) {
     addMessage(`${label} update cancelled.`, "bot");
   });
 }
+
